@@ -1,0 +1,117 @@
+---
+layout: default-stakeholder
+title: Stakeholder Import
+permalink: /stakeholder/import/
+
+---
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <div class="pull-left">
+      <a href="/stakeholders/" class="btn btn-primary btn-r"><i class="glyphicon glyphicon-chevron-left"></i> Back to Stakeholders</a>
+    </div>
+    <div class="pull-right">
+      <a href="" class="btn btn-info">
+        Help
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="row">
+
+    <!--
+    Import
+
+
+    <div class="form-group">
+      <label for="exampleInputFile">File input</label>
+      <input type="file" id="exampleInputFile" class="btn btn-default">
+      <p class="help-block">Example block-level help text here.</p>
+    </div>
+
+  -->
+  <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
+    <div class="panel panel-context-stakeholder">
+      <div class="panel-title">Import Stakeholders</div>
+      <div class="panel-body">
+        <p>
+          Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus.
+        </p>
+        <hr>
+        <div class="form-group">
+          <!--<label for="exampleInputFile">File input</label>-->
+          <input type="file" id="exampleInputFile">
+        </div>
+
+
+
+        <a data-toggle="modal" data-target="#myModalImport" class="btn btn-lg btn-block btn-default"
+            onclick="setTimeout(function(){ $('#loadingBox').addClass('hidden'); $('#doneBox').removeClass('hidden'); }, 5000)">
+          Upload
+        </a>
+        </div>
+
+    </div>
+    <div class="panel">
+      <div class="panel-title">Template</div>
+      <div class="panel-body">
+        <p>Donec id elit non mi porta gravida at eget metus.</p>
+        <a href="" class="btn btn-info">Download Template</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModalImport" tabindex="-1" role="dialog" aria-labelledby="myModalLabelImport">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header modal-header-clear">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <!--<h4 class="modal-title" id="myModalLabel">
+            Importing Stakeholders
+          </h4>-->
+        </div>
+
+        <div class="modal-body modal-body-clear">
+
+         <div id="loadingBox">
+           <div class="body-title">
+             <div class="title">Import Stakeholders
+               <span class="block">Preparing your data</span>
+             </div>
+           </div>
+          <div class="loader">Loading...</div>
+          <!--<p class="text-center">This may take a while.</p>-->
+        </div>
+
+        <div class="hidden" id="doneBox">
+          <h2 class="text-center">Your file is ready to view</h2>
+          <div class="actions-row">
+            <a href="/stakeholder/import/preview/" class="btn btn-primary">View Data</a>
+          </div>
+        </div>
+        <!--<div class="modal-footer">
+          <div class="pull-left">
+            <a href="" class="btn btn-primary">Select</a>
+          </div>
+          <div class="pull-right">
+            <a href="/stakeholder/adam-hogg/" class="btn btn-default">
+              View Profile
+            </a>
+          </div>
+        </div>-->
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
