@@ -1,0 +1,228 @@
+---
+layout: default-projects
+title:  Projects New
+permalink: /projects/new/
+---
+
+<!--<div class="row">
+
+  <div class="col-lg-12 col-md-12 page-title">
+    <h1 class="page-header">Create Project
+      <span class="block">Starting your project journey the most efficient way</span>
+    </h1>
+
+
+    <ul class="list-unstyled menu-list list-inline">
+      <li class="helper">
+        <a onclick="$('.helper-toggle').toggleClass('hide')">
+         <i class="glyphicon glyphicon-question-sign"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<!--
+<div class="alert alert-success alert-fixed alert-sidebar" id="alert-download">
+  <a href="" class="close">
+    &times;
+  </a>
+  <div class="details">
+    <h4>Autosave</h4>
+    <p>09:32AM</p>
+  </div>
+</div>-->
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <a href="/projects/" class="btn btn-primary btn-r">
+      <i class="glyphicon glyphicon-chevron-left"></i> Back to projects</a>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-lg-8 col-md-8">
+    <div class="panel">
+      <div class="panel-title">Project Details</div>
+
+      <div class="panel-body">
+        <div class="body-title body-title-left">
+          <div class="title">New Library Resources <span class="amount pull-right">&pound;120.00</span></div>
+          <p>21.05.2014 <span>to</span> 30.05.2016</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <a class="pull-right btn btn-edit" onclick="$('#new-project-details-toggle').toggleClass('hide'), $('#new-project-record').toggleClass('hide')">
+           <i class="glyphicon glyphicon-pencil"></i> Edit
+        </a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title">Project Narrative</div>
+      <div class="panel-body">
+        <div class="form-group">
+          <label for="id_description" class="control-label">
+            What is your project?
+
+              <div class="popover" role="tooltip" id="test">
+                <div class="arrow"></div>
+                <h3 class="popover-title"></h3>
+                <div class="popover-content">content</div>
+              </div>
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+          </label>
+          <textarea class="field form-control" rows="6" placeholder="High-level description of your project." id="id_description"></textarea>
+          <a class="help-block">
+            Example
+          </a>
+          <div class="error"></div>
+        </div>
+
+        <div class="project_need-hook">
+          <div class="form-group">
+            <label for="id_project_need" class="control-label">
+              Why do you need your project?
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="What is your school missing that this project can provide?" id="id_project_need"></textarea>
+            <a class="help-block">
+              Example
+            </a>
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="impact-hook">
+          <div class="form-group">
+            <label for="id_impact" class="control-label">
+              What impact will your project make?
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="For example, improve pupil IT literacy" id="id_impact"></textarea>
+            <a class="help-block">
+                Example
+            </a>
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="evidence-hook">
+          <div class="form-group">
+            <label for="id_evidence" class="control-label">
+              What supporting evidence have you got to back up the need for your project?
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="Build your C.A.S.E (Consultations, Agendas, Statistics, Environment)" id="id_evidence"></textarea>
+            <a class="help-block">Example
+            </a>
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="school_improvement-hook">
+          <div class="form-group">
+            <label for="id_school_improvement" class="control-label">
+              School Improvement
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="How does the project link it to your school improvement plan?" id="id_school_improvement"></textarea>
+            <a class="help-block">
+              Example
+            </a>
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="project_plan-hook">
+          <div class="form-group">
+            <label for="id_project_plan" class="control-label">
+              How do you plan to deliver, monitor, and evaluate your project?
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="Deliverables, projected outcomes, success criteria" id="id_project_plan"></textarea>
+            <a class="help-block">
+              Example
+            </a>
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="success_measure-hook">
+          <div class="form-group">
+            <label for="id_success_measure" class="control-label">
+              How will you measure and report success?
+              <a type="button" class=" pull-right btn-asign">
+                <i class="fa fa-user"></i>
+              </a>
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="Success criteria, reporting tools" id="id_success_measure"></textarea>
+            <a class="help-block">
+              Example
+            </a>
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="notes-hook">
+          <div class="form-group">
+            <label for="id_notes" class="control-label">
+              Notes
+            </label>
+            <textarea class="field form-control" rows="6" placeholder="Enter any other notes here" id="id_notes"></textarea>
+            <div class="error"></div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-footer">
+        <div class="pull-right">
+          <a href="" class="btn btn-add">Create Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <div class="panel">
+      <!--
+      <div class="panel-title">
+        Team
+      </div>-->
+      <div class="panel-body">
+        <div class="body-title">
+          <div class="title">Need Help?
+            <span class="block">Invite colleagues to help with this project</span>
+          </div>
+          <div class="actions-row">
+            <a data-toggle="modal" data-target="#myModalTeam" class="btn btn-info">Create Team
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+{% include modal-team.html %}
+
+
+
+
+
+
+
+</div>

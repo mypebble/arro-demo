@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grants - Details</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/pebble-demo.css">
+
+</head>
+
+
+  <body class="page-context-grants">
+  		<div id="container" class="effect mainnav-lg">
+
+    <header id="navbar">
+  <div id="navbar-container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">
+      </a>
+    </div>
+    <div class="navbar-content clearfix">
+      <div class="col-lg-12">
+        <div class="navbar-left menu-button">
+          <a href="" class="mainnav-toggle">
+            <i class="fa fa-navicon fa-lg"></i>
+          </a>
+        </div>
+
+
+
+        <!--
+        <div class="navbar-title">
+          <div class="title"><span>
+            - </span></div>
+
+        </div>-->
+        <ul class="navbar-right list-unstyled list-inline pull-right">
+          <li>
+            <span class="label label-danger">BETA</span>
+          </li>
+          <li>
+            |
+          </li>
+
+          <!--<li class="trial-date">
+            <strong>10 Days Remain on Trial</strong>
+          </li>
+          <li>
+            <a data-toggle="modal" data-target="#myModalTrial"
+              class="btn btn-add">
+              Upgrade
+            </a>
+          </li>-->
+          <!--<li>
+            <div class="menu-container">
+              <a id="btn-filters-test" class="btn-menu" onclick="$('#filters-test').toggleClass('hide'), $('#btn-filters-test').toggleClass('active')">
+                <i class="fa fa-tasks"></i> <span class="label label-primary">5</span>
+              </a>
+
+              <div id="filters-test" class="menu-toggle hide">
+                <div class="panel-body">
+
+                  <ul class="list-unstyled list-notification">
+                    <li>
+                      <p>5 Tasks Remain</p>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </li>-->
+
+          <li class="user_name">
+            Funding School
+          </li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <nav id="mainnav-container">
+  <div id="mainnav">
+    <!--Menu-->
+    <div id="mainnav-menu-wrap">
+      <div class="nano">
+        <!--<div class="date">
+          01<span class="block">Sep</span>
+        </div>-->
+        <div class="nano-content">
+          <ul id="mainnav-menu" class="list-group">
+            <li class=" ">
+              <a href="/dashboard/">
+                <i class="glyphicon glyphicon-dashboard"></i>
+                <span class="menu-title">
+                  <strong>Dashboard</strong>
+                </span>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">Activities</li>
+            <li class="nav-clubs  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                <span class="menu-title">
+                  Clubs
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="">
+
+                  Create Club</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/clubs/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-donations  "><!-- active-page  -->
+              <a>
+                <i class="glyphicon glyphicon-gift"></i>
+                <span class="menu-title">
+                  Donations
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="/donations/">
+
+                    Record Donation
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/donations/claim/">Create Claim</a></li>
+                <li><a href="/donations/history/">View Pending / Archived</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-events  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-calendar"></i>
+                <span class="menu-title">
+                  Events
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a href="event-new.html">
+
+                    Create Event
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/events/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-grants active-page">
+              <a href="/grants/">
+                <i class="glyphicon glyphicon-briefcase"></i>
+                <span class="menu-title">
+                  Grants
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">System</li>
+            <li class="nav-projects ">
+              <a href="#">
+                <i class="glyphicon glyphicon-th"></i>
+                <span class="menu-title">
+                  Projects
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="/projects/new/">
+
+                  Create Project</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/projects/">Manage</a></li>
+              </ul>
+            </li>
+            <li class="nav-reports">
+              <a href="report-dashboard.html">
+                <i class="glyphicon glyphicon-tasks"></i>
+                <span class="menu-title">
+                  Reports
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="nav-finance ">
+              <a href="#">
+                <i class="glyphicon glyphicon-sort"></i>
+                <span class="menu-title">
+                  Transactions
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="finance-new.html">
+
+                    Record Transaction
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/transactions/">View Transactions</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-stakeholder ">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span class="menu-title">
+                  Stakeholders
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/stakeholder/">Manage Stakeholders</a></li>
+              </ul>
+            </li>
+            <li class="nav-admin">
+              <a href="#">
+                <i class="glyphicon glyphicon-wrench"></i>
+                <span class="menu-title">
+                  Admin
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/admin/accounts/">Manage Accounts</a>
+                </li>
+                <li>
+                  <a href="/admin/bank/">Manage Bank Accounts</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list-divider"></li>
+            <li class="nav-stakeholder ">
+              <a href="/support-admin/">
+                <i class="glyphicon glyphicon-screenshot"></i>
+                <span class="menu-title">
+                  Support
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="">
+                <i class="glyphicon glyphicon-off"></i>
+                <span class="menu-title">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+    <!--End menu-->
+
+  </div>
+</nav>
+<!--END MAIN NAVIGATION-->
+
+
+      <div id="content-container">
+          <div id="page-content">
+
+          <div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <div class="pull-left">
+      <a href="/grants/" class="btn btn-primary btn-r"><i class="glyphicon glyphicon-chevron-left"></i> Back to Grants</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-8 col-md-8">
+    <div class="panel panel-context-grants">
+      <div class="panel-title">
+       Sport England: Protecting Playing Fields<span class="label-sm label label-white-outline pull-right">SAVED</span>
+      </div>
+      <div class="panel-subnav">
+        <div class="">
+          <div class="col-lg-8 pull-right">
+            <ul class="list-unstyled list-inline pull-right">
+              <li>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Completed Grant</a></li>
+                      <!--<li class="divider"></li>-->
+                      <li><a href="#">Remove Grant</a></li>
+                    </ul>
+                </div>
+              </li>
+              <!--<li>
+                <a class="btn btn-save" data-toggle="modal" data-target="#myModal-record">
+                  <i class="fa fa-heart"></i>  Save Grant
+                </a>
+              </li>-->
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel-body">
+        <!--<div class="row search-results">
+          <div class="col-lg-12">
+            <ul class="list-unstyled list-inline inline">
+              <li>
+                <span class="label label-primary-outline">FREEBIE </span>
+              </li>
+              <li>
+                <span class="label label-primary-outline">SPORT </span>
+              </li>
+              <li>
+                <span class="label label-primary-outline">FOOTBALL </span>
+              </li>
+              <li>
+                <span class="label label-primary-outline">TENNIS </span>
+              </li>
+              <li>
+                <span class="label label-primary-outline">APRIL </span>
+              </li>
+              <li>
+                <span class="label label-primary-outline">FOOTBALLS </span>
+              </li>
+              <li>
+                <span class="label label-primary-outline">5 +</span>
+              </li>
+            </ul>
+          </div>
+        </div>-->
+        <h2 class="section-title">Overview</h2>
+        <p class="lead">This programme from Sport England aims to fund around 500 playing fields across England to support participation and retention of people playing sport of the local level.</p>
+          <p>
+      <h2 class="section-title">Who is Eligible?</h2>
+        <p>Organisations in England that can demonstrate future management, maintenance and sporting use at the site along with the site being protected for 25 years or longer are welcome to apply.  This means that organisations must own (or intend to own) the freehold or have a lease for the field for that length of time.</p>
+        <p>Projects which can offer protection of playing fields “in perpetuity” and projects where ownership is being transferred to the community from public ownership will be prioritised.
+</p>
+
+      <h2 class="section-title">What will I get?</h2>
+        <p>No minimum or maximum grant has been announced.</p>
+        <p>Funds will cover capital costs that improve playing fields for sporting and community use and help to protect the long term sporting purpose of the field. Work is likely to involve creating new pitches or levelling or drainage of existing ones.</p>
+        <p>Education establishments are expected to contribute 30% partnership funding. Partnership funding can be from your own funds, other grants, sponsorship and non-cash (in kind) contributions.  All partner funding contributions must be evidenced in writing before any funding will be released.
+</p>
+
+      </div>
+      <!--<div class="panel-footer">
+        <div class="pull-right">
+          <a href="" class="btn btn-primary">Actions</a>
+        </div>
+      </div>-->
+    </div>
+
+
+  </div>
+  <div class="col-lg-4 col-md-4">
+    <div class="panel">
+      <div class="">
+        <ul class="list-unstyled list-stats list-group-clear">
+          <li class="">
+            Details
+          <span class="">A Share of £3 million</span></li>
+          <li class="">
+            Type
+            <span>Cash Award</span>
+          </li>
+          <li class="">
+            Tasks
+            <span>5</span>
+          </li>
+          <li class="">
+            Deadline
+            <span>No Deadline</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel">
+        <div class="panel-title">
+            Tasks
+        </div>
+          <div class="panel-body">
+            <ul class="list-unstyled list-tasks">
+              <li>
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3">Donec quam libero, rutrum non gravida ut with more description here </label>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3">Donec quam libero, rutrum non gravida ut</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="panel-footer">
+            <div class="">
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-add btn-block"><i class="fa fa-plus"></i> Add Task</button>
+                </div>
+            </div>
+          </div>
+        </div>
+
+    <div class="panel">
+    <div class="panel-title">Helpful Documents
+      <a class="popover-helper helper-toggle pull-right"  data-trigger="hover" data-placement="top" data-content="Documents added to help you complete a successful grant" href="#" data-toggle="popover" title="">
+          <i class="fa fa-question-circle "></i>
+      </a>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled list-info">
+        <li><a href=""><i class="glyphicon glyphicon-paperclip"></i> How to write a Grant Application</a></li>
+        <li><a href=""><i class="glyphicon glyphicon-paperclip"></i> Know your Goal</a></li>
+
+      </ul>
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+</div>
+
+
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="myModalTrial" tabindex="-1" role="dialog" aria-labelledby="myModalLabelTrial">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          Upgrade
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. </p>
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+        </p>
+        <div class="actions-row">
+          <a href="" class="btn btn-add">
+            Upgrade Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+<footer class="">
+
+
+</footer>
+
+<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+<!-- Place JavaScript at bottom of page for quicker loading -->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/jasny-bootstrap.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/bootstrap-select-min.js"></script>
+
+<script src="/js/bootstrap-tagsinput.js"></script>
+<script src="/js/chart.min.js"></script>
+<script>
+window.onload = function(){
+  var ctx4 = document.getElementById("chart-area").getContext("2d");
+
+  window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
+    responsive : true
+  });
+}
+
+
+var doughnutData = [
+  {
+    value: 300.00,
+    color:"#ec87c0",
+    highlight: "#ec87c0",
+    label: "CLUBS"
+  },
+  {
+    value: 100.00,
+    color:"#48cfad",
+    highlight: "#48cfad",
+    label: "EVENTS"
+  },
+  {
+    value: 1000.00,
+    color:"#f6bb42",
+    highlight: "#f6bb42",
+    label: "GRANTS"
+  },
+  {
+    value: 90.00,
+    color: "#fff",
+    highlight: "#fff",
+    label: "TO TARGET"
+  }
+];
+</script>
+
+<script type="text/javascript">
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    });
+</script>
+
+      </div>
+
+    </body>
+
+</html>

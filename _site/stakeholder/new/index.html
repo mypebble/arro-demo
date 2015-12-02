@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stakeholders</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/pebble-demo.css">
+
+</head>
+
+
+  <body class="page-context-dashboard">
+  		<div id="container" class="effect mainnav-lg">
+
+    <header id="navbar">
+  <div id="navbar-container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">
+      </a>
+    </div>
+    <div class="navbar-content clearfix">
+      <div class="col-lg-12">
+        <div class="navbar-left menu-button">
+          <a href="" class="mainnav-toggle">
+            <i class="fa fa-navicon fa-lg"></i>
+          </a>
+        </div>
+
+
+
+        <!--
+        <div class="navbar-title">
+          <div class="title"><span>
+            - </span></div>
+
+        </div>-->
+        <ul class="navbar-right list-unstyled list-inline pull-right">
+          <li>
+            <span class="label label-danger">BETA</span>
+          </li>
+          <li>
+            |
+          </li>
+
+          <!--<li class="trial-date">
+            <strong>10 Days Remain on Trial</strong>
+          </li>
+          <li>
+            <a data-toggle="modal" data-target="#myModalTrial"
+              class="btn btn-add">
+              Upgrade
+            </a>
+          </li>-->
+          <!--<li>
+            <div class="menu-container">
+              <a id="btn-filters-test" class="btn-menu" onclick="$('#filters-test').toggleClass('hide'), $('#btn-filters-test').toggleClass('active')">
+                <i class="fa fa-tasks"></i> <span class="label label-primary">5</span>
+              </a>
+
+              <div id="filters-test" class="menu-toggle hide">
+                <div class="panel-body">
+
+                  <ul class="list-unstyled list-notification">
+                    <li>
+                      <p>5 Tasks Remain</p>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </li>-->
+
+          <li class="user_name">
+            Funding School
+          </li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <nav id="mainnav-container">
+  <div id="mainnav">
+    <!--Menu-->
+    <div id="mainnav-menu-wrap">
+      <div class="nano">
+        <!--<div class="date">
+          01<span class="block">Sep</span>
+        </div>-->
+        <div class="nano-content">
+          <ul id="mainnav-menu" class="list-group">
+            <li class=" ">
+              <a href="/dashboard/">
+                <i class="glyphicon glyphicon-dashboard"></i>
+                <span class="menu-title">
+                  <strong>Dashboard</strong>
+                </span>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">Activities</li>
+            <li class="nav-clubs  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                <span class="menu-title">
+                  Clubs
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="">
+
+                  Create Club</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/clubs/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-donations  "><!-- active-page  -->
+              <a>
+                <i class="glyphicon glyphicon-gift"></i>
+                <span class="menu-title">
+                  Donations
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="/donations/">
+
+                    Record Donation
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/donations/claim/">Create Claim</a></li>
+                <li><a href="/donations/history/">View Pending / Archived</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-events  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-calendar"></i>
+                <span class="menu-title">
+                  Events
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a href="event-new.html">
+
+                    Create Event
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/events/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-grants ">
+              <a href="/grants/">
+                <i class="glyphicon glyphicon-briefcase"></i>
+                <span class="menu-title">
+                  Grants
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">System</li>
+            <li class="nav-projects ">
+              <a href="#">
+                <i class="glyphicon glyphicon-th"></i>
+                <span class="menu-title">
+                  Projects
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="/projects/new/">
+
+                  Create Project</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/projects/">Manage</a></li>
+              </ul>
+            </li>
+            <li class="nav-reports">
+              <a href="report-dashboard.html">
+                <i class="glyphicon glyphicon-tasks"></i>
+                <span class="menu-title">
+                  Reports
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="nav-finance ">
+              <a href="#">
+                <i class="glyphicon glyphicon-sort"></i>
+                <span class="menu-title">
+                  Transactions
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="finance-new.html">
+
+                    Record Transaction
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/transactions/">View Transactions</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-stakeholder active-page">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span class="menu-title">
+                  Stakeholders
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/stakeholder/">Manage Stakeholders</a></li>
+              </ul>
+            </li>
+            <li class="nav-admin">
+              <a href="#">
+                <i class="glyphicon glyphicon-wrench"></i>
+                <span class="menu-title">
+                  Admin
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/admin/accounts/">Manage Accounts</a>
+                </li>
+                <li>
+                  <a href="/admin/bank/">Manage Bank Accounts</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list-divider"></li>
+            <li class="nav-stakeholder ">
+              <a href="/support-admin/">
+                <i class="glyphicon glyphicon-screenshot"></i>
+                <span class="menu-title">
+                  Support
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="">
+                <i class="glyphicon glyphicon-off"></i>
+                <span class="menu-title">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+    <!--End menu-->
+
+  </div>
+</nav>
+<!--END MAIN NAVIGATION-->
+
+
+      <div id="content-container">
+          <div id="page-content">
+
+          <div class="row">
+  <!--Page Title-->
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div class="col-lg-12 col-md-12 page-title">
+    <h1 class="page-header">NEW
+      <span class="block">Manage your Contacts and Accounts</span>
+    </h1>
+    <ul class="list-unstyled menu-list list-inline">
+      <li class="add">
+        <a  data-toggle="modal" data-target="#modal-add-name">
+         <i class="glyphicon glyphicon-plus"></i>
+        </a>
+      </li>
+      <!--<li class="cog">
+        <a href="">
+         <i class="glyphicon glyphicon-cog"></i>
+        </a>
+      </li>-->
+    </ul>
+  </div>
+  <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--End page title-->
+</div>
+
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+    <div class="panel panel-filter">
+      <div class="panel-title">
+        <div class="row">
+
+          <div class="pull-left col-lg-6">
+            <div class="form-group search">
+              <input placeholder="Search for..." class="form-control" type="text">
+
+              <a href="" class="btn-search">
+                <i class="glyphicon glyphicon-search"></i>
+              </a>
+            </div>
+
+          </div>
+          <div class="col-lg-6">
+            <div class="pull-right">
+              <div class="menu-container">
+                <a id="btn-filters-test" class="btn btn-default" onclick="$('#filters-test').toggleClass('hide'), $('#btn-filters-test').toggleClass('active')">Filters <span class="label label-primary">1</span></a>
+
+                <div id="filters-test" class="menu-toggle  hide">
+
+                  <ul class="list-group list-tasks">
+                    <li class="list-group-item">
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1">
+                            Volunteers
+                        </label>
+                      </div>
+                    </li>
+                    <li class="list-group-item">
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1">
+                            Gift Aid
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+
+    <div class="panel panel-table">
+      <div class="panel-body">
+        <table class="table table-vam">
+          <thead>
+            <tr>
+              <th class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox1" value="option1" type="checkbox">
+                    <label for="checkbox1"></label>
+                  </div>
+                </div>
+              </th>
+              <th class="name">Stakeholder<a class="filter"></a></th>
+              <th class="category">Type</th>
+              <th class="contact contact-primary">Primary Contact</th>
+              <th class="amount">Value<a class="filter"></a></th>
+              <th class="date date-lg date-right">
+                Last Activity
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name"><a href="">
+                <span class="initials pupil">AH</span>
+                Adam Hogg</a>
+              </td>
+              <td class="category">Pupil</td>
+              <td class="contact contact-primary"><i class="fa fa-envelope"></i>adam.hogg.ah@gmail.com</td>
+              <td class="amount income">£500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" checked="" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials alumni">AW</span>
+                Alan Waggott</a>
+              </td>
+              <td class="category">Alumni</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials pta">DW</span>
+                Daniel Wakenshaw</a>
+              </td>
+              <td class="category">PTA</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3"  value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials parent">JW</span>
+                Jaquie Wade</a>
+              </td>
+              <td class="category">Parent</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials volunteer">DM</span>
+                Diego Melo</a>
+              </td>
+              <td class="category">Volunteer</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials staff">RG</span>
+                Ryan Green</a>
+              </td>
+              <td class="category">Staff</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials business">JG</span>
+                Janis Green</a>
+              </td>
+              <td class="category">Business</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials supplier">T</span>
+                Tesco</a>
+              </td>
+              <td class="category">Supplier</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials organisation">DW</span>
+                Pebble School</a>
+              </td>
+              <td class="category">Organisation</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox3" value="option3" type="checkbox">
+                    <label for="checkbox3"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <a href="">
+                <span class="initials sponsor">DW</span>
+                Daniel Wakenshaw</a>
+              </td>
+              <td class="category">Sponsor</td>
+              <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+              <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+              <td class="date date-right">
+                20.03.2014
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="myModalTrial" tabindex="-1" role="dialog" aria-labelledby="myModalLabelTrial">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          Upgrade
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. </p>
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+        </p>
+        <div class="actions-row">
+          <a href="" class="btn btn-add">
+            Upgrade Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+<footer class="">
+
+
+</footer>
+
+<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+<!-- Place JavaScript at bottom of page for quicker loading -->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/jasny-bootstrap.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/bootstrap-select-min.js"></script>
+
+<script src="/js/bootstrap-tagsinput.js"></script>
+<script src="/js/chart.min.js"></script>
+<script>
+window.onload = function(){
+  var ctx4 = document.getElementById("chart-area").getContext("2d");
+
+  window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
+    responsive : true
+  });
+}
+
+
+var doughnutData = [
+  {
+    value: 300.00,
+    color:"#ec87c0",
+    highlight: "#ec87c0",
+    label: "CLUBS"
+  },
+  {
+    value: 100.00,
+    color:"#48cfad",
+    highlight: "#48cfad",
+    label: "EVENTS"
+  },
+  {
+    value: 1000.00,
+    color:"#f6bb42",
+    highlight: "#f6bb42",
+    label: "GRANTS"
+  },
+  {
+    value: 90.00,
+    color: "#fff",
+    highlight: "#fff",
+    label: "TO TARGET"
+  }
+];
+</script>
+
+<script type="text/javascript">
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    });
+</script>
+
+      </div>
+
+    </body>
+
+</html>

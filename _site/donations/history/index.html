@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donations History</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/pebble-demo.css">
+
+</head>
+
+
+  <body class="page-context-donations">
+  		<div id="container" class="effect mainnav-lg">
+
+    <header id="navbar">
+  <div id="navbar-container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">
+      </a>
+    </div>
+    <div class="navbar-content clearfix">
+      <div class="col-lg-12">
+        <div class="navbar-left menu-button">
+          <a href="" class="mainnav-toggle">
+            <i class="fa fa-navicon fa-lg"></i>
+          </a>
+        </div>
+
+
+
+        <!--
+        <div class="navbar-title">
+          <div class="title">View Pending / Archived Claims<span>
+            - Your pending and archived Claims for HMRC</span></div>
+
+        </div>-->
+        <ul class="navbar-right list-unstyled list-inline pull-right">
+          <li>
+            <span class="label label-danger">BETA</span>
+          </li>
+          <li>
+            |
+          </li>
+
+          <!--<li class="trial-date">
+            <strong>10 Days Remain on Trial</strong>
+          </li>
+          <li>
+            <a data-toggle="modal" data-target="#myModalTrial"
+              class="btn btn-add">
+              Upgrade
+            </a>
+          </li>-->
+          <!--<li>
+            <div class="menu-container">
+              <a id="btn-filters-test" class="btn-menu" onclick="$('#filters-test').toggleClass('hide'), $('#btn-filters-test').toggleClass('active')">
+                <i class="fa fa-tasks"></i> <span class="label label-primary">5</span>
+              </a>
+
+              <div id="filters-test" class="menu-toggle hide">
+                <div class="panel-body">
+
+                  <ul class="list-unstyled list-notification">
+                    <li>
+                      <p>5 Tasks Remain</p>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </li>-->
+
+          <li class="user_name">
+            Funding School
+          </li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <nav id="mainnav-container">
+  <div id="mainnav">
+    <!--Menu-->
+    <div id="mainnav-menu-wrap">
+      <div class="nano">
+        <!--<div class="date">
+          01<span class="block">Sep</span>
+        </div>-->
+        <div class="nano-content">
+          <ul id="mainnav-menu" class="list-group">
+            <li class=" ">
+              <a href="/dashboard/">
+                <i class="glyphicon glyphicon-dashboard"></i>
+                <span class="menu-title">
+                  <strong>Dashboard</strong>
+                </span>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">Activities</li>
+            <li class="nav-clubs  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                <span class="menu-title">
+                  Clubs
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="">
+
+                  Create Club</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/clubs/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-donations  active-page"><!-- active-page  -->
+              <a>
+                <i class="glyphicon glyphicon-gift"></i>
+                <span class="menu-title">
+                  Donations
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="/donations/">
+
+                    Record Donation
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/donations/claim/">Create Claim</a></li>
+                <li><a href="/donations/history/">View Pending / Archived</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-events  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-calendar"></i>
+                <span class="menu-title">
+                  Events
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a href="event-new.html">
+
+                    Create Event
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/events/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-grants ">
+              <a href="/grants/">
+                <i class="glyphicon glyphicon-briefcase"></i>
+                <span class="menu-title">
+                  Grants
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">System</li>
+            <li class="nav-projects ">
+              <a href="#">
+                <i class="glyphicon glyphicon-th"></i>
+                <span class="menu-title">
+                  Projects
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="/projects/new/">
+
+                  Create Project</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/projects/">Manage</a></li>
+              </ul>
+            </li>
+            <li class="nav-reports">
+              <a href="report-dashboard.html">
+                <i class="glyphicon glyphicon-tasks"></i>
+                <span class="menu-title">
+                  Reports
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="nav-finance ">
+              <a href="#">
+                <i class="glyphicon glyphicon-sort"></i>
+                <span class="menu-title">
+                  Transactions
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="finance-new.html">
+
+                    Record Transaction
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/transactions/">View Transactions</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-stakeholder ">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span class="menu-title">
+                  Stakeholders
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/stakeholder/">Manage Stakeholders</a></li>
+              </ul>
+            </li>
+            <li class="nav-admin">
+              <a href="#">
+                <i class="glyphicon glyphicon-wrench"></i>
+                <span class="menu-title">
+                  Admin
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/admin/accounts/">Manage Accounts</a>
+                </li>
+                <li>
+                  <a href="/admin/bank/">Manage Bank Accounts</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list-divider"></li>
+            <li class="nav-stakeholder ">
+              <a href="/support-admin/">
+                <i class="glyphicon glyphicon-screenshot"></i>
+                <span class="menu-title">
+                  Support
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="">
+                <i class="glyphicon glyphicon-off"></i>
+                <span class="menu-title">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+    <!--End menu-->
+
+  </div>
+</nav>
+<!--END MAIN NAVIGATION-->
+
+
+      <div id="content-container">
+          <div id="page-content">
+
+          <div class="pull-right">
+  <a href="" class="btn btn-info">
+    Help
+  </a>
+</div>
+
+
+<!--
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+
+    <h1 class="page-header">View Pending / Archived Claims</h1>
+    <div class="pull-right">
+      <ul class="list-unstyled menu-list list-inline">
+        <li class="add">
+          <a href="">
+           <i class="glyphicon glyphicon-plus"></i>
+          </a>
+        </li>
+        <li class="files" id="btn-file-test">
+          <div class="menu-container">
+            <a  class="" onclick="$('#file-test').toggleClass('hide'), $('#btn-fileer-test').toggleClass('active')">
+              <i class="glyphicon glyphicon-paperclip"></i>
+            </a>
+            <div id="file-test" class="menu-toggle hide">
+              <div class="panel-body">
+                <div class="body-title">
+                  <div class="title">HMRC</div>
+                  <span>HMRC Gift Aid Claim Schedule</span>
+                </div>
+                <a href="" class="btn btn-info btn-sm btn-block">
+                  Download
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <li class="helper" id="btn-help-test">
+          <div class="menu-container">
+            <a  class="" onclick="$('#help-test').toggleClass('hide'), $('#btn-helper-test').toggleClass('active')">
+              <i class="glyphicon glyphicon-question-sign"></i>
+            </a>
+            <div id="help-test" class="menu-toggle hide">
+              <div class="panel-body">
+                <div class="body-title">
+                  <div class="title">Support</div>
+                  <span>Claiming Gift Aid</span>
+                </div>
+                <p>Not quite sure what to do with your Gift Aid Donations records? Click below to find out how to prepare your Gift Aid Form ready to submit to the HMRC website.</p>
+                <a href="https://docs.google.com/document/d/1iI2hTYBpHiqteTECuKYRwQuuIJCL9IGN5Bh6bB-QDeA/edit" target="_blank" class="btn btn-info btn-sm btn-block">
+                  View Guide
+                </a>
+              </div>
+              <div class="panel-footer">
+                <div class="row">
+                  <div class="col-lg-6 col-md-6">
+                    <a href="" class="btn btn-default btn-block">Need help?
+                    </a>
+                  </div>
+                  <div class="col-lg-6 col-md-6">
+                    <a href="" class="btn btn-primary btn-block">Ok, Got It!</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+-->
+
+<div class="row">
+  <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+    <div class="alert alert-info hide" id="alert-download">
+      <a href="/donations/history/" class="close">
+        &times;
+      </a>
+      <div class="details">
+        <h4>Date Exported</h4>
+        <div class="details">
+          <p>Your are now ready to process your Gift Aid claim for HMRC.</p>
+        </div>
+      </div>
+      <a hef=""class="btn btn-info pull-right">Download Template</a>
+    </div>
+
+    <div class="alert alert-danger hide" id="danger-cancel">
+      <a href="/donations/history/" class="close">
+        &times;
+      </a>
+      <div class="details">
+        <h4>Warning</h4>
+        <div class="details">
+          <p>You are about to cancel your claim, this can not be undone.</p>
+        </div>
+      </div>
+      <a href="" class="btn btn-default">Abandon</a>
+      <a hef=""class="btn btn-danger pull-right">Proceed</a>
+    </div>
+
+    <div class="alert alert-info hide" id="alert-archived">
+      <a href="/donations/history/" class="close">
+        &times;
+      </a>
+      <h4>Caution</h4>
+      <div class="details">
+          <p>You are about to Archive your claim. You should only continue if you have previously submitted this claim. This action cannot be undone. Would you like to proceed?</p>
+      </div>
+
+      <a href="" class="btn btn-default">Abandon</a>
+      <a hef=""class="btn btn-info pull-right">Proceed</a>
+    </div>
+
+
+    <!-- body data-->
+    <div class="panel panel-context-donations">
+      <div class="panel-title">
+        View Pending / Archived Claims
+      </div>
+      <!--<div class="panel-subnav">
+        <div class="">
+          <div class="col-lg-12">
+            <span class="page-total">Last Activity: 20.03.2015</span>
+            <ul class="list-unstyled list-inline pull-right">
+              <li>
+                <a class="btn btn-add" data-toggle="modal" data-target="#myModal-record">
+                  <i class="glyphicon glyphicon-plus"></i> Add New
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>-->
+
+      <div class="panel-title">
+        Pendings Claims
+      </div>
+      <div class="panel-body">
+        <div class="collapse in" id="collapseExample">
+          <table class="table table-vam table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="title">Pending Claim</th>
+                <th class="amount"> Claim Amount<!--<a class="filter"></a>--></th>
+                <th class="action"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="title link">
+                  <a href="">Gift Aid Claim <span class="block">21.05.2014 to 01.09.2015</span></a>
+                </td>
+                <td class="amount gift-aid total-claim">
+                  &pound;250.00
+                </td>
+                <td class="action">
+                  <div class="menu-container">
+                    <a id="btn-ga-test" class="btn btn-default details-toggle" onclick="$('#ga-test').toggleClass('hide'), $('#btn-ga-test').addClass('active')">
+                      Actions
+                    </a>
+                    <div id="ga-test" class="menu-toggle hide">
+                      <div class="panel-actions">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-6">
+                            <a id="btn-cancel" class="btn btn-danger btn-block" onclick="$('#danger-cancel').removeClass('hide'), $('#ga-test').addClass('hide'),$('#btn-ga-test').removeClass('active')">
+                              Cancel Claim
+                            </a>
+                          </div>
+                          <div class="col-lg-6 col-md-6">
+                            <a id="btn-export" class="btn btn-primary btn-block" onclick="$('#alert-download').removeClass('hide'), $('#ga-test').addClass('hide'),$('#btn-ga-test').removeClass('active')  ">
+                              Export CSV
+                            </a>
+                          </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="row">
+                          <div class="col-lg-12 col-md-12">
+                            <a id="btn-archived" class="btn btn-default btn-block" onclick="$('#alert-archived').removeClass('hide'), $('#btn-archived').addClass('hide'), $('#ga-test').addClass('hide')">
+                              Move to Archived
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+      <a class="panel-title details-toggle" id="btn-toggle2" onclick="$('#btn-toggle2').toggleClass('active')" data-toggle="collapse" href="#collapseExample2" aria-expanded="true">
+        Archived Claims <span>(2)</span>
+        <i class="arrow"></i>
+      </a>
+
+
+      <div class="panel-body">
+        <div style="" aria-expanded="true" class="collapse" id="collapseExample2">
+          <table class="table table-vam table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="title">Archived Claims</th>
+                <th class="amount">Refund Amount<!--<a class="filter"></a>--></th>
+                <th class="action"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="title link">
+                  <a href="">Gift Aid Claim <span class="block">21.05.2014 to 01.09.2015</span></a>
+                </td>
+                <td class="amount amount-pending total-claim">
+                  &pound;250.00
+                </td>
+                <td>
+                  <div class="menu-container">
+                    <a id="btn-archived-test" class="btn btn-default details-toggle" onclick="$('#archived-test').toggleClass('hide'), $('#btn-archived-test').toggleClass('active')">
+                      Actions
+                    </a>
+                    <div id="archived-test" class="menu-toggle hide">
+                      <div class="panel-actions">
+                        <div class="row">
+                          <div class="col-lg-6 col-md-6">
+                            <a class="btn btn-default btn-block">
+                              Download
+                            </a>
+                          </div>
+                          <div class="col-lg-6 col-md-6">
+                            <a class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal">
+                              Refunded
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="title link">
+                  <a href="">Gift Aid Claim <span class="block">21.05.2014 to 01.09.2015</span></a>
+                </td>
+                <td class="amount income total-claim">
+                  &pound;250.00
+                  <small class="block text-income">+ £15.00</small>
+                </td>
+                <td>
+                  <a class="btn btn-default btn-block">
+                    View
+                  </a>
+                </td>
+              </tr>
+              <tr>
+                <td class="title link">
+                  <a href="">Gift Aid Claim <span class="block">21.05.2014 to 01.09.2015</span></a>
+                </td>
+                <td class="amount income total-claim">
+                  &pound;235.00
+                  <small class="block text-expenditure">- £15.00</small>
+                </td>
+                <td>
+                  <a class="btn btn-default btn-block">
+                    View
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">
+                  Refunded Gift Aid Claim
+                </h4>
+              </div>
+
+
+              <div class="modal-body">
+
+                <div class="body-title">
+                  <div class="title">Gift Aid Claim </div>
+                  <p>21.05.2014 <span>to</span> 01.09.2015</p>
+                </div>
+
+
+
+                  <div class="">
+                    <div class="section-title text-center">How much did you receive from HMRC?</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
+                      <div class="form-group">
+      		              <input class="form-control input-amount" placeholder="0.00" type="text">
+      		            </div>
+                    </div>
+                  </div>
+
+
+
+              </div>
+
+              <div class="modal-footer">
+                <div class="pull-left">
+                  <a href="" class="btn btn-default">Abandon</a>
+                </div>
+                <div class="pull-right">
+                  <a href="" class="btn btn-primary">
+                    Submit
+                  </a>
+                </div>
+              </div>
+              <!--<div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>-->
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="myModalTrial" tabindex="-1" role="dialog" aria-labelledby="myModalLabelTrial">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          Upgrade
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. </p>
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+        </p>
+        <div class="actions-row">
+          <a href="" class="btn btn-add">
+            Upgrade Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+<footer class="">
+
+
+</footer>
+
+<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+<!-- Place JavaScript at bottom of page for quicker loading -->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/jasny-bootstrap.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/bootstrap-select-min.js"></script>
+
+<script src="/js/bootstrap-tagsinput.js"></script>
+<script src="/js/chart.min.js"></script>
+<script>
+window.onload = function(){
+  var ctx4 = document.getElementById("chart-area").getContext("2d");
+
+  window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
+    responsive : true
+  });
+}
+
+
+var doughnutData = [
+  {
+    value: 300.00,
+    color:"#ec87c0",
+    highlight: "#ec87c0",
+    label: "CLUBS"
+  },
+  {
+    value: 100.00,
+    color:"#48cfad",
+    highlight: "#48cfad",
+    label: "EVENTS"
+  },
+  {
+    value: 1000.00,
+    color:"#f6bb42",
+    highlight: "#f6bb42",
+    label: "GRANTS"
+  },
+  {
+    value: 90.00,
+    color: "#fff",
+    highlight: "#fff",
+    label: "TO TARGET"
+  }
+];
+</script>
+
+<script type="text/javascript">
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    });
+</script>
+
+      </div>
+
+    </body>
+
+</html>

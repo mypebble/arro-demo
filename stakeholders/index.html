@@ -1,0 +1,354 @@
+---
+layout: default-stakeholder
+title: Stakeholders
+permalink: /stakeholder/
+heading: Manage Stakeholders
+tagline: Looking after all your stakeholders
+
+
+---
+
+
+<div class="row">
+  <div class="col-lg-8">
+    <div class="panel panel-table">
+      <div class="panel-title">
+        Manage Stakeholders
+      </div>
+      <div class="panel-subnav">
+        <div class="">
+          <div class="col-lg-4 pull-left">
+            <div class="search">
+              <input type="text" class="form-control" placeholder="Search">
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+          </div>
+          <div class="col-lg-8 ">
+            <ul class="list-unstyled list-inline pull-right">
+              <li>
+                <a class="btn btn-default">
+                  Filter
+                </a>
+              </li>
+              <li>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Print</a></li>
+                        <li><a href="">Export Data</a></li>
+                        <li><a href="/stakeholder/import/">Import Data</a></li>
+
+                    </ul>
+                </div>
+              </li>
+              <li>
+                <a class="btn btn-add" href="">
+                  <i class="glyphicon glyphicon-plus"></i> Add New
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+        <div class="panel-body">
+          <!--<div class="search-results">
+            <div class="results pull-left">
+              <strong>Results for:</strong> <span>New Resources</span>
+            </div>
+            <div class="grants-total pull-right">
+              300 Grants
+            </div>
+          </div>-->
+          <table class="table table-vam">
+            <thead>
+              <tr>
+                <th class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox1" value="option1" type="checkbox">
+                      <label for="checkbox1"></label>
+                    </div>
+                  </div>
+                </th>
+                <th class="name">Stakeholder<a class="filter"></a></th>
+                <th class="category">Type</th>
+                <th class="contact contact-primary">Primary Contact</th>
+                <th class="amount">Value<a class="filter"></a></th>
+                <th class="date date-lg date-right">
+                  Last Activity
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox2" value="option1" type="checkbox">
+                      <label for="checkbox2"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  {% include modal-name-preview.html %}
+                </td>
+                <td class="category">Pupil</td>
+                <td class="contact contact-primary"><i class="fa fa-envelope"></i>adam.hogg.ah@gmail.com</td>
+                <td class="amount income">£500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" checked="" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials alumni">AW</span>
+                  Alan Waggott</a>
+                </td>
+                <td class="category">Alumni</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials pta">DW</span>
+                  Daniel Wakenshaw</a>
+                </td>
+                <td class="category">PTA</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3"  value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials parent">JW</span>
+                  Jaquie Wade</a>
+                </td>
+                <td class="category">Parent</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials volunteer">DM</span>
+                  Diego Melo</a>
+                </td>
+                <td class="category">Volunteer</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials staff">RG</span>
+                  Ryan Green</a>
+                </td>
+                <td class="category">Staff</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials business">JG</span>
+                  Janis Green</a>
+                </td>
+                <td class="category">Business</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials supplier">T</span>
+                  Tesco</a>
+                </td>
+                <td class="category">Supplier</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials organisation">DW</span>
+                  Pebble School</a>
+                </td>
+                <td class="category">Organisation</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+              <tr class="">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox3" value="option3" type="checkbox">
+                      <label for="checkbox3"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="name">
+                  <a href="">
+                  <span class="initials sponsor">DW</span>
+                  Daniel Wakenshaw</a>
+                </td>
+                <td class="category">Sponsor</td>
+                <td class="contact contact-primary"><i class="fa fa-phone"></i>07433459312</td>
+                <td class="amount income">&pound;500.00 <i class="glyphicon glyphicon-plus"></i></td>
+                <td class="date date-right">
+                  20.03.2014
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="pagination">
+                  <li class="disabled">
+                    <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a data-page="1" href="#" class="page">
+                      1
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      2
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      3
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      4
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      5
+                    </a>
+                  </li>
+                <li class="">
+                  <a data-page="next" href="#" aria-label="Next" class="page-next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </li>
+              </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="page-total">
+              Showing 1 - 50 of 2,000
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+  <div class="panel">
+      <div class="panel-title">
+        panel title
+      </div>
+    </div>
+  </div>
+</div>

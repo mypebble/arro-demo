@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="/css/pebble-demo.css">
+
+</head>
+
+
+  <body class="page-context-finance">
+  		<div id="container" class="effect mainnav-lg">
+
+    <header id="navbar">
+  <div id="navbar-container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">
+      </a>
+    </div>
+    <div class="navbar-content clearfix">
+      <div class="col-lg-12">
+        <div class="navbar-left menu-button">
+          <a href="" class="mainnav-toggle">
+            <i class="fa fa-navicon fa-lg"></i>
+          </a>
+        </div>
+
+
+
+        <!--
+        <div class="navbar-title">
+          <div class="title">View Transactions<span>
+            - All your recorded transactions in one place</span></div>
+
+        </div>-->
+        <ul class="navbar-right list-unstyled list-inline pull-right">
+          <li>
+            <span class="label label-danger">BETA</span>
+          </li>
+          <li>
+            |
+          </li>
+
+          <!--<li class="trial-date">
+            <strong>10 Days Remain on Trial</strong>
+          </li>
+          <li>
+            <a data-toggle="modal" data-target="#myModalTrial"
+              class="btn btn-add">
+              Upgrade
+            </a>
+          </li>-->
+          <!--<li>
+            <div class="menu-container">
+              <a id="btn-filters-test" class="btn-menu" onclick="$('#filters-test').toggleClass('hide'), $('#btn-filters-test').toggleClass('active')">
+                <i class="fa fa-tasks"></i> <span class="label label-primary">5</span>
+              </a>
+
+              <div id="filters-test" class="menu-toggle hide">
+                <div class="panel-body">
+
+                  <ul class="list-unstyled list-notification">
+                    <li>
+                      <p>5 Tasks Remain</p>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">Grant Application
+                        <span>Due: 02.02.2015</span>
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </li>-->
+
+          <li class="user_name">
+            Funding School
+          </li>
+      </ul>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <nav id="mainnav-container">
+  <div id="mainnav">
+    <!--Menu-->
+    <div id="mainnav-menu-wrap">
+      <div class="nano">
+        <!--<div class="date">
+          01<span class="block">Sep</span>
+        </div>-->
+        <div class="nano-content">
+          <ul id="mainnav-menu" class="list-group">
+            <li class=" ">
+              <a href="/dashboard/">
+                <i class="glyphicon glyphicon-dashboard"></i>
+                <span class="menu-title">
+                  <strong>Dashboard</strong>
+                </span>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">Activities</li>
+            <li class="nav-clubs  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-flag"></i>
+                <span class="menu-title">
+                  Clubs
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="">
+
+                  Create Club</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/clubs/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-donations  "><!-- active-page  -->
+              <a>
+                <i class="glyphicon glyphicon-gift"></i>
+                <span class="menu-title">
+                  Donations
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="/donations/">
+
+                    Record Donation
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/donations/claim/">Create Claim</a></li>
+                <li><a href="/donations/history/">View Pending / Archived</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-events  ">
+              <a href="#">
+                <i class="glyphicon glyphicon-calendar"></i>
+                <span class="menu-title">
+                  Events
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a href="event-new.html">
+
+                    Create Event
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/events/">Manage</a>
+              </ul>
+            </li>
+            <li class="nav-grants ">
+              <a href="/grants/">
+                <i class="glyphicon glyphicon-briefcase"></i>
+                <span class="menu-title">
+                  Grants
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="list-divider"></li>
+            <li class="list-header">System</li>
+            <li class="nav-projects ">
+              <a href="#">
+                <i class="glyphicon glyphicon-th"></i>
+                <span class="menu-title">
+                  Projects
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="/projects/new/">
+
+                  Create Project</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/projects/">Manage</a></li>
+              </ul>
+            </li>
+            <li class="nav-reports">
+              <a href="report-dashboard.html">
+                <i class="glyphicon glyphicon-tasks"></i>
+                <span class="menu-title">
+                  Reports
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="nav-finance active-page">
+              <a href="#">
+                <i class="glyphicon glyphicon-sort"></i>
+                <span class="menu-title">
+                  Transactions
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li class="">
+                  <a href="finance-new.html">
+
+                    Record Transaction
+                  </a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/transactions/">View Transactions</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-stakeholder ">
+              <a href="#">
+                <i class="fa fa-users"></i>
+                <span class="menu-title">
+                  Stakeholders
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li><a href="/stakeholder/">Manage Stakeholders</a></li>
+              </ul>
+            </li>
+            <li class="nav-admin">
+              <a href="#">
+                <i class="glyphicon glyphicon-wrench"></i>
+                <span class="menu-title">
+                  Admin
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li>
+                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
+
+                    Create</a>
+                </li>
+                <li class="list-divider"></li>
+                <li>
+                  <a href="/admin/accounts/">Manage Accounts</a>
+                </li>
+                <li>
+                  <a href="/admin/bank/">Manage Bank Accounts</a>
+                </li>
+              </ul>
+            </li>
+            <li class="list-divider"></li>
+            <li class="nav-stakeholder ">
+              <a href="/support-admin/">
+                <i class="glyphicon glyphicon-screenshot"></i>
+                <span class="menu-title">
+                  Support
+                </span>
+              </a>
+            </li>
+            <li class="">
+              <a href="">
+                <i class="glyphicon glyphicon-off"></i>
+                <span class="menu-title">
+                  Logout
+                </span>
+              </a>
+            </li>
+          </ul>
+
+
+        </div>
+      </div>
+    </div>
+    <!--End menu-->
+
+  </div>
+</nav>
+<!--END MAIN NAVIGATION-->
+
+
+      <div id="content-container">
+          <div id="page-content">
+
+          <!--
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <h1 class="page-header">View Transactions
+    </h1>
+  </div>
+</div>
+-->
+
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1">
+    <div class="panel panel-context-finance">
+      <div class="panel-title">
+        View Transactions
+      </div>
+      <div class="panel-subnav">
+        <div class="">
+          <div class="col-lg-4 pull-left">
+            <div class="search">
+              <input type="text" class="form-control" placeholder="Search">
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+          </div>
+          <div class="col-lg-8 ">
+            <ul class="list-unstyled list-inline pull-right">
+              <li>
+                <a class="btn btn-default">
+                  Filter
+                </a>
+              </li>
+              <li>
+                <div class="btn-group">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#">Print</a></li>
+                        <li><a href="#">Save as PDF</a></li>
+                        <li><a href="#">Export to Excel</a></li>
+                    </ul>
+                </div>
+              </li>
+              <li>
+                <a class="btn btn-add" data-toggle="modal" data-target="#myModal-record">
+                  <i class="glyphicon glyphicon-plus"></i> Add New
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="panel-body">
+        <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="date">Date<a class="filter"></a></th>
+                <th class="rec">No#<a class="filter"></a></th>
+                <th class="">Stakeholder<a class="filter"></a></th>
+                <th class="details">Detail</th>
+                <th class="amount">Expenditure<a class="filter"></a></th>
+                <th class="amount">Income<a class="filter"></a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-toggle="modal" data-target="#myModal-transaction">
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">
+                  Deposit for trip to beamish trip
+                </td>
+                <td class="amount expenditure"></td>
+                <td class="amount income">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-up"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">Deposit for Ski trip to France 2015 final payment next week</td>
+                <td class="amount expenditure">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-down"></i>
+                </td>
+                <td class="amount income">
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">
+                  Deposit for trip to beamish trip
+                </td>
+                <td class="amount expenditure"></td>
+                <td class="amount income">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-up"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">Deposit for Ski trip to France 2015 final payment next week</td>
+                <td class="amount expenditure">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-down"></i>
+                </td>
+                <td class="amount income">
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+                <td class="details details-sm">
+                  Deposit for trip to beamish trip
+                </td>
+                <td class="amount expenditure"></td>
+                <td class="amount income">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-up"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">Deposit for Ski trip to France 2015 final payment next week</td>
+                <td class="amount expenditure">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-down"></i>
+                </td>
+                <td class="amount income">
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">
+                  Deposit for trip to beamish trip
+                </td>
+                <td class="amount expenditure"></td>
+                <td class="amount income">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-up"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">Deposit for Ski trip to France 2015 final payment next week</td>
+                <td class="amount expenditure">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-down"></i>
+                </td>
+                <td class="amount income">
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">
+                  Deposit for trip to beamish trip
+                </td>
+                <td class="amount expenditure"></td>
+                <td class="amount income">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-up"></i>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="date">05.05.2015</td>
+                <td class="rec">001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">Deposit for Ski trip to France 2015 final payment next week</td>
+                <td class="amount expenditure">
+                  £10.00
+                  <i class="glyphicon glyphicon-arrow-down"></i>
+                </td>
+                <td class="amount income">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+        </div>
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="pagination">
+                  <li class="disabled">
+                    <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a data-page="1" href="#" class="page">
+                      1
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      2
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      3
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      4
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      5
+                    </a>
+                  </li>
+                <li class="">
+                  <a data-page="next" href="#" aria-label="Next" class="page-next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </li>
+              </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="page-total">
+              Showing 1 - 50 of 2,000
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal-transaction" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">
+          Transaction Details
+        </h4>
+      </div>
+      <div class="modal-body">
+       Transaction Details
+      </div>
+      <div class="modal-footer">
+        <div class="pull-left">
+          <a href="" class="btn btn-danger">Delete</a>
+        </div>
+        <div class="pull-right">
+          <a href="" class="btn btn-default">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="myModalTrial" tabindex="-1" role="dialog" aria-labelledby="myModalLabelTrial">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">
+          Upgrade
+        </h4>
+      </div>
+      <div class="modal-body">
+        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. </p>
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+          Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+        </p>
+        <div class="actions-row">
+          <a href="" class="btn btn-add">
+            Upgrade Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+<footer class="">
+
+
+</footer>
+
+<button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+<!-- Place JavaScript at bottom of page for quicker loading -->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/jasny-bootstrap.js"></script>
+<script src="/js/custom.js"></script>
+<script src="/js/bootstrap-select-min.js"></script>
+
+<script src="/js/bootstrap-tagsinput.js"></script>
+<script src="/js/chart.min.js"></script>
+<script>
+window.onload = function(){
+  var ctx4 = document.getElementById("chart-area").getContext("2d");
+
+  window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
+    responsive : true
+  });
+}
+
+
+var doughnutData = [
+  {
+    value: 300.00,
+    color:"#ec87c0",
+    highlight: "#ec87c0",
+    label: "CLUBS"
+  },
+  {
+    value: 100.00,
+    color:"#48cfad",
+    highlight: "#48cfad",
+    label: "EVENTS"
+  },
+  {
+    value: 1000.00,
+    color:"#f6bb42",
+    highlight: "#f6bb42",
+    label: "GRANTS"
+  },
+  {
+    value: 90.00,
+    color: "#fff",
+    highlight: "#fff",
+    label: "TO TARGET"
+  }
+];
+</script>
+
+<script type="text/javascript">
+    $('[data-toggle="popover"]').popover();
+    $('[data-toggle="tooltip"]').tooltip({
+        trigger: 'hover'
+    });
+</script>
+
+      </div>
+
+    </body>
+
+</html>
