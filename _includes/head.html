@@ -1,5 +1,5 @@
 <head>
-	{% if site.github %}
+	{% if github %}
 	<base href="{{ site.baseurl }}" />`
 	{% endif %}
 	<meta charset="utf-8">
@@ -8,5 +8,6 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="/css/pebble-demo.css">
+	<link rel="stylesheet" href="{{ "/css/pebble-demo.css" | prepend: site.baseurl }}">
 
 </head>
