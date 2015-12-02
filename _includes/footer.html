@@ -62,4 +62,16 @@ var doughnutData = [
     $('[data-toggle="tooltip"]').tooltip({
         trigger: 'hover'
     });
+    
+    $("img").each(function(){
+      if($(this).attr("src").indexOf("/") == 0){
+        $(this).attr("src", "{{ site.baseurl }}/" + $(this).attr("src"));
+      }
+    });
+    $("a").each(function(){
+      if(!$(this).attr("href")) return;
+      if($(this).attr("href").indexOf("/") == 0){
+        $(this).attr("href", "{{ site.baseurl }}/" + $(this).attr("href"));
+      }
+    });
 </script>
