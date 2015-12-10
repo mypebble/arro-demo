@@ -36,63 +36,63 @@ permalink: /projects/new/
 <div class="row">
   <div class="col-lg-12 col-md-12 page-title">
     <a href="/projects/" class="btn btn-primary btn-r">
-      <i class="glyphicon glyphicon-chevron-left"></i> Back to projects</a>
+      <i class="glyphicon glyphicon-chevron-left"></i> Back to Projects</a>
+
+      <!--<div class="pull-right">
+        <a class="btn btn-default" onclick="$('#copy').toggleClass('col-lg-8 col-md-8'), $('#comments').toggleClass('hide')">Comments</a>
+        {% include share.html %}
+      </div>-->
   </div>
 </div>
 
 
-
 <div class="row">
-  <div class="col-lg-8 col-md-8">
+  <div class="col-md-12">
     <div class="panel">
       <div class="panel-title">Project Details</div>
+        <div class="panel-body">
+           <div class="col-md-9">
+             <h2>New Library Resources
 
-      <div class="panel-body">
-        <div class="body-title body-title-left">
-          <div class="title">New Library Resources <span class="amount pull-right">&pound;120.00</span></div>
-          <p>21.05.2014 <span>to</span> 30.05.2016</p>
+             </h2>
+             <small class="block">01.01.2015 - 05.06.2016</small>
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor vestibulum imperdiet. Ut auctor accumsan erat, a vulputate metus tristique non. Aliquam aliquam vel orci quis sagittis.
+             </p>
+           </div>
+           <div class="col-md-3 panel-side-l">
+               <div class="text-right">
+                   <h2>£5,000.00</h2>
+                   <p>Funding Target</p>
+               </div>
+           </div>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-        <a class="pull-right btn btn-edit" onclick="$('#new-project-details-toggle').toggleClass('hide'), $('#new-project-record').toggleClass('hide')">
-           <i class="glyphicon glyphicon-pencil"></i> Edit
-        </a>
-      </div>
+        <div class="panel-footer">
+          <div class="pull-right">
+            <!--{% include share.html %}-->
+            <a class="btn btn-edit" data-toggle="modal" data-target="#myModal-record">
+              <i class="glyphicon glyphicon-pencil"></i> Edit
+            </a>
+          </div>
+        </div>
     </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div id="copy" class="col-lg-12 col-md-12">
     <div class="panel">
       <div class="panel-title">Project Narrative</div>
       <div class="panel-body">
-        <div class="form-group">
-          <label for="id_description" class="control-label">
-            What is your project?
-
-              <div class="popover" role="tooltip" id="test">
-                <div class="arrow"></div>
-                <h3 class="popover-title"></h3>
-                <div class="popover-content">content</div>
-              </div>
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
-          </label>
-          <textarea class="field form-control" rows="6" placeholder="High-level description of your project." id="id_description"></textarea>
-          <a class="help-block">
-            Example
-          </a>
-          <div class="error"></div>
-        </div>
-
         <div class="project_need-hook">
           <div class="form-group">
             <label for="id_project_need" class="control-label">
               Why do you need your project?
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
+              {% include input-tips.html %}
             </label>
-            <textarea class="field form-control" rows="6" placeholder="What is your school missing that this project can provide?" id="id_project_need"></textarea>
-            <a class="help-block">
-              Example
-            </a>
+            <textarea class="field form-control"  placeholder="What is your school missing that this project can provide?" id="id_project_need"></textarea>
+            {% include copy-good.html %}
             <div class="error"></div>
           </div>
         </div>
@@ -101,14 +101,10 @@ permalink: /projects/new/
           <div class="form-group">
             <label for="id_impact" class="control-label">
               What impact will your project make?
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
+              {% include input-tips.html %}
             </label>
-            <textarea class="field form-control" rows="6" placeholder="For example, improve pupil IT literacy" id="id_impact"></textarea>
-            <a class="help-block">
-                Example
-            </a>
+            <textarea class="field form-control"  placeholder="For example, improve pupil IT literacy" id="id_impact"></textarea>
+            {% include copy-avg.html %}
             <div class="error"></div>
           </div>
         </div>
@@ -117,13 +113,10 @@ permalink: /projects/new/
           <div class="form-group">
             <label for="id_evidence" class="control-label">
               What supporting evidence have you got to back up the need for your project?
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
+              {% include input-tips.html %}
             </label>
-            <textarea class="field form-control" rows="6" placeholder="Build your C.A.S.E (Consultations, Agendas, Statistics, Environment)" id="id_evidence"></textarea>
-            <a class="help-block">Example
-            </a>
+            <textarea class="field form-control"  placeholder="Build your C.A.S.E (Consultations, Agendas, Statistics, Environment)" id="id_evidence"></textarea>
+            {% include copy-poor.html %}
             <div class="error"></div>
           </div>
         </div>
@@ -132,14 +125,10 @@ permalink: /projects/new/
           <div class="form-group">
             <label for="id_school_improvement" class="control-label">
               School Improvement
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
+              {% include input-tips.html %}
             </label>
-            <textarea class="field form-control" rows="6" placeholder="How does the project link it to your school improvement plan?" id="id_school_improvement"></textarea>
-            <a class="help-block">
-              Example
-            </a>
+            <textarea class="field form-control"  placeholder="How does the project link it to your school improvement plan?" id="id_school_improvement"></textarea>
+            {% include copy-good.html %}
             <div class="error"></div>
           </div>
         </div>
@@ -148,14 +137,10 @@ permalink: /projects/new/
           <div class="form-group">
             <label for="id_project_plan" class="control-label">
               How do you plan to deliver, monitor, and evaluate your project?
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
+              {% include input-tips.html %}
             </label>
-            <textarea class="field form-control" rows="6" placeholder="Deliverables, projected outcomes, success criteria" id="id_project_plan"></textarea>
-            <a class="help-block">
-              Example
-            </a>
+            <textarea class="field form-control"  placeholder="Deliverables, projected outcomes, success criteria" id="id_project_plan"></textarea>
+            {% include copy-good.html %}
             <div class="error"></div>
           </div>
         </div>
@@ -164,41 +149,29 @@ permalink: /projects/new/
           <div class="form-group">
             <label for="id_success_measure" class="control-label">
               How will you measure and report success?
-              <a type="button" class=" pull-right btn-asign">
-                <i class="fa fa-user"></i>
-              </a>
+              {% include input-tips.html %}
             </label>
-            <textarea class="field form-control" rows="6" placeholder="Success criteria, reporting tools" id="id_success_measure"></textarea>
-            <a class="help-block">
-              Example
-            </a>
-            <div class="error"></div>
-          </div>
-        </div>
-
-        <div class="notes-hook">
-          <div class="form-group">
-            <label for="id_notes" class="control-label">
-              Notes
-            </label>
-            <textarea class="field form-control" rows="6" placeholder="Enter any other notes here" id="id_notes"></textarea>
+            <textarea class="field form-control"  placeholder="Success criteria, reporting tools" id="id_success_measure"></textarea>
+            {% include copy-good.html %}
             <div class="error"></div>
           </div>
         </div>
       </div>
       <div class="panel-footer">
+        <div class="pull-left">
+          <a class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
+        </div>
         <div class="pull-right">
-          <a href="" class="btn btn-add">Create Project</a>
+          <a href="/projects/" class="btn btn-add">Create Project</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-4">
+  <div class="col-lg-4 col-md-4 hide" id="comments">
     <div class="panel">
-      <!--
-      <div class="panel-title">
-        Team
-      </div>-->
+      <div class="panel-title">Comments</div>
+    </div>
+    <!--<div class="panel">
       <div class="panel-body">
         <div class="body-title">
           <div class="title">Need Help?
@@ -211,13 +184,12 @@ permalink: /projects/new/
         </div>
       </div>
 
-    </div>
+    </div>-->
   </div>
 
 </div>
 
 
-{% include modal-team.html %}
 
 
 

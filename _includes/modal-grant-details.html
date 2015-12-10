@@ -2,21 +2,20 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header modal-header-clear">
-
-        <a id="star-modal" onclick="$('#star-modal').toggleClass('checked')" class="btn-star">
-          <i class="fa fa-star"></i>
-        </a>
-
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
+
+
+
       <div class="modal-body modal-body-clear">
 
-
         <div class="body-title">
-          <img src="/img/grants-icons/icon-awards.png">
-          <div class="title">Grants for Guitars</div>
+          <!--<img src="/img/grants-icons/icon-awards.png">-->
+          <div class="title">Grants for Guitars
+            <!--<span class="block">Award</span>-->
+          </div>
         </div>
 
 
@@ -25,8 +24,8 @@
               &pound;1,000
               <small>Award</small>
             </li>
-            <li class="col-lg-4 col-md-4 col-sm-4 rating rating-easy">
-              Easy
+            <li class="col-lg-4 col-md-4 col-sm-4 rating">
+              EASY
               <small>2 days</small>
             </li>
             <li class="col-lg-4 col-md-4 col-sm-4">
@@ -35,32 +34,32 @@
             </li>
           </ul>
 
-        <hr>
+
         <div class="row">
           <div class="col-lg-12 col-md-12">
-            <p class="text-center">One of Britain's biggest music retailers is offering grants of up to £5,000 for schools who need new guitars in order to offer lessons to their disadvantaged pupils </p>
+
+            <div class="text-summary">
+              <p class="text-center">One of Britain's biggest music retailers is offering grants of up to £5,000 for schools who need new guitars in order to offer lessons to their disadvantaged pupils </p>
+            </div>
             <div class="actions-row">
                 <a  id="btn-more-grant" onclick="$('#more-grant').removeClass('hide'), $('#btn-more-grant').addClass('hide')">
-                - read more -
+                Read More
               </a>
             </div>
             <div class="hide" id="more-grant">
-              <hr>
-              <div class="section-title">Who is Eligible?</div>
-
-              <p>All schools throughout the UK and Northern Ireland</p>
-
-              <div class="section-title">What Will I Get?</div>
-
-              <p>Up to £5,000 to spend on new classical, acoustic and electric guitars</p>
-
-              <div class="section-title">What Next?</div>
-
-              <p>Go to the website to download an application pack</p>
-              <div class="actions-row">
-                  <a  id="btn-less-grant" onclick="$('#more-grant').addClass('hide'), $('#btn-more-grant').removeClass('hide')">
-                  - read less -
-                </a>
+              <div class="panel">
+                <div class="panel-title">Who is Eligible?</div>
+                  <div class="panel-body">
+                    <p>All schools throughout the UK and Northern Ireland</p>
+                </div>
+                <div class="panel-title">What Will I Get?</div>
+                <div class="panel-body">
+                  <p>Up to £5,000 to spend on new classical, acoustic and electric guitars</p>
+                </div>
+                <div class="panel-title">What Next?</div>
+                <div class="panel-body">
+                  <p>Go to the website to download an application pack</p>
+                </div>
               </div>
             </div>
 
@@ -68,31 +67,96 @@
         </div>
 
 
-<!--
-        <div class="actions-row">
-
-          <a href="" class="btn btn-primary">
-            Assign to Project
-          </a>
-        </div>-->
-
       </div>
+
+
     <div class="modal-footer">
-      <div class="panel-footer">
-        <div class="row">
-          <div class="col-lg-6 col-md-6">
-            <a class="btn btn-default btn-block" data-dismiss="modal" aria-label="Close">
-              Close
+        <ul class="row list-unstyled list-inline list-facts-three">
+          <li class="col-lg-4 col-md-4 col-sm-4">
+            <a class="btn btn-block btn-modal-option text-danger">
+              <i class="fa fa-times"></i> <span class="block">PASS ON GRANT</span>
             </a>
-          </div>
-          <div class="col-lg-6 col-md-6">
-            <a class="btn btn-success btn-block">
-              Save
+          </li>
+          <li class="col-lg-4 col-md-4 col-sm-4 rating">
+            <a class="btn btn-block  btn-modal-option text-favourite">
+              <i class="fa fa-star"></i>
+              <span class="block">ADD TO STARRED</span>
             </a>
-          </div>
+          </li>
+          <li class="col-lg-4 col-md-4 col-sm-4">
+            <a class="btn btn-block  btn-modal-option text-success" onclick="$('#save-grant').toggleClass('hide')">
+              <i class="fa fa-plus"></i> <span class="block">Add TO PROJECT</span>
+            </a>
+          </li>
+        </ul>
+
+        <div id="save-grant" class="modal-footer-save-to hide">
+          <hr>
+
+          <div class="body-title m-t-md"><div class="title">Add to Project</div>
+          <span class="block">
+          <p>Which Project(s) would you like this grant to be saved to?</p>
+        </span>
+      </div>
+          <table class="table table-vam table-hover table-bordered">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Active Projects <span>(2)</span></th>
+                <th class="value-progress">Funding Target</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="selected">
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox1" value="option1" checked="" type="checkbox">
+                      <label for="checkbox1"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="title">
+                    <span class="initials icon-project">NL</span>
+                    New Library Resources
+                </td>
+                <td class="value-progress">
+                  <span>£100.00</span> / £5,000.00
+                </td>
+              </tr>
+              <tr>
+                <td class="check">
+                  <div class="form-group">
+                    <div class="checkbox checkbox-primary">
+                      <input id="checkbox1" value="option1" type="checkbox">
+                      <label for="checkbox1"></label>
+                    </div>
+                  </div>
+                </td>
+                <td class="title ">
+                    <span class="initials icon-project">TP</span>
+                    Tennis Pitch
+                </td>
+                <td class="value-progress">
+                  <span>£100.00</span> / £5,000.00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <a class="btn btn-add m-t-md">
+            Add to Project(s)
+          </a>
         </div>
+
+
       </div>
+
+
+
       </div>
+
+
     </div>
   </div>
 </div>

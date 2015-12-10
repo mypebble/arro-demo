@@ -14,17 +14,51 @@ tagline: Find a Grant to help with your next school project
 </div>
 -->
 
-
-
+<div class="jumbotron hide">
 <div class="row">
-  <div class="col-lg-10 col-lg-offset-1">
-    <div class="panel panel-table">
+  <div class="col-lg-7 col-md-6 ">
+
+
+  </div>
+  <div class="col-lg-5 col-md-6 ">
+    <div class="panel">
+        <div class="panel-title">Getting started
+      </div>
+      <div class="panel-body">
+        <h3>Grants</h3>
+        <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
+        <br>
+        <div class="staff-comment">
+          Daniel Wakenshaw
+          <small class="block">Pebble Support Team</small>
+        </div>
+      </div>
+      <div class="panel-footer">
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="pull-right">
+      <a class="btn btn-info">Got it</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!--- content-->
+<div class="row">
+  <div class="col-lg-12 col-md-12">
+    <div class="panel ">
       <div class="panel-title">Grants</div>
       <div class="panel-subnav">
         <div class="">
           <div class="col-lg-4 pull-left">
             <div class="search">
-              <input type="text" class="form-control" placeholder="Search">
+              <input type="text" class="form-control" placeholder="Grant Title Search">
               <i class="glyphicon glyphicon-search"></i>
             </div>
           </div>
@@ -33,41 +67,18 @@ tagline: Find a Grant to help with your next school project
 
           <div class="col-lg-8 ">
             <ul class="list-unstyled list-inline pull-right">
-              <li>
+              <!--<li>
                 <a class="btn btn-default">Inspire Me</a>
+              </li>-->
+              <li>
+                <a class="btn btn-default">
+                  <i class="fa fa-star  text-favourite"></i> Stared
+                </a>
               </li>
               <li>
                 <a class="btn btn-default" onclick="$('#filter').toggleClass('hide')">
-                  Filter
+                  Advance Search
                 </a>
-              </li>
-              <li>
-                <a class="btn btn-default">
-                  Favourite
-                </a>
-              </li>
-
-
-              <li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">My Projects <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">New Library</a></li>
-                        <li><a href="#">Tennis Pitch</a></li>
-                    </ul>
-                </div>
-              </li>
-              <li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Sort <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Rating</a></li>
-                        <li><a href="#">Duration</a></li>
-                        <li><a href="#">Deadline</a></li>
-                    </ul>
-                </div>
               </li>
             </ul>
           </div>
@@ -75,7 +86,7 @@ tagline: Find a Grant to help with your next school project
       </div>
       <div class="filter-menu hide" id="filter">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-4 col-md-4">
             <div class="form-group">
               <label class="control-label" for="">School Type</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
@@ -107,60 +118,83 @@ tagline: Find a Grant to help with your next school project
               </select>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-4 col-md-4">
            <ul class="list-unstyled">
               <div class="label-title">Grant Type</div>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
-                  <label for="checkbox2">All Grant Types</label>
+                  <label for="checkbox2">All Grant Types
+
+                  </label>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">Award</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-awards.png">
+                  </span>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">Cash</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-cash.png">
+                  </span>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">Competition</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-certificate.png">
+                  </span>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">Discount</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-discount.png">
+                  </span>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">Freebies</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-free.png">
+                  </span>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">Fundraising</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-bucket.png">
+                  </span>
                 </div>
               </li>
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
                   <label for="checkbox2">In Kind Support</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-support.png">
+                  </span>
                 </div>
               </li>
             </ul>
           </div>
-          <div class="col-lg-3">
+          <div class="col-lg-4 col-md-4">
             <div class="form-group">
               <label class="control-label" for="">Subject</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
@@ -195,30 +229,85 @@ tagline: Find a Grant to help with your next school project
           </div>
         </div>
           <div class="panel-body">
-            <div class="search-results">
-              <!--<div class="results pull-left">
+            <!--<div class="search-results">
+              <div class="results pull-left">
                 <strong>Results for:</strong> <span>New Resources</span>
-              </div>-->
+              </div>
               <div class="grants-total pull-right">
                 280 Grants Available
               </div>
-            </div>
+            </div>-->
+
+            <!--<table class="table table-vam">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="title">Grant Title</th>
+                  <th class="value">Award</th>
+                  <th class="rating">Complexity <a class="filter"></a></th>
+                  <th class="duration">To Complete  <a class="filter"></a></th>
+                  <th class="date date-right">Deadline  <a class="filter"></a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="check-star" id="star">
+                    <a onclick="$('#star').toggleClass('checked')">
+                      <i class="fa fa-star-o"></i>
+                    </a>
+                  </td>
+                  <td class="title link">
+                    <a data-toggle="modal" data-target="#myModalGrants">
+                      <span class="grant-icon">
+                        <img src="/img/grants-icons/icon-awards.png">
+                      </span>
+                        Grants for Guitars
+                    </a>
+                  </td>
+
+                  <td class="value">
+                    &pound;1,000
+                  </td>
+                  <td class="rating rating-easy">
+                    Easy
+                  </td>
+                  <td class="duration">
+                    2 days
+                  </td>
+                  <td class="date date-right">
+                    None
+                  </td>
+                  <td class="action"><a class="btn btn-default">button</a></td>
+                </tr>
+                <tr class="details-row">
+                  <td></td>
+                  <td>
+                    <p>One of Britain's biggest music retailers is offering grants of up to £5,000 for schools who need new guitars in order to offer lessons to their disadvantaged pupils</p>
+</td>
+                  <td colspan=""></td>
+                </tr>
+              </tbody>
+            </table>-->
+            <div class="table-responsive">
           <table class="table table-hover table-vam">
             <thead>
-              <tr>
-                <th></th>
-                <th>Grant Title</th>
-                <th class="value">Value</th>
-                <th class="rating">Rating</th>
-                <th class="">Duration</th>
-                <th></th>
-              </tr>
-            </thead>
+                <tr>
+                  <th></th>
+                  <th class="title">Grant Title</th>
+                  <th class="value">Award</th>
+                  <th class="rating">Complexity <a class="filter"></a></th>
+                  <th class="duration">To Complete  <a class="filter"></a></th>
+                  <th class="date date-right">Deadline  <a class="filter"></a></th>
+                  <!--<th class="action">
+                    Actions
+                  </th>-->
+                </tr>
+              </thead>
             <tbody>
               <tr>
-                <td class="check-star" id="star">
-                  <a onclick="$('#star').toggleClass('checked')">
-                    <i class="fa fa-star"></i>
+                <td class="check-star">
+                  <a>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
@@ -235,18 +324,21 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-easy">
                   Easy
                 </td>
-                <td class="">
+                <td class="duration">
                   2 days
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                    None
+                  </td>
+                <!--<td class="action">
                   <a class="btn btn-primary" data-toggle="modal" data-target="#myModalGrants">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
               <tr>
-                <td class="check-star checked" id="star2">
-                  <a onclick="$('#star2').toggleClass('checked')">
+                <td class="check-star checked">
+                  <a>
                     <i class="fa fa-star"></i>
                   </a>
                 </td>
@@ -264,19 +356,22 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-hard">
                   Hard
                 </td>
-                <td class="">
+                <td class="duration">
                   2 weeks
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                    12.12.2015
+                  </td>
+                <!--<td class="action">
                   <a class="btn btn-primary">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
               <tr>
                 <td class="check-star" id="star">
                   <a>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
@@ -293,19 +388,22 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-medium">
                   medium
                 </td>
-                <td class="">
+                <td class="duration">
                   2 days
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                    05.02.2016
+                  </td>
+                <!--<td class="action">
                   <a class="btn btn-primary">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
               <tr>
                 <td class="check-star" id="star">
                   <a>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
@@ -322,19 +420,22 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-medium">
                   medium
                 </td>
-                <td class="">
+                <td class="duration">
                   2 days
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                    04.04.2016
+                  </td>
+                <!--<td class="action">
                   <a class="btn btn-primary">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
               <tr>
                 <td class="check-star" id="star">
                   <a>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
@@ -351,19 +452,22 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-easy">
                   Easy
                 </td>
-                <td class="">
+                <td class="duration">
                   2 days
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                    06.04.2016
+                  </td>
+                <!--<td class="action">
                   <a class="btn btn-primary">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
               <tr>
                 <td class="check-star" id="star">
                   <a>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
@@ -380,19 +484,22 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-easy">
                   Easy
                 </td>
-                <td class="">
+                <td class="duration">
                   2 days
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                  10.04.2016
+                </td>
+                <!--<td class="action">
                   <a class="btn btn-primary">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
               <tr>
                 <td class="check-star" id="star">
                   <a>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
@@ -409,18 +516,22 @@ tagline: Find a Grant to help with your next school project
                 <td class="rating rating-easy">
                   Easy
                 </td>
-                <td class="">
+                <td class="duration">
                   2 days
                 </td>
-                <td class="action">
+                <td class="date date-right">
+                  26.05.2016
+                </td>
+                <!--<td class="action">
                   <a class="btn btn-primary">
                     View
                   </a>
-                </td>
+                </td>-->
               </tr>
 
             </tbody>
           </table>
+        </div>
         </div>
     </div>
   </div>

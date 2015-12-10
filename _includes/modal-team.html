@@ -8,85 +8,74 @@
         </button>
       </div>
       <div class="modal-body modal-body-clear">
-        <h2 class="text-center"></h2>
-
-
         <div class="body-title">
-          <div class="title">Get your team involved!
+          <div class="title">Share
             <span class="block">Share project with others!</span>
           </div>
-          <div class="row actions-row">
-            <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
-              <div class="search">
-                <input type="text" class="form-control" placeholder="Search">
-                <i class="glyphicon glyphicon-search"></i>
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label" for="">Name</label>
+                <input class="form-control" placeholder="Enter Name" type="text">
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <div class="form-group">
+                <label class="control-label" for="">Email Address</label>
+                <input class="form-control" placeholder="Email Address" type="text">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <div class="pull-right">
+                <a class="btn btn-info">Add Contact</a>
+              </div>
+            </div>
+          </div>
+
+
+              <table class="table m-t-md">
+                <tbody>
+                  <tr>
+                    <td class="name">
+                      Adam Hogg
+                      <small class="block">adam.hogg@mypebble.co.uk</small>
+                    </td>
+                    <td class="action">
+                      <a class="text-danger">
+                        <i class="fa fa-times"></i> Remove
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="form-group m-t-md">
+                <label for="id_description" class="control-label">
+                  Message
+                  {% include input-tips.html %}
+                </label>
+                <textarea class="field form-control" placeholder="" id="id_description"></textarea>
+                <div class="error"></div>
+              </div>
+
+            </div>
+            </div>
+            <div class="modal-footer">
+              <div class="pull-left">
+                <a class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
+              </div>
+              <div class="pull-right">
+                <a class="btn btn-primary">
+                  <i class="fa fa-paper-plane-o"></i>
+                  Share Project
+                </a>
               </div>
             </div>
           </div>
         </div>
-
-
-
-        <table class="table">
-          <thead></thead>
-          <tbody>
-            <tr>
-              <td class="name">
-                <!--<span class="initials pupil">AH</span>-->
-                Adam Hogg
-                <small class="block">adam.hogg@mypebble.co.uk</small>
-              </td>
-              <td class="action">
-                <a class="btn btn-default btn-block disabled">
-                  Invited
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                <!--<span class="initials pupil">AH</span>-->
-                Alan Waggott
-                <small class="block">alan.waggott@mypebble.co.uk</small>
-              </td>
-              <td class="action">
-                <a class="btn btn-info btn-block">
-                  Invite
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <td class="name">
-                <!--<span class="initials pupil">AH</span>-->
-                Daniel Wakenshaw
-                <small class="block">dan.wakenshaw@mypebble.co.uk</small>
-              </td>
-              <td class="action">
-                <a class="btn btn-info btn-block">
-                  Invite
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="modal-footer modal-footer-gray">
-        <div class="row">
-          <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
-            <div class="body-title">
-              <div class="title">Invite
-                <span class="block">Invite others to help!</span>
-              </div>
-            </div>
-            <div class="search">
-              <input type="text" class="form-control" placeholder="Invite">
-              <i class="glyphicon glyphicon-envelope"></i>
-            </div>
-            <div class="actions-row">
-              <a href="" class="btn btn-info col-lg-4">Invite</a>
-            </div>
-          </div>
-        </div>
+        <!---->
       </div>
     </div>
   </div>
-</div>

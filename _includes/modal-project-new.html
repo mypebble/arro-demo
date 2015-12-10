@@ -17,25 +17,18 @@
         <div class="row">
           <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
             <div class="form-group">
-              <label class="control-label" for="">What shall we name your project?</label>
+              <label class="control-label" for="">Project Title {% include input-tips.html %}</label>
               <input class="form-control" placeholder="Project Title" type="text">
-              <a class="help-block">Example</a>
+
             </div>
 
             <div class="form-group">
-              <label class="control-label" for="">Summary</label>
+              <label class="control-label" for="">Project Description
+                {% include input-tips.html %}
+              </label>
+
               <textarea class="field form-control" rows="4" value="Description"></textarea>
-              <div id="example-summary" class="hide">
-                <div class="alert-example">
-                  <strong>Example</strong>
-                  <p>
-                    Donec id elit non mi porta gravida at eget metus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                  </p>
-                </div>
-              </div>
-              <a class="help-block" id="btn-example-show" onclick="$('#example-summary').toggleClass('hide')">
-                Example
-              </a>
+
             </div>
 
             <div class="row">
@@ -50,10 +43,16 @@
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="form-group">
-                  <label for="dtp_input2" class="control-label">End Date</label>
+                  <label for="dtp_input2" class="control-label">Completion Date</label>
                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                       <input class="form-control" size="16" value="" placeholder="Date" type="text">
                       <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                  </div>
+                </div>
+                <div class="form-group m-t-sm">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox1" value="option1" type="checkbox">
+                    <label for="checkbox1"> No Completion date</label>
                   </div>
                 </div>
               </div>
@@ -62,10 +61,13 @@
             <div class="row">
                 <div class="form-group">
                   <div class="col-lg-6 col-md-6">
-                    <label class="control-label" for="">How much will this cost?</label>
+                    <label class="control-label" for="">How much will this Project cost?</label>
                   </div>
                   <div class="col-lg-6 col-md-6">
-                    <input class="form-control input-amount" placeholder="0.00" type="text">
+                    <input class="form-control input-amount" placeholder="£0.00" type="text">
+
+
+
                   </div>
                 </div>
 
@@ -76,7 +78,7 @@
 
       <div class="modal-footer">
         <div class="pull-left">
-          <a  data-dismiss="modal" aria-label="Close" class="btn btn-default">Abandon</a>
+          <a  data-dismiss="modal" aria-label="Close" class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
         </div>
         <div class="pull-right">
           <a href="/projects/new/" class="btn btn-add">Create Project

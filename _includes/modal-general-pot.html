@@ -14,28 +14,30 @@
             <span class="block">The general pot is where all your income goes if it hasn't been allocated to a project. You can use the general pot for activities that can be used to fund multiple projects, such as open donations. Use the transfer facility to allocate money to a project from the general fund. </span>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
-            <div class="form-group">
-              <label class="control-label" for="">Value</label>
-              <input class="form-control input-lg input-amount" value="£10,000.00" disabled="" type="text">
-            </div>
 
-
-          </div>
+        <div class="text-center">
+          <h2>£10,000.00</h2>
         </div>
+
+        <div class="actions-row">
+          <a class="btn btn-info" onclick="$('#transfer').toggleClass('hide')">Transfer funds to Project</a>
+        </div>
+
+        <div id="transfer" class="hide">
+          <div class="alert alert-warning">
+            <strong>Caution:</strong> You can transfer money raised from the General Pot to any of your Projects, once completed this can not be undone.
+          </div>
+
+        </div>
+
+
       </div>
 
-      <div class="modal-footer">
+    <!--  <div class="modal-footer">
         <div class="pull-left">
           <a  data-dismiss="modal" aria-label="Close" class="btn btn-default">Close</a>
         </div>
-        <div class="pull-right">
-          <a class="btn btn-primary">
-            Transfer Funds
-          </a>
-        </div>
-      </div>
+      </div>-->
     </div>
 
   </div>

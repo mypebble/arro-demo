@@ -1,10 +1,18 @@
   {% include modal-upgrade.html %}
 
-  
+
 <footer class="">
 
 
 </footer>
+
+<!-- modals -->
+{% include modal-team.html %}
+{% include modal-project-library.html %}
+
+<!-- end modals-->
+
+
 
 <button id="scroll-top" class="btn"><i class="fa fa-chevron-up"></i></button>
 
@@ -19,6 +27,17 @@
 
 <script src="{{ "/js/bootstrap-tagsinput.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/chart.min.js" | prepend: site.baseurl }}"></script>
+
+
+<script src="{{ "/js/jquery.flexText.min.js" | prepend: site.baseurl }}"></script>
+<script>
+$(function () {
+    $('textarea').flexText();
+});
+</script>
+
+
+
 <script>
 window.onload = function(){
   var ctx4 = document.getElementById("chart-area").getContext("2d");
@@ -62,7 +81,7 @@ var doughnutData = [
     $('[data-toggle="tooltip"]').tooltip({
         trigger: 'hover'
     });
-    
+
     $("img").each(function(){
       if($(this).attr("src").indexOf("/") == 0){
         $(this).attr("src", "{{ site.baseurl }}/" + $(this).attr("src"));

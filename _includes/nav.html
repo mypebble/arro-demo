@@ -10,7 +10,7 @@
           <ul id="mainnav-menu" class="list-group">
             <li class=" {% if page.url contains '/dashboard/' %}active-page{% endif %}">
               <a href="/dashboard/">
-                <i class="glyphicon glyphicon-dashboard"></i>
+                <i class="fa fa-tachometer"></i>
                 <span class="menu-title">
                   <strong>Dashboard</strong>
                 </span>
@@ -18,25 +18,10 @@
             </li>
             <li class="list-divider"></li>
             <li class="list-header">Activities</li>
-            <li class="nav-clubs  {% if page.url contains '/clubs/' %}active-page{% endif %}">
-              <a href="#">
-                <i class="glyphicon glyphicon-flag"></i>
-                <span class="menu-title">
-                  Clubs
-                </span>
-                <i class="arrow"></i>
-              </a>
-              <ul class="collapse">
-                <li><a href="">
 
-                  Create Club</a></li>
-                  <li class="list-divider"></li>
-                <li><a href="/clubs/">Manage</a>
-              </ul>
-            </li>
             <li class="nav-donations  {% if page.url contains '/donations/' %}active-page{% endif %}"><!-- active-page  -->
               <a>
-                <i class="glyphicon glyphicon-gift"></i>
+                <i class="fa fa-gift"></i>
                 <span class="menu-title">
                   Donations
                 </span>
@@ -54,10 +39,26 @@
                 <li><a href="/donations/history/">View Pending / Archived</a></li>
               </ul>
             </li>
+            <li class="nav-clubs  {% if page.url contains '/clubs/' %}active-page{% endif %}">
+              <a href="#">
+                <i class="fa fa-flag-o"></i>
+                <span class="menu-title">
+                  Clubs
+                </span>
+                <i class="arrow"></i>
+              </a>
+              <ul class="collapse">
+                <li><a href="">
+
+                  Create Club</a></li>
+                  <li class="list-divider"></li>
+                <li><a href="/clubs/">Manage</a>
+              </ul>
+            </li>
 
             <li class="nav-events  {% if page.url contains '/events/' %}active-page{% endif %}">
               <a href="#">
-                <i class="glyphicon glyphicon-calendar"></i>
+                <i class="fa fa-calendar-o"></i>
                 <span class="menu-title">
                   Events
                 </span>
@@ -74,11 +75,38 @@
                 <li><a href="/events/">Manage</a>
               </ul>
             </li>
+            <li class="nav-services {% if page.url contains '/services/' %}active-page{% endif %}">
+              <a href="/services/">
+                <i class="fa fa-magic"></i>
+                <span class="menu-title">
+                  Services
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="nav-lettings {% if page.url contains '/lettings/' %}active-page{% endif %}">
+              <a href="/lettings/">
+                <i class="fa fa-building-o"></i>
+                <span class="menu-title">
+                  Lettings
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
             <li class="nav-grants {% if page.url contains '/grants/' %}active-page{% endif %}">
               <a href="/grants/">
-                <i class="glyphicon glyphicon-briefcase"></i>
+                <i class="fa fa-briefcase"></i>
                 <span class="menu-title">
                   Grants
+                </span>
+                <i class="arrow"></i>
+              </a>
+            </li>
+            <li class="nav-sponsorship {% if page.url contains '/sponsorship/' %}active-page{% endif %}">
+              <a href="/sponsorship/">
+                <i class="fa fa-diamond"></i>
+                <span class="menu-title">
+                  Sponsorship
                 </span>
                 <i class="arrow"></i>
               </a>
@@ -86,24 +114,17 @@
             <li class="list-divider"></li>
             <li class="list-header">System</li>
             <li class="nav-projects {% if page.url contains '/projects/' %}active-page{% endif %}">
-              <a href="#">
-                <i class="glyphicon glyphicon-th"></i>
+              <a href="/projects/">
+                <i class="fa fa-sitemap"></i>
                 <span class="menu-title">
                   Projects
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
-                <li><a href="/projects/new/">
-
-                  Create Project</a></li>
-                  <li class="list-divider"></li>
-                <li><a href="/projects/">Manage</a></li>
-              </ul>
             </li>
             <li class="nav-reports">
               <a href="report-dashboard.html">
-                <i class="glyphicon glyphicon-tasks"></i>
+                <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
                   Reports
                 </span>
@@ -112,7 +133,7 @@
             </li>
             <li class="nav-finance {% if page.url contains '/transactions/' %}active-page{% endif %}">
               <a href="#">
-                <i class="glyphicon glyphicon-sort"></i>
+                <i class="fa fa-exchange"></i>
                 <span class="menu-title">
                   Transactions
                 </span>
@@ -150,7 +171,7 @@
             </li>
             <li class="nav-admin">
               <a href="#">
-                <i class="glyphicon glyphicon-wrench"></i>
+                <i class="fa fa-wrench"></i>
                 <span class="menu-title">
                   Admin
                 </span>
@@ -174,7 +195,7 @@
             <li class="list-divider"></li>
             <li class="nav-stakeholder {% if page.url contains '/support-admin/' %}active-page{% endif %}">
               <a href="/support-admin/">
-                <i class="glyphicon glyphicon-screenshot"></i>
+                <i class="fa fa-crosshairs"></i>
                 <span class="menu-title">
                   Support
                 </span>
@@ -182,7 +203,7 @@
             </li>
             <li class="">
               <a href="">
-                <i class="glyphicon glyphicon-off"></i>
+                <i class=" fa fa-power-off"></i>
                 <span class="menu-title">
                   Logout
                 </span>
