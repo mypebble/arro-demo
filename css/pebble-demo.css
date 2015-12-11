@@ -19646,10 +19646,6 @@ th .form-group .checkbox label {
 #mainnav-menu-wrap {
   height: 100%;
 }
-#mainnav-menu-wrap {
-  margin-top: -50px;
-  padding-top: 50px;
-}
 #mainnav-menu ul,
 .menu-popover ul {
   list-style: none;

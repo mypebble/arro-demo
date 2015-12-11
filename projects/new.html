@@ -71,7 +71,7 @@ permalink: /projects/new/
           <div class="pull-right">
             <!--{% include share.html %}-->
             <a class="btn btn-edit" data-toggle="modal" data-target="#myModal-record">
-              <i class="glyphicon glyphicon-pencil"></i> Edit
+              <i class="fa fa-pencil"></i> Edit
             </a>
           </div>
         </div>
@@ -89,7 +89,23 @@ permalink: /projects/new/
           <div class="form-group">
             <label for="id_project_need" class="control-label">
               Why do you need your project?
-              {% include input-tips.html %}
+              <a class="pull-right font-normal" onclick="$('#hint').removeClass('hide')">
+                Hints &amp; Tips
+              </a>
+              <div class="alert alert-info m-t-sm hide" id="hint">
+                <strong class="block">Hints &amp; Tips</strong>
+                <p>
+                  Maecenas sed diam eget risus varius blandit sit amet non magna:
+                </p>
+                <ol>
+                  <li>What is it you want to achieve?</li>
+                  <li>
+                    Maecenas sed diam eget risus varius blandit sit amet non magna.
+                  </li>
+                </ol>
+                <a class="btn btn-info pull-right" onclick="$('#hint').addClass('hide')">Got it
+                </a>
+              </div>
             </label>
             <textarea class="field form-control"  placeholder="What is your school missing that this project can provide?" id="id_project_need"></textarea>
             {% include copy-good.html %}
