@@ -52,20 +52,20 @@ tagline: Find a Grant to help with your next school project
 <!--- content-->
 <div class="row">
   <div class="col-lg-12 col-md-12">
-    <div class="panel ">
+    <div class="panel panel-context-grants">
       <div class="panel-title">Grants</div>
       <div class="panel-subnav">
         <div class="">
-          <div class="col-lg-4 pull-left">
+          <div class="col-lg-6 col-md-6 pull-left">
             <div class="search">
-              <input type="text" class="form-control" placeholder="Grant Title Search">
+              <input type="text" class="form-control" placeholder="Search by Grant Title">
               <i class="glyphicon glyphicon-search"></i>
             </div>
           </div>
 
 
 
-          <div class="col-lg-8 ">
+          <div class="col-lg-6 col-md-6 ">
             <ul class="list-unstyled list-inline pull-right">
               <!--<li>
                 <a class="btn btn-default">Inspire Me</a>
@@ -88,7 +88,7 @@ tagline: Find a Grant to help with your next school project
         <div class="row">
           <div class="col-lg-4 col-md-4">
             <div class="form-group">
-              <label class="control-label" for="">School Type</label>
+              <label class="control-label" for="">Filter by School Type</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
                 <option>All School Types</option>
                 <option>Primary</option>
@@ -100,7 +100,7 @@ tagline: Find a Grant to help with your next school project
               </select>
             </div>
             <div class="form-group">
-              <label class="control-label" for="">Location</label>
+              <label class="control-label" for="">Filter by Location</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
                 <option>All Locations</option>
                 <option>East Anglia</option>
@@ -118,7 +118,7 @@ tagline: Find a Grant to help with your next school project
               </select>
             </div>
             <div class="form-group">
-              <label class="control-label" for="">By Subject</label>
+              <label class="control-label" for="">Filter by Subject</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
                 <option>All Subjects</option>
                 <option>Art and Design</option>
@@ -137,7 +137,7 @@ tagline: Find a Grant to help with your next school project
               </select>
             </div>
             <div class="form-group">
-              <label class="control-label" for="">By Project</label>
+              <label class="control-label" for="">Filter by Project</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
                 <option>New Library Resources</option>
                 <option>Tennis Pitch</option>
@@ -145,7 +145,7 @@ tagline: Find a Grant to help with your next school project
             </div>
           </div>
           <div class="col-lg-8 col-md-8">
-            <div class="label-title">Grant Type</div>
+            <div class="label-title">Filter by Grant Type</div>
            <ul class="list-unstyled row">
 
 
@@ -229,15 +229,12 @@ tagline: Find a Grant to help with your next school project
             </ul>
 
           </div>
-          <div class="col-lg-4 col-md-4">
-
-            </div>
           </div>
           <div class="row">
             <div class="col-lg-12 col-md-12">
-              <div class="pull-left">
+              <!--<div class="pull-left">
                 <a class="btn btn-default" onclick="$('#filter').addClass('hide')">Hide</a>
-              </div>
+              </div>-->
               <div class="pull-right">
                 <a href="" class="btn btn-default">Clear</a>
                 <a href="" class="btn btn-primary">
@@ -263,8 +260,8 @@ tagline: Find a Grant to help with your next school project
                   <th></th>
                   <th class="title">Grant Title</th>
                   <th class="value">Award</th>
-                  <th class="rating">Complexity <a class="filter"></a></th>
-                  <th class="duration">To Complete  <a class="filter"></a></th>
+                  <th class="rating">Detail Required <a class="filter"></a></th>
+                  <th class="duration">Time to the deadline  <a class="filter"></a></th>
                   <th class="date date-right">Deadline  <a class="filter"></a></th>
                 </tr>
               </thead>
@@ -288,7 +285,7 @@ tagline: Find a Grant to help with your next school project
                     &pound;1,000
                   </td>
                   <td class="rating rating-easy">
-                    Easy
+                    Basic
                   </td>
                   <td class="duration">
                     2 days
@@ -314,8 +311,8 @@ tagline: Find a Grant to help with your next school project
                   <th></th>
                   <th class="title">Grant Title</th>
                   <th class="value">Award</th>
-                  <th class="rating">Complexity <a class="filter"></a></th>
-                  <th class="duration">To Complete  <a class="filter"></a></th>
+                  <th class="rating">Detail Required <a class="filter"></a></th>
+                  <th class="duration">To complete <a class="filter"></a></th>
                   <th class="date date-right">Deadline  <a class="filter"></a></th>
                   <!--<th class="action">
                     Actions
@@ -324,11 +321,12 @@ tagline: Find a Grant to help with your next school project
               </thead>
             <tbody>
               <tr>
-                <td class="check-star">
+                <td class="check-star checked">
                   <a>
-                    <i class="fa fa-star-o"></i>
+                    <i class="fa fa-star"></i>
                   </a>
                 </td>
+
                 <td class="title-lg link">
                   <a data-toggle="modal" data-target="#myModalGrants">
                     <span class="grant-icon">
@@ -341,7 +339,7 @@ tagline: Find a Grant to help with your next school project
                   &pound;1,000
                 </td>
                 <td class="rating rating-easy">
-                  Easy
+                  Basic
                 </td>
                 <td class="duration">
                   2 days
@@ -356,30 +354,30 @@ tagline: Find a Grant to help with your next school project
                 </td>-->
               </tr>
               <tr>
-                <td class="check-star checked">
+                <td class="check-star">
                   <a>
-                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-o"></i>
                   </a>
                 </td>
                 <td class="title-lg link">
-                  <a href="">
+                  <a data-toggle="modal" data-target="#myModalGrants-lg">
                     <span class="grant-icon">
                       <img src="/img/grants-icons/icon-cash.png">
                     </span>
-                    Sport England: Protecting Playing Fields
+                    Sport England Inspired Facilities
                   </a>
                 </td>
                 <td class="value">
                   &pound;5,000
                 </td>
                 <td class="rating rating-hard">
-                  Hard
+                  Complex
                 </td>
                 <td class="duration">
                   2 weeks
                 </td>
                 <td class="date date-right">
-                    12.12.2015
+                    04.02.2016
                   </td>
                 <!--<td class="action">
                   <a class="btn btn-primary">
@@ -405,7 +403,7 @@ tagline: Find a Grant to help with your next school project
                   &pound;1,000
                 </td>
                 <td class="rating rating-medium">
-                  medium
+                  Moderate
                 </td>
                 <td class="duration">
                   2 days
@@ -437,7 +435,7 @@ tagline: Find a Grant to help with your next school project
                   details
                 </td>
                 <td class="rating rating-medium">
-                  medium
+                  Moderate
                 </td>
                 <td class="duration">
                   2 days
@@ -469,7 +467,7 @@ tagline: Find a Grant to help with your next school project
                   details
                 </td>
                 <td class="rating rating-easy">
-                  Easy
+                  Basic
                 </td>
                 <td class="duration">
                   2 days
@@ -501,7 +499,7 @@ tagline: Find a Grant to help with your next school project
                   details
                 </td>
                 <td class="rating rating-easy">
-                  Easy
+                  Basic
                 </td>
                 <td class="duration">
                   2 days
@@ -533,7 +531,7 @@ tagline: Find a Grant to help with your next school project
                   details
                 </td>
                 <td class="rating rating-easy">
-                  Easy
+                  Basic
                 </td>
                 <td class="duration">
                   2 days
@@ -560,6 +558,3 @@ tagline: Find a Grant to help with your next school project
 <div class="row">
   <div class="loader">Loading...</div>
 </div>
-
-
-{% include modal-grant-details.html %}

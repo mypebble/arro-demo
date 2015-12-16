@@ -16,16 +16,19 @@ permalink: /projects/details/
   <div class="col-md-12">
     <div class="panel">
       <div class="panel-title">Project Details
-        <span class="actions pull-right text-success">
+        <span class=" text-info label label-info pull-right">Active Project</span>
+        <!--<span class="actions pull-right text-success">
           <i class="fa fa-check-circle"></i> Approved Project
-        </span>
+        </span>-->
       </div>
         <div class="panel-body">
+
            <div class="col-md-9">
              <h2>New Library Resources
 
              </h2>
-             <small class="block">01.01.2015 - 05.06.2016</small>
+
+             <span class="block">01.01.2015 - 05.06.2016</span>
              <p>
                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor vestibulum imperdiet. Ut auctor accumsan erat, a vulputate metus tristique non. Aliquam aliquam vel orci quis sagittis.
              </p>
@@ -62,9 +65,10 @@ permalink: /projects/details/
     <div class="panel">
       <div class="panel-title with-nav-tabs">
         <ul class="nav nav-tabs nav-justified">
-            <li class="active"><a href="#tab1default" data-toggle="tab">Project Narrative</a></li>
-            <li><a href="#tab2default" data-toggle="tab">Grants (1)</a></li>
-            <li><a href="#tab3default" data-toggle="tab">Comments (2)</a></li>
+            <li class="active"><a href="#tab1default" data-toggle="tab"><i class="fa fa-file-o"></i> Project Narrative</a></li>
+            <li><a href="#tab2default" data-toggle="tab"><i class="fa fa-briefcase"></i> Grants (1)</a></li>
+            <li><a href="#tab3default" data-toggle="tab"><i class="fa fa-comments"></i> Comments (2)</a></li>
+            <li><a href="#tab4default" data-toggle="tab"><i class="fa fa-file"></i> Files (4)</a></li>
         </ul>
       </div>
       <div class="panel-body">
@@ -110,38 +114,34 @@ permalink: /projects/details/
         </div>
         <div class="tab-pane fade in" id="tab2default">
           <div class="" id="jumbo">
-          <div class="row">
-            <div class="col-lg-7 col-md-6 ">
-
-
-            </div>
-            <div class="col-lg-5 col-md-6 ">
-              <div class="panel">
-                  <div class="panel-title">Getting started
-                </div>
-                <div class="panel-body">
-                  <h3>Grants</h3>
-                  <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
-                  <br>
-                  <div class="staff-comment">
-                    Daniel Wakenshaw
-                    <small class="block">Pebble Support Team</small>
+            <div class="row">
+              <div class="col-lg-7 col-md-6 ">
+              </div>
+              <div class="col-lg-5 col-md-6 ">
+                <div class="panel">
+                    <div class="panel-title">Getting started
+                  </div>
+                  <div class="panel-body">
+                    <h3>Grants</h3>
+                    <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
+                    <br>
+                    <div class="staff-comment">
+                      Daniel Wakenshaw
+                      <small class="block">Pebble Support Team</small>
+                    </div>
+                  </div>
+                  <div class="panel-footer">
                   </div>
                 </div>
-                <div class="panel-footer">
-
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="pull-right">
+                  <a class="btn btn-primary" onclick="$('#saved-grants').removeClass('hide'), $('#jumbo').addClass('hide')">Find Grant</a>
                 </div>
               </div>
-
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="pull-right">
-                <a class="btn btn-primary" onclick="$('#saved-grants').removeClass('hide'), $('#jumbo').addClass('hide')">Find Grant</a>
-              </div>
-            </div>
-          </div>
           </div>
 
           <div class="table-responsive hide" id="saved-grants">
@@ -151,7 +151,7 @@ permalink: /projects/details/
                   <th></th>
                   <th class="title">Grant Title</th>
                   <th class="value">Award</th>
-                  <th class="rating">Complexity <a class="filter"></a></th>
+                  <th class="rating">Detail Required <a class="filter"></a></th>
                   <th class="duration">To Complete  <a class="filter"></a></th>
                   <th class="date date-right">Deadline  <a class="filter"></a></th>
                   <!--<th class="action">
@@ -178,7 +178,7 @@ permalink: /projects/details/
                   £5,000
                 </td>
                 <td class="rating rating-hard">
-                  Hard
+                  Complex
                 </td>
                 <td class="duration">
                   2 weeks
@@ -265,6 +265,93 @@ permalink: /projects/details/
 
               </ul>
 
+            </div>
+            <div class="tab-pane fade in" id="tab4default">
+              <div class="panel-subnav">
+
+              <div class="pull-right">
+                <ul class="list-unstyled list-inline">
+                  <li>
+                    <a class="btn btn-add" data-toggle="modal" data-target="#myModalDocument-add">
+                      <i class="fa fa-plus"></i>
+                      Add New
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
+              <table class="table table-vam">
+                <thead>
+                  <tr>
+                    <th>File Name</th>
+                    <th>File Size</th>
+                    <th class="date date-right">Uploaded<a class="filter"></a></th>
+                    <!--<th></th>-->
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="name link">
+                      <a href="">
+                        <span class="initials pupil">
+                          <i class="fa fa-file-pdf-o"></i>
+                        </span>
+                        Proposal for New Library floor plan
+                      </a>
+                    </td>
+                    <td class="file-size">250kb</td>
+                    <td class="date date-right">02.04.2015</td>
+                    <!--<td class="">
+                      <a class="btn btn-info">Download</a>
+                      <a class="btn btn-danger">Remove</a>
+                    </td>-->
+                  </tr>
+                  <tr>
+                    <td class="name link">
+                      <a href="">
+                        <span class="initials pupil">
+                          <i class="fa fa-file-text-o"></i>
+                        </span>
+                        Library Reading List
+                      </a>
+                    </td>
+                    <td class="file-size">503kb</td>
+                    <td class="date date-right">02.04.2015</td>
+                    <!--<td class="">
+                    </td>-->
+                  </tr>
+                  <tr>
+                    <td class="name link">
+                      <a href="">
+                        <span class="initials pupil">
+                          <i class="fa fa-file-picture-o"></i>
+                        </span>
+                        Mindmap session notes
+                      </a>
+                    </td>
+                    <td class="file-size">100kb</td>
+                    <td class="date date-right">02.04.2015</td>
+                    <!--<td class="">
+                    </td>-->
+                  </tr>
+                  <tr>
+                    <td class="name link">
+                      <a href="">
+                        <span class="initials pupil">
+                          <i class="fa fa-file-excel-o"></i>
+                        </span>
+                        Reading List
+                      </a>
+                    </td>
+                    <td class="file-size">100kb</td>
+                    <td class="date date-right">02.04.2015</td>
+                    <!--<td class="">
+                    </td>-->
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
