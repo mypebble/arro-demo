@@ -27,56 +27,41 @@
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
-                <li class="">
-                  <a href="/donations/">
-
+              <ul class="collapse {% if page.url contains '/donations/' %}in{% endif %}">
+                <li class="{% if page.url contains '/donations/home/' %}active{% endif %}">
+                  <a href="/donations/home/">
                     Record Donation
                   </a>
                 </li>
                 <li class="list-divider"></li>
-                <li><a href="/donations/claim/">Create Claim</a></li>
-                <li><a href="/donations/history/">View Pending / Archived</a></li>
+                <li><a href="/donations/claim/" class="{% if page.url contains '/donations/claim/' %}active{% endif %}">Create Claim</a></li>
+                <li class="{% if page.url contains '/donations/history/' %}active{% endif %}">
+                  <a href="/donations/history/">View Pending / Archived</a>
+                </li>
               </ul>
             </li>
             <li class="nav-clubs  {% if page.url contains '/clubs/' %}active-page{% endif %}">
-              <a href="#">
+              <a href="/clubs/home/">
                 <i class="fa fa-flag-o"></i>
                 <span class="menu-title">
                   Clubs
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
-                <li><a href="">
 
-                  Create Club</a></li>
-                  <li class="list-divider"></li>
-                <li><a href="/clubs/">Manage</a>
-              </ul>
             </li>
 
             <li class="nav-events  {% if page.url contains '/events/' %}active-page{% endif %}">
-              <a href="#">
+              <a href="/events/home">
                 <i class="fa fa-calendar-o"></i>
                 <span class="menu-title">
                   Events
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
-                <li>
-                  <a href="event-new.html">
-
-                    Create Event
-                  </a>
-                </li>
-                <li class="list-divider"></li>
-                <li><a href="/events/">Manage</a>
-              </ul>
             </li>
             <li class="nav-services {% if page.url contains '/services/' %}active-page{% endif %}">
-              <a href="/services/">
+              <a href="/services/home/">
                 <i class="fa fa-magic"></i>
                 <span class="menu-title">
                   Services
@@ -85,7 +70,7 @@
               </a>
             </li>
             <li class="nav-lettings {% if page.url contains '/lettings/' %}active-page{% endif %}">
-              <a href="/lettings/">
+              <a href="/lettings/home/">
                 <i class="fa fa-building-o"></i>
                 <span class="menu-title">
                   Lettings
@@ -103,7 +88,7 @@
               </a>
             </li>
             <li class="nav-sponsorship {% if page.url contains '/sponsorship/' %}active-page{% endif %}">
-              <a href="/sponsorship/">
+              <a href="/sponsorship/home/">
                 <i class="fa fa-diamond"></i>
                 <span class="menu-title">
                   Sponsorship
@@ -139,16 +124,16 @@
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
+              <ul class="collapse {% if page.url contains '/transactions/' %}in{% endif %}">
                 <li class="">
-                  <a href="finance-new.html">
+                  <a href="">
 
                     Record Transaction
                   </a>
                 </li>
                 <li class="list-divider"></li>
-                <li>
-                  <a href="/transactions/">View Transactions</a>
+                <li class="{% if page.url contains '/transactions/home/' %}active{% endif %}">
+                  <a href="/transactions/home/">View Transactions</a>
                 </li>
               </ul>
             </li>
@@ -160,13 +145,13 @@
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
+              <ul class="collapse {% if page.url contains '/stakeholder/' %}in{% endif %}">
                 <li>
                   <a herf="#" data-toggle="modal" data-target="#modal-add-name">
                     Create</a>
                 </li>
                 <li class="list-divider"></li>
-                <li><a href="/stakeholder/">Manage Stakeholders</a></li>
+                <li class="{% if page.url contains '/stakeholders/home/' %}active-page{% endif %}"><a href="/stakeholder/home/">Manage Stakeholders</a></li>
               </ul>
             </li>
             <li class="nav-admin">
@@ -202,7 +187,7 @@
               </a>
             </li>
             <li class="">
-              <a href="">
+              <a href="/logout/">
                 <i class=" fa fa-power-off"></i>
                 <span class="menu-title">
                   Logout

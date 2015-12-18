@@ -2,100 +2,22 @@
 layout: default-donations
 
 title: Donations Claim
-permalink: /donations/claim/
+permalink: /donations/preview/
 heading: Create Claim
 tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refund.
 
 ---
 
-<!--
-<div class="row">
-  <div class="col-lg-12 col-md-12 page-title">
-    <h1 class="page-header">{{ page.heading }}
-    </h1>
-    <ul class="list-unstyled menu-list list-inline">
-      <li class="helper">
-        <a onclick="$('.helper-toggle').toggleClass('hide')">
-         <i class="glyphicon glyphicon-question-sign"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>-->
-<a data-toggle="modal" data-target="#myModalDone" class="btn btn-info">
-  DONE
-</a>
 
 
 
-<div id="claim-toggle" class="row">
-  <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
-    <div class="panel  panel-context-donations">
-      <div class="panel-title">Claim Calculate</div>
-      <div class="panel-body">
-        <p>Please select the date you wish your claim to run until.</p>
-
-        <div class="form-group">
-          <div class="input-group">
-              <input class="form-control" data-provide="datepicker" value="01/09/2015" title="" data-date="12-02-2012" data-date-format="dd-mm-yyyy" type="text">
-              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="checkbox checkbox-success">
-            <input id="checkbox1" type="checkbox">
-            <label for="checkbox1">
-                I understand that any transaction recorded after this report has been created, <strong>will not</strong> be included within this claim.
-            </label>
-          </div>
-        </div>
-
-      </div>
-      <div class="panel-footer">
-        <a class="btn btn-primary btn-lg btn-block" onclick="$('#ga-preview').toggleClass('hide')">Calculate</a>
-      </div>
-      <div id="ga-preview" class="hide">
-        <div class="panel-body" >
-          <div class="body-title">
-            <div class="title">Summary</div>
-            <p>21/05/2014 <span>to</span> 01/09/2015</p>
-          </div>
-          <ul class="list-unstyled list-stats">
-            <li>Stakeholders
-              <span>30</span></li>
-            <li>Transactions
-              <span>50</span>
-            </li>
-            <li>Amount
-              <span>£1,000.00</span>
-            </li>
-            <li>
-              Total inc Gift Aid
-              <span>£1,250.00</span>
-            </li>
-          </ul>
-        </div>
-        <div class="panel-footer" id="">
-          <div class="ga-total">
-            <span>£250.00</span>
-            <small class="block">Calculated Claim</small>
-          </div>
-          <a class="btn btn-block btn-primary btn-lg" onclick="$('#report-toggle').toggleClass('hide'), $('#claim-toggle').toggleClass('hide')">Preview</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
-
-<div id="report-toggle" class="hide">
+<div id="report-toggle">
   <div class="row">
     <div class="col-lg-12">
       <div class="panel ">
         <div class="panel-title">
           <div class="pull-left">
-            Gift Aid Claim - <span>21/05/2014 to 01/09/2015</span>
+            Gift Aid Report for &pound;750.00
           </div>
           <div class="text-right">Preview</div>
         </div>
@@ -131,11 +53,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                    &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -152,11 +74,10 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
-
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -173,11 +94,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -194,11 +115,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -215,11 +136,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -236,11 +157,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -257,11 +178,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -278,11 +199,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -299,11 +220,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -320,11 +241,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -341,11 +262,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -362,11 +283,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -383,11 +304,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -404,11 +325,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -425,11 +346,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -446,11 +367,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -467,11 +388,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -488,11 +409,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -509,11 +430,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -530,11 +451,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -551,11 +472,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -572,11 +493,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -593,11 +514,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -614,11 +535,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -635,11 +556,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -656,11 +577,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -677,11 +598,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -698,11 +619,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -719,11 +640,11 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
               <tr>
@@ -740,15 +661,22 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
                   22/04/2015
                 </td>
                 <td class="amount income">
-                  £100.00
+                  &pound;100.00
                 </td>
                 <td class="amount gift-aid total-claim">
 
-                  £40.00
+                  &pound;25.00
                 </td>
               </tr>
 
             </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="3">Total</th>
+                <td class="amount">&pound;3,000.00</td>
+                <td class="amount">&pound;750.00</td>
+              </tr>
+            </tfoot>
           </table>
         </div>
         <div class="panel-footer">
@@ -756,7 +684,7 @@ tagline: Create your report ready to be sent to HMRC to claim your Gift Aid refu
             <a href="/donations/claim/" class="btn btn-danger"><i class="fa fa-trash-o"></i> Abandon</a>
           </div>
           <div class="pull-right">
-            <a class="btn btn-primary" href="/donations/history/">Create Claim</a>
+            <a class="btn btn-primary" href="/donations/history/">Create Report</a>
           </div>
         </div>
 

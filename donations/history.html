@@ -9,6 +9,41 @@ tagline: Your pending and archived Claims for HMRC
 
 ---
 
+<div class="jumbotron hide" id="jumbo">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 ">
+
+
+    </div>
+    <div class="col-lg-5 col-md-6 ">
+      <div class="panel">
+          <div class="panel-title">Getting started
+        </div>
+        <div class="panel-body">
+          <h3>Grants</h3>
+          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
+          <br>
+          <div class="staff-comment">
+            Daniel Wakenshaw
+            <small class="block">Pebble Support Team</small>
+          </div>
+        </div>
+        <div class="panel-footer">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="pull-right">
+        <a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="col-lg-12">
@@ -58,8 +93,62 @@ tagline: Your pending and archived Claims for HMRC
       <div class="panel-title">
         View Pending / Archived Claims
       </div>
+      <div class="panel-subnav">
+        <div class="">
+          <div class="col-lg-12">
+            <ul class="list-unstyled list-inline pull-right">
+              <li>
+                <a class="btn btn-add" data-toggle="modal" data-target="#myModalClaim" onclick="setTimeout(function(){ $('#ga-calculator').addClass('hide'); $('#ga-claim').removeClass('hide'); }, 5000)">
+                  <i class="glyphicon glyphicon-plus"></i> Create Report
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="panel-body">
+
+        <table class="table table-vam table-bordered table-hover">
+          <thead>
+            <tr>
+              <th class="title">Report</th>
+              <th class="names">Donors</th>
+              <th class="amount">Claim Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="title link">
+                <a href="">
+                  Gift Aid Claim
+                </a>
+              </td>
+              <td class="names">10</td>
+              <td class="amount">
+                &pound;250.00
+              </td>
+              <td></td>
+            </tr>
+
+            <tr class="danger">
+              <td class="title link">
+                <a href="">
+                  Potantial Donors Gift Aid Claim
+                </a>
+              </td>
+              <td class="names">5</td>
+              <td class="amount">
+                &pound;150.00
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr>
+
           <table class="table table-vam table-bordered table-hover">
             <thead>
               <tr>
@@ -81,7 +170,7 @@ tagline: Your pending and archived Claims for HMRC
                   </a>
                 </td>
                 <td class="">
-                  21.05.2014 to 01.09.2015
+                  21/05/2014 to 01/09/2015
                 </td>
                 <td class="amount gift-aid total-claim">
                   &pound;250.00
@@ -118,7 +207,11 @@ tagline: Your pending and archived Claims for HMRC
 
         </div>
         <div class="panel-body">
-
+          <div class="alert alert-info">
+            <p>Collect these <strong>5 Gift Aid Declerations</strong> you could get up to <strong>£150.00</strong> from HMRC
+            </p>
+            <a class="btn btn-info pull-right">Get Started</a>
+          </div>
           <table class="table table-vam table-bordered table-hover">
             <thead>
               <tr>
@@ -139,7 +232,7 @@ tagline: Your pending and archived Claims for HMRC
                   </a>
                 </td>
                 <td>
-                  10.02.2014 to 20.05.2014
+                  10/02/2014 to 20/05/2014
                 </td>
                 <td class="amount amount-pending total-claim">
                   &pound;250.00
@@ -170,7 +263,7 @@ tagline: Your pending and archived Claims for HMRC
                    </a>
                 </td>
                 <td>
-                   03.02.2014 to 09.03.2014
+                   03/02/2014 to 09/03/2014
                 </td>
                 <td class="amount income total-claim">
                   &pound;250.00
@@ -192,7 +285,7 @@ tagline: Your pending and archived Claims for HMRC
                   </a>
                 </td>
                 <td>
-                 01.01.2014 to 02.02.2014
+                 01/01/2014 to 02/02/2014
                 </td>
                 <td class="amount income total-claim">
                   &pound;235.00

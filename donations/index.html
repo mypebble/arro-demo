@@ -2,7 +2,7 @@
 layout: default-donations
 
 title:  Record Donation
-permalink: /donations/
+permalink: /donations/home/
 heading: Record Donation
 tagline: Donations are a great way to get additional income without much effort.
 ---
@@ -29,8 +29,57 @@ tagline: Donations are a great way to get additional income without much effort.
   </a>
 </div>
 -->
+
+<div class="jumbotron" id="jumbo">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 ">
+
+
+    </div>
+    <div class="col-lg-5 col-md-6 ">
+      <div class="panel">
+          <div class="panel-title">Getting started
+        </div>
+        <div class="panel-body">
+          <h3>Grants</h3>
+          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
+          <br>
+          <div class="staff-comment">
+            Daniel Wakenshaw
+            <small class="block">Pebble Support Team</small>
+          </div>
+        </div>
+        <div class="panel-footer">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="pull-right">
+        <a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="row">
   <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+    <!--<div class="panel">
+      <div class="panel-body">
+        xx
+      </div>
+    </div>-->
+
+    <!--
+    <div class="alert">
+      xxx
+    </div>
+    -->
+
     <div class="panel panel-context-donations" id="donation-record">
       <div class="panel-title">Record Donation</div>
       <div class="panel-body">
@@ -113,10 +162,14 @@ tagline: Donations are a great way to get additional income without much effort.
         <div class="panel-title">Stakeholder</div>
         <div class="panel-subnav">
           <form action="#" class="col-lg-12">
-            <input class="form-control" placeholder="Search" type="text">
+            <div class="search">
+              <input type="text" class="form-control" placeholder="Search for Name">
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
           </form>
         </div>
         <div class="panel-body">
+
           <table class="table table-vam">
             <thead>
               <tr>
@@ -142,7 +195,9 @@ tagline: Donations are a great way to get additional income without much effort.
                   </div>
                 </td>
                 <td class="name">
-                  {% include modal-name-preview.html %}
+                  <a data-toggle="modal" data-target="#myModalName">
+                  <span class="initials pupil">AH</span>
+                  Adam Hogg</a>
                 </td>
 
               </tr>
@@ -161,26 +216,12 @@ tagline: Donations are a great way to get additional income without much effort.
                   Alan Waggott</a>
                 </td>
               </tr>
-              <tr>
-                <td class="check">
-                  <!--<div class="form-group">
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox3" value="option3" type="checkbox">
-                      <label for="checkbox3"></label>
-                    </div>
-                  </div>-->
-                </td>
-                <td class="name">
-                  <a href="">
-                    <span class="initials new">
-                      <i class="glyphicon glyphicon-plus"></i>
-                    </span>
-                    New Name
-                  </a>
-                </td>
-              </tr>
             </tbody>
           </table>
+          <hr>
+          <div class="alert alert-success alert-clear">
+            <div class="title"><i class="fa fa-user-plus"></i> Name not on the list?</div> <a class="btn btn-add pull-right"><i class="fa fa-plus"></i> Add Name</a>
+          </div>
         </div>
         <div class="panel-footer">
           <div class="row">
