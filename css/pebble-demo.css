@@ -17240,6 +17240,15 @@ fieldset[disabled] .btn-menu.active {
   line-height: 50px;
   font-size: 1.15em;
 }
+.navbar-clear-inverse .navbar-header {
+  background: none;
+}
+.navbar-clear-inverse .navbar-header::before {
+  background: none;
+}
+.navbar-clear-inverse .navbar-brand {
+  background: url('../img/logo/logo_pebble_wht.svg') no-repeat;
+}
 /* Navbar */
 .panel-clear {
   border-color: transparent !important;
@@ -17655,6 +17664,10 @@ fieldset[disabled] .btn-menu.active {
   background: #ffffff;
   border-top: 0px;
 }
+.panel-actions-footer-b {
+  border-top: 1px solid #cccccc;
+  border-color: #dddddd;
+}
 .panel-actions-footer:before,
 .panel-actions-footer:after {
   content: " ";
@@ -17707,6 +17720,10 @@ fieldset[disabled] .btn-menu.active {
 .panel-footer {
   background: #ffffff;
   border-top: 0px;
+}
+.panel-footer-b {
+  border-top: 1px solid #cccccc;
+  border-color: #dddddd;
 }
 .panel-footer:before,
 .panel-footer:after {
@@ -18366,6 +18383,10 @@ fieldset[disabled] .btn-menu.active {
   background: #ffffff;
   border-top: 0px;
 }
+.menu-container .menu-toggle-actions-footer-b {
+  border-top: 1px solid #cccccc;
+  border-color: #dddddd;
+}
 .menu-container .menu-toggle-actions-footer:before,
 .menu-container .menu-toggle-actions-footer:after {
   content: " ";
@@ -18417,6 +18438,10 @@ fieldset[disabled] .btn-menu.active {
 .menu-container .menu-toggle-footer {
   background: #ffffff;
   border-top: 0px;
+}
+.menu-container .menu-toggle-footer-b {
+  border-top: 1px solid #cccccc;
+  border-color: #dddddd;
 }
 .menu-container .menu-toggle-footer:before,
 .menu-container .menu-toggle-footer:after {
@@ -18517,6 +18542,15 @@ fieldset[disabled] .btn-menu.active {
   border-left: 1px solid #cccccc;
   border-color: #dddddd;
 }
+.panel-transparent {
+  background: rgba(33, 33, 33, 0.7);
+  border-color: transparent;
+  border-width: 0;
+  color: #ffffff;
+}
+.panel-transparent blockquote {
+  border-left: none;
+}
 /*panels*/
 /* TABLES */
 .table {
@@ -18524,16 +18558,6 @@ fieldset[disabled] .btn-menu.active {
   width: 100%;
   max-width: 100%;
   margin-bottom: 0 !important;
-  /*
-  &-lg > tbody > tr > td{
-    padding:40px 20px;
-    .link{
-      padding:0px;
-      a{
-        padding:40px 20px;
-      }
-    }
-  }*/
 }
 .table > thead > tr > th,
 .table > tbody > tr > th,
@@ -18789,6 +18813,17 @@ fieldset[disabled] .btn-menu.active {
 }
 .table tr.selected > td {
   background: #f9f9f9;
+}
+.table tr.updated > td.field-updated {
+  color: #3c763d;
+  color: #93c01f;
+  font-weight: 700;
+}
+a.table tr.updated > td.field-updated:hover {
+  color: #2b542c;
+}
+.table tr.updated > td.field-deleted {
+  background: #f2dede;
 }
 .table-hover > tbody > tr:hover {
   background: #f9f9f9;
@@ -20063,6 +20098,29 @@ th .form-group .checkbox label {
   bottom: 0px;
   align-items: center;
   justify-content: center;
+}
+.flex-bottom {
+  display: flex;
+  align-items: baseline;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: -1;
+}
+.bg-login {
+  background: url('../img/background-img.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.login-footer {
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
 }
 .flex-text-wrap {
   position: relative;
