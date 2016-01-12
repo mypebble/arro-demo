@@ -6,20 +6,53 @@
 </footer>
 
 <!-- modals -->
-{% include modal-team.html %}
-{% include modal-project-library.html %}
-{% include modal-ga-refund.html %}
 
-{% include modal-grant-details.html %}
-{% include modal-grant-details-lg.html %}
+<!-- donations-->
+  {% include modal-hmrc.html %}
+  {% include modal-hmrc-data.html %}
+  {% include modal-ga-refund.html %}
 
-{% include modal-document-add.html %}
+<!-- clubs -->
 
+<!-- events -->
+
+<!-- services -->
+
+<!-- lettings -->
+
+<!-- grants -->
+  {% include modal-grant-details.html %}
+  {% include modal-grant-details-lg.html %}
+
+<!-- sponsorship -->
+
+<!-- projects -->
+  {% include modal-team.html %}
+  {% include modal-project-library.html %}
+  {% include modal-project-new.html %}
+  {% include modal-general-pot.html %}
+  {% include modal-document-add.html %}
+
+<!-- reports -->
+
+<!-- grants -->
+
+<!-- transactions -->
+
+<!-- SRM -->
+  {% include modal-name-preview.html %}
+  {% include modal-srm-data.html %}
+  {% include modal-import-csv.html %}
+  {% include modal-srm-new.html %}
+
+  {% include modal-campaign-ga.html %}
+
+
+<!-- general -->
 {% include modal-done.html %}
 
-{% include modal-create-claim.html %}
 
-{% include modal-name-preview.html %}
+
 <!-- end modals-->
 
 
@@ -46,46 +79,6 @@
 $(function () {
     $('textarea').flexText();
 });
-</script>
-
-
-
-<script>
-window.onload = function(){
-  var ctx4 = document.getElementById("chart-area").getContext("2d");
-
-  window.myDoughnut = new Chart(ctx4).Doughnut(doughnutData, {
-    responsive : true
-  });
-}
-
-
-var doughnutData = [
-  {
-    value: 300.00,
-    color:"#ec87c0",
-    highlight: "#ec87c0",
-    label: "CLUBS"
-  },
-  {
-    value: 100.00,
-    color:"#48cfad",
-    highlight: "#48cfad",
-    label: "EVENTS"
-  },
-  {
-    value: 1000.00,
-    color:"#f6bb42",
-    highlight: "#f6bb42",
-    label: "GRANTS"
-  },
-  {
-    value: 90.00,
-    color: "#fff",
-    highlight: "#fff",
-    label: "TO TARGET"
-  }
-];
 </script>
 
 <script type="text/javascript">

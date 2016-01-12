@@ -12,8 +12,6 @@ tagline: Your pending and archived Claims for HMRC
 <div class="jumbotron hide" id="jumbo">
   <div class="row">
     <div class="col-lg-7 col-md-6 ">
-
-
     </div>
     <div class="col-lg-5 col-md-6 ">
       <div class="panel">
@@ -29,196 +27,86 @@ tagline: Your pending and archived Claims for HMRC
           </div>
         </div>
         <div class="panel-footer">
-
+          <a class="btn btn-info pull-right" onclick="$('#jumbo').addClass('hide')">Got it</a>
         </div>
       </div>
 
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a>
-      </div>
     </div>
   </div>
 </div>
 
-
 <div class="row">
   <div class="col-lg-12">
-    <div class="alert alert-info hide" id="alert-download">
-      <a href="/donations/history/" class="close">
-        &times;
-      </a>
-      <div class="details">
-        <h4>Date Exported</h4>
-        <div class="details">
-          <p>Your are now ready to process your Gift Aid claim for HMRC.</p>
-        </div>
-      </div>
-      <a hef=""class="btn btn-info pull-right">Download Template</a>
-    </div>
-
-    <div class="alert alert-danger hide" id="danger-cancel">
-      <a href="/donations/history/" class="close">
-        &times;
-      </a>
-      <div class="details">
-        <h4>Warning</h4>
-        <div class="details">
-          <p>You are about to cancel your claim, this can not be undone.</p>
-        </div>
-      </div>
-      <a href="" class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
-      <a hef=""class="btn btn-danger pull-right">Proceed</a>
-    </div>
-
-    <div class="alert alert-info hide" id="alert-archived">
-      <a href="/donations/history/" class="close">
-        &times;
-      </a>
-      <h4>Caution</h4>
-      <div class="details">
-          <p>You are about to Archive your claim. You should only continue if you have previously submitted this claim. This action cannot be undone. Would you like to proceed?</p>
-      </div>
-
-      <a href="" class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
-      <a hef=""class="btn btn-info pull-right">Proceed</a>
-    </div>
-
-
-    <!-- body data-->
-    <div class="panel panel-context-donations">
+    <div class="panel panel-table panel-context-donations">
       <div class="panel-title">
-        View Pending / Archived Claims
+        Reports
       </div>
-      <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-12">
-            <ul class="list-unstyled list-inline pull-right">
-              <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalClaim" onclick="setTimeout(function(){ $('#ga-calculator').addClass('hide'); $('#ga-claim').removeClass('hide'); }, 5000)">
-                  <i class="glyphicon glyphicon-plus"></i> Create Report
-                </a>
-              </li>
-            </ul>
+      <div class="panel-alert alert-info ">
+        <div class="col-md-12">
+          <div class="title">
+            Did you know you could claim an additional <span>&pound;250.00</span> from these <span>50 donors</span>
           </div>
+          <a class="btn btn-info pull-right">Get Started</a>
         </div>
       </div>
 
       <div class="panel-body">
-
-        <table class="table table-vam table-bordered table-hover">
-          <thead>
-            <tr>
-              <th class="title">Report</th>
-              <th class="names">Donors</th>
-              <th class="amount">Claim Amount</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="title link">
-                <a href="">
-                  Gift Aid Claim
-                </a>
-              </td>
-              <td class="names">10</td>
-              <td class="amount">
-                &pound;250.00
-              </td>
-              <td></td>
-            </tr>
-
-            <tr class="danger">
-              <td class="title link">
-                <a href="">
-                  Potantial Donors Gift Aid Claim
-                </a>
-              </td>
-              <td class="names">5</td>
-              <td class="amount">
-                &pound;150.00
-              </td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-
-        <hr>
-
-          <table class="table table-vam table-bordered table-hover">
-            <thead>
-              <tr>
-                <th class="title">Pending Claim <span>(1)</span></th>
-                <th>Date Range<a class="filter"></a></th>
-                <th class="amount">Claim Amount<!--<a class="filter"></a>--></th>
-                <th class="action"></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="title link">
-                  <a href="">
-                    <span class="initials icon-donations">
-                      <i class="fa fa-file"></i>
-                    </span>
-                    Gift Aid Claim
-                    <small class="block"></small>
-                  </a>
-                </td>
-                <td class="">
-                  21/05/2014 to 01/09/2015
-                </td>
-                <td class="amount gift-aid total-claim">
-                  &pound;250.00
-                </td>
-                <td class="action-box">
-                  <div class="btn-group">
-                      <a class="dropdown-toggle" data-toggle="dropdown">
-                        Status <i class="arrow"></i>
+            <table class="table table-vam table-bordered">
+                <thead>
+                  <tr>
+                    <th class="title">Live Report</th>
+                    <th>Donors</th>
+                    <th class="amount">Refund Amount<!--<a class="filter"></a>--></th>
+                    <th>Reports</th>
+                    <th class="action"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="title link">
+                      <a href="">
+                        <span class="initials icon-donations">
+                          <i class="fa fa-file"></i>
+                        </span>
+                        Gift Aid Claim - 002
                       </a>
-                      <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Draft</a></li>
-                        <li><a href="#">Pending</a></li>
-                        <li><a href="#"> Refunded</a></li>
-                      </ul>
-                  </div>
-
-                </td>
-                <td class="action">
-                  <div class="btn-group">
-                      <a class="dropdown-toggle btn btn-default" data-toggle="dropdown">
-                        Actions <i class="arrow"></i>
+                    </td>
+                    <td class="names">
+                      10 Donors
+                    </td>
+                    <td class="amount total-claim">
+                      £250.00
+                    </td>
+                    <td>
+                      <a data-toggle="modal" data-target="#myModalHMRC-data">
+                        Preview
                       </a>
-                      <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#"><i class="fa fa-download"></i> Export CSV</a></li>
-                        <li><a href="#"><i class="fa fa-share"></i> Move to Archived</a></li>
-                        <li class="list-divider"></li>
-                        <li><a href="#"><i class="fa fa-trash"></i> Cancel Claim</a></li>
-                      </ul>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
+                    </td>
+                    <td>
+                      <a class="btn btn-default" data-toggle="modal" data-target="#myModalHMRC">
+                        Create Claim
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-        <div class="panel-body">
-          <div class="alert alert-info">
-            <p>Collect these <strong>5 Gift Aid Declerations</strong> you could get up to <strong>£150.00</strong> from HMRC
-            </p>
-            <a class="btn btn-info pull-right">Get Started</a>
+          <div class="panel-title">Archived Claims
           </div>
+          <div class="panel-alert">
+            <div class="col-md-12">
+              <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModalRefund"><i class="fa fa-gift"></i> Refund Received</a>
+            </div>
+          </div>
+
+        <div class="panel-body">
           <table class="table table-vam table-bordered table-hover">
             <thead>
               <tr>
-                <th class="title">Archived Claims <span>(3)</span></th>
-                <th>Date Range<a class="filter"></a></th>
-                <th class="amount">Refund Amount<!--<a class="filter"></a>--></th>
-                <th class="action"></th>
+                <th class="title">Archived Claims</th>
+                <th class="names">Donors</th>
+                <th class="amount">Refund Amount</th>
+                <th class="">Report<!--<a class="filter"></a>--></th>
               </tr>
             </thead>
             <tbody>
@@ -228,16 +116,20 @@ tagline: Your pending and archived Claims for HMRC
                     <span class="initials icon-donations">
                       <i class="fa fa-file"></i>
                     </span>
-                    Gift Aid Claim
+                    Gift Aid Claim - 001
                   </a>
+                </td>
+                <td class="names">
+                  1 Donor
+                </td>
+                <td class="amount">
+                  &pound;5.00
                 </td>
                 <td>
-                  10/02/2014 to 20/05/2014
+                  <a>Preview</a>
                 </td>
-                <td class="amount amount-pending total-claim">
-                  &pound;250.00
-                </td>
-                <td class="action">
+
+                <!--<td class="action">
                   <div class="btn-group">
                       <a class="dropdown-toggle btn btn-default" data-toggle="dropdown">
                         Actions <i class="arrow"></i>
@@ -251,56 +143,16 @@ tagline: Your pending and archived Claims for HMRC
                         <li><a  data-toggle="modal" data-target="#myModalRefund"><i class="fa fa-check"></i> Refund Received</a></li>
                       </ul>
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a href="">
-                    <span class="initials icon-donations">
-                      <i class="fa fa-file"></i>
-                    </span>
-                    Gift Aid Claim
-                   </a>
-                </td>
-                <td>
-                   03/02/2014 to 09/03/2014
-                </td>
-                <td class="amount income total-claim">
-                  &pound;250.00
-                  <!--<small class="text-income">( + £15.00 )</small>-->
-                </td>
-                <td>
-                  <a class="btn btn-default btn-block">
-                    View
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a href="">
-                    <span class="initials icon-donations">
-                      <i class="fa fa-file"></i>
-                    </span>
-                    Gift Aid Claim
-                  </a>
-                </td>
-                <td>
-                 01/01/2014 to 02/02/2014
-                </td>
-                <td class="amount income total-claim">
-                  &pound;235.00
-                  <!--<small class="text-expenditure">( - £15.00 )</small>-->
-                </td>
-                <td>
-                  <a class="btn btn-default btn-block">
-                    View
-                  </a>
-                </td>
+                </td>-->
               </tr>
             </tbody>
           </table>
-        </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
 
     </div>
   </div>

@@ -30,7 +30,8 @@ tagline: Donations are a great way to get additional income without much effort.
 </div>
 -->
 
-<div class="jumbotron" id="jumbo">
+
+<div class="jumbotron hide" id="jumbo">
   <div class="row">
     <div class="col-lg-7 col-md-6 ">
 
@@ -50,48 +51,38 @@ tagline: Donations are a great way to get additional income without much effort.
           </div>
         </div>
         <div class="panel-footer">
-
+          <a class="btn btn-info pull-right" onclick="$('#jumbo').addClass('hide')">Got it</a>
         </div>
       </div>
 
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a>
-      </div>
-    </div>
-  </div>
 </div>
 
 
-<div class="row">
-  <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
-    <!--<div class="panel">
-      <div class="panel-body">
-        xx
-      </div>
-    </div>-->
-
-    <!--
-    <div class="alert">
-      xxx
-    </div>
-    -->
-
+<div class="row flex-center-row">
+  <div class="col-md-8">
     <div class="panel panel-context-donations" id="donation-record">
-      <div class="panel-title">Record Donation</div>
+      <!--<div class="panel-title">Donation Details
+        <span class="pull-right">1 of 3</span>
+      </div>-->
+      <div class="panel-body">
+        <div class="body-title">
+          <div class="title">Record Donation</div>
+          <span>Record your donation(s) here</span>
+        </div>
+      </div>
+      <div class="panel-title">Donation Details</div>
       <div class="panel-body">
         <form class="">
           <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4">
               <div class="form-group">
                 <label class="control-label" for="">Amount</label>
                 <input class="form-control input-amount" placeholder="0.00" type="text">
               </div>
             </div>
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-4 col-md-4">
               <div class="form-group">
                 <label class="control-label" for="">Type</label>
                 <select class="selectpicker" data-style="btn-primary">
@@ -101,21 +92,7 @@ tagline: Donations are a great way to get additional income without much effort.
                  </select>
                </div>
              </div>
-           </div>
-           <div class="row row-ga">
-             <div class="col-lg-12 col-md-12">
-               <div class="form-group">
-                 <div class="checkbox checkbox-donations">
-                  <input id="checkbox2" checked="" value="option1" type="checkbox">
-                     <label for="checkbox2">
-                      Claim Gift Aid
-                     </label>
-                  </div>
-               </div>
-             </div>
-           </div>
-           <div class="row">
-             <div class="col-lg-12 col-md-12">
+             <div class="col-lg-4 col-md-4">
                <div class="form-group">
                  <label for="dtp_input2" class="control-label">Date</label>
                  <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
@@ -125,21 +102,127 @@ tagline: Donations are a great way to get additional income without much effort.
                </div>
              </div>
            </div>
-              <div class="form-group">
-                  <label for="textArea" class="control-label">Description</label>
-                  <textarea class="form-control" rows="3" id="textArea"></textarea>
+
+
+
+            <div class="form-group">
+                <label for="textArea" class="control-label">Description</label>
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+            </div>
+
+
+            <div class="form-group m-b-none">
+              <div class="checkbox checkbox-donations">
+               <input id="checkbox2" checked="" value="option1" type="checkbox">
+                  <label for="checkbox2">
+                   Claim Gift Aid on this donation
+                   <span>This donation is eligible for Gift Aid</span>
+                  </label>
+               </div>
+            </div>
+          </div>
+          <div class="panel-title">Donor</div>
+          <div class="panel-subnav">
+            <div action="#" class="col-lg-12">
+              <div class="search">
+                <input type="text" class="form-control" placeholder="Search for Name" value="Alan Waggott">
+                <i class="glyphicon glyphicon-search"></i>
               </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <table class="table table-vam">
+              <thead>
+                <tr>
+                  <th class="check">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox3" value="option3" type="checkbox">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </div>
+                  </th>
+                  <th class="name">Stakeholders <a class="filter"></a></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="selected">
+                  <td class="check">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox3" checked="" value="option3" type="checkbox">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="name">
+                    <a href="">
+                    <span class="initials alumni">AW</span>
+                    Alan Waggott</a>
+                  </td>
+                </tr>
+                <tr class="info table-alert">
+                  <td colspan="3">
+                    <div class="title">Can't find your donor's details?</div>
+                      <a class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Name</a>
+                    </div>
+                </tr>
+              </tbody>
+            </table>
 
         </form>
       </div>
       <div class="panel-footer">
-        <div class="pull-right">
-          <a class="btn btn-default" onclick="$('#donation-details-toggle').toggleClass('hide'), $('#donation-record').toggleClass('hide')">NEXT</a>
+        <div class="row">
+          <div class="col-lg-8">
+            <ul class="pagination">
+              <li class="disabled">
+                <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+              </li>
+              <li class="active">
+                <a data-page="1" href="#" class="page">
+                  1
+                </a>
+              </li>
+              <li class="">
+                <a data-page="2" href="#" class="page">
+                  2
+                </a>
+              </li>
+              <li class="">
+                  <a data-page="2" href="#" class="page">
+                    3
+                  </a>
+              </li>
+              <li class="">
+                <a data-page="next" href="#" aria-label="Next" class="page-next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+              </li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+          <div class="page-total">
+            <strong>Names Selected:</strong> 1
+          </div>
+        </div>
+      </div>
+    <hr/>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pull-left">
+            <a class="btn btn-default" href="/donations/claim/"><i class="fa fa-trash-o"></i> Abandon</a>
+          </div>
+          <div class="pull-right">
+            <a class="btn btn-add" href="">Create Donation</a>
+          </div>
         </div>
       </div>
     </div>
 
-    <div id="donation-details-toggle" class="panel hide">
+    <!--<div id="donation-details-toggle" class="panel hide">
       <div class="panel-body">
 
         <ul class="list-unstyled list-summary">
@@ -151,123 +234,7 @@ tagline: Donations are a great way to get additional income without much effort.
            <i class="fa fa-pencil"></i> Edit
         </a>
       </div>
-    </div>
+    </div>-->
 
   </div>
 </div>
-
-  <div class="row">
-    <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
-      <div class="panel ">
-        <div class="panel-title">Stakeholder</div>
-        <div class="panel-subnav">
-          <form action="#" class="col-lg-12">
-            <div class="search">
-              <input type="text" class="form-control" placeholder="Search for Name">
-              <i class="glyphicon glyphicon-search"></i>
-            </div>
-          </form>
-        </div>
-        <div class="panel-body">
-
-          <table class="table table-vam">
-            <thead>
-              <tr>
-                <th class="check">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox3" value="option3" type="checkbox">
-                      <label for="checkbox3"></label>
-                    </div>
-                  </div>
-                </th>
-                <th class="name">Stakeholders <a class="filter"></a></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="">
-                <td class="check">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox3" value="option3" type="checkbox">
-                      <label for="checkbox3"></label>
-                    </div>
-                  </div>
-                </td>
-                <td class="name">
-                  <a data-toggle="modal" data-target="#myModalName">
-                  <span class="initials pupil">AH</span>
-                  Adam Hogg</a>
-                </td>
-
-              </tr>
-              <tr class="selected">
-                <td class="check">
-                  <div class="form-group">
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox3" checked="" value="option3" type="checkbox">
-                      <label for="checkbox3"></label>
-                    </div>
-                  </div>
-                </td>
-                <td class="name">
-                  <a href="">
-                  <span class="initials alumni">AW</span>
-                  Alan Waggott</a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-          <div class="alert alert-success alert-clear">
-            <div class="title"><i class="fa fa-user-plus"></i> Name not on the list?</div> <a class="btn btn-add pull-right"><i class="fa fa-plus"></i> Add Name</a>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <div class="row">
-            <div class="col-lg-8">
-              <ul class="pagination">
-                <li class="disabled">
-                  <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                  </a>
-                </li>
-                <li class="active">
-                  <a data-page="1" href="#" class="page">
-                    1
-                  </a>
-                </li>
-                <li class="">
-                  <a data-page="2" href="#" class="page">
-                    2
-                  </a>
-                </li>
-                <li class="">
-                    <a data-page="2" href="#" class="page">
-                      3
-                    </a>
-                </li>
-                <li class="">
-                  <a data-page="next" href="#" aria-label="Next" class="page-next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                  </a>
-                </li>
-              </ul>
-          </div>
-          <div class="col-lg-4">
-            <div class="page-total">
-              <strong>Names Selected:</strong> 1
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-body">
-          <a class="btn btn-default" href="/donations/claim/"><i class="fa fa-trash-o"></i> Abandon</a>
-          <a class="btn btn-primary pull-right" href="">Create Donation</a>
-        </div>
-      </div>
-    </div>
-  </div>

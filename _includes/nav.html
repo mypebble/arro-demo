@@ -34,9 +34,12 @@
                   </a>
                 </li>
                 <li class="list-divider"></li>
-                <li><a href="/donations/claim/" class="{% if page.url contains '/donations/claim/' %}active{% endif %}">Create Claim</a></li>
+                <!--<li><a href="/donations/claim/" class="{% if page.url contains '/donations/claim/' %}active{% endif %}">Create Claim</a></li>-->
+                <li class="{% if page.url contains '/donations/all/' %}active{% endif %}">
+                  <a href="/donations/all/">View Donations</a>
+                </li>
                 <li class="{% if page.url contains '/donations/history/' %}active{% endif %}">
-                  <a href="/donations/history/">View Pending / Archived</a>
+                  <a href="/donations/history/">Gift Aid Claims</a>
                 </li>
               </ul>
             </li>
@@ -137,22 +140,22 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-stakeholder {% if page.url contains '/stakeholder/' %}active-page{% endif %}">
-              <a href="#">
+            <li class="nav-stakeholder {% if page.url contains '/stakeholders/' %}active-page{% endif %}">
+              <a href="/stakeholders/home/">
                 <i class="fa fa-users"></i>
                 <span class="menu-title">
-                  Stakeholders
+                  SRM
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse {% if page.url contains '/stakeholder/' %}in{% endif %}">
+              <!--<ul class="collapse {% if page.url contains '/stakeholder/' %}in{% endif %}">
                 <li>
                   <a herf="#" data-toggle="modal" data-target="#modal-add-name">
                     Create</a>
                 </li>
                 <li class="list-divider"></li>
                 <li class="{% if page.url contains '/stakeholders/home/' %}active-page{% endif %}"><a href="/stakeholder/home/">Manage Stakeholders</a></li>
-              </ul>
+              </ul>-->
             </li>
             <li class="nav-admin">
               <a href="#">
