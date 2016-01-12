@@ -17138,6 +17138,125 @@ a.has-success .form-control:focus:hover {
 .checkbox label {
   padding-left: 10px !important;
 }
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile + label {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 8px 12px;
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: #555555 !important;
+}
+.inputfile + label:focus,
+.inputfile + label:active:focus,
+.inputfile + label.active:focus,
+.inputfile + label.focus,
+.inputfile + label:active.focus,
+.inputfile + label.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.inputfile + label:hover,
+.inputfile + label:focus,
+.inputfile + label.focus {
+  color: #333333;
+  text-decoration: none;
+}
+.inputfile + label:active,
+.inputfile + label.active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.inputfile + label.disabled,
+.inputfile + label[disabled],
+fieldset[disabled] .inputfile + label {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.inputfile + label i {
+  margin-right: 5px;
+}
+.inputfile + label .label {
+  background: #ed5565;
+  margin-left: 5px;
+  font-size: 70%;
+  padding: 4px 7px;
+}
+.inputfile + label:hover,
+.inputfile + label:focus,
+.inputfile + label.focus,
+.inputfile + label:active,
+.inputfile + label.active,
+.open > .dropdown-toggle.inputfile + label {
+  color: #333333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.inputfile + label:active,
+.inputfile + label.active,
+.open > .dropdown-toggle.inputfile + label {
+  background-image: none;
+}
+.inputfile + label.disabled,
+.inputfile + label[disabled],
+fieldset[disabled] .inputfile + label,
+.inputfile + label.disabled:hover,
+.inputfile + label[disabled]:hover,
+fieldset[disabled] .inputfile + label:hover,
+.inputfile + label.disabled:focus,
+.inputfile + label[disabled]:focus,
+fieldset[disabled] .inputfile + label:focus,
+.inputfile + label.disabled.focus,
+.inputfile + label[disabled].focus,
+fieldset[disabled] .inputfile + label.focus,
+.inputfile + label.disabled:active,
+.inputfile + label[disabled]:active,
+fieldset[disabled] .inputfile + label:active,
+.inputfile + label.disabled.active,
+.inputfile + label[disabled].active,
+fieldset[disabled] .inputfile + label.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.inputfile + label .badge {
+  color: #ffffff;
+  background-color: #333333;
+}
+.inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}
 /*input type*/
 .menu-button a {
   line-height: 50px;
