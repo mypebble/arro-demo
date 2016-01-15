@@ -23,9 +23,8 @@ tagline: Looking after all your stakeholders
     <div class="panel">
       <div class="panel-title with-nav-tabs">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#tab1default" data-toggle="tab">All <span>(3,231)</span></a></li>
-            <li><a href="#tab2default" data-toggle="tab">Donors <span>(2)</span></a></li>
-            <li><a href="#tab3default" data-toggle="tab">Campaigns <span class="label label-success">NEW</span></a></li>
+            <li class="active"><a href="#tab1default" data-toggle="tab">Stakeholders <span>(3,231)</span></a></li>
+            <li><a href="#tab3default" data-toggle="tab">Reports <span class="label label-success">NEW</span></a></li>
         </ul>
       </div>
 
@@ -73,7 +72,7 @@ tagline: Looking after all your stakeholders
                             </div>
                           </div>
                         </th>
-                        <th class="name">Stakeholder<a class="filter"></a></th>
+                        <th class="name">Name<a class="filter"></a></th>
                         <th class="category">Type</th>
                         <th class="comms">Contact Details</th>
                         <th class="status">Gift Aid</th>
@@ -183,7 +182,7 @@ tagline: Looking after all your stakeholders
                           </ul>
                         </td>
                       </tr>
-                      <tr class="updated">
+                      <tr>
                         <td class="check">
                           <div class="form-group">
                             <div class="checkbox checkbox-primary">
@@ -234,7 +233,7 @@ tagline: Looking after all your stakeholders
                           </ul>
                         </td>
                       </tr>
-                      <tr class="updated">
+                      <tr>
                         <td class="check">
                           <div class="form-group">
                             <div class="checkbox checkbox-primary">
@@ -639,6 +638,9 @@ tagline: Looking after all your stakeholders
                   <div class="col-lg-4">
                     <div class="page-total">
                       <strong>Selected 1</strong>
+                      <!--
+                        <a class="btn btn-primary">Action</a>
+                      -->
                     <!--  Showing 1 - 10 of 2,000 -->
                     </div>
                   </div>
@@ -805,10 +807,9 @@ tagline: Looking after all your stakeholders
 
             </div>
             <div class="tab-pane fade in" id="tab3default">
-              <div class="panel-body">
+              <!--<div class="panel-body">
                 <div class="row">
                   <div class="jumbotron jumbotron-sm m-b-none" id="jumbo">
-
                     <div class="row">
                       <div class="col-md-4">
                         <h2>Featured Campaign</h2>
@@ -816,33 +817,95 @@ tagline: Looking after all your stakeholders
                         <p>Collect all avaiable Gift Aid Declaration forms from your stakeholders to allow you to claim an additional 2% on all Gift Aid Eligible Transactions and Donations.</p>
                         <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-ga">Show Details</a>
                       </div>
-                      <!--<div class="col-md-4">
-                        <div class="panel">
-                            <div class="panel-title">About Campaigns
-                          </div>
-                          <div class="panel-body">
-                            <p>Arro has the ability to help keep your data up to date and engage with your stakeholders.</p>
-                            <br>
-                            <div class="staff-comment">
-                              Daniel Wakenshaw
-                              <small class="block">Pebble Support Team</small>
-                            </div>
-                          </div>
-                        </div>
-                      </div>-->
-
-                      <!--<div class="col-md-4">
-                        <strong>Step 1</strong>
-                        <p>cc</p>
-                      </div>-->
                     </div>
 
                   </div>
                 </div>
               </div>
+            -->
 
+            <!--
               <div class="panel-title">All Campaigns <span>(2)</span></div>
+            -->
               <div class="panel-body">
+
+                <div class="row row-campaigns">
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-donations">
+                            <i class="fa fa-gift"></i>
+                          </span>
+                          <div class="title">#001 - Gift Aid Eligibly Stakeholders</div>
+                        </div>
+                        <p class="text-center">Collect all avaiable Gift Aid Declaration forms from your stakeholders to allow you to claim an additional 2% on all Gift Aid Eligible Transactions and Donations.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-ga"><i class="fa fa-paper-plane"></i> Run Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-stakeholders">
+                            <i class="fa fa-users"></i>
+                          </span>
+                          <div class="title">#002 - Improve your stakeholders knowledge</div>
+                        </div>
+                        <p class="text-center">Collect more information about your stakeholders without having to Run Campaign out and chase them all.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-info"><i class="fa fa-paper-plane"></i> Run Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-volunteer">
+                            <i class="fa fa-plus-square"></i>
+                          </span>
+                          <div class="title">#003 - Get your Volunteers involved</div>
+                        </div>
+                        <p class="text-center">Ask your local community to help your school grow.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target=""><i class="fa fa-paper-plane"></i> Run Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign locked">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-donations">
+                            <i class="fa fa-gift"></i>
+                          </span>
+                          <div class="title">#004 - Donate £10 to help your school</div>
+                        </div>
+                        <p class="text-center">Ask your parents to donate just £10 a year towards the runing of your club.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target=""><i class="fa fa-lock"></i> Unlock Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!--
                 <table class="table table-vam table-hover table-bordered">
                   <thead>
                     <tr>
@@ -854,7 +917,7 @@ tagline: Looking after all your stakeholders
                   <tbody>
                     <tr>
                       <td class="title link">
-                        <a href="">
+                        <a data-toggle="modal" data-target="#myModalSRM-campaign-ga">
                           <span class="initials campaign">
                             <i class="fa fa-paper-plane"></i>
                           </span>
@@ -870,7 +933,7 @@ tagline: Looking after all your stakeholders
                     </tr>
                     <tr>
                       <td class="title link">
-                        <a href="">
+                        <a data-toggle="modal" data-target="#myModalSRM-campaign-info">
                           <span class="initials campaign">
                             <i class="fa fa-paper-plane"></i>
                           </span>
@@ -882,10 +945,10 @@ tagline: Looking after all your stakeholders
                       <td class="rating rating-easy">
                         Basic
                       </td>
-                      <td class="action"><a class="btn btn-default">Show Details</a></td>
+                      <td class="action"><a class="btn btn-default" data-toggle="modal" data-target="#myModalSRM-campaign-info">Show Details</a></td>
                     </tr>
                   </tbody>
-                </table>
+                </table>-->
 
               </div>
 

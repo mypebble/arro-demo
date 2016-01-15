@@ -103,9 +103,14 @@ tagline: Donations are a great way to get additional income without much effort.
              </div>
            </div>
 
+           <div class="form-group" id="add-description">
+             <label for="" class="control-label">Description</label>
+             This is a voluntary donation.
+             <a onclick="$('#ga-description').removeClass('hide'),$('#add-description').addClass('hide') ">Add Description</a>
+           </div>
 
 
-            <div class="form-group">
+            <div class="form-group hide" id="ga-description">
                 <label for="textArea" class="control-label">Description</label>
                 <textarea class="form-control" rows="3" id="textArea"></textarea>
             </div>
@@ -123,11 +128,14 @@ tagline: Donations are a great way to get additional income without much effort.
           </div>
           <div class="panel-title">Donor</div>
           <div class="panel-subnav">
-            <div action="#" class="col-lg-12">
+            <div action="#" class="col-lg-9">
               <div class="search">
-                <input type="text" class="form-control" placeholder="Search for Name" value="Alan Waggott">
+                <input type="text" class="form-control" placeholder="Search for Name" value="Adam Hogg">
                 <i class="glyphicon glyphicon-search"></i>
               </div>
+            </div>
+            <div class="col-lg-3">
+              <a class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Name</a>
             </div>
           </div>
           <div class="panel-body">
@@ -142,7 +150,8 @@ tagline: Donations are a great way to get additional income without much effort.
                       </div>
                     </div>
                   </th>
-                  <th class="name">Stakeholders <a class="filter"></a></th>
+                  <th class="name">Name <a class="filter"></a></th>
+                  <th class="status">Gift Aid</th>
                 </tr>
               </thead>
               <tbody>
@@ -155,25 +164,32 @@ tagline: Donations are a great way to get additional income without much effort.
                       </div>
                     </div>
                   </td>
-                  <td class="name">
-                    <a href="">
-                    <span class="initials alumni">AW</span>
-                    Alan Waggott</a>
+                  <td class="name link">
+                    <a  data-toggle="modal" data-target="#myModalName">
+                    <span class="initials pupil">AH</span>
+                    Adam Hogg</a>
+                  </td>
+                  <td class="status">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="donations active">
+                        <i class="fa fa-gift"></i>
+                      </li>
+                    </ul>
                   </td>
                 </tr>
-                <tr class="info table-alert">
+                <!--<tr class="info table-alert">
                   <td colspan="3">
                     <div class="title">Can't find your donor's details?</div>
                       <a class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Name</a>
                     </div>
-                </tr>
+                </tr>-->
               </tbody>
             </table>
 
         </form>
       </div>
       <div class="panel-footer">
-        <div class="row">
+        <!--<div class="row">
           <div class="col-lg-8">
             <ul class="pagination">
               <li class="disabled">
@@ -209,7 +225,7 @@ tagline: Donations are a great way to get additional income without much effort.
           </div>
         </div>
       </div>
-    <hr/>
+    <hr/>-->
       <div class="row">
         <div class="col-md-12">
           <div class="pull-left">

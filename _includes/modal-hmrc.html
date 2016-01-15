@@ -1,5 +1,5 @@
 <div class="modal fade" id="myModalHMRC" tabindex="-1" role="dialog" aria-labelledby="myModalLabelHMRC">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header modal-header-clear">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -8,53 +8,64 @@
       </div>
       <div class="modal-body modal-body-clear">
         <div class="body-title">
+          <span class="initials none">
+            <i class="fa fa-file"></i>
+          </span>
           <div class="title">Create Claim
           </div>
           <span class="label label-info">Gift Aid Report 001</span>
         </div>
-
-
-        <div class="panel-title">
-          Step 1 - Download your Data
-        </div>
         <div class="panel-body">
-          xxx
-        </div>
-        <a href="" class="btn btn-info">
-          <i class="fa fa-download"></i>
-          Download CSV
-        </a>
-        <div class="panel-title">
-          Step 2 - Merge Data into HMRC Template
-        </div>
-        <div class="panel-body">
-          xxx
+          <ul class="list-unstyled list-tasks">
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox1" value="option1" type="checkbox">
+                  <label for="checkbox1">Step 1 - Download HMRC Template
+                    <span>This is official HMRC document we will need to use for our claim.</span>
+                  </label>
+                </div>
+              </div>
+              <div class="actions-row">
+                <a href="#" class="btn btn-info"><i class="fa fa-download"></i> Download Template</a>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox2" value="option2" type="checkbox">
+                  <label for="checkbox2">Step 2 - Download your donation data
+                    <span>Here is all your elibile Aift Aid donors information to date.</span>
+                  </label>
+                </div>
+              </div>
+              <div class="actions-row">
+                <a href="#" class="btn btn-info"><i class="fa fa-download"></i> Download Data</a>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" value="option3" type="checkbox">
+                  <label for="checkbox3">Step 3 - Merge Data File with HMRC template.
+                    <span>Copy and paste your data file into the HMRC template</span>
+                  </label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox4" value="option3" type="checkbox">
+                  <label for="checkbox4">Step 4 - Submit to HMRC
+                    <span>Submit your report to HMRC for review.</span>
+                  </label>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <div class="panel-title">
-          Step 3 - Submit to HMRC
-        </div>
-        <div class="panel-body">
-          <div class="form-group m-b-none">
-            <div class="checkbox checkbox-success">
-             <input id="checkbox2" value="option1" type="checkbox">
-                <label for="checkbox2">
-                 I have submitted this claim to HMRC <span class="text-muted block">This will move this claim to a pending state while we wait for HMRC</span>
-                </label>
-             </div>
-          </div>
-        </div>
-        <!--<div class="panel-footer">
-          <div class="actions-row actions-row-clear">
-            <ul class="list-unstyled list-progress list-inline">
-              <li class="complete"></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>-->
       </div>
       <div class="modal-footer">
         <div class="pull-left">
