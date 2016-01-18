@@ -18,30 +18,65 @@
         <div class="row" id="">
           <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
             <div id="profile-type">
-              <div>
-                  PROFILE TYPE
-                  <!--<a class="btn btn-primary" onclick="$('#profile-parent').removeClass('hide')">Parent</a>-->
+              <div class="actions-row">
+                <h3>What profile type is this contact?</h3>
+                  <a class="btn btn-default" onclick="$('#profile-parent').removeClass('hide')">Parent / Guardian
+                    <i class="m-l-sm fa fa-chevron-down"></i>
+                  </a>
               </div>
-              <div id="profile-parent" class="">
-                title First Name Last Name
-
-                <div class="form-group">
-                  <label class="control-label" for="">Address
-                  </label>
-                  <input class="form-control" placeholder="Address" type="text">
+              <div id="profile-parent" class="hide">
+                <hr>
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label class="control-label" for="">Title
+                      </label>
+                      <input class="form-control" placeholder="Title" type="text">
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="form-group">
+                      <label class="control-label" for="">First Name
+                      </label>
+                      <input class="form-control" placeholder="First Name" type="text">
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <div class="form-group">
+                      <label class="control-label" for="">Last Name
+                      </label>
+                      <input class="form-control" placeholder="Last Name" type="text">
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group">
-                  <label class="control-label" for="">Postcode
-                  </label>
-                  <input class="form-control" placeholder="Postcode" type="text">
+
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <label class="control-label" for="">Address
+                      </label>
+                      <input class="form-control" placeholder="Address" type="text">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="control-label" for="">Postcode
+                      </label>
+                      <input class="form-control" placeholder="Postcode" type="text">
+                    </div>
+                  </div>
+                </div>
+                <div class="actions-row" id="btn-profile-contact-more">
+                  <a onclick="$('#profile-contact-more').removeClass('hide'), $('#btn-profile-contact-more').addClass('hide')" id="">Add Contact Details</a>
                 </div>
               </div>
 
             </div>
 
 
-            <div>
-              CONTACT MORE
+            <div id="profile-contact-more" class="hide">
+
+              <!--<div class="panel-title">CONTACT MORE</div>-->
 
               <div class="row">
                 <div class="col-lg-6 col-md-6">
@@ -80,112 +115,92 @@
                 </div>
               </div>
 
-            </div>
-
-
-            <div>
-              VOLUNTEER / GIFT AID
-            </div>
-
-            <div>
-              SOCIAL EXTRA
-
-              <div class="form-group">
-                <label class="control-label" for="">Twitter
-                </label>
-                <div class="input-group">
-                  <span class="input-group-addon" id="basic-addon1">@</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
-                </div>
+              <div class="actions-row" id="btn-volunteer-ga">
+                <a onclick="$('#profile-volunteer-ga').removeClass('hide'), $('#btn-volunteer-ga').addClass('hide')" id="">Add  Gift Aid / Volunteer Status</a>
               </div>
 
             </div>
 
 
-          </div>
-        </div>
+            <div id="profile-volunteer-ga" class="hide">
+              <!--<div class="panel-title">VOLUNTEER / GIFT AID</div>-->
+                  <div class="form-group">
+                    <label class="control-label" for="">Gift Aid Status
+                    </label>
+                    <div class="checkbox checkbox-success">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#donor-detail').toggleClass('hide')">
+                        <label for="donor">
+                         This contact is eligible for Gift Aid
+                         <span>Gift Aid declaration form from this contact.</span>
+                        </label>
+                          <a class="btn btn-default pull-right" href="">Template</a>
+                     </div>
+                  </div>
 
-        </div>
+                  <div id="donor-detail" class="hide">
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-2">
+                        <div class="form-group">
+                          <label class="control-label" for="">Title
+                          </label>
+                          <input class="form-control" placeholder="Title" type="text">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="control-label" for="">Donor First Name
+                          </label>
+                          <input class="form-control" placeholder="Donor First Name" type="text">
+                        </div>
+                      </div>
+                      <div class="col-md-5">
 
-          <div class="actions-row">
-            <div class="form-group">
-              <label class="control-label">Profile Type</label>
+                        <div class="form-group">
+                          <label class="control-label" for="">Donor Last Name
+                          </label>
+                          <input class="form-control" placeholder="Donor Last Name" type="text">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="control-label" for="">Volunteer Status
+                    </label>
+                    <div class="checkbox checkbox-success">
+                     <input id="checkbox2" value="donor" type="checkbox" onclick="$('#donor').toggleClass('hide')">
+                        <label for="donor">
+                         This contact would like to volunteer and help your school.
+                        </label>
+                     </div>
+                  </div>
+
+
+              <div class="actions-row" id="btn-social-media">
+                <a onclick="$('#profile-social-media').removeClass('hide'), $('#btn-social-media').addClass('hide')" id="">Add Twitter account</a>
+              </div>
 
             </div>
-          </div>
-          <div id="profile-" class="">
-            <!--
-            <div class="row">
-              <div class="col-md-2">
-                <div class="form-group">
-                  <label class="control-label" for="">Title
-                  </label>
-                  <input class="form-control" placeholder="Title" type="text">
+
+            <div id="profile-social-media" class="hide">
+              <!--<div class="panel-title">SOCIAL EXTRA</div>-->
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="control-label" for="">Twitter
+                    </label>
+                    <div class="input-group  has-disabled">
+                      <span class="input-group-addon" id="basic-addon1">@</span>
+                      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label class="control-label" for="">First Name
-                  </label>
-                  <input class="form-control" placeholder="First Name" type="text">
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="form-group">
-                  <label class="control-label" for="">Last Name
-                  </label>
-                  <input class="form-control" placeholder="Last Name" type="text">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="">Address
-              </label>
-              <input class="form-control" placeholder="Address" type="text">
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="">Postcode
-              </label>
-              <input class="form-control" placeholder="Postcode" type="text">
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="">Email Address
-              </label>
-              <input class="form-control" placeholder="Email Address" type="email">
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="">Telephone Number
-              </label>
-              <input class="form-control" placeholder="Telephone Number" type="text">
-            </div>
-            <div class="form-group">
-              <label class="control-label" for="">Mobile Number
-              </label>
-              <input class="form-control" placeholder="Mobile Number" type="text">
-            </div>
-          -->
 
-
-          </div>
-
+            </div>
         </div>
-
-        <div id="section1" class="">
-          Section 1
-          <div class="actions-row">
-            <a class="" onclick="$('#section2').removeClass('hide'), $('#btn-more-2').addClass('hide')" id="btn-more-2">Add More</a>
-          </div>
-
-        </div>
-
-        <div id="section2" class="">
-          section 3
-          <div class="actions-row">
-            <a class="" onclick="$('#section3').removeClass('hide'), $('#btn-more-3').addClass('hide')" id="btn-more-3">Add Social Media Details</a>
-          </div>
-        </div>
-
-        <div id="section3" class="">
 
         </div>
 
@@ -198,146 +213,13 @@
         </div>
         <div class="pull-right">
           <a class="btn btn-primary">
-            Create Name
+            Create
           </a>
         </div>
       </div>
-
-        <!--<div class="jumbotron">
-          <div class="flex-center-row">
-            <div class="col-lg-10 col-md-10">
-              <div class="form-group">
-                <label class="control-label">Profile Type</label>
-                <select class="selectpicker form-control" data-style="btn btn-default block">
-                  <option>Pupil</option>
-                  <option>Alumni</option>
-                  <option>PTA</option>
-                  <option>Parent</option>
-                  <option>Volunteer</option>
-                  <option>Staff</option>
-                  <option>Business</option>
-                  <option>Supplier</option>
-                  <option>Organisation</option>
-                  <option>Sponsor</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex-center-row" id="profile-pupil">
-            <div class="col-lg-10 col-md-10">
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label class="control-label" for="">Year
-                  </label>
-                  <input class="form-control" placeholder="Year" type="text">
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label class="control-label" for="">Class
-                  </label>
-                  <input class="form-control" placeholder="Class" type="text">
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="form-group">
-                  <label class="control-label" for="">Reg
-                  </label>
-                  <input class="form-control" placeholder="Reg" type="text">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>-->
-
-
-          <div class="flex-center-row">
-            <div class="col-lg-10 col-md-10">
-              <div class="row">
-                <!--<div class="col-md-4">
-                  <div class="flex-center-row">
-                    <div class="initials initials-lg none">
-                      AH
-                    </div>
-                  </div>
-                </div>-->
-
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-4">
-                </div>
-                <div class="col-md-8">
-
-
-
-                </div>
-              </div>
-              <hr>
-
-              <div class="panel">
-                <div class="panel-body">
-                  <div class="form-group m-b-none">
-                    <div class="checkbox checkbox-success">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#donor-detail').toggleClass('hide')">
-                        <label for="donor">
-                         This contact is elibile for Gift Aid
-                         <span>Gift Aid declaration form from this contact.</span>
-                        </label>
-                          <a class="btn btn-default pull-right" href="">Template</a>
-                     </div>
-                  </div>
-
-                  <div id="donor-detail" class="hide">
-                    <hr>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="control-label" for="">Donor First Name
-                          </label>
-                          <input class="form-control" placeholder="Donor First Name" type="text">
-                        </div>
-
-                        <div class="form-group">
-                          <label class="control-label" for="">Donor Last Name
-                          </label>
-                          <input class="form-control" placeholder="Donor Last Name" type="text">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="panel">
-                <div class="panel-body">
-                  <div class="form-group m-b-none">
-                    <div class="checkbox checkbox-success">
-                     <input id="checkbox2" value="donor" type="checkbox" onclick="$('#donor').toggleClass('hide')">
-                        <label for="donor">
-                         This contact would like to volunteer and help your school.
-                        </label>
-                     </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
-
-
-      <div class="modal-footer">
-        <div class="pull-left">
-          <a  data-dismiss="modal" aria-label="Close" class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
-        </div>
-        <div class="pull-right">
-          <a data-dismiss="modal" aria-label="Close" class="btn btn-add"<i class="fa fa-save"></i> Save
-          </a>
-        </div>
-      </div>
     </div>
 
   </div>

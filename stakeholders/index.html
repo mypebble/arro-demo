@@ -51,6 +51,9 @@ tagline: Looking after all your stakeholders
                         </div>
                       </li>
                       <li>
+                        <a class="btn btn-default" onclick="$('#filter').toggleClass('hide')">Advanced Search</a>
+                      </li>
+                      <li>
                         <a class="btn btn-add" data-toggle="modal" data-target="#myModalSRMNew">
                           <i class="glyphicon glyphicon-plus"></i> Add New
                         </a>
@@ -59,6 +62,133 @@ tagline: Looking after all your stakeholders
                   </div>
                 </div>
               </div>
+
+              <!-- filter -->
+              <div class="filter-menu hide" id="filter">
+                <div class="row">
+
+                  <div class="col-lg-6 col-md-6">
+                    <div class="label-title">Filter by Stakeholder Type</div>
+                     <ul class="list-unstyled">
+                       <div class="row">
+                         <div class="col-lg-12 col-md-12">
+                           <li class="form-group">
+                             <div class="checkbox checkbox-primary">
+                               <input id="checkbox1" value="option1" type="checkbox">
+                               <label for="checkbox2">All Stakeholder Types</label>
+                             </div>
+                           </li>
+                         </div>
+                       </div>
+                       <div class="row">
+                         <div class="col-lg-6 col-md-6">
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox2" value="option2" type="checkbox">
+                              <label for="checkbox2">Pupil</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3">Alumni</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox4" value="option4" type="checkbox">
+                              <label for="checkbox4">PTA</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox5" value="option5" type="checkbox">
+                              <label for="checkbox5">Parent / Guardian</label>
+                            </div>
+                          </li>
+
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox6" value="option6" type="checkbox">
+                              <label for="checkbox6">Volunteer</label>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox7" value="option7" type="checkbox">
+                              <label for="checkbox7">Staff</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox8" value="option8" type="checkbox">
+                              <label for="checkbox8">Business</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox9" value="option9" type="checkbox">
+                              <label for="checkbox9">Supplier</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox10" value="option10" type="checkbox">
+                              <label for="checkbox10">Organisation</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox11" value="option11" type="checkbox">
+                              <label for="checkbox1">Sponsor</label>
+                            </div>
+                          </li>
+                          </div>
+                        </div>
+                      </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <div class="form-group">
+                        <label class="control-label" for="">Filter Gift Aid Status</label>
+                        <select class="selectpicker form-control" data-style="btn btn-default block">
+                          <option>All Gift Aid Status</option>
+                          <option>Eligible</option>
+                          <option>Not Eligible</option>
+                          <option>No information</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <div class="form-group">
+                        <label class="control-label" for="">Filter by Volunteer Status</label>
+                        <select class="selectpicker form-control" data-style="btn btn-default block">
+                          <option>All Volunteer Status</option>
+                          <option>Willing to Volunteer</option>
+                          <option>Opted out to Volunteer</option>
+                          <option>No information</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                      <!--<div class="pull-left">
+                        <a class="btn btn-default" onclick="$('#filter').addClass('hide')">Hide</a>
+                      </div>-->
+                      <div class="pull-right">
+                        <a href="" class="btn btn-default">Clear Form</a>
+                        <a href="" class="btn btn-primary">
+                          Search</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- end filter -->
 
                 <div class="panel-body">
                   <table class="table table-bordered table-vam table-hover">
@@ -247,7 +377,7 @@ tagline: Looking after all your stakeholders
                           <span class="initials parent">JW</span>
                           Jaquie Wade</a>
                         </td>
-                        <td class="category ">Parent</td>
+                        <td class="category ">Parent / Guardian</td>
                         <td class="comms">
                           <ul class="list-unstyled list-inline list-status">
                             <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">

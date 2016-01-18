@@ -15912,6 +15912,35 @@ ul.list-status li.donations.active {
 ul.list-status li.volunteer.active {
   color: #e6c200 !important;
 }
+ul.list-transaction li {
+  background: #f9f9f9;
+  color: #9b9b9b;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+}
+ul.list-transaction li span {
+  color: #555555;
+  float: right !important;
+  float: right;
+}
+ul.list-transaction li.description span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+ul.list-transaction li.amount span {
+  font-weight: 700;
+}
+ul.list-transaction li.amount span.text-income {
+  color: #00ad57;
+}
+ul.list-transaction li.amount span.text-expenditure {
+  color: #ff2d2d;
+}
+ul.list-transaction li.donation .status.eligible {
+  color: #00aea9 !important;
+}
 .body-title {
   text-align: center;
   font-weight: 700;
@@ -16945,33 +16974,24 @@ fieldset[disabled] .btn-edit.active {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
+.form-control[disabled] {
+  border-color: transparent;
+  border-width: 0;
+}
 textarea {
   resize: none;
   overflow: auto;
 }
 .has-disabled .form-control[disabled] {
-  background-color: #fff;
   font-size: 14px;
   color: #555555;
   border-color: #ffffff;
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
-  padding: 0 !important;
 }
-.has-disabled .form-control[disabled] a {
-  color: #26aae2;
-}
-.has-disabled .form-control[disabled] a:hover {
-  color: #198bbc;
-}
-.has-disabled .form-control[disabled] .text-muted {
-  color: #9b9b9b !important;
-}
-.has-disabled .form-control[disabled] .lt,
-.has-disabled .form-control[disabled] .lter,
-.has-disabled .form-control[disabled] .dk,
-.has-disabled .form-control[disabled] .dker {
-  background-color: #fff;
+.input-group.has-disabled .input-group-addon {
+  border-color: transparent;
+  border-width: 0;
 }
 .input-lg {
   height: 45px;
@@ -18937,6 +18957,9 @@ fieldset[disabled] .btn-menu.active {
 .table .check .form-group {
   margin-left: 5px;
 }
+.table .type {
+  width: 100px;
+}
 .table .check-star {
   width: 20px;
   font-size: 1.5em;
@@ -19059,7 +19082,7 @@ fieldset[disabled] .btn-menu.active {
 .table td.amount.expenditure {
   color: #ff2d2d;
 }
-.table td.amount.gift-aid {
+.table td.amount.donation {
   color: #00aea9;
 }
 .table td.amount-grant {
@@ -19069,7 +19092,7 @@ fieldset[disabled] .btn-menu.active {
   color: #9b9b9b;
 }
 .table .title {
-  min-width: 350px;
+  min-width: 250px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -19213,6 +19236,9 @@ a.table tr.updated > td.field-updated:hover {
 }
 .table tr.updated > td.field-deleted {
   background: #f2dede;
+}
+.table tr.link > td {
+  cursor: pointer;
 }
 .table-hover > tbody > tr:hover {
   background: #f9f9f9;
@@ -19594,6 +19620,9 @@ td .tooltip > .tooltip-inner {
 /* MODAL */
 .modal-backdrop {
   z-index: 0;
+}
+.modal-sm {
+  width: 400px;
 }
 @media (min-width: 768px) {
   .modal-dialog {
