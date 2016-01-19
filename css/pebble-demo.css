@@ -20724,6 +20724,12 @@ th .form-group .checkbox label {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .flex-center {
+    margin: 25% 0px;
+    display: block;
+  }
+}
 .flex-center-row {
   display: flex;
   left: 0px;
