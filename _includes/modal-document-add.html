@@ -9,30 +9,34 @@
       </div>
       <div class="modal-body modal-body-clear">
         <div class="body-title">
+          <span class="initials none">
+            <i class="fa fa-file-o"></i>
+          </span>
           <div class="title">Add File
             <span class="block">Upload document</span>
           </div>
         </div>
+
         <div class="row">
-          <div class="col-lg-12">
-            <div class="form-group">
-              <label class="control-label" for="">File Location</label>
-              <input type="file">
+          <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1 text-center">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <h3>Choose File to upload</h3>
+                <div class="form-group">
+        					<input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
+        					<label for="file-1">
+                    <span>Choose a file&hellip;</span>
+                  </label>
+                </div>
+              </div>
             </div>
-            <!--<div class="form-group">
-              <label class="control-label" for="">File Name
-                {% include input-tips.html %}
-              </label>
-              <input placeholder="Enter Document" type="text" class="form-control">
-            </div>-->
           </div>
         </div>
-
 
         </div>
             <div class="modal-footer">
               <div class="pull-left">
-                <a class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
+                <a data-dismiss="modal"  class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
               </div>
               <div class="pull-right">
                 <a class="btn btn-info">

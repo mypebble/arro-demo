@@ -24,30 +24,28 @@ tagline: All your recorded transactions in one place
       </div>
       <div class="panel-subnav">
         <div class="">
-          <div class="col-lg-4 pull-left">
+          <div class="col-lg-6 col-md-6">
             <div class="search">
               <input type="text" class="form-control" placeholder="Search">
               <i class="glyphicon glyphicon-search"></i>
             </div>
           </div>
-          <div class="col-lg-8 ">
+          <div class="col-lg-6 col-md-6">
             <ul class="list-unstyled list-inline pull-right">
-              <li>
-                <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>
-              <li>
+              <!--<li>
                 <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
+                  <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Export Data</a></li>
+                  </ul>
                 </div>
-              </li>
+              </li>-->
+              <!--<li>
+                <a class="btn btn-default" onclick="$('#filter').toggleClass('hide')">
+                  Advanced Search
+                </a>
+              </li>-->
               <li>
                 <a class="btn btn-add" data-toggle="modal" data-target="#myModal-record">
                   <i class="glyphicon glyphicon-plus"></i> Add New
@@ -58,6 +56,27 @@ tagline: All your recorded transactions in one place
         </div>
       </div>
 
+      <div class="filter-menu hide" id="filter" >
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6">
+            <div class="label-title">Filter by</div>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <!--<div class="pull-left">
+                <a class="btn btn-default" onclick="$('#filter').addClass('hide')">Hide</a>
+              </div>-->
+              <div class="pull-right">
+                <a href="" class="btn btn-default">Clear Form</a>
+                <a href="" class="btn btn-primary">
+                  Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
 
     <div class="panel-body">
         <table class="table table-bordered table-hover">
@@ -66,7 +85,7 @@ tagline: All your recorded transactions in one place
                 <th class="date">Date<a class="filter"></a></th>
                 <th class="rec">No#<a class="filter"></a></th>
                 <th class="">Name<a class="filter"></a></th>
-                <th class="details">Detail</th>
+                <th class="details">Description</th>
                 <th class="amount">Expenditure<a class="filter"></a></th>
                 <th class="amount">Income<a class="filter"></a></th>
               </tr>

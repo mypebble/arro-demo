@@ -17601,8 +17601,13 @@ fieldset[disabled] .btn-menu.active {
   top: 0px;
   bottom: 0px;
 }
+.panel-campaign .body-title .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .panel-campaign p {
-  height: 70px;
+  height: 100px;
 }
 .panel-campaign.locked {
   color: #9b9b9b;
@@ -17922,8 +17927,13 @@ fieldset[disabled] .btn-menu.active {
   top: 0px;
   bottom: 0px;
 }
+.panel-actions-campaign .body-title .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .panel-actions-campaign p {
-  height: 70px;
+  height: 100px;
 }
 .panel-actions-campaign.locked {
   color: #9b9b9b;
@@ -18379,8 +18389,13 @@ fieldset[disabled] .btn-menu.active {
   top: 0px;
   bottom: 0px;
 }
+.menu-container .menu-toggle-campaign .body-title .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu-container .menu-toggle-campaign p {
-  height: 70px;
+  height: 100px;
 }
 .menu-container .menu-toggle-campaign.locked {
   color: #9b9b9b;
@@ -18694,8 +18709,13 @@ fieldset[disabled] .btn-menu.active {
   top: 0px;
   bottom: 0px;
 }
+.menu-container .menu-toggle-actions-campaign .body-title .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu-container .menu-toggle-actions-campaign p {
-  height: 70px;
+  height: 100px;
 }
 .menu-container .menu-toggle-actions-campaign.locked {
   color: #9b9b9b;
@@ -20733,6 +20753,14 @@ th .form-group .checkbox label {
   padding: 15px;
   text-align: center;
   width: 100%;
+}
+.clubs-none {
+  background: url('../img/no-clubs.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .flex-text-wrap {
   position: relative;
