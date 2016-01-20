@@ -110,8 +110,8 @@
                 <i class="arrow"></i>
               </a>
             </li>
-            <li class="nav-reports">
-              <a href="report-dashboard.html">
+            <li  class="nav-reports {% if page.url contains '/reports/' %}active-page{% endif %}">
+              <a href="/reports/">
                 <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
                   Reports
@@ -128,9 +128,8 @@
                 <i class="arrow"></i>
               </a>
               <ul class="collapse {% if page.url contains '/transactions/' %}in{% endif %}">
-                <li class="">
-                  <a href="">
-
+                <li class="{% if page.url contains '/transactions/record/' %}active{% endif %}">
+                  <a href="/transactions/record/">
                     Record Transaction
                   </a>
                 </li>
@@ -157,7 +156,7 @@
                 <li class="{% if page.url contains '/stakeholders/home/' %}active-page{% endif %}"><a href="/stakeholder/home/">Manage Stakeholders</a></li>
               </ul>-->
             </li>
-            <li class="nav-admin">
+            <li class="nav-admin {% if page.url contains '/admin/' %}active-page{% endif %}">
               <a href="#">
                 <i class="fa fa-wrench"></i>
                 <span class="menu-title">
@@ -165,17 +164,11 @@
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse">
-                <li>
-                  <a herf="#" data-toggle="modal" data-target="#modal-add-name">
-
-                    Create</a>
-                </li>
-                <li class="list-divider"></li>
-                <li>
+              <ul class="collapse {% if page.url contains '/admin/' %}in{% endif %}">
+                <li class="{% if page.url contains '/admin/account/' %}active{% endif %}">
                   <a href="/admin/accounts/">Manage Accounts</a>
                 </li>
-                <li>
+                <li class="{% if page.url contains '/admin/bank/' %}active{% endif %}">
                   <a href="/admin/bank/">Manage Bank Accounts</a>
                 </li>
               </ul>
