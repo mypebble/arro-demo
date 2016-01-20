@@ -19034,17 +19034,17 @@ fieldset[disabled] .btn-menu.active {
   text-overflow: ellipsis;
   width: 100%;
 }
-.table .title a {
+.table td.title a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
-.table .title a a span.block {
+.table td.title a a span.block {
   font-weight: normal;
   color: #555555;
 }
-.table .title a .grant-icon img {
+.table td.title a .grant-icon img {
   height: 40px;
   width: 40px;
 }

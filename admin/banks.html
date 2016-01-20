@@ -7,4 +7,53 @@ tagline: xxx
 
 ---
 
-{{ page.heading }}
+<div class="row">
+	<div class="panel panel-context-admin">
+		<div class="panel-title">Manage Bank Accounts</div>
+		<div class="panel-subnav">
+			<div class="col-lg-12">
+				<a class="btn btn-add pull-right" data-toggle="modal" data-target=""><i class="fa fa-plus"></i> Add New</a>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>CODE<a class="filter"></a></th>
+						<th class="title">Account<a class="filter"></a></th>
+						<th class="amount">Balance<a class="filter"></a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>CASH</td>
+						<td class="title link">
+							<a>Cash Account</a>
+						</td>
+						<td class="amount">
+							&pound;50.00
+						</td>
+					</tr>
+          <tr>
+						<td>CURR</td>
+						<td class="title link">
+							<a>Current Account</a>
+						</td>
+						<td class="amount">
+							&pound;21,485.70
+						</td>
+					</tr>
+          <tr>
+						<td>DEP</td>
+						<td class="title link">
+							<a>Deposit Account</a>
+						</td>
+						<td class="amount">
+							&pound;10,921.65
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
