@@ -9047,6 +9047,15 @@ button.close {
 /*------------------------------------*\
     #SETTINGS
 \*------------------------------------*/
+/*@project-blue:            #4183D7;
+@project-purple:          #674172;
+@project-green:           #87D37C;
+@project-red:             #D24D57;
+@project-gray:            #6C7A89;
+@project-pink:            #D2527F;
+@project-teal:            #4ECDC4;
+@project-salmon:          #c8a4ce;
+@project-general:         #7a6268;*/
 /* Your site specific LESS variables - these override BS defaults  */
 /* PAGE CONTEXT */
 /* VARIABLES TO RUN THROUGH MIXIN */
@@ -15843,6 +15852,8 @@ ul.list-transaction li.donation .status.eligible {
 ul.list-dividers li {
   border-right: 1px solid #cccccc;
   border-color: #edf1f2;
+  padding-left: 10px;
+  padding-right: 10px !important;
 }
 ul.list-dividers li:last-child {
   border: none;
@@ -16066,6 +16077,10 @@ ul.list-files li a small {
 }
 .icon-base {
   background: #333333;
+  color: #ffffff;
+}
+.icon-user {
+  background: #77216f;
   color: #ffffff;
 }
 .menu-list {
@@ -16799,30 +16814,16 @@ fieldset[disabled] .btn-star.active {
 .label-context-admin {
   background-color: #656d78;
 }
-.label-project-blue {
-  background-color: #4183d7;
-}
-.label-project-purple {
-  background-color: #674172;
-}
-.label-project-green {
-  background-color: #87d37c;
-}
-.label-project-red {
-  background-color: #d24d57;
-}
-.label-project-gray {
-  background-color: #6c7a89;
-}
-.label-project-pink {
-  background-color: #d2527f;
-}
-.label-project-teal {
-  background-color: #4ecdc4;
-}
-.label-project-salmon {
-  background-color: #c8a4ce;
-}
+/*
+  .label-variant(label-project-blue, @project-blue);
+  .label-variant(label-project-purple, @project-purple);
+  .label-variant(label-project-green, @project-green);
+  .label-variant(label-project-red, @project-red);
+  .label-variant(label-project-gray, @project-gray);
+  .label-variant(label-project-pink, @project-pink);
+  .label-variant(label-project-teal, @project-teal);
+  .label-variant(label-project-salmon, @project-salmon);
+*/
 .label-context-donations-outline {
   border-color: #00aea9;
   box-shadow: 0px 0px 0px 2px #00aea9 inset;
@@ -16862,46 +16863,6 @@ fieldset[disabled] .btn-star.active {
   border-color: #656d78;
   box-shadow: 0px 0px 0px 2px #656d78 inset;
   color: #656d78 !important;
-}
-.label-project-blue-outline {
-  border-color: #4183d7;
-  box-shadow: 0px 0px 0px 2px #4183d7 inset;
-  color: #4183d7 !important;
-}
-.label-project-purple-outline {
-  border-color: #674172;
-  box-shadow: 0px 0px 0px 2px #674172 inset;
-  color: #674172 !important;
-}
-.label-project-green-outline {
-  border-color: #87d37c;
-  box-shadow: 0px 0px 0px 2px #87d37c inset;
-  color: #87d37c !important;
-}
-.label-project-red-outline {
-  border-color: #d24d57;
-  box-shadow: 0px 0px 0px 2px #d24d57 inset;
-  color: #d24d57 !important;
-}
-.label-project-gray-outline {
-  border-color: #6c7a89;
-  box-shadow: 0px 0px 0px 2px #6c7a89 inset;
-  color: #6c7a89 !important;
-}
-.label-project-pink-outline {
-  border-color: #d2527f;
-  box-shadow: 0px 0px 0px 2px #d2527f inset;
-  color: #d2527f !important;
-}
-.label-project-teal-outline {
-  border-color: #4ecdc4;
-  box-shadow: 0px 0px 0px 2px #4ecdc4 inset;
-  color: #4ecdc4 !important;
-}
-.label-project-salmon-outline {
-  border-color: #c8a4ce;
-  box-shadow: 0px 0px 0px 2px #c8a4ce inset;
-  color: #c8a4ce !important;
 }
 .label-danger-outline {
   border-color: #ed5565;
@@ -20001,132 +19962,17 @@ footer{
 .checkbox-grants input[type="checkbox"]:checked + label span {
   font-weight: normal;
 }
-.checkbox-project-blue input[type="checkbox"]:checked + label {
-  color: #4183d7;
-  font-weight: 700;
-}
-.checkbox-project-blue input[type="checkbox"]:checked + label::before {
-  background-color: #4183d7;
-  border-color: #4183d7;
-}
-.checkbox-project-blue input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-blue input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-purple input[type="checkbox"]:checked + label {
-  color: #674172;
-  font-weight: 700;
-}
-.checkbox-project-purple input[type="checkbox"]:checked + label::before {
-  background-color: #674172;
-  border-color: #674172;
-}
-.checkbox-project-purple input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-purple input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-green input[type="checkbox"]:checked + label {
-  color: #87d37c;
-  font-weight: 700;
-}
-.checkbox-project-green input[type="checkbox"]:checked + label::before {
-  background-color: #87d37c;
-  border-color: #87d37c;
-}
-.checkbox-project-green input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-green input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-red input[type="checkbox"]:checked + label {
-  color: #d24d57;
-  font-weight: 700;
-}
-.checkbox-project-red input[type="checkbox"]:checked + label::before {
-  background-color: #d24d57;
-  border-color: #d24d57;
-}
-.checkbox-project-red input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-red input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-gray input[type="checkbox"]:checked + label {
-  color: #6c7a89;
-  font-weight: 700;
-}
-.checkbox-project-gray input[type="checkbox"]:checked + label::before {
-  background-color: #6c7a89;
-  border-color: #6c7a89;
-}
-.checkbox-project-gray input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-gray input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-pink input[type="checkbox"]:checked + label {
-  color: #d2527f;
-  font-weight: 700;
-}
-.checkbox-project-pink input[type="checkbox"]:checked + label::before {
-  background-color: #d2527f;
-  border-color: #d2527f;
-}
-.checkbox-project-pink input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-pink input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-teal input[type="checkbox"]:checked + label {
-  color: #4ecdc4;
-  font-weight: 700;
-}
-.checkbox-project-teal input[type="checkbox"]:checked + label::before {
-  background-color: #4ecdc4;
-  border-color: #4ecdc4;
-}
-.checkbox-project-teal input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-teal input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-salmon input[type="checkbox"]:checked + label {
-  color: #c8a4ce;
-  font-weight: 700;
-}
-.checkbox-project-salmon input[type="checkbox"]:checked + label::before {
-  background-color: #c8a4ce;
-  border-color: #c8a4ce;
-}
-.checkbox-project-salmon input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-salmon input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
-.checkbox-project-general input[type="checkbox"]:checked + label {
-  color: #7a6268;
-  font-weight: 700;
-}
-.checkbox-project-general input[type="checkbox"]:checked + label::before {
-  background-color: #7a6268;
-  border-color: #7a6268;
-}
-.checkbox-project-general input[type="checkbox"]:checked + label::after {
-  color: #fff;
-}
-.checkbox-project-general input[type="checkbox"]:checked + label span {
-  font-weight: normal;
-}
+/*
+.checkbox-variant(checkbox-project-blue, @project-blue);
+.checkbox-variant(checkbox-project-purple, @project-purple);
+.checkbox-variant(checkbox-project-green, @project-green);
+.checkbox-variant(checkbox-project-red, @project-red);
+.checkbox-variant(checkbox-project-gray, @project-gray);
+.checkbox-variant(checkbox-project-pink, @project-pink);
+.checkbox-variant(checkbox-project-teal, @project-teal);
+.checkbox-variant(checkbox-project-salmon, @project-salmon);
+.checkbox-variant(checkbox-project-general, @project-general);
+*/
 .radio {
   padding-left: 20px;
 }
