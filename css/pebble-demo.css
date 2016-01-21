@@ -16946,7 +16946,7 @@ fieldset[disabled] .btn-star.active {
 }
 /*global label*/
 /* INPUTS */
-.someinput::-ms-clear {
+:-ms-clear {
   display: none;
 }
 .form-control {
