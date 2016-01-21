@@ -19126,6 +19126,13 @@ fieldset[disabled] .btn-menu.active {
   width: 100px;
   max-width: 150px;
 }
+.table td.email {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  width: 200px;
+}
 .table .total-claim small {
   font-size: 70%;
 }

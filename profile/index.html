@@ -6,18 +6,28 @@ heading: My Profile
 tagline: Track your income generation goals with projects
 ---
 
+<!--
+<div class="row">
+	<div class="col-md-4">
+		<div class="">
+			x
+		</div>
+	</div>
+</div>
+-->
 <div class="row">
   <div class="col-lg-12 col-md-12">
     <div class="panel">
       <div class="panel-title">My Profile</div>
       <div class="panel-body">
         <ul class="nav nav-pills nav-stacked col-md-3">
-            <li class="active"><a href="#a" data-toggle="tab">Preferences</a></li>
-            <li><a href="#b" data-toggle="tab">Account</a></li>
-						<li><a href="#c" data-toggle="tab">Users <span>(2)</span></a></li>
+            <li class="active"><a href="#pref" data-toggle="tab">Preferences</a></li>
+            <li><a href="#account" data-toggle="tab">Account</a></li>
+						<li><a href="#settings" data-toggle="tab">Settings</a></li>
+						<li><a href="#users" data-toggle="tab">Users <span>(2)</span></a></li>
         </ul>
         <div class="tab-content col-md-9">
-					<div class="tab-pane active" id="a">
+					<div class="tab-pane active" id="pref">
 						<div class="section-title">Preferences</div>
 						<div class="row">
 							<div class="col-md-6">
@@ -56,27 +66,73 @@ tagline: Track your income generation goals with projects
 							</div>
 						</div>
 					</div>
-          <div class="tab-pane" id="b">
+          <div class="tab-pane" id="account">
             <div class="section-title">Account</div>
             Lorem ipsum dolor sit amet, charetra varius rci quis tortor imperdiet venenatis quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
-            <hr>
+
+						<div class="row">
+							<div class="col-md-5">
+	              <div class="form-group">
+	                <label class="control-label" for="">Name
+	                </label>
+	                <input class="form-control" disabled="" placeholder="Name" value="Adam Hogg" type="text">
+	              </div>
+	              <div class="form-group">
+	                <label class="control-label" for="">Email Address
+	                </label>
+	                <input class="form-control" disabled="" placeholder="Email Address" value="adam.hogg.ah@gmail.com" type="text">
+	              </div>
+								<div class="form-group" id="password">
+	                <label class="control-label" for="">Password
+	                </label>
+	                <input class="form-control" disabled="" placeholder="Password" value="password" type="password">
+									<span class="help-block"><a onclick="$('#password-change').removeClass('hide'), $('#password').addClass('hide')">Change Password</a></span>
+	              </div>
+
+								<div id="password-change" class="hide">
+									<div class="form-group">
+		                <label class="control-label" for="">Current Password
+		                </label>
+		                <input class="form-control" placeholder="Current Password" type="password">
+		              </div>
+									<div class="form-group">
+		                <label class="control-label" for="">New Password
+		                </label>
+		                <input class="form-control" placeholder="New Password" type="password">
+		              </div>
+									<div class="form-group">
+		                <label class="control-label" for="">Confirm New Password
+		                </label>
+		                <input class="form-control" placeholder="Confirm New Password" type="password">
+		              </div>
+								</div>
+							</div>
+            </div>
+
+
           </div>
-          <div class="tab-pane" id="c">
+					<div class="tab-pane" id="settings">
+						<div class="section-title">Settings</div>
+					</div>
+          <div class="tab-pane" id="users">
             <div class="section-title">Users</div>
             Secondo sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan. Aliquam in felis sit amet augue.
 						<hr>
+						<div class="panel-subnav">
+							<div class="pull-right">
+								<a class="btn btn-add"><i class="fa fa-plus"></i> Add New</a>
+							</div>
+						</div>
 						<table class="table table-hover table-vam table-bordered">
 							<thead>
 								<tr>
-									<th></th>
 									<th class="name">Name<a class="filter"></a></th>
-									<th>Email Address<a class="filter"></a></th>
+									<th class="email">Email Address<a class="filter"></a></th>
 									<th class="">Permissions<a class="filter"></a></th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td></td>
 									<td class="name link">
 										<a>
 											<span class="initials icon-user">
@@ -85,7 +141,7 @@ tagline: Track your income generation goals with projects
 											Adam Hogg
 										</a>
 									</td>
-									<td>adam.hogg.ah@gmail.com</td>
+									<td class="email">adam.hogg.ah@gmail.com</td>
 									<td></td>
 								</tr>
 							</tbody>
@@ -93,26 +149,6 @@ tagline: Track your income generation goals with projects
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4 m-t-lg">
-	<div class="panel">
-    <div class="panel-body">
-			<div class="body-title">
-				<span class="initials icon-lettings">
-		      <i class="fa fa-building-o"></i>
-				</span>
-				<div class="title">Profile
-					<span class="block">xxx</span>
-				</div>
-				<a class="btn btn-primary">Learn More</a>
-			</div>
     </div>
   </div>
 </div>
