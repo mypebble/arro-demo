@@ -57,6 +57,106 @@ tagline: Find a Grant to help with your next school project
   <div class="col-lg-12 col-md-12">
     <div class="panel panel-context-grants">
       <div class="panel-title">Grants</div>
+      <div class="m-b-lg">
+        xx
+      </div>
+
+        <div class="palne-subnav">
+          <div class="col-lg-12">
+
+
+            <ul class="list-unstyled list-inline list-dividers">
+              <li>
+                <label class="control-label">Starred</label>
+                <a id="btn-star" class="btn btn-star" onclick=$('#btn-star').toggleClass('active')>
+                  <i class="fa fa-star"></i> Starred
+                </a>
+              </li>
+              <li>
+                <label class="control-label">Grant Type</label>
+                <div class="btn-group btn-group-grants" data-toggle="buttons">
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> All
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Award">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-awards.png"> <span>Award</span>
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Cash">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-cash.png"><span>Cash</span>
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Competition">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-certificate.png"><span>Competition</span>
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Discount">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-discount.png"><span>Discount</span>
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Freebie">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-free.png"><span>Freebie</span>
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Fundraising">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-bucket.png"><span>Fundraising</span>
+                  </label>
+                  <label class="btn btn-default" data-toggle="tooltip" data-placement="top" title="In Kind Support">
+                    <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-support.png"><span>In Kind Support</span>
+                  </label>
+                </div>
+              </li>
+              <li>
+                <label class="control-label">Detail Required</label>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Basic
+                  </label>
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Moderate
+                  </label>
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Complex
+                  </label>
+                </div>
+              </li>
+              <li>
+                <label class="control-label">To Complete</label>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Hours
+                  </label>
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Days
+                  </label>
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Weeks
+                  </label>
+                </div>
+              </li>
+              <li>
+                <label class="control-label">Grant Status</label>
+                <div class="btn-group" data-toggle="buttons">
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> New
+                  </label>
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Updated
+                  </label>
+                  <label class="btn btn-default">
+                    <input type="checkbox" autocomplete="off"> Expiring
+                  </label>
+                </div>
+              </li>
+              <li>
+                <label class="control-label"></label>
+                <a class="btn btn-default">More</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+        <div class="m-b-lg">
+          xx
+        </div>
+
+
+      <!-- current search -->
       <div class="panel-subnav">
         <div class="">
           <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
@@ -65,14 +165,8 @@ tagline: Find a Grant to help with your next school project
               <i class="glyphicon glyphicon-search"></i>
             </div>
           </div>
-
-
-
           <div class="col-lg-6 col-md-6 col-sm-6">
             <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
-                <a class="btn btn-default">Inspire Me</a>
-              </li>-->
               <li>
                 <a class="btn btn-default">
                   <i class="fa fa-star  text-favourite"></i> Starred
@@ -89,7 +183,7 @@ tagline: Find a Grant to help with your next school project
       </div>
       <div class="filter-menu hide" id="filter">
         <div class="row">
-          <div class="col-lg-4 col-md-4">
+          <div class="col-lg-3 col-md-3">
             <div class="form-group">
               <label class="control-label" for="">Filter by School Type</label>
               <select class="selectpicker form-control" data-style="btn btn-default block">
@@ -139,13 +233,15 @@ tagline: Find a Grant to help with your next school project
                 <option>Science</option>
               </select>
             </div>
-            <div class="form-group">
-              <label class="control-label" for="">Filter by Project</label>
-              <select class="selectpicker form-control" data-style="btn btn-default block">
-                <option>New Library Resources</option>
-                <option>Tennis Pitch</option>
-              </select>
-            </div>
+            <!--
+              <div class="form-group">
+                <label class="control-label" for="">Filter by Project</label>
+                <select class="selectpicker form-control" data-style="btn btn-default block">
+                  <option>New Library Resources</option>
+                  <option>Tennis Pitch</option>
+                </select>
+              </div>
+            -->
           </div>
           <div class="col-lg-8 col-md-8">
             <div class="label-title">Filter by Grant Type</div>
@@ -153,7 +249,6 @@ tagline: Find a Grant to help with your next school project
 
 
              <div class="col-lg-6">
-
               <li class="form-group">
                 <div class="checkbox checkbox-primary">
                   <input id="checkbox2" value="option1" type="checkbox">
@@ -290,7 +385,7 @@ tagline: Find a Grant to help with your next school project
                     Basic
                   </td>
                   <td class="duration">
-                    2 days
+                    Days
                   </td>
                   <td class="date date-right">
                     None
@@ -344,7 +439,7 @@ tagline: Find a Grant to help with your next school project
                   Basic
                 </td>
                 <td class="duration">
-                  2 days
+                  Days
                 </td>
                 <td class="date date-right">
                     None
@@ -376,7 +471,7 @@ tagline: Find a Grant to help with your next school project
                   Complex
                 </td>
                 <td class="duration">
-                  2 weeks
+                  Weeks
                 </td>
                 <td class="date date-right">
                     04/02/2016
@@ -408,7 +503,7 @@ tagline: Find a Grant to help with your next school project
                   Moderate
                 </td>
                 <td class="duration">
-                  2 days
+                  Days
                 </td>
                 <td class="date date-right">
                     05/02/2016
@@ -441,7 +536,7 @@ tagline: Find a Grant to help with your next school project
                   Moderate
                 </td>
                 <td class="duration">
-                  2 days
+                  Days
                 </td>
                 <td class="date date-right">
                     04/04/2016
@@ -473,7 +568,7 @@ tagline: Find a Grant to help with your next school project
                   Basic
                 </td>
                 <td class="duration">
-                  2 days
+                  Days
                 </td>
                 <td class="date date-right">
                     06/04/2016
@@ -505,7 +600,7 @@ tagline: Find a Grant to help with your next school project
                   Basic
                 </td>
                 <td class="duration">
-                  2 days
+                  Days
                 </td>
                 <td class="date date-right">
                   10/04/2016
@@ -537,7 +632,7 @@ tagline: Find a Grant to help with your next school project
                   Basic
                 </td>
                 <td class="duration">
-                  2 days
+                  Days
                 </td>
                 <td class="date date-right">
                   26/05/2016
