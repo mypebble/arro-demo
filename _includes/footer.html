@@ -54,9 +54,11 @@
   {% include modal-import-warning.html %}
 
 <!-- general -->
-{% include modal-done.html %}
+  {% include modal-done.html %}
 
 
+<!-- profile -->
+  {% include modal-profile-new.html %}
 
 <!-- end modals-->
 
@@ -75,8 +77,11 @@
 <script src="{{ "/js/custom.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/bootstrap-select-min.js" | prepend: site.baseurl }}"></script>
 
-<script src="{{ "/js/bootstrap-tagsinput.js" | prepend: site.baseurl }}"></script>
+
 <script src="{{ "/js/chart.min.js" | prepend: site.baseurl }}"></script>
+
+<!--<script src="{{ "/js/bootstrap-tagsinput.js" | prepend: site.baseurl }}"></script>-->
+<script src="{{ "/js/bootstrap-switch.min.js" | prepend: site.baseurl }}"></script>
 
 
 <script src="{{ "/js/custom-file-input.js" | prepend: site.baseurl }}"></script>
@@ -84,6 +89,7 @@
 <script>
 $(function () {
     $('textarea').flexText();
+    $("[name='my-checkbox']").bootstrapSwitch();
 });
 </script>
 

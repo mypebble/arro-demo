@@ -21,55 +21,57 @@ tagline: Track your income generation goals with projects
       <div class="panel-title">My Profile</div>
       <div class="panel-body">
         <ul class="nav nav-pills nav-stacked col-md-3">
-            <li class="active"><a href="#pref" data-toggle="tab">Preferences</a></li>
+            <li class="active"><a href="#alerts" data-toggle="tab">Alerts</a></li>
             <li><a href="#account" data-toggle="tab">Account</a></li>
 						<li><a href="#settings" data-toggle="tab">Settings</a></li>
-						<li><a href="#users" data-toggle="tab">Users <span>(2)</span></a></li>
+						<li><a href="#users" data-toggle="tab">Users <span class="badge badge-info pull-right">2</span></a></li>
         </ul>
         <div class="tab-content col-md-9">
-					<div class="tab-pane active" id="pref">
-						<div class="section-title">Preferences</div>
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group">
-		              <label class="control-label" for="">School Type</label>
-		              <select class="selectpicker form-control" data-style="btn btn-default block">
-		                <option>All School Types</option>
-		                <option>Primary</option>
-		                <option>Secondary</option>
-		                <option>Academy</option>
-		                <option>Early Years</option>
-		                <option>Further Education </option>
-		                <option>Special School</option>
-		              </select>
-		            </div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group">
-		              <label class="control-label" for="">Location</label>
-		              <select class="selectpicker form-control" data-style="btn btn-default block">
-		                <option>All Locations</option>
-		                <option>East Anglia</option>
-		                <option>East Midlands</option>
-		                <option>London</option>
-		                <option>North East England</option>
-		                <option>North West England</option>
-		                <option>Northern Ireland</option>
-		                <option>Scotland</option>
-		                <option>South East England</option>
-		                <option>South West England</option>
-		                <option>Wales</option>
-		                <option>West Midlands</option>
-		                <option>Yorkshire &amp; the Humber</option>
-		              </select>
-		            </div>
-							</div>
-						</div>
+					<div class="tab-pane active" id="alerts">
+						<div class="section-title section-title-profile">Alerts</div>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+              </div>
+            </div>
+            <div class="row">
+
+              <div class="col-md-5">
+                <ul class="list-unstyled list-profile-settings">
+                  <li>
+                    <div class="title">
+                      Grants Alerts
+                      <small class="block"></small>
+                    </div>
+                    <div class="action"><input type="checkbox" name="my-checkbox" data-size="mini" checked></div>
+                  </li>
+                  <li>
+                    <div class="title">
+                      SRM Alerts
+                      <small class="block"></small>
+                    </div>
+                    <div class="action"><input type="checkbox" name="my-checkbox" data-size="mini" checked></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+
 					</div>
           <div class="tab-pane" id="account">
             <div class="section-title">Account</div>
             Lorem ipsum dolor sit amet, charetra varius rci quis tortor imperdiet venenatis quam sit amet vulputate. Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero.
-
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="control-label" for="">Organisation Name
+                  </label>
+                  <input class="form-control" disabled="" placeholder="Organisation Name" value="Funding School" type="text">
+                </div>
+              </div>
+            </div>
 						<div class="row">
 							<div class="col-md-5">
 	              <div class="form-group">
@@ -105,11 +107,62 @@ tagline: Track your income generation goals with projects
 		                </label>
 		                <input class="form-control" placeholder="Confirm New Password" type="password">
 		              </div>
+                  <div class="pull-left"><a class="btn btn-default"><i class="fa fa-trash"></i> Abandon</a></div>
+                  <div class="pull-right">
+                    <a class="btn btn-primary">Save</a>
+                  </div>
 								</div>
 							</div>
             </div>
+            <div class="row">
+							<div class="col-md-5">
+                <div class="form-group">
+                  <label class="control-label" for="">School Type</label>
+                  <div class="btn btn-default btn-block disabled">
+                    Primary School
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label" for="">Location</label>
+                  <div class="btn btn-default btn-block disabled">
+                    London
+                  </div>
+                </div>
+								<!--<div class="form-group">
+		              <label class="control-label" for="">School Type</label>
+		              <select class="selectpicker form-control" data-style="btn btn-default block">
+		                <option>Primary</option>
+		                <option>Secondary</option>
+		                <option>Academy</option>
+		                <option>Early Years</option>
+		                <option>Further Education </option>
+		                <option>Special School</option>
+                    <option>All School Types</option>
+		              </select>
+		            </div>-->
+							</div>
+							<!--<div class="col-md-6">
+								<div class="form-group">
+		              <label class="control-label" for="">Location</label>
+		              <select class="selectpicker form-control" data-style="btn btn-default block">
+		                <option>All Locations</option>
+		                <option>East Anglia</option>
+		                <option>East Midlands</option>
+		                <option>London</option>
+		                <option>North East England</option>
+		                <option>North West England</option>
+		                <option>Northern Ireland</option>
+		                <option>Scotland</option>
+		                <option>South East England</option>
+		                <option>South West England</option>
+		                <option>Wales</option>
+		                <option>West Midlands</option>
+		                <option>Yorkshire &amp; the Humber</option>
+		              </select>
+		            </div>
+							</div>-->
 
-
+            </div>
           </div>
 					<div class="tab-pane" id="settings">
 						<div class="section-title">Settings</div>
@@ -120,7 +173,7 @@ tagline: Track your income generation goals with projects
 						<hr>
 						<div class="panel-subnav">
 							<div class="pull-right">
-								<a class="btn btn-add"><i class="fa fa-plus"></i> Add New</a>
+								<a class="btn btn-add" data-toggle="modal" data-target="#myModalUser-New"><i class="fa fa-plus"></i> Add New</a>
 							</div>
 						</div>
 						<table class="table table-hover table-vam table-bordered">
