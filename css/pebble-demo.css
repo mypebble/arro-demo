@@ -16682,11 +16682,14 @@ ul.list-profile-settings li .jumbotron-sm {
 ul.list-profile-settings li .title {
   display: inline-block !important;
   width: 80%;
+  font-weight: 700;
+}
+ul.list-profile-settings li .title small {
+  font-weight: normal;
 }
 ul.list-profile-settings li .action {
   float: right !important;
   float: right;
-  width: 20%;
 }
 ul.list-status {
   margin-bottom: 0 !important;
@@ -17368,15 +17371,6 @@ a.list-facts-three li.rating-hard:hover {
   line-height: 80px;
   font-size: 3em;
 }
-/*
-.title{
-  .text-u-c;
-  .font-bold;
-  i{
-    .m-r-xs;
-  }
-}
-*/
 /*global type*/
 .btn {
   padding: 8px 12px;
@@ -17584,12 +17578,12 @@ fieldset[disabled] .btn-edit.active {
   background: #26aae2;
   color: #ffffff !important;
 }
+.btn-group-grants .btn {
+  text-align: left !important;
+}
 .btn-group-grants img {
   height: 20px;
   width: 20px;
-}
-.btn-group-grants span {
-  display: none !important;
 }
 .btn-star {
   color: #333333;
@@ -18170,6 +18164,25 @@ fieldset[disabled] .inputfile + label.active {
 .navbar-right {
   line-height: 50px;
 }
+.navbar-right .profile {
+  line-height: 20px;
+}
+.navbar-right .profile .btn-group.open .btn-profile .initials {
+  background: #77216f;
+}
+.btn-profile .initials {
+  margin-right: 0 !important;
+  padding: 5px;
+  width: 40px;
+  background: #555555;
+  border: 4px solid #f9f9f9;
+}
+.btn-profile .initials i {
+  margin-right: 0 !important;
+}
+.btn-profile .initials:hover {
+  background: #77216f;
+}
 .btn-menu {
   display: inline-block;
   margin-bottom: 0;
@@ -18302,6 +18315,10 @@ fieldset[disabled] .btn-menu.active {
 }
 .navbar-pager {
   text-align: center;
+}
+.btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
 .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
   border-radius: 4px;
@@ -20589,6 +20606,11 @@ a.notification:focus {
     margin: 50px auto;
   }
 }
+.modal .modal-content {
+  overflow-y: scroll;
+  max-height: 800px;
+  width: 100%;
+}
 .modal-header-clear {
   border-bottom: 0px;
 }
@@ -21221,6 +21243,7 @@ th .form-group .checkbox label {
 #mainnav-menu > li {
   -webkit-transition: background-color 0.5s linear 0.5s;
   transition: background-color 0.5s linear 0.5s;
+  position: relative;
 }
 #mainnav-menu li a i {
   margin-right: 5px;
