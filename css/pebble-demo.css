@@ -16766,6 +16766,15 @@ ul.list-dividers li {
 ul.list-dividers li:last-child {
   border: none;
 }
+ul.list-services li {
+  line-height: 2em;
+}
+ul.list-services li .checkbox label::before {
+  margin-top: 6px;
+}
+ul.list-services li .checkbox input[type="checkbox"] {
+  margin-top: 6px;
+}
 .body-title {
   text-align: center;
   font-weight: 700;
@@ -17059,6 +17068,10 @@ ul.list-files li a small {
   border-bottom: 1px solid #cccccc;
   margin-bottom: 10px;
 }
+.section-title p {
+  font-weight: normal;
+  font-size: 14px;
+}
 .list-group-clear li {
   border-bottom: 1px solid #cccccc;
   border-color: #edf1f2;
@@ -17076,10 +17089,6 @@ ul.list-files li a small {
 }
 .list-height-2x li {
   line-height: 2em;
-}
-.format-clear li {
-  font-weight: normal;
-  font-size: 14px;
 }
 .details-toggle {
   color: #26aae2;
@@ -17370,6 +17379,16 @@ a.list-facts-three li.rating-hard:hover {
   width: 95px;
   line-height: 80px;
   font-size: 3em;
+}
+.thumb-square {
+  height: 100px;
+  width: 100px;
+  float: left !important;
+  float: left;
+  margin-right: 20px;
+}
+.thumb-square img {
+  width: 100%;
 }
 /*global type*/
 .btn {
@@ -17853,6 +17872,9 @@ textarea {
 .input-amount {
   text-align: right;
 }
+.input-qty {
+  text-align: center;
+}
 .help-block {
   text-align: right;
 }
@@ -17885,6 +17907,9 @@ a.has-error .form-control:hover {
 a.has-error .form-control:focus:hover {
   color: #843534;
 }
+.has-error .form-control .input-group-addon {
+  border-color: #ed5565;
+}
 .has-warning .control-label {
   color: #8a6d3b;
   color: #f7b033;
@@ -17913,6 +17938,9 @@ a.has-warning .form-control:hover {
 }
 a.has-warning .form-control:focus:hover {
   color: #66512c;
+}
+.has-warning .form-control .input-group-addon {
+  border-color: #f7b033;
 }
 .has-success .control-label {
   color: #3c763d;
@@ -17943,12 +17971,24 @@ a.has-success .form-control:hover {
 a.has-success .form-control:focus:hover {
   color: #2b542c;
 }
+.has-success .input-group-addon {
+  border-color: #93c01f;
+}
 .control-label {
   line-height: 2em;
   display: block;
   text-align: left;
 }
 .control-label i {
+  margin-right: 5px;
+}
+.control-label-lg {
+  line-height: 2em;
+  display: block;
+  text-align: left;
+  font-weight: 700;
+}
+.control-label-lg i {
   margin-right: 5px;
 }
 .form-group {
@@ -18153,6 +18193,9 @@ fieldset[disabled] .inputfile + label.active {
 .inputfile + label {
   cursor: pointer;
   /* "hand" cursor */
+}
+.input-addon-result {
+  width: 110px;
 }
 /*input type*/
 .menu-button a {
@@ -19900,6 +19943,12 @@ fieldset[disabled] .btn-menu.active {
 .table .names {
   width: 100px;
 }
+.table .product {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 700px;
+}
 .table .date {
   width: 100px;
 }
@@ -19982,7 +20031,7 @@ fieldset[disabled] .btn-menu.active {
   text-align: right;
 }
 .table td.amount {
-  width: 160px;
+  width: 150px;
   font-weight: 700;
 }
 .table td.amount.income {
@@ -20159,6 +20208,13 @@ a.table tr.updated > td.field-updated:hover {
 .table-hover > tbody > tr:hover {
   background: #f9f9f9;
 }
+.table td.quantity {
+  width: 100px;
+  text-align: center;
+}
+.table td.hire {
+  width: 200px;
+}
 .table td.rating {
   text-transform: uppercase;
   font-weight: 700;
@@ -20191,6 +20247,15 @@ a.table td.rating-poor:hover,
 a.table td.rating-hard:hover {
   color: #843534;
 }
+.table-form td {
+  height: 60px;
+}
+.table-form td .form-group {
+  margin-bottom: -15px;
+}
+.table-form td .form-group .input-amount {
+  font-weight: normal;
+}
 tr.details-row > td {
   border-top: 0px !important;
   padding: 0px 10px !important;
@@ -20208,6 +20273,10 @@ td.comment {
 td.comment.unread {
   opacity: 1;
   color: #26aae2;
+}
+td.photo {
+  width: 70px;
+  text-align: center;
 }
 /*ul.stakeholder-report{
   li{
@@ -20605,11 +20674,6 @@ a.notification:focus {
   .modal-dialog {
     margin: 50px auto;
   }
-}
-.modal .modal-content {
-  overflow-y: scroll;
-  max-height: 800px;
-  width: 100%;
 }
 .modal-header-clear {
   border-bottom: 0px;
