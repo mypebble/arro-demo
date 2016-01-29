@@ -20307,6 +20307,9 @@ tr.danger > td {
 atr.danger > td:hover {
   color: #843534;
 }
+.table-bordered > thead > tr > td {
+  border-width: 1px !important;
+}
 /* Tables */
 /* ALERTS */
 /* MIXINS */
