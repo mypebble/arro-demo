@@ -22,36 +22,232 @@ tagline: Looking after all your stakeholders
         <div class="tab-content">
           <div class="tab-pane fade in active" id="tab1default">
               <div class="panel-subnav">
-                <div class="">
-                  <div class="col-lg-6 col-md-6 pull-left">
-                    <div class="search">
-                      <input type="text" class="form-control" placeholder="Search">
-                      <i class="glyphicon glyphicon-search"></i>
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <div class="search">
+                        <input class="form-control" placeholder="Search by Name" type="text">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </div>
                     </div>
+                    <button class="btn btn-primary col-sm-2">Search</button>
                   </div>
-                  <div class="col-lg-6 col-md-6">
-                    <ul class="list-unstyled list-inline pull-right">
-                      <li>
-                        <div class="btn-group">
-                            <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right">
-                              <li><a data-toggle="modal" data-target="#myModalImport"><i class="fa fa-upload"></i> Import Data</a></li>
-                              <li><a href=""><i class="fa fa-download"></i> Export Data</a></li>
-                            </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                  <ul class="list-unstyled list-inline pull-right">
+                    <li>
+                      <div class="btn-group">
+                          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a data-toggle="modal" data-target="#myModalImport"><i class="fa fa-upload"></i> Import Data</a></li>
+                            <li><a href=""><i class="fa fa-download"></i> Export Data</a></li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="btn btn-default" id="adv-btn" onclick="$('#filter').toggleClass('hide'), $('#adv-btn').toggleClass('active')">Advanced Search</a>
+                    </li>
+                    <li>
+                      <a class="btn btn-add" data-toggle="modal" data-target="#myModalSRMNew">
+                        <i class="glyphicon glyphicon-plus"></i> Add New
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <!-- keyword search -->
+              <div class="panel-subnav panel-subnav-gray hide" id='filter'>
+                  <div class="col-md-12">
+                    <!--<div class="control-label">Filter by:</div>-->
+                    <ul class="list-unstyled list-inline list-dividers">
+                      <li class="col-sm-4">
+                       <div class="button-group btn-group-checkboxes">
+                          <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                            <span>Stakeholder Type</span>
+                            <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu dropdown-menu-checkbox">
+                            <li>
+                              <a href="#" data-value="option-agt">
+                                <div class="checkbox checkbox-primary" data-value="option-agt">
+                                  <input id="option-agt" value="option-agt" type="checkbox">
+                                  <label for="option-award">Show All</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-award">
+                                <div class="checkbox checkbox-primary" data-value="option-award">
+                                  <input id="option-award" value="option-test" type="checkbox">
+                                  <label for="option-award">Pupil</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-cash">
+                                <div class="checkbox checkbox-primary" data-value="option-cash">
+                                  <input id="option-cash" value="option-cash" type="checkbox">
+                                  <label for="option-cash">Alumni</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-competition">
+                                <div class="checkbox checkbox-primary" data-value="option-competition">
+                                  <input id="option-competition" value="option-competition" type="checkbox">
+                                  <label for="option-competition">PTA</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-discount">
+                                <div class="checkbox checkbox-primary" data-value="option-award">
+                                  <input id="option-discount" value="option-discount" type="checkbox">
+                                  <label for="option-discount">Parent / Guardian</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-freebie">
+                                <div class="checkbox checkbox-primary" data-value="option-award">
+                                  <input id="option-freebie" value="option-freebie" type="checkbox">
+                                  <label for="option-freebie">Volunteer</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-fund">
+                                <div class="checkbox checkbox-primary" data-value="option-fund">
+                                  <input id="option-fund" value="option-fund" type="checkbox">
+                                  <label for="option-fund">Staff</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Business</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Supplier</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Organisation</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Sponsor</label>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
                         </div>
                       </li>
-                      <li>
-                        <a class="btn btn-default" onclick="$('#filter').toggleClass('hide')">Advanced Search</a>
+                      <li class="col-sm-4">
+                       <div class="button-group btn-group-checkboxes">
+                          <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                            <span>Gift Aid Status</span>
+                            <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu dropdown-menu-checkbox">
+                             <li>
+                               <a href="#" data-value="option-agt">
+                                 <div class="checkbox checkbox-primary" data-value="option-agt">
+                                   <input id="option-agt" value="option-agt" type="checkbox">
+                                   <label for="option-all">All</label>
+                                 </div>
+                               </a>
+                             </li>
+                             <li>
+                              <a href="#" data-value="option-agt">
+                                <div class="checkbox checkbox-primary" data-value="option-agt">
+                                  <input id="option-agt" value="option-agt" type="checkbox">
+                                  <label for="option-all">Eligible</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-basic">
+                                <div class="checkbox checkbox-primary" data-value="option-basic">
+                                  <input id="option-basic" value="option-basic" type="checkbox">
+                                  <label for="option-basic">Not Eligible</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-moderate">
+                                <div class="checkbox checkbox-primary" data-value="option-moderate">
+                                  <input id="option-moderate" value="option-moderate" type="checkbox">
+                                  <label for="option-moderate">Unknown</label>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
-                      <li>
-                        <a class="btn btn-add" data-toggle="modal" data-target="#myModalSRMNew">
-                          <i class="glyphicon glyphicon-plus"></i> Add New
-                        </a>
+                      <li class="col-sm-4">
+                       <div class="button-group btn-group-checkboxes">
+                          <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                            <span>Volunteer Status</span>
+                            <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu dropdown-menu-checkbox">
+                             <li>
+                               <a href="#" data-value="option-agt">
+                                 <div class="checkbox checkbox-primary" data-value="option-agt">
+                                   <input id="option-agt" value="option-agt" type="checkbox">
+                                   <label for="option-all">All</label>
+                                 </div>
+                               </a>
+                             </li>
+                             <li>
+                              <a href="#" data-value="option-agt">
+                                <div class="checkbox checkbox-primary" data-value="option-agt">
+                                  <input id="option-agt" value="option-agt" type="checkbox">
+                                  <label for="option-all">Willing</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-basic">
+                                <div class="checkbox checkbox-primary" data-value="option-basic">
+                                  <input id="option-basic" value="option-basic" type="checkbox">
+                                  <label for="option-basic">Not Willing</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-moderate">
+                                <div class="checkbox checkbox-primary" data-value="option-moderate">
+                                  <input id="option-moderate" value="option-moderate" type="checkbox">
+                                  <label for="option-moderate">Unknown</label>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
                       </li>
                     </ul>
                   </div>
-                </div>
               </div>
 
               <!-- filter -->
@@ -193,7 +389,7 @@ tagline: Looking after all your stakeholders
                             </div>
                           </div>
                         </th>
-                        <th class="name">Name<a class="filter"></a></th>
+                        <th class="name">Name{% include filter.html %}</th>
                         <th class="category">Type</th>
                         <th class="comms">Contact Details</th>
                         <th class="status">Gift Aid</th>
@@ -812,7 +1008,7 @@ tagline: Looking after all your stakeholders
                               </div>
                             </div>
                           </th>
-                          <th class="name">Stakeholder<a class="filter"></a></th>
+                          <th class="name">Stakeholder{% include filter.html %}</th>
                           <th class="category">Type</th>
                           <th class="comms">Contact Details</th>
                           <th class="status">Gift Aid</th>

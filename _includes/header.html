@@ -11,68 +11,20 @@
             <i class="fa fa-navicon fa-lg"></i>
           </a>
         </div>
-        <ul class="navbar-right list-unstyled list-inline pull-right">
-          <!--<li>
-            <span class="label label-danger">DEMO</span>
-          </li>
-          <li>
-            |
-          </li>-->
-
-          <!--<li class="trial-date">
-            <strong>10 Days Remain on Trial</strong>
-          </li>
-          <li>
-            <a data-toggle="modal" data-target="#myModalTrial"
-              class="btn btn-add">
-              Upgrade
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown user_name">
+            <a href="#" class="dropdown-toggle "
+               data-toggle="dropdown" role="button"
+               aria-haspopup="true" aria-expanded="false">
+                 <i class="fa fa-user"></i> Adam Hogg
+              <span class="caret"></span>
             </a>
-          </li>-->
-          <!--<li>
-            <div class="menu-container">
-              <a id="btn-filters-test" class="btn-menu" onclick="$('#filters-test').toggleClass('hide'), $('#btn-filters-test').toggleClass('active')">
-                <i class="fa fa-tasks"></i>
-              </a>
-
-              <div id="filters-test" class="menu-toggle hide">
-                <div class="panel-body">
-
-                  <ul class="list-unstyled list-notification">
-                    <li>
-                      <p>5 Tasks Remain</p>
-                    </li>
-                    <li>
-                      <a href="">Grant Application
-                        <span>Due: 02.02.2015</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="">Grant Application
-                        <span>Due: 02.02.2015</span>
-                      </a>
-                    </li>
-                  </ul>
-
-                </div>
-              </div>
-            </div>
-          </li>-->
-          <li class="profile">
-            <div class="btn-group">
-              <a class="dropdown-toggle btn-profile" data-toggle="dropdown">
-                <span class="initials icon-user">
-                  AH
-                </span>
-              </a>
-              <ul class="dropdown-menu dropdown-menu-right">
-                  <li><a href="/profile/home/"> My Profile</a></li>
-              </ul>
-            </div>
+            <ul class="dropdown-menu">
+              <li><a href="/profile/home/"><i class="fa fa-user"></i> My Profile</a></li>
+              <li><a href="/logout/"><i class=" fa fa-power-off"></i>Logout</a></li>
+            </ul>
           </li>
-          <li class="user_name">
-            Funding School
-          </li>
-      </ul>
+        </ul>
 
       </div>
     </div>

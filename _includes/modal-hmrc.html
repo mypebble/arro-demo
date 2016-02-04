@@ -13,69 +13,39 @@
           </span>
           <div class="title">Create Claim
           </div>
-          <span class="label label-info">Gift Aid Report 001</span>
+          <span class="label label-info">Gift Aid February 2016</span>
         </div>
         <div class="panel-body">
-          <ul class="list-unstyled list-tasks">
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox1" value="option1" type="checkbox">
-                  <label for="checkbox1">Step 1 - Download HMRC Template
-                    <span>This is official HMRC document we will need to use for our claim.</span>
-                  </label>
+
+          <div class="row">
+            <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
+              <div class="row">
+                <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
+                  <div class="form-group">
+                    <label class="control-label" for="">Previously over-claimed Gift Aid
+{% include input-tips.html %}
+                    </label>
+                    <input class="form-control input-amount" placeholder="0.00" type="text">
+                  </div>
+                  <div class="form-group">
+                    <a href="#" class="btn btn-info disabled btn-block"><i class="fa fa-download"></i> Save & Download</a>
+                  </div>
+                  <!--
+                  <div class="form-group">
+                    <div class="checkbox checkbox-success">
+                      <input id="checkbox4" value="option3" type="checkbox">
+                      <label for="checkbox4">Sent to HMRC
+                      </label>
+                    </div>
+                  </div>
+                -->
                 </div>
               </div>
-              <div class="actions-row">
-                <a href="/files/gift_aid_schedule_version_3-2.ods" class="btn btn-info"><i class="fa fa-download"></i> Download Template</a>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox2" value="option2" type="checkbox">
-                  <label for="checkbox2">Step 2 - Download your donation data
-                    <span>Here is all your eligible Gift Aid donors information to date.</span>
-                  </label>
-                </div>
-              </div>
-              <div class="actions-row">
-                <a href="#" class="btn btn-info"><i class="fa fa-download"></i> Download Data</a>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox3" value="option3" type="checkbox">
-                  <label for="checkbox3">Step 3 - Merge Data File with HMRC template.
-                    <span>Copy and paste your data file into the HMRC template</span>
-                  </label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox4" value="option3" type="checkbox">
-                  <label for="checkbox4">Step 4 - Submit to HMRC
-                    <span>Submit your report to HMRC for review.</span>
-                  </label>
-                </div>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
 
       </div>
-      <div class="modal-footer">
-        <div class="pull-left">
-          <a data-dismiss="modal" class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
-        </div>
-        <div class="pull-right">
-          <a class="btn btn-primary">Save</a>
-        </div>
-      </div>
-
     </div>
   </div>
 </div>

@@ -19,14 +19,14 @@ tagline: xxx
 			<table class="table table-bordered">
 				<thead>
 					<tr>
-						<th>CODE<a class="filter"></a></th>
-						<th class="title">Account<a class="filter"></a></th>
-						<th class="amount">Balance<a class="filter"></a></th>
+						<th class="code">CODE{% include filter.html %}</th>
+						<th class="title">Account{% include filter.html %}</th>
+						<th class="amount">Balance{% include filter.html %}</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>CASH</td>
+						<td class="code">CASH</td>
 						<td class="title link">
 							<a>Cash Account</a>
 						</td>
@@ -35,7 +35,7 @@ tagline: xxx
 						</td>
 					</tr>
           <tr>
-						<td>CURR</td>
+						<td class="code">CURR</td>
 						<td class="title link">
 							<a>Current Account</a>
 						</td>
@@ -44,7 +44,7 @@ tagline: xxx
 						</td>
 					</tr>
           <tr>
-						<td>DEP</td>
+						<td class="code">DEP</td>
 						<td class="title link">
 							<a>Deposit Account</a>
 						</td>

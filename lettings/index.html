@@ -23,15 +23,47 @@ tagline: Track your income generation goals with projects
   </div>
 </div>
 
+<div class="jumbotron" id="jumbo">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 flex-center-row">
+			<img src="/img/video-placeholder.jpg">
 
+    </div>
+    <div class="col-lg-5 col-md-6 ">
+      <div class="panel">
+          <div class="panel-title">Getting started
+        </div>
+        <div class="panel-body">
+          <h3>Lettings</h3>
+          <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <br>
+          <div class="staff-comment">
+            Daniel Wakenshaw
+            <small class="block">Pebble Support Team</small>
+          </div>
+        </div>
+        <div class="panel-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="pull-right">
+        <a class="btn btn-info" onclick="$('#jumbo').addClass('hide'), $('#setup').removeClass('hide')">Get Started</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<div class="row">
-	<div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+<div class="row hide" id="setup">
+	<div class="col-md-12 col-lg-12">
 		<div class="panel">
 			<div class="panel-title">Lettings Setup</div>
+			<!-- setup checkboxes-->
 			<div id="step1" class="">
 				<div class="panel-body">
-					<div class="section-title">Step 1 of 3</div>
+					<div class="section-title">Step 1 of 2</div>
 					<div class="section-title">Room Types
 						<p>Which of these room types do you have available?</p>
 					</div>
@@ -39,25 +71,25 @@ tagline: Track your income generation goals with projects
 						<div class="col-md-4">
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox" checked="">
 									<label for="checkbox2">Large Hall(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Small Hall(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Library(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Kitchen(s)</label>
 								</div>
 							</li>
@@ -65,25 +97,25 @@ tagline: Track your income generation goals with projects
 						<div class="col-md-4">
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Meeting Room(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Conference Room(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Large Classroom(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Small Classroom(s)</label>
 								</div>
 							</li>
@@ -91,32 +123,32 @@ tagline: Track your income generation goals with projects
 						<div class="col-md-4">
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Sports Hall(s)</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Gymnasiums</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Swimming Pool</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Outdoor Area</label>
 								</div>
 							</li>
 
 							<li>
 								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
+									<input id="checkbox1" value="" type="checkbox">
 									<label for="checkbox2">Other...</label>
 								</div>
 							</li>
@@ -126,53 +158,79 @@ tagline: Track your income generation goals with projects
 					<div class="section-title">Hire Equipment
 						<p>Any additional pieces of equipment can be hired out and bring in a venue instead of sitting in a cupboard.</p>
 					</div>
-					<ul class="row list-unstyled list-services">
-						<div class="col-md-4">
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Office Chairs</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Standard Chairs</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Executive Chairs</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Tables</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Computer Monitors</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Computers (complete)</label>
-								</div>
-							</li>
-
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="option1" type="checkbox">
-									<label for="checkbox2">Whiteboard</label>
-								</div>
-							</li>
-						</div>
-					</ul>
+					<div class="row">
+						<ul class="list-unstyled list-services">
+							<div class="col-md-4">
+								<div class="control-label-lg">Furniture</div>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox" checked="">
+										<label for="checkbox2">Office Chairs</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Standard Chairs</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Executive Chairs</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox" checked="">
+										<label for="checkbox2">Tables</label>
+									</div>
+								</li>
+							</div>
+							<div class="col-md-4">
+								<div class="control-label-lg">IT Equipment</div>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Computer Monitors</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Computers (complete)</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Whiteboard</label>
+									</div>
+								</li>
+							</div>
+							<div class="col-md-4">
+								<div class="control-label-lg">Sport Equipment</div>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Rackets</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Footballs</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox checkbox-primary">
+										<input id="checkbox1" value="" type="checkbox">
+										<label for="checkbox2">Goal Posts</label>
+									</div>
+								</li>
+							</div>
+						</ul>
+					</div>
 				</div>
 				<div class="panel-footer">
 					<div class="pull-right">
@@ -180,325 +238,74 @@ tagline: Track your income generation goals with projects
 					</div>
 				</div>
 			</div>
-
-
-
+			<!-- room/hire setup -->
 			<div id="step2" class="hide">
 				<div class="panel-body">
-					<div class="section-title">Step 2 of 3</div>
+					<div class="section-title">Step 2 of 2</div>
 
-					<div class="section-title">Room Setup
-						<p>Complete your room specifications</p>
+					<div class="section-title">Room Details
+						<p>Create your rooms</p>
 					</div>
 
-					<div class="panel" id="room-edit">
-						<div class="panel-title">Room <span class="text-muted">#01</span></div>
-						<div class="panel-body">
 
-							<div class="row">
-								<div class="col-lg-8 col-md-8">
+					<table class="table table-form table-bordered">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Room Name</th>
+								<th>Room Type</th>
+								<th>Quantity</th>
+								<th>Hire Charge</th>
+								<th>Hire Period</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="id">
+									001
+								</td>
+								<td class="product">
 									<div class="form-group">
-										<label class="control-label">Room Name</label>
-										<input class="form-control" value="" type="text" placeholder="Room Name">
+										<input class="form-control" value="Large Hall" type="text">
 									</div>
+								</td>
+								<td class="room-type">
+									Large Hall
+								</td>
+								<td class="quantity">
 									<div class="form-group">
-										<label class="control-label">Description</label>
-										<textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+										<input class="form-control input-qty" value="1" type="number">
 									</div>
-								</div>
-								<div class="col-lg-4">
+								</td>
+
+								<td class="amount">
 									<div class="form-group">
-										<label class="control-label">Room Width <span>(m)</span></label>
-										<input class="form-control" value="" type="text" placeholder="0">
+										<input class="form-control input-amount" value="0.00" type="text">
 									</div>
-									<div class="form-group">
-										<label class="control-label">Room Length <span>(m)</span></label>
-										<input class="form-control" value="" type="text" placeholder="0">
+								</td>
+								<td class="hire">
+									<div class="form-group btn-block">
+										<select class="selectpicker form-control" data-style="btn btn-default">
+											<option>Per Hour</option>
+											<option>Per Peak Day</option>
+											<option>Per Off-Peak Day</option>
+											<option>Per Week</option>
+											<option>Other</option>
+										</select>
 									</div>
-									<div class="form-group">
-										<label class="control-label">Max Capacity</label>
-										<input class="form-control" value="" type="number" placeholder="0">
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-lg-8 col-md-8">
-									<div class="control-label-lg">Features</div>
-									<ul class="list-unstyled list-services row">
-										<div class="col-lg-6 col-md-6">
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Disabled Access</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Onsite Parking</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Premium Wifi</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Free Wifi</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Air Conditioning</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Storage Room</label>
-												</div>
-											</li>
-										</div>
-										<div class="col-lg-6 col-md-6">
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Flipchart</label>
-												</div>
-											</li>
-
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Furnishing included in price</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">HDMI connection</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Projector and AV system</label>
-												</div>
-											</li>
-											<li>
-												<div class="checkbox checkbox-primary">
-													<input id="checkbox1" value="option1" type="checkbox">
-													<label for="checkbox2">Add More</label>
-												</div>
-
-											</li>
-										</div>
-										</ul>
-									</div>
-								<div class="col-lg-4 col-md-4">
-									<div class="control-label-lg">Licences</div>
-									<ul class="list-unstyled list-services">
-										<li>
-											<div class="checkbox checkbox-primary">
-												<input id="checkbox1" value="option1" type="checkbox">
-												<label for="checkbox2">Alchol Licence</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-primary">
-												<input id="checkbox1" value="option1" type="checkbox">
-												<label for="checkbox2">Entertainment Licence</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-primary">
-												<input id="checkbox1" value="option1" type="checkbox">
-												<label for="checkbox2">Catering Lincence</label>
-											</div>
-										</li>
-										<li>
-											<div class="checkbox checkbox-primary">
-												<input id="checkbox1" value="option1" type="checkbox">
-												<label for="checkbox2">Other Licence</label>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						<!--
-							<hr>
-						-->
-							<div class="row">
-							<!--
-								<div class="section-title">How much does it cost the school to make this room available?</div>
-
-								-Electricity
-								-Insurance
-								-Staff
-
-
-
-								<div class="row">
-									<div class="col-lg-4">
-										<div class="form-group">
-											<input class="form-control" value="" type="text" placeholder="0">
-										</div>
-
-
-									</div>
-								</div>-->
-							</div>
-
-							<div class="row">
-								<div class="col-md-12">
-									<div class="section-title">Images
-										<p>Help sell your room with a photograph</p>
-									</div>
-									<div class="form-group">
-										<input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
-										<label for="file-2">
-											<span>Choose a file&hellip;</span>
-										</label>
-										<!--<span class="help-block">JPG / PNG</span>-->
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-md-12">
-									<div class="section-title">Cost
-										<p>Help calculate cost of the room hire</p>
-									</div>
-									<table class="table table-form table-bordered">
-										<thead>
-											<tr>
-												<th>Room Expenses</th>
-												<th>Hire Cost</th>
-												<th>Hire Period</th>
-												<th>Room Total</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td class="amount">
-													<div class="form-group">
-														<input class="form-control input-amount" value="0.00" type="text">
-													</div>
-												</td>
-												<td class="amount">
-													<div class="form-group">
-														<input class="form-control input-amount" value="0.00" type="text">
-													</div>
-												</td>
-												<td class="hire">
-													<div class="form-group btn-block">
-														<select class="selectpicker form-control" data-style="btn btn-default">
-															<option>Per Hour</option>
-															<option>Per Peak Day</option>
-															<option>Per Off-Peak Day</option>
-															<option>Per Week</option>
-															<option>Other</option>
-														</select>
-													</div>
-												</td>
-												<td class="">
-													<div class="form-group has-success">
-														<div class="input-group">
-														  <input type="text" class="form-control input-amount" placeholder="0.00" aria-describedby="basic-addon2">
-														  <span class="input-group-addon input-addon-result" id="basic-addon2">10% Profit</span>
-														</div>
-													</div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-						<div class="panel-footer">
-							<div class="pull-left">
-								<a class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
-							</div>
-							<div class="pull-right">
-								<a class="btn btn-add" onclick="$('#room-small').removeClass('hide'), $('#room-edit').addClass('hide')">Create Room</a>
-							</div>
-						</div>
-					</div>
-
-					<div class="row " id="room-small">
-						<div class="col-lg-12 col-md-12">
-
-							<table class="table table-bordered table-vam">
-								<thead>
-									<tr>
-										<th class="check"></th>
-										<th class="title"></th>
-										<th class="photo"></th>
-										<th class=""></th>
-										<th class="amount">Amount</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td class="check"></td>
-										<td class="title">
-											Meeting Room
-										</td>
-										<td class="photo">
-											<i class="fa fa-camera"></i> 5
-										</td>
-										<td>
-											Small Room
-											<!-- <small class="block">3m x 4m</small> -->
-										</td>
-										<td class="amount">
-											&pound;15.00p/h
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<!--<div class="panel">
-								<div class="panel-body">
-									<div class="col-lg-10 col-md-10">
-										<div class="thumb-square">
-											<img src="/img/rooms/meeting-test.jpg" class="">
-											<span class="pull-right m-t-xs">5 <i class="fa fa-camera"></i></span>
-										</div>
-										<div>Meeting Room 1</div>
-										<p>Curabitur blandit tempus porttitor. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
-									</div>
-									<div class="col-lg-2 col-md-2">
-										&pound;15.00p/h
-									</div>
-								</div>
-							</div>-->
-						</div>
-					</div>
-
-				<!--
-					<div class="pull-right">
-						<a class="btn btn-primary" onclick="$('#step3').removeClass('hide'), $('#step2').addClass('hide')">Next Step</a>
-					</div>
-				-->
-
-
-
-				</div>
-			</div>
-
-
-			<div id="step3" class="hide">
-				<div class="panel-body">
-					<div class="section-title">Step 2 of 3</div>
+								</td>
+								<td class="action">
+									<a class="btn btn-danger">Remove</a>
+								</td>
+							</tr>
+						</tobdy>
+					</table>
 
 					<div class="section-title">Hire Equipment
 						<p>Which of these room types do you have available?</p>
 					</div>
+
 
 					<table class="table table-form table-bordered">
 						<thead>
@@ -580,8 +387,46 @@ tagline: Track your income generation goals with projects
 				</div>
 				<div class="panel-footer">
 					<div class="pull-right">
-						<a class="btn btn-primary" onclick="$('#step3').removeClass('hide'), $('#step2').addClass('hide')">Next Step</a>
+						<a class="btn btn-primary" onclick="$('#setup').addClass('hide'), $('#setup-done').removeClass('hide')">Create</a>
 					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="hide" id="setup-done">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel">
+				<div class="panel-title">Lettings</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Room</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="id">001</td>
+								<td class="title link">
+									<a data-toggle="modal" data-target="#myModalLetting-room">
+										<span class="initials icon-lettings">
+											<i class="fa fa-building-o"></i>
+										</span>
+										Large Hall
+									</a>
+								</td>
+								<td>
+
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
 				</div>
 			</div>
 		</div>

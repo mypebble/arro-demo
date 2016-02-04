@@ -23,36 +23,41 @@ tagline: All your recorded transactions in one place
         View Donations
       </div>
       <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="search">
-              <input type="text" class="form-control" placeholder="Search for name">
-              <i class="glyphicon glyphicon-search"></i>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="search">
+                <input class="form-control" placeholder="Search by Name" type="text">
+                <i class="glyphicon glyphicon-search"></i>
+              </div>
             </div>
+            <button class="btn btn-primary col-sm-2">Search</button>
           </div>
-          <div class="col-lg-6 col-md-6">
-            <ul class="list-unstyled list-inline pull-right">
-              <li>
-                <a class="btn btn-add" href="/donations/home/">
-                  <i class="glyphicon glyphicon-plus"></i> Add New
-                </a>
-              </li>
-            </ul>
-          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <ul class="list-unstyled list-inline pull-right">
+            <li>
+              <a class="btn btn-add" href="/donations/home/">
+                <i class="glyphicon glyphicon-plus"></i> Add New
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
 
-    <div class="panel-body">
+
+      <div class="panel-body">
         <table class="table table-bordered table-hover">
             <thead>
               <tr>
-                <th class="date">Date<a class="filter"></a></th>
-                <th class="rec">No#<a class="filter"></a></th>
-                <th class="">Name<a class="filter"></a></th>
+                <th class="date">Date{% include filter.html %}</th>
+                <th class="rec">No#{% include filter.html %}</th>
+                <th class="">Name{% include filter.html %}</th>
                 <th class="details">Description</th>
-                <th class="amount">Amount<a class="filter"></a></th>
-                <th class="type">Type<a class="filter"></a></th>
+                <th class="amount">Amount{% include filter.html %}</th>
+                <th class="type">Type{% include filter.html %}</th>
                 <th class="status">Gift Aid</th>
               </tr>
             </thead>

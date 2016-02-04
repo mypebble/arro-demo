@@ -22,7 +22,6 @@ permalink: /projects/details/
         </span>-->
       </div>
         <div class="panel-body">
-
            <div class="col-md-9">
              <h2>Sports Field
              </h2>
@@ -151,9 +150,9 @@ permalink: /projects/details/
                   <th></th>
                   <th class="title">Grant Title</th>
                   <th class="value">Award</th>
-                  <th class="rating">Detail Required <a class="filter"></a></th>
-                  <th class="duration">To Complete  <a class="filter"></a></th>
-                  <th class="date date-right">Deadline  <a class="filter"></a></th>
+                  <th class="rating">Detail Required {% include filter.html %}</th>
+                  <th class="duration">To Complete  {% include filter.html %}</th>
+                  <th class="date date-right">Deadline  {% include filter.html %}</th>
                   <!--<th class="action">
                     Actions
                   </th>-->
@@ -284,7 +283,7 @@ permalink: /projects/details/
                   <tr>
                     <th>File Name</th>
                     <th>File Size</th>
-                    <th class="date date-right">Uploaded<a class="filter"></a></th>
+                    <th class="date date-right">Uploaded{% include filter.html %}</th>
                     <th class="action">Remove</th>
                   </tr>
                 </thead>
