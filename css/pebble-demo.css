@@ -14083,9 +14083,6 @@ fieldset[disabled] .modal-success .btn-primary.active {
 /*------------------------------------*\
     #MAIN
 \*------------------------------------*/
-body {
-  height: 100vh;
-}
 #container {
   min-height: 100%;
   position: relative;
@@ -14096,7 +14093,6 @@ body {
 }
 #content-container {
   position: relative;
-  height: 100vh;
 }
 #content-container::after:before,
 #content-container::after:after {
@@ -16211,6 +16207,11 @@ ul.list-profile-settings li-campaign.locked .initials {
   opacity: 0.65;
   filter: alpha(opacity=65);
 }
+ul.list-profile-settings li-gray .panel-title,
+ul.list-profile-settings li-gray .panel-body,
+ul.list-profile-settings li-gray .panel-footer {
+  background: #f9f9f9;
+}
 ul.list-profile-settings li-footer {
   background: #ffffff;
   border-top: 0px;
@@ -16915,7 +16916,7 @@ a.list-facts-three li.rating-hard:hover {
 .initials.pta {
   background: #eb9361;
 }
-.initials.parent {
+.initials.family {
   background: #f1b28e;
 }
 .initials.volunteer {
@@ -16936,7 +16937,14 @@ a.list-facts-three li.rating-hard:hover {
 .initials.sponsor {
   background: #f28080;
 }
-.initials.none {
+.initials.community {
+  background: #e2651d;
+}
+.initials.charity {
+  background: #ed5252;
+}
+.initials.none,
+.initials.person {
   background: #9b9b9b;
 }
 .initials.comment {
@@ -17761,7 +17769,7 @@ a.has-success .form-control:focus:hover {
   position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 99;
+  z-index: 2;
   color: #9b9b9b;
 }
 .search i:last-child {
@@ -18280,6 +18288,11 @@ fieldset[disabled] .btn-menu.active {
 .panel-campaign.locked .initials {
   opacity: 0.65;
   filter: alpha(opacity=65);
+}
+.panel-gray .panel-title,
+.panel-gray .panel-body,
+.panel-gray .panel-footer {
+  background: #f9f9f9;
 }
 /* PANEL */
 .panel-footer {
@@ -20101,6 +20114,35 @@ th .form-group .checkbox label {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+.has-spinner.active {
+  cursor: progress;
+}
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto;
+  /* This doesn't work, just fix for unkown width elements */
+}
+.has-spinner.btn-mini.active .spinner {
+  width: 10px;
+}
+.has-spinner.btn-small.active .spinner {
+  width: 13px;
+}
+.has-spinner.btn.active .spinner {
+  width: 16px;
+}
+.has-spinner.btn-large.active .spinner {
+  width: 19px;
 }
 .flex-center {
   display: flex;

@@ -1,0 +1,82 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal-donation-gasds" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-gasds">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body modal-body-clear">
+        <div class="body-title">
+          <div class="title">GASDS Donation</div>
+          <span>Gift Aid Small Donations Scheme</span>
+        </div>
+        <p>
+          <strong>Examples Include:</strong> Donation Cash Buckets and Anonymous Cash Donations
+        </p>
+
+        <div class="row">
+          <div class="col-sm-12">
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label class="control-label" for="">Amount</label>
+                  <input class="form-control input-amount" placeholder="0.00" type="text">
+                </div>
+              </div>
+               <div class="col-sm-6">
+                 <div class="form-group">
+                   <label for="dtp_input2" class="control-label">Date</label>
+                   <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                       <input class="form-control" size="16" value="" placeholder="Date" type="text">
+                       <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+             <div class="row">
+               <div class="col-md-12">
+                 <div class="form-group">
+                   <label class="control-label" for="">Building Name
+                   </label>
+                   <input class="form-control" placeholder="Building Name" type="text">
+                 </div>
+               </div>
+            </div>
+            <div class="row">
+             <div class="col-md-12">
+               <div class="form-group" id="">
+                   <label for="textArea" class="control-label">Description
+                     {% include input-tips.html %}
+                   </label>
+                   <textarea class="form-control" rows="3" id="textArea"></textarea>
+               </div>
+             </div>
+           </div>
+           <div class="row">
+             <div class="col-md-12">
+               <div class="alert alert-info">
+                 This donation will be recorded against the <strong>GASDS Account</strong> which will be used for your future claim.
+               </div>
+             </div>
+           </div>
+         </div>
+      </div>
+    </div>
+
+
+      <div class="modal-footer">
+        <div class="pull-left">
+          <a class="btn btn-default">
+            <i class="fa fa-trash-o"></i> Abandon
+          </a>
+        </div>
+        <div class="pull-right">
+          <a data-dismiss="modal" class="btn btn-add">
+            Create Donation
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
