@@ -20183,6 +20183,7 @@ th .form-group .checkbox label {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 .login-footer {
   color: #ffffff;
