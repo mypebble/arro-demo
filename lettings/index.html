@@ -23,7 +23,7 @@ tagline: Track your income generation goals with projects
   </div>
 </div>
 
-<div class="jumbotron" id="jumbo">
+<div class="jumbotron hide" id="jumbo">
   <div class="row">
     <div class="col-lg-7 col-md-6 flex-center-row">
 			<img src="/img/video-placeholder.jpg">
@@ -56,7 +56,7 @@ tagline: Track your income generation goals with projects
   </div>
 </div>
 
-<div class="row hide" id="setup">
+<div class="row" id="setup">
 	<div class="col-md-12 col-lg-12">
 		<div class="panel">
 			<div class="panel-title">Lettings Setup</div>
@@ -72,51 +72,25 @@ tagline: Track your income generation goals with projects
 							<li>
 								<div class="checkbox checkbox-primary">
 									<input id="checkbox1" value="" type="checkbox" checked="">
-									<label for="checkbox2">Large Hall(s)</label>
+									<label for="checkbox2">Large Hall</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
 									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Small Hall(s)</label>
+									<label for="checkbox2">Small Hall</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
 									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Library(s)</label>
+									<label for="checkbox2">Library</label>
 								</div>
 							</li>
 							<li>
 								<div class="checkbox checkbox-primary">
 									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Kitchen(s)</label>
-								</div>
-							</li>
-						</div>
-						<div class="col-md-4">
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Meeting Room(s)</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Conference Room(s)</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Large Classroom(s)</label>
-								</div>
-							</li>
-							<li>
-								<div class="checkbox checkbox-primary">
-									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Small Classroom(s)</label>
+									<label for="checkbox2">Kitchen</label>
 								</div>
 							</li>
 						</div>
@@ -124,7 +98,33 @@ tagline: Track your income generation goals with projects
 							<li>
 								<div class="checkbox checkbox-primary">
 									<input id="checkbox1" value="" type="checkbox">
-									<label for="checkbox2">Sports Hall(s)</label>
+									<label for="checkbox2">Meeting Room</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox checkbox-primary">
+									<input id="checkbox1" value="" type="checkbox">
+									<label for="checkbox2">Conference Room</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox checkbox-primary">
+									<input id="checkbox1" value="" type="checkbox">
+									<label for="checkbox2">Large Classroom</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox checkbox-primary">
+									<input id="checkbox1" value="" type="checkbox">
+									<label for="checkbox2">Small Classroom</label>
+								</div>
+							</li>
+						</div>
+						<div class="col-md-4">
+							<li>
+								<div class="checkbox checkbox-primary">
+									<input id="checkbox1" value="" type="checkbox">
+									<label for="checkbox2">Sports Hall</label>
 								</div>
 							</li>
 							<li>
@@ -239,13 +239,35 @@ tagline: Track your income generation goals with projects
 				</div>
 			</div>
 			<!-- room/hire setup -->
-			<div id="step2" class="hide">
+			<div id="step2" class="">
 				<div class="panel-body">
-					<div class="section-title">Step 2 of 2</div>
-
-					<div class="section-title">Room Details
+					<div class="section-title">Rooms Available
 						<p>Create your rooms</p>
 					</div>
+
+					<div class="col-md-4">
+						<table class="table table-bordered table-form">
+							<thead>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="checkbox checkbox-primary">
+											<input id="checkbox1" value="" type="checkbox" checked="">
+											<label for="checkbox2">Large Hall</label>
+										</div>
+									</td>
+									<td class="quantity">
+										<div class="form-group">
+											<input class="form-control input-qty " disabled="" value="1" type="number">
+										</div>
+									</td>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
 
 
 					<table class="table table-form table-bordered">
@@ -254,7 +276,7 @@ tagline: Track your income generation goals with projects
 								<th>ID</th>
 								<th>Room Name</th>
 								<th>Room Type</th>
-								<th>Quantity</th>
+								<!--<th>Quantity</th>-->
 								<th>Hire Charge</th>
 								<th>Hire Period</th>
 								<th>Actions</th>
@@ -263,7 +285,7 @@ tagline: Track your income generation goals with projects
 						<tbody>
 							<tr>
 								<td class="id">
-									001
+									L001
 								</td>
 								<td class="product">
 									<div class="form-group">
@@ -273,12 +295,6 @@ tagline: Track your income generation goals with projects
 								<td class="room-type">
 									Large Hall
 								</td>
-								<td class="quantity">
-									<div class="form-group">
-										<input class="form-control input-qty" value="1" type="number">
-									</div>
-								</td>
-
 								<td class="amount">
 									<div class="form-group">
 										<input class="form-control input-amount" value="0.00" type="text">
@@ -296,7 +312,39 @@ tagline: Track your income generation goals with projects
 									</div>
 								</td>
 								<td class="action">
-									<a class="btn btn-danger">Remove</a>
+									<a class="btn btn-add btn-block">Add</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="id">
+									L002
+								</td>
+								<td class="product">
+									<div class="form-group">
+										<input class="form-control" value="Large Hall" type="text">
+									</div>
+								</td>
+								<td class="room-type">
+									Large Hall
+								</td>
+								<td class="amount">
+									<div class="form-group">
+										<input class="form-control input-amount" value="0.00" type="text">
+									</div>
+								</td>
+								<td class="hire">
+									<div class="form-group btn-block">
+										<select class="selectpicker form-control" data-style="btn btn-default">
+											<option>Per Hour</option>
+											<option>Per Peak Day</option>
+											<option>Per Off-Peak Day</option>
+											<option>Per Week</option>
+											<option>Other</option>
+										</select>
+									</div>
+								</td>
+								<td class="action">
+									<a class="btn btn-add btn-block">Add</a>
 								</td>
 							</tr>
 						</tobdy>
@@ -310,6 +358,7 @@ tagline: Track your income generation goals with projects
 					<table class="table table-form table-bordered">
 						<thead>
 							<tr>
+								<th class="id">ID</th>
 								<th>Label</th>
 								<th class="quantity">Quantity</th>
 								<th class="">Hire Charge</th>
@@ -319,6 +368,7 @@ tagline: Track your income generation goals with projects
 						</thead>
 						<tbody>
 							<tr>
+								<td class="id">H01</td>
 								<td class="product">
 									<div class="form-group">
 										<input class="form-control" value="Chairs" type="text">
@@ -350,6 +400,7 @@ tagline: Track your income generation goals with projects
 								</td>
 							</tr>
 							<tr>
+								<td class="id">H02</td>
 								<td class="product">
 									<div class="form-group">
 										<input class="form-control" value="Tables" type="text">
