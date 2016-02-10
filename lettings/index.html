@@ -23,7 +23,7 @@ tagline: Track your income generation goals with projects
   </div>
 </div>
 
-<div class="jumbotron hide" id="jumbo">
+<div class="jumbotron" id="jumbo">
   <div class="row">
     <div class="col-lg-7 col-md-6 flex-center-row">
 			<img src="/img/video-placeholder.jpg">
@@ -56,14 +56,18 @@ tagline: Track your income generation goals with projects
   </div>
 </div>
 
-<div class="row" id="setup">
-	<div class="col-md-12 col-lg-12">
+<div class="row hide" id="setup">
+	<div class="col-md-12">
 		<div class="panel">
-			<div class="panel-title">Lettings Setup</div>
+			<!--<div class="panel-title">Lettings Setup</div>-->
 			<!-- setup checkboxes-->
 			<div id="step1" class="">
 				<div class="panel-body">
-					<div class="section-title">Step 1 of 2</div>
+					<div class="body-title">
+						<div class="title">Lettings Setup</div>
+						<span>What room types have you got available?</span>
+					</div>
+					<!--<div class="section-title">Step 1 of 2</div>
 					<div class="section-title">Room Types
 						<p>Which of these room types do you have available?</p>
 					</div>
@@ -154,8 +158,9 @@ tagline: Track your income generation goals with projects
 							</li>
 						</div>
 					</ul>
+				-->
 
-					<div class="section-title">Hire Equipment
+					<!--<div class="section-title">Hire Equipment
 						<p>Any additional pieces of equipment can be hired out and bring in a venue instead of sitting in a cupboard.</p>
 					</div>
 					<div class="row">
@@ -230,46 +235,234 @@ tagline: Track your income generation goals with projects
 								</li>
 							</div>
 						</ul>
+					</div>-->
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<table class="table table-form table-bordered">
+								<thead>
+									<tr>
+										<th class="check"></th>
+										<th class="room-type">Room Type</th>
+										<th>Quantity</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr id="tr-lhall">
+										<td class="check">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option1" type="checkbox" checked="" onclick="$('#tr-lhall td').toggleClass('td-disabled'), $('#tr-lhall td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type">
+											Large Hall
+										</td>
+										<td class="quantity">
+											<div class="form-group">
+												<input class="form-control input-qty" value="2" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-shall">
+										<td class="check">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option2" type="checkbox" checked="" onclick="$('#tr-shall td').toggleClass('td-disabled'), $('#tr-shall td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type">
+											Small Hall
+										</td>
+										<td class="quantity">
+											<div class="form-group">
+												<input class="form-control input-qty" checked=""  value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-sport">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option3" type="checkbox" onclick="$('#tr-sport td').toggleClass('td-disabled'), $('#tr-sport td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Sports Hall
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-gym">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option4" type="checkbox" onclick="$('#tr-gym td').toggleClass('td-disabled'), $('#tr-gym td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Gymnasium
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-kitchen">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option5" type="checkbox" onclick="$('#tr-kitchen td').toggleClass('td-disabled'), $('#tr-kitchen td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Kitchen
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-meeting">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option6" type="checkbox" onclick="$('#tr-meeting td').toggleClass('td-disabled'), $('#tr-meeting td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Meeting Room
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-conf">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option7" type="checkbox" onclick="$('#tr-conf td').toggleClass('td-disabled'), $('#tr-conf td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Conference Room
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-tennis">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option8" type="checkbox" onclick="$('#tr-tennis td').toggleClass('td-disabled'), $('#tr-tennis td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Tennis Courts
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-sport-field">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option9" type="checkbox" onclick="$('#tr-sport-field td').toggleClass('td-disabled'), $('#tr-sport-field td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Sports Field
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-swim">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option10" type="checkbox" onclick="$('#tr-swim td').toggleClass('td-disabled'), $('#tr-swim td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Swimming Pool
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+									<tr id="tr-other">
+										<td class="check td-disabled">
+											<div class="form-group">
+												<div class="checkbox checkbox-primary">
+													<input id="checkbox3" value="option11" type="checkbox" onclick="$('#tr-other td').toggleClass('td-disabled'), $('#tr-other td.quantity .form-group').toggleClass('hide')">
+													<label for="checkbox3"></label>
+												</div>
+											</div>
+										</td>
+										<td class="room-type td-disabled">
+											Other
+										</td>
+										<td class="quantity td-disabled">
+											<div class="form-group hide">
+												<input class="form-control input-qty" value="1" type="number">
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 				<div class="panel-footer">
 					<div class="pull-right">
-						<a class="btn btn-primary" onclick="$('#step2').removeClass('hide'), $('#step1').addClass('hide')">Next Step</a>
+						<a class="btn btn-add" onclick="$('#step2').removeClass('hide'), $('#step1').addClass('hide')">Next</a>
 					</div>
 				</div>
 			</div>
 			<!-- room/hire setup -->
-			<div id="step2" class="">
+			<div id="step2" class="hide">
 				<div class="panel-body">
-					<div class="section-title">Rooms Available
-						<p>Create your rooms</p>
+					<div class="body-title">
+						<div class="title">Rooms Available</div>
+						<span>Create your rooms</span>
 					</div>
-
-					<div class="col-md-4">
-						<table class="table table-bordered table-form">
-							<thead>
-							</thead>
-							<tbody>
-								<tr>
-									<td>
-										<div class="checkbox checkbox-primary">
-											<input id="checkbox1" value="" type="checkbox" checked="">
-											<label for="checkbox2">Large Hall</label>
-										</div>
-									</td>
-									<td class="quantity">
-										<div class="form-group">
-											<input class="form-control input-qty " disabled="" value="1" type="number">
-										</div>
-									</td>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
-
-
 					<table class="table table-form table-bordered">
 						<thead>
 							<tr>
@@ -312,7 +505,7 @@ tagline: Track your income generation goals with projects
 									</div>
 								</td>
 								<td class="action">
-									<a class="btn btn-add btn-block">Add</a>
+									<a class="btn btn-danger btn-block">Remove</a>
 								</td>
 							</tr>
 							<tr>
@@ -344,13 +537,102 @@ tagline: Track your income generation goals with projects
 									</div>
 								</td>
 								<td class="action">
+									<a class="btn btn-danger btn-block">Remove</a>
+								</td>
+							</tr>
+							<tr>
+								<td class="id">
+									L003
+								</td>
+								<td class="product">
+									<div class="form-group">
+										<input class="form-control" value="Small Hall" type="text">
+									</div>
+								</td>
+								<td class="room-type">
+									Small Hall
+								</td>
+								<td class="amount">
+									<div class="form-group">
+										<input class="form-control input-amount" value="0.00" type="text">
+									</div>
+								</td>
+								<td class="hire">
+									<div class="form-group btn-block">
+										<select class="selectpicker form-control" data-style="btn btn-default">
+											<option>Per Hour</option>
+											<option>Per Peak Day</option>
+											<option>Per Off-Peak Day</option>
+											<option>Per Week</option>
+											<option>Other</option>
+										</select>
+									</div>
+								</td>
+								<td class="action">
+									<a class="btn btn-danger btn-block">Remove</a>
+								</td>
+							</tr>
+
+
+							<tr>
+								<td class="id">
+									L005
+								</td>
+								<td class="product">
+									<div class="form-group">
+										<input class="form-control" Placeholder="Room Type" type="text">
+									</div>
+								</td>
+								<td class="">
+									<div class="form-group btn-block">
+										<select class="selectpicker form-control" data-style="btn btn-default">
+											<!--<option>Large Hall</option>
+											<option>Small Hall</option>
+											<option>Sports Hall</option>
+											<option>Gymnasium</option>
+											<option>Library</option>
+											<option>Kitchen</option>
+											<option>Meeting Room</option>
+											<option>Conference Room</option>
+											<option>Classroom</option>
+											<option>Meeting Room</option>
+											<option>Sports Field</option>
+											<option>Tennis Courts</option>
+											<option>Swimming Pool</option>
+											<option>Other</option>-->
+										</select>
+									</div>
+								</td>
+								<td class="amount">
+									<div class="form-group">
+										<input class="form-control input-amount" placeholder="0.00" type="text">
+									</div>
+								</td>
+								<td class="hire">
+									<div class="form-group btn-block">
+										<select class="selectpicker form-control" data-style="btn btn-default">
+											<option>Per Hour</option>
+											<option>Per Peak Day</option>
+											<option>Per Off-Peak Day</option>
+											<option>Per Week</option>
+											<option>Other</option>
+										</select>
+									</div>
+								</td>
+								<td class="action">
 									<a class="btn btn-add btn-block">Add</a>
 								</td>
 							</tr>
 						</tobdy>
 					</table>
+				</div>
+				<div class="panel-footer">
+					<div class="pull-right">
+						<a class="btn btn-add" onclick="$('#setup-ready').removeClass('hide'), $('#setup').addClass('hide') ">Create</a>
+					</div>
+				</div>
 
-					<div class="section-title">Hire Equipment
+					<!--<div class="section-title">Hire Equipment
 						<p>Which of these room types do you have available?</p>
 					</div>
 
@@ -396,24 +678,24 @@ tagline: Track your income generation goals with projects
 									</div>
 								</td>
 								<td class="action">
-									<a class="btn btn-danger">Remove</a>
+								<a class="btn btn-danger btn-block">Remove</a>
 								</td>
 							</tr>
 							<tr>
 								<td class="id">H02</td>
 								<td class="product">
 									<div class="form-group">
-										<input class="form-control" value="Tables" type="text">
+										<input class="form-control" placeholder="Tables" type="text">
 									</div>
 								</td>
 								<td class="quantity">
 									<div class="form-group">
-										<input class="form-control input-qty" value="1" type="number">
+										<input class="form-control input-qty" placeholder="0" type="number">
 									</div>
 								</td>
 								<td class="amount">
 									<div class="form-group">
-										<input class="form-control input-amount" value="0.00" type="text">
+										<input class="form-control input-amount" placeholder="0.00" type="text">
 									</div>
 								</td>
 								<td class="hire">
@@ -428,7 +710,7 @@ tagline: Track your income generation goals with projects
 									</div>
 								</td>
 								<td class="action">
-									<a class="btn btn-danger">Remove</a>
+									<a class="btn btn-add btn-block">Add</a>
 								</td>
 							</tr>
 
@@ -436,49 +718,81 @@ tagline: Track your income generation goals with projects
 					</table>
 
 				</div>
-				<div class="panel-footer">
-					<div class="pull-right">
-						<a class="btn btn-primary" onclick="$('#setup').addClass('hide'), $('#setup-done').removeClass('hide')">Create</a>
-					</div>
-				</div>
+			-->
 			</div>
+
 		</div>
 	</div>
 </div>
 
-<div class="hide" id="setup-done">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel">
-				<div class="panel-title">Lettings</div>
-				<div class="panel-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Room</th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="id">001</td>
-								<td class="title link">
-									<a data-toggle="modal" data-target="#myModalLetting-room">
-										<span class="initials icon-lettings">
-											<i class="fa fa-building-o"></i>
-										</span>
-										Large Hall
-									</a>
-								</td>
-								<td>
-
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
+<div id="setup-ready" class="row hide">
+	<div class="col-md-12">
+		<div class="panel">
+			<div class="panel-title">
+				lettings
+			</div>
+			<div class="panel-subnav">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+						<!--<div class="row">
+						<div class="col-sm-10">
+							<div class="search">
+								<input class="form-control" placeholder="Search by Name" type="text">
+								<i class="glyphicon glyphicon-search"></i>
+							</div>
+						</div>
+						<button class="btn btn-primary col-sm-2">Search</button>
+					</div>-->
 				</div>
+				<div class="col-lg-6 col-md-6">
+					<ul class="list-unstyled list-inline pull-right">
+						<!--<li>
+							<div class="btn-group">
+									<button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+									</button>
+									<ul class="dropdown-menu dropdown-menu-right">
+										<li><a data-toggle="modal" data-target="#myModalImport"><i class="fa fa-upload"></i> Import Data</a></li>
+										<li><a href=""><i class="fa fa-download"></i> Export Data</a></li>
+									</ul>
+							</div>
+						</li>
+						<li>
+							<a class="btn btn-default" id="adv-btn" onclick="$('#filter').toggleClass('hide'), $('#adv-btn').toggleClass('active')">Advanced Search</a>
+						</li>-->
+						<li>
+							<a class="btn btn-add" data-toggle="" data-target="">
+								<i class="glyphicon glyphicon-plus"></i> Add New
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="panel-body">
+				<table class="table table-vam table-bordered">
+					<thead>
+						<tr>
+							<th class="id">ID <a class="filter"></a></th>
+							<th>Room Name</th>
+							<th>Room Type</th>
+							<th>Hire Charge</th>
+							<th>Status</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="id">
+								L001
+							</td>
+							<td class="title link">
+								<a data-toggle="modal" data-target="">Main Hall</a>
+							</td>
+							<td>Large Hall</td>
+							<td class="amount">&pound;16.00 <span>p/h</span></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>

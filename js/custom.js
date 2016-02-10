@@ -809,5 +809,4 @@ $( '.dropdown-menu-checkbox a' ).on( 'click', function( event ) {
 });
 
 
-
 }(jQuery);

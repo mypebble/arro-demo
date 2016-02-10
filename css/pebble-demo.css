@@ -14320,6 +14320,8 @@ fieldset[disabled] .modal-success .btn-primary.active {
 }
 #content-container {
   position: relative;
+  height: 100vh;
+  overflow-y: scroll;
 }
 #content-container::after:before,
 #content-container::after:after {
@@ -18718,6 +18720,9 @@ fieldset[disabled] .btn-menu.active {
 .table-form td {
   height: 60px;
 }
+.table-form td.check .form-group {
+  margin-top: 8px;
+}
 .table-form td .form-group {
   margin-bottom: -15px;
 }
@@ -18941,7 +18946,6 @@ fieldset[disabled] .btn-menu.active {
   padding: 18px 10px;
 }
 .table td.room-type {
-  width: 150px;
   padding: 18px 10px;
 }
 .table td.email {
@@ -19085,6 +19089,10 @@ a.table tr.updated > td.field-updated:hover {
 .table tr.details-row p {
   margin-left: 43px;
   font-size: 12px;
+}
+.table TR .td-disabled {
+  background: #f9f9f9;
+  color: #9b9b9b;
 }
 /*end .table*/
 /* Tables */
