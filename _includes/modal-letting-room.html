@@ -1,5 +1,5 @@
 <div class="modal fade" id="myModalLetting-room" tabindex="-1" role="dialog" aria-labelledby="myModalLabelLetting-room">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document" id="modal-size-letting">
     <div class="modal-content">
       <div class="modal-header modal-header-clear">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -8,51 +8,483 @@
       </div>
       <div class="modal-body modal-body-clear">
         <div class="body-title">
-          <div class="title">
-            <!--<span class="initials icon-donations">
-              <i class="fa fa-file"></i>
-            </span>-->
-            Room ID 01
-          </div>
+          <div class="title">Create Letting</div>
+          <span class="">What would you like to Let out?</span>
+
         </div>
 
-
-        <div class="panel" id="room-edit">
-          <div class="panel-title">Room <span class="text-muted">#01</span></div>
-          <div class="panel-body">
-
-            <div class="row">
-              <div class="col-lg-8 col-md-8">
-                <div class="form-group">
-                  <label class="control-label">Room Name</label>
-                  <input class="form-control" value="" type="text" placeholder="Room Name">
+        <div class="row" >
+          <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+            <!--  Facility  / Hire-->
+            <div class="row text-center m-b-xl" id="letting-options">
+              <div class="col-lg-6 col-md-6">
+                <div class="body-title">
+                  <span class="">
+                    <i class="fa fa-building-o fa-xl">
+                    </i>
+                  </span>
+                  <div class="title">
+                    Facilities
+                  </div>
+                  <p>Halls, Rooms, Sports Halls </p>
                 </div>
-                <div class="form-group">
-                  <label class="control-label">Description</label>
-                  <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                <a class="btn btn-default" onclick="$('#letting-facility').removeClass('hide'), $('#letting-options').addClass('hide'), $('#letting-footer').removeClass('hide')">Select</a>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="body-title">
+                  <span class="">
+                    <i class="fa fa-futbol-o fa-xl">
+                    </i>
+                  </span>
+                  <div class="title">Equipment</div>
+                  <p>Printers, Chairs, Rackets</p>
+                </div>
+                <a class="btn btn-default" onclick="$('#letting-facility-equipment').removeClass('hide'), $('#letting-options').addClass('hide'), $('#letting-footer').removeClass('hide')">Select</a>
+              </div>
+            </div>
+
+            <div id="letting-facility-equipment" class="hide">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label class="control-label">Equipment Name</label>
+                    <input class="form-control" type="text" placeholder="Equipment Name">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="control-label">Quantity</label>
+                    <input class="form-control input-qty" value="1" type="number">
+                  </div>
+
+                  <!--<label class="control-label">Status</label>
+                  <div class="form-group btn-block">
+                    <select class="selectpicker form-control" data-style="btn btn-default">
+                      <option selected="">Active</option>
+                      <option>Disabled</option>
+                    </select>
+                  </div>-->
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="form-group">
-                  <label class="control-label">Room Width <span>(m)</span></label>
-                  <input class="form-control" value="" type="text" placeholder="0">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="control-label">Description{% include input-tips.html %}</label>
+                    <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                  </div>
+<!--
+                  <div class="actions-row" id="btn-letting-includes">
+                    <a onclick="$('#service-include').removeClass('hide'), $('#btn-letting-includes').addClass('hide')" id="">Add more Detail</a>
+                  </div>
+
+                  <div class="hide" id="letting-include">
+                    <div class="form-group">
+                      <label class="control-label">Includes <a class="pull-right font-normal" onclick="$('#letting-include').addClass('hide'), $('#btn-service-includes').removeClass('hide')">Hide</a></label>
+                      <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                    </div>
+                  </div>-->
                 </div>
-                <div class="form-group">
-                  <label class="control-label">Room Length <span>(m)</span></label>
-                  <input class="form-control" value="" type="text" placeholder="0">
+              </div>
+              <!--<div class="row">
+                <div class="col-md-12">
+
                 </div>
+              </div>-->
+              <!--
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="control-label" for="">Terms
+                    </label>
+                    <div class="checkbox checkbox-success">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#donor-detail').toggleClass('hide')">
+                        <label for="donor">
+                         This hire requires a liability signature
+                         <span></span>
+                        </label>
+                     </div>
+                  </div>
+                </div>
+              </div>
+            -->
+
+              <!--<hr/>-->
+
+              <!--<div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
+                        <label for="donor">
+                         This item can be delivery
+                        </label>
+                     </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group hide" id="delivery-1">
+                    <label class="control-label">Price Per Mile</label>
+                    <input type="text" class="form-control" placeholder="£0.00">
+                  </div>
+                </div>
+              </div>-->
+
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="control-label">Time &amp; Cost</label>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
+                        <label for="donor">
+                         Item available during office hours
+                         <span>08.00 to 16:00</span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
+                        <label for="donor">
+                         Item available out of office hours
+                         <span>16:00 onwards </span>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
+                        <label for="donor">
+                         Item available at weekends
+                         <span>Sat - Sun (Return following Monday)</span>
+                        </label>
+                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="control-label">Collection</label>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Pickup Time</label>
+                        <select class="selectpicker form-control" data-style="btn btn-default">
+                          <option>07.00</option>
+                          <option>07.30</option>
+                          <option>08.00</option>
+                          <option>08.30</option>
+                          <option>09.00</option>
+                          <option>09.30</option>
+                          <option>10.00</option>
+                          <option>10.30</option>
+                          <option>11.00</option>
+                          <option>11.30</option>
+                          <option>12.00</option>
+                          <option>12.30</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Return Time</label>
+                        <select class="selectpicker form-control" data-style="btn btn-default">
+                          <option>07.00</option>
+                          <option>07.30</option>
+                          <option>08.00</option>
+                          <option>08.30</option>
+                          <option>09.00</option>
+                          <option>09.30</option>
+                          <option>10.00</option>
+                          <option>10.30</option>
+                          <option>11.00</option>
+                          <option>11.30</option>
+                          <option>12.00</option>
+                          <option>12.30</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label class="control-label">Pickup Address</label>
+                    <input class="form-control" type="text" placeholder="Pickup Address">
+
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="control-label">Postcode</label>
+                    <input class="form-control" type="text" placeholder="Postcode">
+                  </div>
+                </div>
+              </div>
+
+            -->
+
+
+              <div class="row">
+                <div class="col-md-12">
+                    <label class="control-label">Extra</label>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-danger">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-1').toggleClass('hide')">
+                        <label for="donor">
+                         Age Restricted item
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group hide" id="policy-1">
+                    <textarea class="field form-control"  placeholder="">
+You must be over the age of 18 to hire this equipment
+                    </textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
+                        <label for="donor">
+                         Terms and Conditions
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group hide" id="policy-2">
+                    <textarea class="field form-control"  placeholder="">
+In order to hire this equipment you must sign our terms and conditions document
+                    </textarea>
+                  </div>
+                </div>
+              </div>
+<hr/>
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="control-label">Booking Details</label>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="contact" type="checkbox" onclick="$('#contact-id-blank').toggleClass('hide'), $('#contact-id-complete').toggleClass('hide') ">
+                        <label for="contact">
+                        Use School Contact Details
+                        </label>
+                     </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label" for="">First Name
+                        </label>
+                        <input class="form-control" placeholder="First Name" type="text">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label" for="">Last Name
+                        </label>
+                        <input class="form-control" placeholder="Last Name" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="contact-id-blank">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Telephone Number</label>
+                        <input class="form-control" placeholder="Telephone Number" type="text">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <input class="form-control" placeholder="Email Address" type="text">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row hide" id="contact-id-complete">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Telephone Number</label>
+                        <input class="form-control" placeholder="Telephone Number" type="text" value="08453101788">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label class="control-label">Email Address</label>
+                        <input class="form-control" placeholder="Email Address" type="text" value="info@fundraisingschool.org.uk">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--<div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-gray">
+                    <div class="panel-title">Booking Contact Details</div>
+                    <div class="panel-body">
+                      <div class="row">
+
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label" for="">First Name
+                            </label>
+                            <input class="form-control" placeholder="First Name" type="text">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label" for="">Last Name
+                            </label>
+                            <input class="form-control" placeholder="Last Name" type="text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label">Telephone Number</label>
+                            <input class="form-control" placeholder="Telephone Number" type="text">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label">Email Address</label>
+                            <input class="form-control" placeholder="Email Address" type="text">
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="panel-footer">
+                      <div class="pull-right">
+                        <a class="btn btn-default">Set Default</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>-->
+
+            </div>
+
+
+            <div id="letting-facility" class="hide">
+            <div class="row" >
+              <div class="col-md-7">
                 <div class="form-group">
-                  <label class="control-label">Max Capacity</label>
-                  <input class="form-control" value="" type="number" placeholder="0">
+                  <label class="control-label">Room Name</label>
+                  <input class="form-control" value="Large Hall" type="text" placeholder="Room Name">
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label class="control-label">Room Type</label>
+                    <select class="selectpicker form-control" data-style="btn btn-default">
+                      <option selected>Large Hall</option>
+                      <option>Small Hall</option>
+                      <option>Sports Hall</option>
+                      <option>Gymnasium</option>
+                      <option>Library</option>
+                      <option>Kitchen</option>
+                      <option>Meeting Room</option>
+                      <option>Conference Room</option>
+                      <option>Classroom</option>
+                      <option>Meeting Room</option>
+                      <option>Sports Field</option>
+                      <option>Tennis Courts</option>
+                      <option>Swimming Pool</option>
+                      <option>Other</option>
+                    </select>
                 </div>
               </div>
             </div>
 
             <div class="row">
-              <div class="col-lg-8 col-md-8">
-                <div class="control-label-lg">Features</div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label">Description</label>
+                  <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                </div>
+              </div>
+            </div>
+              <!--<div class="col-md-4">
+                <div class="form-group">
+                  <label class="control-label">Max Capacity</label>
+                  <input class="form-control" value="" type="number" placeholder="0">
+                </div>
+              </div>-->
+
+            <!--<div class="row">
+              <label class="control-label">Opening Times<label>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th class="actions"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <label class="control-label">Cost</label>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>
+
+                    </th>
+                    <th class="actions"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+
+                    </td>
+                    <td class="actions">
+                      <a class="btn btn-add">Add</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>-->
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="control-label-lg">Includes</div>
                 <ul class="list-unstyled list-services row">
-                  <div class="col-lg-6 col-md-6">
+                  <div class="col-md-6">
+                    <li>
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox1" value="" type="checkbox">
+                        <label for="checkbox2">Parking</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox1" value="" type="checkbox">
+                        <label for="checkbox2">Disabled Parking</label>
+                      </div>
+                    </li>
                     <li>
                       <div class="checkbox checkbox-primary">
                         <input id="checkbox1" value="" type="checkbox">
@@ -62,19 +494,15 @@
                     <li>
                       <div class="checkbox checkbox-primary">
                         <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Onsite Parking</label>
+                        <label for="checkbox2">WiFi</label>
                       </div>
                     </li>
+                  </div>
+                  <div class="col-lg-6 col-md-6">
                     <li>
                       <div class="checkbox checkbox-primary">
                         <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Premium Wifi</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox checkbox-primary">
-                        <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Free Wifi</label>
+                        <label for="checkbox2">AV Equipment</label>
                       </div>
                     </li>
                     <li>
@@ -86,46 +514,14 @@
                     <li>
                       <div class="checkbox checkbox-primary">
                         <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Storage Room</label>
+                        <label for="checkbox2">Other</label>
                       </div>
-                    </li>
-                  </div>
-                  <div class="col-lg-6 col-md-6">
-                    <li>
-                      <div class="checkbox checkbox-primary">
-                        <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Flipchart</label>
-                      </div>
-                    </li>
-
-                    <li>
-                      <div class="checkbox checkbox-primary">
-                        <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Furnishing included in price</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox checkbox-primary">
-                        <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">HDMI connection</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox checkbox-primary">
-                        <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Projector and AV system</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checkbox checkbox-primary">
-                        <input id="checkbox1" value="" type="checkbox">
-                        <label for="checkbox2">Add More</label>
-                      </div>
-
                     </li>
                   </div>
                   </ul>
                 </div>
+
+                <!--
               <div class="col-lg-4 col-md-4">
                 <div class="control-label-lg">Licences</div>
                 <ul class="list-unstyled list-services">
@@ -155,94 +551,256 @@
                   </li>
                 </ul>
               </div>
+            -->
+
             </div>
 
-            <div class="row">
-              <div class="col-md-12">
-                <div class="section-title">Images
-                  <p>Help sell your room with a photograph</p>
-                </div>
-                <!--<ul class="list-unstyled list-inline list-images">
-                  <li>
-                    <img src="/img/rooms/meeting-test.jpg" class="">
-                  </li>
-                  <li class="upload">
-                  </li>
-                </ul>-->
 
+            <div class="row">
+              <div class="col-md-8">
                 <div class="form-group">
-                  <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
-                  <label for="file-2">
-                    <span>Choose file&hellip;</span>
-                  </label>
+                  <label class="control-label">Letting Address</label>
+                  <input class="form-control" type="text" placeholder="Letting Address">
+
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <label class="control-label">Postcode</label>
+                  <input class="form-control" type="text" placeholder="Postcode">
                 </div>
               </div>
             </div>
 
             <div class="row">
               <div class="col-md-12">
-                <div class="section-title">Cost
-                  <p>Help calculate cost of the room hire</p>
+                <label class="control-label">Time &amp; Cost</label>
+                <div class="form-group">
+                  <label class="control-label" for="">
+                  </label>
+                  <div class="checkbox checkbox-primary">
+                   <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
+                      <label for="donor">
+                       Hire available during office hours
+                       <span>08.00 to 16:00</span>
+                      </label>
+                   </div>
                 </div>
-                <table class="table table-form table-bordered">
-                  <thead>
-                    <tr>
-                      <th>Room Expenses</th>
-                      <th>Hire Cost</th>
-                      <th>Hire Period</th>
-                      <th>Room Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="amount">
-                        <div class="form-group">
-                          <input class="form-control input-amount" value="0.00" type="text">
-                        </div>
-                      </td>
-                      <td class="amount">
-                        <div class="form-group">
-                          <input class="form-control input-amount" value="0.00" type="text">
-                        </div>
-                      </td>
-                      <td class="hire">
-                        <div class="form-group btn-block">
-                          <select class="selectpicker form-control" data-style="btn btn-default">
-                            <option>Per Hour</option>
-                            <option>Per Peak Day</option>
-                            <option>Per Off-Peak Day</option>
-                            <option>Per Week</option>
-                            <option>Other</option>
-                          </select>
-                        </div>
-                      </td>
-                      <td class="hire-total">
-                        <div class="form-group has-success">
-                          <div class="input-group">
-                            <input type="text" class="form-control input-amount" placeholder="0.00" aria-describedby="basic-addon2">
-                            <span class="input-group-addon input-addon-result" id="basic-addon2">10% Profit</span>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div class="form-group">
+                  <label class="control-label" for="">
+                  </label>
+                  <div class="checkbox checkbox-primary">
+                   <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
+                      <label for="donor">
+                       Hire available out of office hours
+                       <span>16:00 onwards </span>
+                      </label>
+                   </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="panel-footer">
-            <div class="pull-left">
-              <a class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
+
+            <div class="row hide">
+              <div class="actions-row" id="btn-images">
+                <a onclick="$('#container-images').removeClass('hide'), $('#btn-images').addClass('hide')" id="">Add  Images</a>
+              </div>
             </div>
-            <div class="pull-right">
-              <a class="btn btn-primary">Save</a>
+
+                <div class="row hide" id="container-images">
+                  <div class="col-md-12">
+                    <label class="control-label">Images</label>
+                      <!--<p>Help sell your room with a photograph</p>-->
+                    <form>
+                      <ul class="list-unstyled list-inline list-gallery list-gallery-radio">
+                        <li>
+                          <img src="/img/rooms/meeting-test.jpg">
+                          <div class="form-group">
+    												<div class="radio radio-primary">
+    													<input id="radio1" value="radio1" type="radio" checked="" name="radio">
+    													<label for="radio1">Primary</label>
+    												</div>
+    											</div>
+                        </li>
+                        <li>
+                          <img src="/img/rooms/meeting-test.jpg">
+                          <div class="form-group">
+    												<div class="radio radio-primary">
+    													<input id="radio2" value="radio2" type="radio" name="radio">
+    													<label for="radio2">Primary</label>
+    												</div>
+    											</div>
+                        </li>
+                        <li>
+                          <img src="/img/rooms/meeting-test.jpg">
+                          <div class="form-group">
+    												<div class="radio radio-primary">
+    													<input id="radio3" value="radio3" type="radio" name="radio">
+    													<label for="radio3">Primary</label>
+    												</div>
+    											</div>
+                        </li>
+                      </ul>
+
+                    </form>
+                    <!--<ul class="list-unstyled list-inline list-images">
+                      <li>
+                        <img src="/img/rooms/meeting-test.jpg" class="">
+                      </li>
+                      <li class="upload">
+                      </li>
+                    </ul>-->
+
+                    <div class="form-group">
+                      <input type="file"
+                             name="file-2[]" id="file-2"
+                             class="inputfile inputfile-2"
+                             data-multiple-caption="{count} files selected"
+                             multiple />
+                      <label for="file-2">
+                        <span>Choose file&hellip;</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                      <label class="control-label">Extra</label>
+                    <div class="form-group">
+                      <label class="control-label" for="">
+                      </label>
+                      <div class="checkbox checkbox-danger">
+                       <input id="donor" value="xx" type="checkbox" onclick="$('#policy-1').toggleClass('hide')">
+                          <label for="donor">
+                           Age Restriction
+                          </label>
+                       </div>
+                    </div>
+                    <div class="form-group hide" id="policy-1">
+                      <textarea class="field form-control"  placeholder="">
+  You must be over the age of 18 to hire this Facility
+                      </textarea>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="">
+                      </label>
+                      <div class="checkbox checkbox-primary">
+                       <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
+                          <label for="donor">
+                           Terms and Conditions
+                          </label>
+                       </div>
+                    </div>
+                    <div class="form-group hide" id="policy-2">
+                      <textarea class="field form-control"  placeholder="">
+  In order to hire this facility you must sign our terms and conditions document
+                      </textarea>
+                    </div>
+                  </div>
+                </div>
+                <hr/>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label class="control-label">Booking Details</label>
+                    <div class="form-group">
+                      <label class="control-label" for="">
+                      </label>
+                      <div class="checkbox checkbox-primary">
+                       <input id="contact-2" type="checkbox" onclick="$('#contact-id-blank-2').toggleClass('hide'), $('#contact-id-complete-2').toggleClass('hide') ">
+                          <label for="contact">
+                          Use School Contact Details
+                          </label>
+                       </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label" for="">First Name
+                          </label>
+                          <input class="form-control" placeholder="First Name" type="text">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label" for="">Last Name
+                          </label>
+                          <input class="form-control" placeholder="Last Name" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" id="contact-id-blank-2">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label">Telephone Number</label>
+                          <input class="form-control" placeholder="Telephone Number" type="text">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label">Email Address</label>
+                          <input class="form-control" placeholder="Email Address" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row hide" id="contact-id-complete-2">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label">Telephone Number</label>
+                          <input class="form-control" placeholder="Telephone Number" type="text" value="08453101788">
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label class="control-label">Email Address</label>
+                          <input class="form-control" placeholder="Email Address" type="text" value="info@fundraisingschool.org.uk">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              <!--
+                <div class="row">
+                  <div class="section-title">Room Spec
+                    <p>xx</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="control-label">Room Width <span>(m)</span></label>
+                      <input class="form-control" value="" type="text" placeholder="0">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="control-label">Room Length <span>(m)</span></label>
+                      <input class="form-control" value="" type="text" placeholder="0">
+                    </div>
+                  </div>
+                </div>
+              -->
             </div>
           </div>
-        </div>
-
-
-
       </div>
-</div>
-</div>
+      </div>
+      <div class="modal-footer hide" id="letting-footer">
+        <div class="pull-left">
+          <a class="btn btn-default" data-dismiss="modal"><i class="fa fa-trash-o"></i>
+            Abandon
+          </a>
+        </div>
+        <div class="pull-right">
+            <button type="button"
+                    class="btn btn-add"
+                    data-dismiss="modal"
+                    onclick="$('#letting1').removeClass('hide'),
+                             $('#letting-list').removeClass('hide'),
+                             $('#jumbo').addClass('hide'),
+                             setTimeout(function(){ $('#alert').hide(); }, 10000);">
+                            Create Letting
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

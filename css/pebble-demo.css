@@ -17235,15 +17235,31 @@ a.list-facts-three li.rating-hard:hover {
   line-height: 80px;
   font-size: 3em;
 }
-.thumb-square {
-  height: 100px;
-  width: 100px;
+.list-gallery li {
+  position: relative;
+  height: 150px;
+  width: 150px;
   float: left !important;
   float: left;
-  margin-right: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 5px;
+  margin-right: 10px;
 }
-.thumb-square img {
+.list-gallery li img {
   width: 100%;
+}
+.list-gallery-radio li {
+  height: 170px;
+}
+.list-gallery-radio li .form-group {
+  padding: 0px 10px;
+  display: block;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0 !important;
 }
 /*global type*/
 .btn {
@@ -18955,6 +18971,14 @@ fieldset[disabled] .btn-menu.active {
   max-width: 200px;
   width: 200px;
 }
+.table td.price {
+  text-align: right;
+  width: 150px;
+  font-weight: 700;
+}
+.table td.price span {
+  font-weight: normal;
+}
 .table .total-claim small {
   font-size: 70%;
 }
@@ -19093,6 +19117,10 @@ a.table tr.updated > td.field-updated:hover {
 .table TR .td-disabled {
   background: #f9f9f9;
   color: #9b9b9b;
+}
+.table .day {
+  text-align: center;
+  width: 30px;
 }
 /*end .table*/
 /* Tables */
@@ -19496,6 +19524,17 @@ a.notification:focus {
 .modal-footer ul {
   margin-bottom: 0 !important;
 }
+.modal-footer ul.list-inline {
+  margin-left: 0 !important;
+}
+.modal-footer ul.list-inline li {
+  padding-left: 10px;
+  padding-right: 0px;
+  display: inline-block;
+}
+.modal-footer ul.list-inline li:first-child {
+  padding-left: 0px;
+}
 .modal-footer-gray {
   background: #f9f9f9;
   border-radius: 4px;
@@ -19830,6 +19869,10 @@ footer{
 .radio-primary input[type="radio"] + label::after {
   background-color: #34495e;
 }
+.radio-primary input[type="radio"]:checked + label {
+  font-weight: 700;
+  color: #34495e;
+}
 .radio-primary input[type="radio"]:checked + label::before {
   border-color: #34495e;
 }
@@ -19838,6 +19881,10 @@ footer{
 }
 .radio-danger input[type="radio"] + label::after {
   background-color: #ed5565;
+}
+.radio-danger input[type="radio"]:checked + label {
+  font-weight: 700;
+  color: #ed5565;
 }
 .radio-danger input[type="radio"]:checked + label::before {
   border-color: #ed5565;
@@ -19848,6 +19895,10 @@ footer{
 .radio-info input[type="radio"] + label::after {
   background-color: #26aae2;
 }
+.radio-info input[type="radio"]:checked + label {
+  font-weight: 700;
+  color: #26aae2;
+}
 .radio-info input[type="radio"]:checked + label::before {
   border-color: #26aae2;
 }
@@ -19856,6 +19907,10 @@ footer{
 }
 .radio-warning input[type="radio"] + label::after {
   background-color: #f7b033;
+}
+.radio-warning input[type="radio"]:checked + label {
+  font-weight: 700;
+  color: #f7b033;
 }
 .radio-warning input[type="radio"]:checked + label::before {
   border-color: #f7b033;
@@ -19866,6 +19921,10 @@ footer{
 .radio-success input[type="radio"] + label::after {
   background-color: #93c01f;
 }
+.radio-success input[type="radio"]:checked + label {
+  font-weight: 700;
+  color: #93c01f;
+}
 .radio-success input[type="radio"]:checked + label::before {
   border-color: #93c01f;
 }
@@ -19874,6 +19933,10 @@ footer{
 }
 .radio-clubs input[type="radio"] + label::after {
   background-color: #ec87c0;
+}
+.radio-clubs input[type="radio"]:checked + label {
+  font-weight: 700;
+  color: #ec87c0;
 }
 .radio-clubs input[type="radio"]:checked + label::before {
   border-color: #ec87c0;
@@ -20344,7 +20407,7 @@ th .form-group .checkbox label {
   position: relative;
 }
 .loader {
-  margin: 60px auto;
+  margin: 20px auto;
   font-size: 5px;
   position: relative;
   text-indent: -9999em;
@@ -20367,8 +20430,8 @@ th .form-group .checkbox label {
 .loader,
 .loader:after {
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
+  width: 15em;
+  height: 15em;
 }
 @-webkit-keyframes load8 {
   0% {
@@ -20538,3 +20601,34 @@ textarea,
   padding: 15px;
 }
 /*jumbo*/
+.tagsort-tags-container span {
+  display: inline-block;
+  border: 2px solid #CCC;
+  color: #AAA;
+  font-size: 12px;
+  line-height: 10px;
+  padding: 5px 9px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.tagsort-tags-container span:hover {
+  border: 2px solid #000;
+  color: #FFF;
+  background-color: #000000;
+}
+.tagsort-tags-container span.tagsort-active {
+  border: 2px solid #000;
+  color: #000;
+  background-color: transparent;
+}
+.tags-group .disabled {
+  color: #9b9b9b;
+}
+/*tagsort*/

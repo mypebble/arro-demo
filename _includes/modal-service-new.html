@@ -1,0 +1,324 @@
+<div class="modal fade" id="myModalService-new" tabindex="-1" role="dialog" aria-labelledby="myModalLabelService-new">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-body-clear">
+        <div class="body-title">
+          <div class="title">Create Service</div>
+          <span>What Services would you like to provide?</span>
+        </div>
+        <div class="row">
+          <div class="col-md-10 col-lg-10 col-md-offset-1 col-lg-offset-1">
+
+            <div id="service-type" class="hide">
+              <div class="actions-row">
+                <h3>What type of service is this?</h3>
+                  <a class="btn btn-default" onclick="$('#service-test').removeClass('hide'), $('#service-type').addClass('hide')">xxxx
+                    <i class="m-l-sm fa fa-chevron-down"></i>
+                  </a>
+              </div>
+            </div>
+
+            <div class="row text-center m-b-xl" id="service-options">
+              <div class="col-lg-6 col-md-6">
+                <div class="body-title">
+                  <span class="">
+                    <i class="fa fa-graduation-cap fa-xl">
+                    </i>
+                  </span>
+                  <div class="title">
+                    Skilled
+                  </div>
+                  <p>Teaching, Education, Knowledge </p>
+                </div>
+                <a class="btn btn-default" onclick="$('#services-facility').removeClass('hide'), $('#service-options').addClass('hide'), $('#service-footer').removeClass('hide')">Select</a>
+              </div>
+              <div class="col-lg-6 col-md-6">
+                <div class="body-title">
+                  <span class="">
+                    <i class="fa fa-magic fa-xl">
+                    </i>
+                  </span>
+                  <div class="title">Resources</div>
+                  <p>Printing, Catering, Aid</p>
+                </div>
+                <a class="btn btn-default">Select</a>
+              </div>
+            </div>
+
+
+
+            <div id="services-facility" class="hide">
+      				<div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label class="control-label">Service Name</label>
+                    <input class="form-control" type="text" placeholder="Service Name">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label class="control-label">Status</label>
+                  <div class="form-group btn-block">
+                    <select class="selectpicker form-control" data-style="btn btn-default">
+                      <option selected="">Active</option>
+                      <!--<option>Draft</option>-->
+                      <option>Disabled</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+              		<div class="form-group">
+                    <label class="control-label">Description{% include input-tips.html %}</label>
+                    <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                  </div>
+
+                  <div class="actions-row hide" id="btn-service-includes">
+                    <a onclick="$('#service-include').removeClass('hide'), $('#btn-service-includes').addClass('hide')" id="">Add more Detail</a>
+                  </div>
+
+          				<div class="hide" id="service-include">
+          					<div class="form-group">
+          	          <label class="control-label">Includes <a class="pull-right font-normal" onclick="$('#service-include').addClass('hide'), $('#btn-service-includes').removeClass('hide')">Hide</a></label>
+          	          <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+          	        </div>
+          				</div>
+      					</div>
+      				</div>
+              <!-- Available -->
+
+
+              <div class="row">
+                <div class="col-md-12">
+                <!--  <label class="control-label">Available</label>-->
+                  <!--
+                  <table class="table table-bordered table-form">
+                    <thead>
+                      <tr>
+                        <th class="day">Mon</th>
+                        <th class="day">Tue</th>
+                        <th class="day">Wed</th>
+                        <th class="day">Thr</th>
+                        <th class="day">Fri</th>
+                        <th class="day">Sat</th>
+                        <th class="day">Sun</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                -->
+                  <!--<table class="table table-bordered table-form">
+                    <thead>
+                      <tr>
+                        <th>Available</th>
+                        <th>From</th>
+                        <th>Until</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Standard
+                        </td>
+                        <td>
+                          <div class="form-group btn-block">
+                            <select class="selectpicker form-control" data-style="btn btn-default">
+                              <option>07.00</option>
+                              <option>07.30</option>
+                              <option>08.00</option>
+                              <option>08.30</option>
+                              <option>09.00</option>
+                              <option>09.30</option>
+                              <option>10.00</option>
+                              <option>10.30</option>
+                              <option>11.00</option>
+                              <option>11.30</option>
+                              <option>12.00</option>
+                              <option>12.30</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="form-group btn-block">
+                            <select class="selectpicker form-control" data-style="btn btn-default">
+                              <option>07.00</option>
+                              <option>07.30</option>
+                              <option>08.00</option>
+                              <option>08.30</option>
+                              <option>09.00</option>
+                              <option>09.30</option>
+                              <option>10.00</option>
+                              <option>10.30</option>
+                              <option>11.00</option>
+                              <option>11.30</option>
+                              <option>12.00</option>
+                              <option>12.30</option>
+                            </select>
+                          </div>
+                        </td>
+                        <td></td>
+                      </tr>
+
+                    </tbody>
+                  </table>-->
+                </div>
+              </div>
+              <!-- end Available -->
+
+
+
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="form-group">
+                    <label class="control-label">Service Address{% include input-tips.html %}</label>
+                    <input class="form-control" type="text" placeholder="Service Address">
+
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="control-label">Postcode</label>
+                    <input class="form-control" type="text" placeholder="Postcode">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="panel panel-gray">
+                    <div class="panel-title">Booking Contact Details</div>
+                    <div class="panel-body">
+                      <div class="row">
+                        <!--
+                        <div class="col-md-12">
+                          <label class="control-label">Booking Contact Details</label>
+                        </div>-->
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label" for="">First Name
+                            </label>
+                            <input class="form-control" placeholder="First Name" type="text">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label" for="">Last Name
+                            </label>
+                            <input class="form-control" placeholder="Last Name" type="text">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label">Telephone Number</label>
+                            <input class="form-control" type="text" placeholder="Telephone Number">
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label class="control-label">Email Address</label>
+                            <input class="form-control" type="text" placeholder="Email Address">
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer hide" id="service-footer">
+        <div class="pull-left">
+          <a class="btn btn-default" data-dismiss="modal"><i class="fa fa-trash-o"></i>
+            Abandon
+          </a>
+        </div>
+        <div class="pull-right">
+            <button type="button"
+                    class="btn btn-add"
+                    data-dismiss="modal"
+                    onclick="$('#service1').removeClass('hide'),
+                             $('#service-list').removeClass('hide'),
+                             $('#jumbo').addClass('hide'),
+                             setTimeout(function(){ $('#alert').hide(); }, 10000);">
+                            Create Service
+            </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,9 +19,12 @@
 <!-- events -->
 
 <!-- services -->
+  {% include modal-service-new.html %}
 
 <!-- lettings -->
   {% include modal-letting-room.html %}
+  {% include modal-letting-details.html %}
+  {% include modal-letting-loading.html %}
 
 <!-- grants -->
   {% include modal-grant-details.html %}
@@ -42,6 +45,9 @@
 
 <!-- transactions -->
 {% include modal-transaction.html %}
+
+
+
 
 <!-- SRM -->
   {% include modal-name-preview.html %}
@@ -90,12 +96,22 @@
 
 <script src="{{ "/js/custom-file-input.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/jquery.flexText.min.js" | prepend: site.baseurl }}"></script>
+
+<script src="{{ "/js/tagsort.min.js" | prepend: site.baseurl }}"></script>
+
+<script>
+$('div.tagsort-tags-container').tagSort({
+	selector:'.item-to-tag'
+});
+</script>
+
 <script>
 $(function () {
     $('textarea').flexText();
     $("[name='my-checkbox']").bootstrapSwitch();
 });
 </script>
+
 
 <script type="text/javascript">
     $('[data-toggle="popover"]').popover();
