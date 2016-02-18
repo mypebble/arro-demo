@@ -33,7 +33,7 @@
               <div class="col-lg-6 col-md-6">
                 <div class="body-title">
                   <span class="">
-                    <i class="fa fa-futbol-o fa-xl">
+                    <i class="fa fa-cubes fa-xl">
                     </i>
                   </span>
                   <div class="title">Equipment</div>
@@ -56,22 +56,15 @@
                     <label class="control-label">Quantity</label>
                     <input class="form-control input-qty" value="1" type="number">
                   </div>
-
-                  <!--<label class="control-label">Status</label>
-                  <div class="form-group btn-block">
-                    <select class="selectpicker form-control" data-style="btn btn-default">
-                      <option selected="">Active</option>
-                      <option>Disabled</option>
-                    </select>
-                  </div>-->
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
                     <label class="control-label">Description{% include input-tips.html %}</label>
-                    <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                    <textarea class="field form-control"  placeholder="" ></textarea>
                   </div>
+
 <!--
                   <div class="actions-row" id="btn-letting-includes">
                     <a onclick="$('#service-include').removeClass('hide'), $('#btn-letting-includes').addClass('hide')" id="">Add more Detail</a>
@@ -80,7 +73,7 @@
                   <div class="hide" id="letting-include">
                     <div class="form-group">
                       <label class="control-label">Includes <a class="pull-right font-normal" onclick="$('#letting-include').addClass('hide'), $('#btn-service-includes').removeClass('hide')">Hide</a></label>
-                      <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                      <textarea class="field form-control"  placeholder="" ></textarea>
                     </div>
                   </div>-->
                 </div>
@@ -132,108 +125,146 @@
               </div>-->
 
               <div class="row">
+                <div class="actions-row" id="btn-images-1">
+                  <a onclick="$('#container-images').removeClass('hide'), $('#btn-images-1').addClass('hide')" id="">Add Images</a>
+                </div>
+              </div>
+
+                  <div class="row hide" id="container-images">
+                    <div class="col-md-12">
+                      <label class="control-label">Images</label>
+                      <!--<span class="help-block text-left">File help text</span>-->
+                        <!--<p>Help sell your room with a photograph</p>-->
+                      <form>
+                        <ul class="list-unstyled list-inline list-gallery">
+                          <li>
+                            <img src="/img/letting/equipment/lawn-mower-1.jpg">
+                          </li>
+                        </ul>
+                      </form>
+
+                      <div class="form-group">
+                        <input type="file"
+                               name="file-2[]" id="file-2"
+                               class="inputfile inputfile-2"
+                               data-multiple-caption="{count} files selected"
+                               multiple />
+                        <label for="file-2">
+                          <span>Choose file&hellip;</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+              <div class="row">
                 <div class="col-md-12">
                   <label class="control-label">Time &amp; Cost</label>
-                  <div class="form-group">
-                    <label class="control-label" for="">
-                    </label>
-                    <div class="checkbox checkbox-primary">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
-                        <label for="donor">
-                         Item available during office hours
-                         <span>08.00 to 16:00</span>
-                        </label>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label" for="">
-                    </label>
-                    <div class="checkbox checkbox-primary">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
-                        <label for="donor">
-                         Item available out of office hours
-                         <span>16:00 onwards </span>
-                        </label>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label" for="">
-                    </label>
-                    <div class="checkbox checkbox-primary">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
-                        <label for="donor">
-                         Item available at weekends
-                         <span>Sat - Sun (Return following Monday)</span>
-                        </label>
-                     </div>
-                  </div>
+
+                  <table class="table table-form table-bordered">
+                    <thead>
+                      <tr>
+                        <th class="room-type">Time</th>
+                        <th>Hire Cost</th>
+                        <th>Hire Period</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr id="t-c-1">
+                        <td class="td-disabled">
+                          <div class="form-group">
+                            <label class="control-label" for="">
+                            </label>
+                            <div class="checkbox checkbox-primary">
+                             <input id="option1" type="checkbox"  onclick="$('#t-c-1 td').toggleClass('td-disabled'), $('#t-c-1 td.amount .form-group').toggleClass('hide'), $('#t-c-1 td.hire .form-group').toggleClass('hide')">
+                                <label for="donor">
+                                 Peak
+                                 <span>08.00 to 16:00</span>
+                                </label>
+                             </div>
+                          </div>
+                        </td>
+                        <td class="amount amount-sm td-disabled">
+                          <div class="form-group hide">
+                            <input class="form-control input-amount" value="£0.00" type="text">
+                          </div>
+                        </td>
+                        <td class="hire td-disabled">
+        									<div class="form-group btn-block hide">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+        											<option>30 mins</option>
+        											<option>per hour</option>
+        											<option>half day</option>
+        											<option>full day</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                      <tr id="t-c-2">
+                        <td class="td-disabled">
+                          <div class="form-group">
+                            <label class="control-label" for="">
+                            </label>
+                            <div class="checkbox checkbox-primary">
+                             <input id="option1" type="checkbox"  onclick="$('#t-c-2 td').toggleClass('td-disabled'), $('#t-c-2 td.amount .form-group').toggleClass('hide'), $('#t-c-2 td.hire .form-group').toggleClass('hide')">
+                                <label for="donor">
+                                 Offpeak
+                                 <span>16:00 - 19:00</span>
+                                </label>
+                             </div>
+                          </div>
+                        </td>
+                        <td class="amount amount-sm td-disabled">
+                          <div class="form-group hide">
+                            <input class="form-control input-amount" value="£0.00" type="text">
+                          </div>
+                        </td>
+                        <td class="hire td-disabled">
+        									<div class="form-group btn-block hide">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+                              <option>30 mins</option>
+        											<option>per hour</option>
+        											<option>half day</option>
+        											<option>full day</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                      <tr id="t-c-3">
+                        <td class="td-disabled">
+                          <div class="form-group">
+                            <label class="control-label" for="">
+                            </label>
+                            <div class="checkbox checkbox-primary">
+                             <input id="option1" type="checkbox"  onclick="$('#t-c-3 td').toggleClass('td-disabled'), $('#t-c-3 td.amount .form-group').toggleClass('hide'), $('#t-c-3 td.hire .form-group').toggleClass('hide')">
+                                <label for="donor">
+                                 Weekends
+                                 <span>Sat - Sun (Return Monday)</span>
+                                </label>
+                             </div>
+                          </div>
+                        </td>
+                        <td class="amount amount-sm td-disabled">
+                          <div class="form-group hide">
+                            <input class="form-control input-amount" value="£0.00" type="text">
+                          </div>
+                        </td>
+                        <td class="hire td-disabled">
+        									<div class="form-group btn-block hide">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+                              <option>30 mins</option>
+        											<option>per hour</option>
+        											<option>half day</option>
+        											<option>full day</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
-              <!--
-              <div class="row">
-                <div class="col-md-12">
-                  <label class="control-label">Collection</label>
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="control-label">Pickup Time</label>
-                        <select class="selectpicker form-control" data-style="btn btn-default">
-                          <option>07.00</option>
-                          <option>07.30</option>
-                          <option>08.00</option>
-                          <option>08.30</option>
-                          <option>09.00</option>
-                          <option>09.30</option>
-                          <option>10.00</option>
-                          <option>10.30</option>
-                          <option>11.00</option>
-                          <option>11.30</option>
-                          <option>12.00</option>
-                          <option>12.30</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="control-label">Return Time</label>
-                        <select class="selectpicker form-control" data-style="btn btn-default">
-                          <option>07.00</option>
-                          <option>07.30</option>
-                          <option>08.00</option>
-                          <option>08.30</option>
-                          <option>09.00</option>
-                          <option>09.30</option>
-                          <option>10.00</option>
-                          <option>10.30</option>
-                          <option>11.00</option>
-                          <option>11.30</option>
-                          <option>12.00</option>
-                          <option>12.30</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-8">
-                  <div class="form-group">
-                    <label class="control-label">Pickup Address</label>
-                    <input class="form-control" type="text" placeholder="Pickup Address">
-
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <label class="control-label">Postcode</label>
-                    <input class="form-control" type="text" placeholder="Postcode">
-                  </div>
-                </div>
-              </div>
-
-            -->
-
+              <hr/>
 
               <div class="row">
                 <div class="col-md-12">
@@ -244,7 +275,7 @@
                     <div class="checkbox checkbox-danger">
                      <input id="donor" value="xx" type="checkbox" onclick="$('#policy-1').toggleClass('hide')">
                         <label for="donor">
-                         Age Restricted item
+                         Restrictions
                         </label>
                      </div>
                   </div>
@@ -265,7 +296,7 @@ You must be over the age of 18 to hire this equipment
                   </div>
                   <div class="form-group hide" id="policy-2">
                     <textarea class="field form-control"  placeholder="">
-In order to hire this equipment you must sign our terms and conditions document
+In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.
                     </textarea>
                   </div>
                 </div>
@@ -274,7 +305,7 @@ In order to hire this equipment you must sign our terms and conditions document
               <div class="row">
                 <div class="col-md-12">
                   <label class="control-label">Booking Details</label>
-                  <div class="form-group">
+                  <!--<div class="form-group">
                     <label class="control-label" for="">
                     </label>
                     <div class="checkbox checkbox-primary">
@@ -283,24 +314,17 @@ In order to hire this equipment you must sign our terms and conditions document
                         Use School Contact Details
                         </label>
                      </div>
-                  </div>
+                  </div>-->
                   <div class="row">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label class="control-label" for="">First Name
+                        <label class="control-label" for="">Name
                         </label>
-                        <input class="form-control" placeholder="First Name" type="text">
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="control-label" for="">Last Name
-                        </label>
-                        <input class="form-control" placeholder="Last Name" type="text">
+                        <input class="form-control" placeholder="Name" type="text" value="Office">
                       </div>
                     </div>
                   </div>
-                  <div class="row" id="contact-id-blank">
+                  <div class="row hide" id="contact-id-blank">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label">Telephone Number</label>
@@ -314,7 +338,7 @@ In order to hire this equipment you must sign our terms and conditions document
                       </div>
                     </div>
                   </div>
-                  <div class="row hide" id="contact-id-complete">
+                  <div class="row" id="contact-id-complete">
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="control-label">Telephone Number</label>
@@ -328,56 +352,27 @@ In order to hire this equipment you must sign our terms and conditions document
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                  <div class="actions-row" id="btn-notes-hire-add">
+                    <a class="" onclick="$('#notes-hire-add').removeClass('hide'), $('#btn-notes-hire-add').addClass('hide')">Add Notes</a>
+                  </div>
 
-              <!--<div class="row">
-                <div class="col-md-12">
-                  <div class="panel panel-gray">
-                    <div class="panel-title">Booking Contact Details</div>
-                    <div class="panel-body">
-                      <div class="row">
-
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="control-label" for="">First Name
-                            </label>
-                            <input class="form-control" placeholder="First Name" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="control-label" for="">Last Name
-                            </label>
-                            <input class="form-control" placeholder="Last Name" type="text">
-                          </div>
-                        </div>
+                  <div class="row hide" id="notes-hire-add">
+                    <hr/>
+                    <div class="col-md-12">
+                      <label class="control-label">Office use only</label>
+                      <div class="form-group">
+                        <label class="control-label">Storage Location</label>
+                        <input class="form-control" type="text" placeholder="Storage Location">
                       </div>
-                      <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="control-label">Telephone Number</label>
-                            <input class="form-control" placeholder="Telephone Number" type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6">
-                          <div class="form-group">
-                            <label class="control-label">Email Address</label>
-                            <input class="form-control" placeholder="Email Address" type="text">
-                          </div>
-                        </div>
+                      <div class="form-group">
+                        <label class="control-label">Notes</label>
+                        <textarea class="field form-control"  placeholder="" ></textarea>
                       </div>
 
-
-                    </div>
-                    <div class="panel-footer">
-                      <div class="pull-right">
-                        <a class="btn btn-default">Set Default</a>
-                      </div>
                     </div>
                   </div>
                 </div>
-              </div>-->
+              </div>
 
             </div>
 
@@ -417,56 +412,19 @@ In order to hire this equipment you must sign our terms and conditions document
               <div class="col-md-12">
                 <div class="form-group">
                   <label class="control-label">Description</label>
-                  <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+                  <textarea class="field form-control"  placeholder="" ></textarea>
                 </div>
               </div>
             </div>
-              <!--<div class="col-md-4">
+
+            <div class="row">
+              <div class="col-md-4">
                 <div class="form-group">
-                  <label class="control-label">Max Capacity</label>
-                  <input class="form-control" value="" type="number" placeholder="0">
+                  <label class="control-label">Room Max Capacity</label>
+                  <input class="form-control" value="Large Hall" type="number" placeholder="0">
                 </div>
-              </div>-->
-
-            <!--<div class="row">
-              <label class="control-label">Opening Times<label>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th></th>
-                    <th class="actions"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <label class="control-label">Cost</label>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>
-
-                    </th>
-                    <th class="actions"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-
-                    </td>
-                    <td class="actions">
-                      <a class="btn btn-add">Add</a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-
-            </div>-->
+              </div>
+            </div>
 
             <div class="row">
               <div class="col-md-12">
@@ -520,39 +478,44 @@ In order to hire this equipment you must sign our terms and conditions document
                   </div>
                   </ul>
                 </div>
-
-                <!--
-              <div class="col-lg-4 col-md-4">
-                <div class="control-label-lg">Licences</div>
-                <ul class="list-unstyled list-services">
-                  <li>
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox1" value="" type="checkbox">
-                      <label for="checkbox2">Alochol Licence</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox1" value="" type="checkbox">
-                      <label for="checkbox2">Entertainment Licence</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox1" value="" type="checkbox">
-                      <label for="checkbox2">Catering Lincence</label>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="checkbox checkbox-primary">
-                      <input id="checkbox1" value="" type="checkbox">
-                      <label for="checkbox2">Other Licence</label>
-                    </div>
-                  </li>
-                </ul>
+            </div>
+            <div class="row">
+              <div class="actions-row" id="btn-images">
+                <a onclick="$('#container-images-2').removeClass('hide'), $('#btn-images').addClass('hide')" id="">Add  Images</a>
               </div>
-            -->
+            </div>
 
+            <div class="row hide" id="container-images-2">
+              <div class="col-md-12">
+                <label class="control-label">Images</label>
+                  <!--<p>Help sell your room with a photograph</p>-->
+                <form>
+                  <ul class="list-unstyled list-inline list-gallery">
+                    <li>
+                      <img src="/img/letting/equipment/meeting-test.jpg">
+                    </li>
+                  </ul>
+
+                </form>
+                <!--<ul class="list-unstyled list-inline list-images">
+                  <li>
+                    <img src="/img/letting/equipment/meeting-test.jpg" class="">
+                  </li>
+                  <li class="upload">
+                  </li>
+                </ul>-->
+
+                <div class="form-group">
+                  <input type="file"
+                         name="file-2[]" id="file-2"
+                         class="inputfile inputfile-2"
+                         data-multiple-caption="{count} files selected"
+                         multiple />
+                  <label for="file-2">
+                    <span>Choose file&hellip;</span>
+                  </label>
+                </div>
+              </div>
             </div>
 
 
@@ -571,97 +534,114 @@ In order to hire this equipment you must sign our terms and conditions document
                 </div>
               </div>
             </div>
-
             <div class="row">
               <div class="col-md-12">
                 <label class="control-label">Time &amp; Cost</label>
-                <div class="form-group">
-                  <label class="control-label" for="">
-                  </label>
-                  <div class="checkbox checkbox-primary">
-                   <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
-                      <label for="donor">
-                       Hire available during office hours
-                       <span>08.00 to 16:00</span>
-                      </label>
-                   </div>
-                </div>
-                <div class="form-group">
-                  <label class="control-label" for="">
-                  </label>
-                  <div class="checkbox checkbox-primary">
-                   <input id="donor" value="xx" type="checkbox" onclick="$('#delivery-1').toggleClass('hide')">
-                      <label for="donor">
-                       Hire available out of office hours
-                       <span>16:00 onwards </span>
-                      </label>
-                   </div>
-                </div>
+
+                <table class="table table-form table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="room-type">Time</th>
+                      <th>Hire Cost</th>
+                      <th>Hire Period</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr id="t-c-4">
+                      <td class="td-disabled">
+                        <div class="form-group">
+                          <label class="control-label" for="">
+                          </label>
+                          <div class="checkbox checkbox-primary">
+                           <input id="option4" type="checkbox"  onclick="$('#t-c-4 td').toggleClass('td-disabled'), $('#t-c-4 td.amount .form-group').toggleClass('hide'), $('#t-c-4 td.hire .form-group').toggleClass('hide')">
+                              <label for="donor">
+                               Peak
+                               <span>08.00 to 16:00</span>
+                              </label>
+                           </div>
+                        </div>
+                      </td>
+                      <td class="amount amount-sm td-disabled">
+                        <div class="form-group hide">
+                          <input class="form-control input-amount" value="£0.00" type="text">
+                        </div>
+                      </td>
+                      <td class="hire td-disabled">
+                        <div class="form-group btn-block hide">
+                          <select class="selectpicker form-control" data-style="btn btn-default">
+                            <option>30 mins</option>
+                            <option>per hour</option>
+                            <option>half day</option>
+                            <option>full day</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr id="t-c-5">
+                      <td class="td-disabled">
+                        <div class="form-group">
+                          <label class="control-label" for="">
+                          </label>
+                          <div class="checkbox checkbox-primary">
+                           <input id="option5" type="checkbox"  onclick="$('#t-c-5 td').toggleClass('td-disabled'), $('#t-c-5 td.amount .form-group').toggleClass('hide'), $('#t-c-5 td.hire .form-group').toggleClass('hide')">
+                              <label for="donor">
+                               Offpeak
+                               <span>16:00 - 19:00</span>
+                              </label>
+                           </div>
+                        </div>
+                      </td>
+                      <td class="amount amount-sm td-disabled">
+                        <div class="form-group hide">
+                          <input class="form-control input-amount" value="£0.00" type="text">
+                        </div>
+                      </td>
+                      <td class="hire td-disabled">
+                        <div class="form-group btn-block hide">
+                          <select class="selectpicker form-control" data-style="btn btn-default">
+                            <option>30 mins</option>
+                            <option>per hour</option>
+                            <option>half day</option>
+                            <option>full day</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr id="t-c-6">
+                      <td class="td-disabled">
+                        <div class="form-group">
+                          <label class="control-label" for="">
+                          </label>
+                          <div class="checkbox checkbox-primary">
+                           <input id="option6" type="checkbox"  onclick="$('#t-c-6 td').toggleClass('td-disabled'), $('#t-c-6 td.amount .form-group').toggleClass('hide'), $('#t-c-6 td.hire .form-group').toggleClass('hide')">
+                              <label for="donor">
+                               Weekends
+                               <span>Sat - Sun (Return Monday)</span>
+                              </label>
+                           </div>
+                        </div>
+                      </td>
+                      <td class="amount amount-sm td-disabled">
+                        <div class="form-group hide">
+                          <input class="form-control input-amount" value="£0.00" type="text">
+                        </div>
+                      </td>
+                      <td class="hire td-disabled">
+                        <div class="form-group btn-block hide">
+                          <select class="selectpicker form-control" data-style="btn btn-default">
+                            <option>30 mins</option>
+                            <option>60 mins</option>
+                            <option>90 mins</option>
+                            <option>Day</option>
+                          </select>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-
-            <div class="row hide">
-              <div class="actions-row" id="btn-images">
-                <a onclick="$('#container-images').removeClass('hide'), $('#btn-images').addClass('hide')" id="">Add  Images</a>
-              </div>
-            </div>
-
-                <div class="row hide" id="container-images">
-                  <div class="col-md-12">
-                    <label class="control-label">Images</label>
-                      <!--<p>Help sell your room with a photograph</p>-->
-                    <form>
-                      <ul class="list-unstyled list-inline list-gallery list-gallery-radio">
-                        <li>
-                          <img src="/img/rooms/meeting-test.jpg">
-                          <div class="form-group">
-    												<div class="radio radio-primary">
-    													<input id="radio1" value="radio1" type="radio" checked="" name="radio">
-    													<label for="radio1">Primary</label>
-    												</div>
-    											</div>
-                        </li>
-                        <li>
-                          <img src="/img/rooms/meeting-test.jpg">
-                          <div class="form-group">
-    												<div class="radio radio-primary">
-    													<input id="radio2" value="radio2" type="radio" name="radio">
-    													<label for="radio2">Primary</label>
-    												</div>
-    											</div>
-                        </li>
-                        <li>
-                          <img src="/img/rooms/meeting-test.jpg">
-                          <div class="form-group">
-    												<div class="radio radio-primary">
-    													<input id="radio3" value="radio3" type="radio" name="radio">
-    													<label for="radio3">Primary</label>
-    												</div>
-    											</div>
-                        </li>
-                      </ul>
-
-                    </form>
-                    <!--<ul class="list-unstyled list-inline list-images">
-                      <li>
-                        <img src="/img/rooms/meeting-test.jpg" class="">
-                      </li>
-                      <li class="upload">
-                      </li>
-                    </ul>-->
-
-                    <div class="form-group">
-                      <input type="file"
-                             name="file-2[]" id="file-2"
-                             class="inputfile inputfile-2"
-                             data-multiple-caption="{count} files selected"
-                             multiple />
-                      <label for="file-2">
-                        <span>Choose file&hellip;</span>
-                      </label>
-                    </div>
-                  </div>
-                </div>
+            <hr/>
 
                 <div class="row">
                   <div class="col-md-12">
@@ -702,7 +682,7 @@ In order to hire this equipment you must sign our terms and conditions document
                 <div class="row">
                   <div class="col-md-12">
                     <label class="control-label">Booking Details</label>
-                    <div class="form-group">
+                    <!--<div class="form-group">
                       <label class="control-label" for="">
                       </label>
                       <div class="checkbox checkbox-primary">
@@ -711,24 +691,17 @@ In order to hire this equipment you must sign our terms and conditions document
                           Use School Contact Details
                           </label>
                        </div>
-                    </div>
+                    </div>-->
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
-                          <label class="control-label" for="">First Name
+                          <label class="control-label" for="">Name
                           </label>
-                          <input class="form-control" placeholder="First Name" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label class="control-label" for="">Last Name
-                          </label>
-                          <input class="form-control" placeholder="Last Name" type="text">
+                          <input class="form-control" placeholder="Name" type="text" value="Office">
                         </div>
                       </div>
                     </div>
-                    <div class="row" id="contact-id-blank-2">
+                    <div class="row hide" id="contact-id-blank-2">
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="control-label">Telephone Number</label>
@@ -742,7 +715,7 @@ In order to hire this equipment you must sign our terms and conditions document
                         </div>
                       </div>
                     </div>
-                    <div class="row hide" id="contact-id-complete-2">
+                    <div class="row " id="contact-id-complete-2">
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="control-label">Telephone Number</label>
@@ -756,32 +729,27 @@ In order to hire this equipment you must sign our terms and conditions document
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
 
-
-              <!--
-                <div class="row">
-                  <div class="section-title">Room Spec
-                    <p>xx</p>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="control-label">Room Width <span>(m)</span></label>
-                      <input class="form-control" value="" type="text" placeholder="0">
+                    <div class="actions-row" id="btn-notes-letting-add">
+                      <a class="" onclick="$('#notes-letting-add').removeClass('hide'), $('#btn-notes-letting-add').addClass('hide')">Add Notes</a>
                     </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="form-group">
-                      <label class="control-label">Room Length <span>(m)</span></label>
-                      <input class="form-control" value="" type="text" placeholder="0">
+
+                    <div class="row hide" id="notes-letting-add">
+                      <hr/>
+                      <div class="col-md-12">
+                        <label class="control-label">Office use only</label>
+                        <div class="form-group">
+                          <label class="control-label">Notes</label>
+                          <textarea class="field form-control"  placeholder="" ></textarea>
+                        </div>
+
+                      </div>
                     </div>
                   </div>
                 </div>
-              -->
             </div>
           </div>
-      </div>
+        </div>
       </div>
       <div class="modal-footer hide" id="letting-footer">
         <div class="pull-left">
@@ -790,15 +758,15 @@ In order to hire this equipment you must sign our terms and conditions document
           </a>
         </div>
         <div class="pull-right">
-            <button type="button"
-                    class="btn btn-add"
-                    data-dismiss="modal"
-                    onclick="$('#letting1').removeClass('hide'),
-                             $('#letting-list').removeClass('hide'),
-                             $('#jumbo').addClass('hide'),
-                             setTimeout(function(){ $('#alert').hide(); }, 10000);">
-                            Create Letting
-            </button>
+          <button type="button"
+                  class="btn btn-add"
+                  data-dismiss="modal"
+                  onclick="$('#letting1').removeClass('hide'),
+                           $('#letting-list').removeClass('hide'),
+                           $('#jumbo').addClass('hide'),
+                           setTimeout(function(){ $('#alert').hide(); }, 10000);">
+                          Create Letting
+          </button>
         </div>
       </div>
     </div>

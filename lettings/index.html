@@ -6,8 +6,6 @@ heading: Manage Events
 tagline: Track your income generation goals with projects
 ---
 
-
-
 <div class="jumbotron" id="jumbo">
   <div class="row">
     <div class="col-lg-7 col-md-6 flex-center-row">
@@ -42,7 +40,7 @@ tagline: Track your income generation goals with projects
 </div>
 
 
-<div class="row" id="letting-list">
+<div class="row hide" id="letting-list">
 	<div class="col-md-12">
 		<div class="panel">
 			<div class="panel-title">Lettings Portfolio</div>
@@ -64,57 +62,374 @@ tagline: Track your income generation goals with projects
 							<a class="btn btn-default">Download Brochure</a>
 						</li>
 						<li>
-							<a class="btn btn-add" data-toggle="modal" data-target="#myModalService-new"><i class="fa fa-plus"></i> Add New</a>
+							<a class="btn btn-add" data-toggle="modal" data-target="#myModalLetting-room"><i class="fa fa-plus"></i> Add New</a>
             </li>
           </ul>
         </div>
       </div>
 			<div class="panel-body">
-				<div class="alert alert-success" id="alert">
-					<strong>Well Done.</strong> You have saved your first Service Portfolio item!
-				</div>
-			  <table class="table table-vam table-bordered">
+				<!--
+          <div class="alert alert-success" id="alert">
+  					<strong>Well Done.</strong> You have saved your first Service Portfolio item!
+  				</div>
+        -->
+			  <table class="table table-hover table-vam">
 			    <thead>
 						<tr>
-							<th class="id">ID <a class="filter"></a></th>
-							<th class="product">Letting Name</th>
-              <th>Type</th>
-              <th class="quantity">Quantity</th>
-							<th class="actions"></th>
+							<th class="id">ID<!--<a class="filter"></a>--></th>
+							<th class="title">Letting Name</th>
+              <th class="category">Type</th>
+              <th>Details</th>
+              <th class="available">Time Available
+                <span>Price</span>
+              </th>
+              <!--<th class="price">Letting Price</th>-->
+							<!--<th class="actions"></th>-->
 						</tr>
 					</thead>
 			    <tbody>
-			      <tr id="letting1" class="">
+			      <tr id="" class="" >
 							<td class="id">L001</td>
 							<td class="title link">
-              <a data-toggle="modal" data-target="#myModalLetting-details">Letting 1</a>
+                <a data-toggle="modal" data-target="#myModalLetting-details-lg">
+                  Sit on Lawn Mower
+                </a>
 							</td>
-              <td class="type">
-                <!--<i class="fa fa-building-o"></i>--> Facility
+              <td class="category">
+                Equipment
               </td>
-              <td class="quantity">-</td>
-              <td class="price">&pound;15.00 <span>per hour</span></td>
-              <!-- <td class="available">Available</td> -->
-							<td class="actions">
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#myModalLetting-details">View</a>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo active" data-toggle="tooltip" data-placement="top" title="3 photos">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction active" data-toggle="tooltip" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li class="active">Peak <span>&pound;5.00 p/h</span></li>
+                  <li class="active">Offpeak <span>&pound;6.00 p/h</span></li>
+                  <li class="">Weekend<span>Not Available</li>
+                </ul>
               </td>
 						</tr>
-            <tr id="letting1" class="">
+            <tr id="" class="">
 							<td class="id">L002</td>
 							<td class="title link">
-              <a data-toggle="modal" data-target="#myModalLetting-details">Letting 2</a>
+                <a>
+                  Floor Polisher
+                </a>
 							</td>
-              <td class="type">
-                <!--<i class="fa fa-futbol-o"></i>--> Equipment
+              <td class="category">
+                Equipment
               </td>
-              <td class="quantity">10</td>
-              <td class="price"></td>
-              <!-- <td class="available">Available</td> -->
-							<td class="actions">
-                <a class="btn btn-default btn-block" data-toggle="modal" data-target="#myModalLetting-details">View</a>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction active"  data-toggle="tooltip" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li class="active">Peak <span>&pound;8.00 p/h</span></li>
+                  <li>Offpeak <span>Not Available</span></li>
+                  <li>Weekend<span>Not Available</li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L003</td>
+							<td class="title link">
+                <a>
+                  20 x Computer Chairs
+                </a>
+							</td>
+              <td class="category">
+                Equipment
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li>Offpeak <span>Not Available</span></li>
+                  <li class="active">Weekend<span>&pound;10.00</li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L004</td>
+							<td class="title link">
+                <a>
+                  10 x Tables
+                </a>
+							</td>
+              <td class="category">
+                Equipment
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li>Offpeak <span>Not Available</span></li>
+                  <li class="active">Weekend<span>&pound;12.00</li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L005</td>
+							<td class="title link">
+                <a>
+                  Music Studio
+                </a>
+							</td>
+              <td class="category">
+                Facility
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li class="active">Offpeak <span>&pound;12.00 p/h</span></li>
+                  <li>Weekend<span>Not Available</span></li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L006</td>
+							<td class="title link">
+                <a>
+                  Jetwash Powerwash
+                </a>
+							</td>
+              <td class="category">
+                Equipment
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction active" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>&pound;5.00 p/h</span></li>
+                  <li class="active">Offpeak <span>&pound;5.00 p/h</span></li>
+                  <li>Weekend<span>&pound;4.00 p/h</span></li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L007</td>
+							<td class="title link">
+                <a>
+                  Drama Studio
+                </a>
+							</td>
+              <td class="category">
+                Facility
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li class="active">Offpeak <span>&pound;12.00 p/h</span></li>
+                  <li>Weekend<span>Not Available</span></li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L007</td>
+							<td class="title link">
+                <a>
+                  Music Studio
+                </a>
+							</td>
+              <td class="category">
+                Facility
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li class="active">Offpeak <span>&pound;12.00 p/h</span></li>
+                  <li>Weekend<span>Not Available</span></li>
+                </ul>
               </td>
 						</tr>
 
+            <tr id="" class="">
+							<td class="id">L008</td>
+							<td class="title link">
+                <a>
+                  Classroom E3
+                </a>
+							</td>
+              <td class="category">
+                Facility
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction active" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li class="active">Offpeak <span>&pound;12.00 p/h</span></li>
+                  <li>Weekend<span>&pound;12.00 p/h</span></li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L009</td>
+							<td class="title link">
+                <a>
+                  Classroom E4
+                </a>
+							</td>
+              <td class="category">
+                Facility
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction active" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li>Peak <span>Not Available</span></li>
+                  <li class="active">Offpeak <span>&pound;12.00 p/h</span></li>
+                  <li>Weekend<span>&pound;12.00 p/h</span></li>
+                </ul>
+              </td>
+						</tr>
+            <tr id="" class="">
+							<td class="id">L010</td>
+							<td class="title link">
+                <a>
+                  Small Hall
+                </a>
+							</td>
+              <td class="category">
+                Facility
+              </td>
+              <td class="status-l">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="photo">
+                    <i class="fa fa-picture-o"></i>
+                  </li>
+                  <li class="age-restriction" data-placement="top" title="restriction">
+                    <i class="fa fa-ban"></i>
+                  </li>
+                  <li class="terms active" data-toggle="tooltip" data-placement="top" title="terms required">
+                    <i class="fa fa-pencil-square-o"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="price-list">
+                <ul class="list-unstyled list-status">
+                  <li class="active">Peak <span>Not Available</span></li>
+                  <li class="active">Offpeak <span>&pound;12.00 p/h</span></li>
+                  <li>Weekend<span>&pound;20.00 p/h</span></li>
+                </ul>
+              </td>
+						</tr>
 			    </tbody>
 			  </table>
 			</div>

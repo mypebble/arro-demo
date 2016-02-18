@@ -11,7 +11,6 @@
   {% include modal-hmrc.html %}
   {% include modal-hmrc-data.html %}
   {% include modal-ga-refund.html %}
-
   {% include modal-donation.html %}
   {% include modal-donation-gasds.html %}
 <!-- clubs -->
@@ -23,7 +22,7 @@
 
 <!-- lettings -->
   {% include modal-letting-room.html %}
-  {% include modal-letting-details.html %}
+  {% include modal-letting-details-lg.html %}
   {% include modal-letting-loading.html %}
 
 <!-- grants -->
@@ -44,10 +43,7 @@
 <!-- grants -->
 
 <!-- transactions -->
-{% include modal-transaction.html %}
-
-
-
+  {% include modal-transaction.html %}
 
 <!-- SRM -->
   {% include modal-name-preview.html %}
@@ -57,8 +53,7 @@
 
   {% include modal-campaign-ga.html %}
   {% include modal-campaign-info.html %}
-    {% include modal-campaign-locked.html %}
-
+  {% include modal-campaign-locked.html %}
   {% include modal-import-warning.html %}
 
 <!-- general -->
@@ -84,26 +79,23 @@
 <script src="{{ "/js/jquery-1.10.2.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/bootstrap.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/jasny-bootstrap.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/readmore.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/custom.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/bootstrap-select-min.js" | prepend: site.baseurl }}"></script>
-
-
 <script src="{{ "/js/chart.min.js" | prepend: site.baseurl }}"></script>
-
-<!--<script src="{{ "/js/bootstrap-tagsinput.js" | prepend: site.baseurl }}"></script>-->
 <script src="{{ "/js/bootstrap-switch.min.js" | prepend: site.baseurl }}"></script>
-
-
 <script src="{{ "/js/custom-file-input.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/jquery.flexText.min.js" | prepend: site.baseurl }}"></script>
 
-<script src="{{ "/js/tagsort.min.js" | prepend: site.baseurl }}"></script>
 
+<!--<script src="{{ "/js/tagsort.min.js" | prepend: site.baseurl }}"></script>-->
+
+<!--
 <script>
 $('div.tagsort-tags-container').tagSort({
 	selector:'.item-to-tag'
 });
-</script>
+</script>-->
 
 <script>
 $(function () {
@@ -111,6 +103,8 @@ $(function () {
     $("[name='my-checkbox']").bootstrapSwitch();
 });
 </script>
+
+
 
 
 <script type="text/javascript">

@@ -808,5 +808,19 @@ $( '.dropdown-menu-checkbox a' ).on( 'click', function( event ) {
    return false;
 });
 
+var opts = {
+    collapsedHeight: 100,
+    speed: 120,
+    moreLink: '<div class="actions-row"><a href="#">Read more</a></div>',
+    lessLink: '<div class="actions-row"><a href="#">Read Less</a></div>'
+};
+
+$('.text-collapse').readmore(opts);
+
+$('.modal').one('show.bs.modal', function () {
+    $(this).find('.text-collapse').css({overflow: "hidden", maxHeight: opts.maxHeight});
+}).one('shown.bs.modal', function () {
+    $(this).find('.text-collapse').readmore(opts);
+});
 
 }(jQuery);

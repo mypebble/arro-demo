@@ -16545,6 +16545,27 @@ ul.list-status li.donations.active {
 ul.list-status li.volunteer.active {
   color: #e6c200 !important;
 }
+ul.list-status li.terms.active {
+  color: #31708f !important;
+  color: #26aae2 !important;
+}
+aul.list-status li.terms.active:hover {
+  color: #245269 !important;
+}
+ul.list-status li.age-restriction.active {
+  color: #a94442 !important;
+  color: #ed5565 !important;
+}
+aul.list-status li.age-restriction.active:hover {
+  color: #843534 !important;
+}
+ul.list-status li.photo.active {
+  color: #3c763d !important;
+  color: #93c01f !important;
+}
+aul.list-status li.photo.active:hover {
+  color: #2b542c !important;
+}
 ul.list-transaction li {
   background: #f9f9f9;
   color: #9b9b9b;
@@ -17235,15 +17256,31 @@ a.list-facts-three li.rating-hard:hover {
   line-height: 80px;
   font-size: 3em;
 }
+.list-gallery:before,
+.list-gallery:after {
+  content: " ";
+  display: table;
+}
+.list-gallery:after {
+  clear: both;
+}
+.list-gallery:before,
+.list-gallery:after {
+  content: " ";
+  display: table;
+}
+.list-gallery:after {
+  clear: both;
+}
 .list-gallery li {
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 110px;
+  width: 110px;
   float: left !important;
   float: left;
   border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 5px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 .list-gallery li img {
   width: 100%;
@@ -18854,6 +18891,23 @@ fieldset[disabled] .btn-menu.active {
   width: 100px;
   text-align: center;
 }
+.table td.status-l {
+  width: 150px;
+  text-align: center;
+}
+.table tr.hire-detail > td {
+  color: #9b9b9b;
+}
+.table tr.hire-detail > td span {
+  display: block;
+}
+.table tr.hire-detail.active > td {
+  background: #ffffff;
+  color: #555555;
+}
+.table tr.hire-detail.active > td span {
+  color: #555555;
+}
 .table .category {
   white-space: nowrap;
   overflow: hidden;
@@ -18899,6 +18953,9 @@ fieldset[disabled] .btn-menu.active {
 }
 .table td.amount-pending {
   color: #9b9b9b;
+}
+.table td.amount-sm {
+  width: 100px;
 }
 .table .title {
   min-width: 250px;
@@ -18959,10 +19016,6 @@ fieldset[disabled] .btn-menu.active {
 }
 .table td.id {
   width: 50px;
-  padding: 18px 10px;
-}
-.table td.room-type {
-  padding: 18px 10px;
 }
 .table td.email {
   white-space: nowrap;
@@ -18972,12 +19025,16 @@ fieldset[disabled] .btn-menu.active {
   width: 200px;
 }
 .table td.price {
-  text-align: right;
   width: 150px;
   font-weight: 700;
 }
 .table td.price span {
   font-weight: normal;
+}
+.table td.price-list span {
+  float: right !important;
+  float: right;
+  text-align: right;
 }
 .table .total-claim small {
   font-size: 70%;
@@ -19000,10 +19057,7 @@ fieldset[disabled] .btn-menu.active {
   text-align: center;
 }
 .table td.hire {
-  width: 200px;
-}
-.table td.hire-total {
-  width: 250px;
+  width: 120px;
 }
 .table td.comment {
   width: 70px;
@@ -19046,6 +19100,11 @@ a.table td.rating-medium:hover {
 a.table td.rating-poor:hover,
 a.table td.rating-hard:hover {
   color: #843534;
+}
+.table th.available span {
+  text-align: right;
+  float: right !important;
+  float: right;
 }
 .table tr.info > td {
   text-transform: uppercase;
@@ -20601,34 +20660,3 @@ textarea,
   padding: 15px;
 }
 /*jumbo*/
-.tagsort-tags-container span {
-  display: inline-block;
-  border: 2px solid #CCC;
-  color: #AAA;
-  font-size: 12px;
-  line-height: 10px;
-  padding: 5px 9px;
-  margin: 5px;
-  cursor: pointer;
-  border-radius: 12px;
-  -moz-border-radius: 12px;
-  -webkit-border-radius: 12px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.tagsort-tags-container span:hover {
-  border: 2px solid #000;
-  color: #FFF;
-  background-color: #000000;
-}
-.tagsort-tags-container span.tagsort-active {
-  border: 2px solid #000;
-  color: #000;
-  background-color: transparent;
-}
-.tags-group .disabled {
-  color: #9b9b9b;
-}
-/*tagsort*/
