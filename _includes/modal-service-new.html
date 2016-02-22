@@ -27,7 +27,7 @@
               <div class="col-lg-6 col-md-6">
                 <div class="body-title">
                   <span class="">
-                    <i class="fa fa-graduation-cap fa-xl">
+                    <i class="fa fa-child fa-xl">
                     </i>
                   </span>
                   <div class="title">
@@ -89,6 +89,53 @@
                     <label class="control-label">Postcode</label>
                     <input class="form-control" type="text" placeholder="Postcode" value="NE12QB">
                   </div>
+                </div>
+              </div>
+
+              <div class="row hide">
+                <div class="col-md-12">
+                  <label class="control-label">Time &amp; Cost</label>
+                  <table class="table table-form table-bordered">
+                    <thead>
+                      <tr>
+                        <th class="room-type">Time</th>
+                        <th>Hire Cost</th>
+                        <th>Hire Period</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr id="t-c-1">
+                        <td class="td-disabled">
+                          <div class="form-group">
+                            <label class="control-label" for="">
+                            </label>
+                            <div class="checkbox checkbox-primary">
+                             <input id="option1" type="checkbox"  onclick="$('#t-c-1 td').toggleClass('td-disabled'), $('#t-c-1 td.amount .form-group').toggleClass('hide'), $('#t-c-1 td.hire .form-group').toggleClass('hide')">
+                                <label for="donor">
+                                 Peak
+                                 <span>08.00 to 16:00</span>
+                                </label>
+                             </div>
+                          </div>
+                        </td>
+                        <td class="amount amount-sm td-disabled">
+                          <div class="form-group hide">
+                            <input class="form-control input-amount" value="£0.00" type="text">
+                          </div>
+                        </td>
+                        <td class="hire td-disabled">
+        									<div class="form-group btn-block hide">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+        											<option>30 mins</option>
+        											<option>per hour</option>
+        											<option>half day</option>
+        											<option>full day</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                     </tbody>
+                  </table>
                 </div>
               </div>
 
