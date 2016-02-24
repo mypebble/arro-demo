@@ -92,50 +92,69 @@
                 </div>
               </div>
 
-              <div class="row hide">
+
+              <div class="row">
                 <div class="col-md-12">
-                  <label class="control-label">Time &amp; Cost</label>
+                  <label class="control-label">Service Cost</label>
                   <table class="table table-form table-bordered">
                     <thead>
                       <tr>
-                        <th class="room-type">Time</th>
-                        <th>Hire Cost</th>
-                        <th>Hire Period</th>
+                        <th class="room-type">Type</th>
+                        <th>Price</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr id="t-c-1">
-                        <td class="td-disabled">
+                      <tr>
+                        <td>
+                          <strong>Service Cost</strong>
+                          <span class="block">Cost for total service</span>
+                        </td>
+                        <td class="amount amount-sm">
                           <div class="form-group">
-                            <label class="control-label" for="">
-                            </label>
-                            <div class="checkbox checkbox-primary">
-                             <input id="option1" type="checkbox"  onclick="$('#t-c-1 td').toggleClass('td-disabled'), $('#t-c-1 td.amount .form-group').toggleClass('hide'), $('#t-c-1 td.hire .form-group').toggleClass('hide')">
-                                <label for="donor">
-                                 Peak
-                                 <span>08.00 to 16:00</span>
-                                </label>
-                             </div>
+                            <input class="form-control input-amount" placeholder="£0.00" type="text">
                           </div>
                         </td>
-                        <td class="amount amount-sm td-disabled">
-                          <div class="form-group hide">
-                            <input class="form-control input-amount" value="£0.00" type="text">
-                          </div>
-                        </td>
-                        <td class="hire td-disabled">
-        									<div class="form-group btn-block hide">
-        										<select class="selectpicker form-control" data-style="btn btn-default">
-        											<option>30 mins</option>
-        											<option>per hour</option>
-        											<option>half day</option>
-        											<option>full day</option>
-        										</select>
-        									</div>
-        								</td>
                       </tr>
-                     </tbody>
+                    </tbody>
                   </table>
+                </div>
+              </div>
+
+              <hr/>
+
+              <div class="row">
+                <div class="col-md-12">
+                    <label class="control-label">Extra</label>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-danger">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-1').toggleClass('hide')">
+                        <label for="donor">
+                         Restrictions
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group hide" id="policy-1">
+                    <textarea class="field form-control"  placeholder="">
+          You must be over the age of 18 to hire this equipment
+                    </textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
+                        <label for="donor">
+                         Terms and Conditions
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group hide" id="policy-2">
+                    <textarea class="field form-control"  placeholder="">
+          In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.
+                    </textarea>
+                  </div>
                 </div>
               </div>
 
@@ -224,8 +243,8 @@
                   <div class="form-group">
                     <label class="control-label">Type</label>
                       <select class="selectpicker form-control" data-style="btn btn-default">
-                        <option>Teaching</option>
-                        <option>Staff</option>
+                        <option>Catering</option>
+                        <option>Art &amp; Design</option>
                       </select>
                   </div>
                 </div>
@@ -250,6 +269,71 @@
                   <div class="form-group">
                     <label class="control-label">Postcode</label>
                     <input class="form-control" type="text" placeholder="Postcode" value="NE12QB">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="control-label">Service Cost</label>
+                  <table class="table table-form table-bordered">
+                    <thead>
+                      <tr>
+                        <th class="room-type">Type</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <strong>Service Cost</strong>
+                          <span class="block">Cost for total service</span>
+                        </td>
+                        <td class="amount amount-sm">
+                          <div class="form-group">
+                            <input class="form-control input-amount" placeholder="£0.00" type="text">
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <hr/>
+
+              <div class="row">
+                <div class="col-md-12">
+                    <label class="control-label">Extra</label>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-danger">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-1').toggleClass('hide')">
+                        <label for="donor">
+                         Restrictions
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group hide" id="policy-1">
+                    <textarea class="field form-control"  placeholder="">
+          You must be over the age of 18 to hire this equipment
+                    </textarea>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="">
+                    </label>
+                    <div class="checkbox checkbox-primary">
+                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
+                        <label for="donor">
+                         Terms and Conditions
+                        </label>
+                     </div>
+                  </div>
+                  <div class="form-group hide" id="policy-2">
+                    <textarea class="field form-control"  placeholder="">
+          In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.
+                    </textarea>
                   </div>
                 </div>
               </div>

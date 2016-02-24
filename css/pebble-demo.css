@@ -17624,6 +17624,69 @@ fieldset[disabled] .btn-star.active {
   -webkit-transition: opacity .3s;
   transition: opacity 0.3s;
 }
+.btn .notification {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  color: #ffffff !important;
+  vertical-align: middle;
+  border-radius: 500px;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  background: #ed5565;
+  position: absolute;
+  right: 20px !important;
+  top: -5px !important;
+  height: 15px;
+  width: 10px;
+  display: block;
+}
+a.btn .notification:hover,
+a.btn .notification:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn .notification:empty {
+  display: none;
+}
+.btn .btn .notification {
+  position: relative;
+  top: -1px;
+}
+.btn .notification-sm {
+  font-size: 70%;
+}
+.btn .notification-default {
+  color: #4d4d4d;
+  background: #ffffff;
+}
+.btn .notification-secondary {
+  background: #555555;
+  color: #ffffff;
+}
+.form-group .notification {
+  background: #ed5565;
+  height: 15px;
+  width: 10px;
+  position: absolute;
+  right: 10px !important;
+  top: -5px !important;
+  z-index: 5;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
 /*global type*/
 /* LABELS */
 .label {
@@ -18192,6 +18255,54 @@ fieldset[disabled] .inputfile + label {
   font-size: 70%;
   padding: 4px 7px;
 }
+.inputfile + label .notification {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  color: #ffffff !important;
+  vertical-align: middle;
+  border-radius: 500px;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  background: #ed5565;
+  position: absolute;
+  right: 20px !important;
+  top: -5px !important;
+  height: 15px;
+  width: 10px;
+  display: block;
+}
+a.inputfile + label .notification:hover,
+a.inputfile + label .notification:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.inputfile + label .notification:empty {
+  display: none;
+}
+.btn .inputfile + label .notification {
+  position: relative;
+  top: -1px;
+}
+.inputfile + label .notification-sm {
+  font-size: 70%;
+}
+.inputfile + label .notification-default {
+  color: #4d4d4d;
+  background: #ffffff;
+}
+.inputfile + label .notification-secondary {
+  background: #555555;
+  color: #ffffff;
+}
 .inputfile + label:hover,
 .inputfile + label:focus,
 .inputfile + label.focus,
@@ -18344,6 +18455,54 @@ fieldset[disabled] .btn-menu {
   margin-left: 5px;
   font-size: 70%;
   padding: 4px 7px;
+}
+.btn-menu .notification {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  color: #ffffff !important;
+  vertical-align: middle;
+  border-radius: 500px;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  background: #ed5565;
+  position: absolute;
+  right: 20px !important;
+  top: -5px !important;
+  height: 15px;
+  width: 10px;
+  display: block;
+}
+a.btn-menu .notification:hover,
+a.btn-menu .notification:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-menu .notification:empty {
+  display: none;
+}
+.btn .btn-menu .notification {
+  position: relative;
+  top: -1px;
+}
+.btn-menu .notification-sm {
+  font-size: 70%;
+}
+.btn-menu .notification-default {
+  color: #4d4d4d;
+  background: #ffffff;
+}
+.btn-menu .notification-secondary {
+  background: #555555;
+  color: #ffffff;
 }
 .btn-menu:hover,
 .btn-menu:focus,
@@ -18891,7 +19050,7 @@ fieldset[disabled] .btn-menu.active {
   width: 100px;
   text-align: center;
 }
-.table td.status-l {
+.table td.status-lg {
   width: 150px;
   text-align: center;
 }

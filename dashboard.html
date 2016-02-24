@@ -4,7 +4,21 @@ title: Dashboard
 permalink: /dashboard/
 ---
 
-<div class="jumbotron" id="jumbo">
+<!-- -->
+<!--<div class="row">
+  <div class="col-md-8">
+    <canvas id="canvas" height="150"></canvas>
+  </div>
+</div>
+-->
+
+<div class="row">
+  <div class="col-md-4"></div>
+</div>
+
+
+
+<div class="jumbotron hide" id="jumbo">
   <div class="row">
     <div class="col-lg-8 col-md-8">
     </div>
@@ -30,8 +44,63 @@ permalink: /dashboard/
     </div>
   </div>
 </div>
+<div class="row hide">
+  <div class="col-md-12">
+    <div class="alert alert-success">
+      Donations Report Ready
+    </div>
+  </div>
+</div>
+<div class="row hide">
+  <div class="col-md-4">
+    <div class="panel">
+      <div class="panel-body">
+        Result
+      </div>
+      <div class="panel-footer">
+        <div class="actions-row actions-row-clear">
+          <a class="btn btn-default">View Results</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<div class="row">
+  <div class="col-md-9">
+    <div class="panel">
+      <div class="panel-title">
+        To Do
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li class="panel">
+            <div class="panel-title panel-title-white">
+              Task #001 -
+              <!--<i class="fa fa-envelope"></i>-->
+              Thank your donors!
+              <div class="actions pull-right">
+                <a><i class="fa fa-close"></i></a>
+              </div>
+            </div>
+            <div class="panel-body">
+              <p>Send a <strong>'Thank You'</strong> message to all recent donations. They collectivly have contributed <strong>&pound;532.20</strong> towards your projects. </p>
+              <a class="btn btn-primary">
+                <i class="fa fa-paper-plane"></i> Send Message
+              </a>
+              <a class="btn btn-default">
+                Close
+              </a>
+            </div>
+            <div class="panel-footer panel-footer-gray">
+              <i class="fa fa-arrow-circle-up text-success"></i> Donors are more likely to donate again if they feel valued and apprechiated
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <!--
 <div class="row">
   <div class="col-lg-4">
@@ -88,7 +157,7 @@ permalink: /dashboard/
 </div>
 -->
 
-<div class="row">
+<div class="row hide">
   <div class="col-md-3">
     <div class="panel panel-sm">
       <span class="icon icon-grants"><i class="glyphicon glyphicon-briefcase"></i></span>
@@ -127,7 +196,7 @@ permalink: /dashboard/
   </div>
 </div>
 
-<div class="row">
+<div class="row hide">
   <div class="col-md-6">
     <div class="panel">
       <div class="panel-title">
@@ -143,7 +212,7 @@ permalink: /dashboard/
               </div>
             </div>
             <div class="actions pull-right">
-              <a href="#" class=""><i class="fa fa-close"></i></a>
+              <a><i class="fa fa-close"></i></a>
             </div>
           </li>
           <li>
@@ -154,7 +223,7 @@ permalink: /dashboard/
               </div>
             </div>
             <div class="actions pull-right">
-              <a href="#" class=""><i class="fa fa-close"></i></a>
+              <a class=""><i class="fa fa-close"></i></a>
             </div>
           </li>
         </ul>
