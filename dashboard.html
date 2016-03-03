@@ -12,13 +12,16 @@ permalink: /dashboard/
 </div>
 -->
 
-<div class="row">
-  <div class="col-md-4"></div>
-</div>
+<!--
+  <div class="row">
+    <div class="col-md-12">
 
+    </div>
+  </div>
+-->
 
-
-<div class="jumbotron hide" id="jumbo">
+<!--
+<div class="jumbotron">
   <div class="row">
     <div class="col-lg-8 col-md-8">
     </div>
@@ -44,13 +47,137 @@ permalink: /dashboard/
     </div>
   </div>
 </div>
-<div class="row hide">
-  <div class="col-md-12">
-    <div class="alert alert-success">
-      Donations Report Ready
+
+-->
+<div class="row">
+  <div class="col-md-4">
+    <h2>Report</h2>
+    <div id="chart-guage"></div>
+
+    <div id="chart"></div>
+    </div>
+  </div>
+
+
+
+<div class="row">
+  <div class="col-md-8">
+    <div id="lines"></div>
+  </div>
+  <div class="col-md-4">
+    <!--
+      <div class="alert alert-success">
+        xxx
+      </div>
+    -->
+    <div class="panel">
+      <div class="panel-title panel-title-clear panel-title-white text-center">Weekly Summary</div>
+      <div class="panel-body">
+        <ul class="list-unstyled list-stats">
+          <li>
+            New Stakeholders <span>15 <span><i class="fa fa-arrow-up text-success"></i>(4%)</span></span>
+          </li>
+          <li>
+            Donations <span>&pound;123.37</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title panel-title-clear panel-title-white text-center">League Table</div>
+      <div class="panel-body">
+        <div class="alert alert-success hide">
+          <p><strong>Excelent News!</strong> You've gone up <strong>5</strong> places in the League with this months activity.</p>
+        </div>
+        <table class="table table-league">
+          <!--
+            <thead>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </thead>
+          -->
+          <tbody>
+            <tr class="rank-leader">
+              <td class="id">001</td>
+              <td>Hogg Primary School</td>
+              <td>
+                <span class="text-gold">
+                  <i class="fa fa-trophy"></i>
+                </span>
+                <!--<span class="text-success"><i class="fa fa-arrow-up"></i> 1</span>-->
+              </td>
+            </tr>
+          <!--
+            <tr>
+              <td class="id">002</td>
+              <td>Hogg Academy</td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-down"></i> 1</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">003</td>
+              <td>Hogg Secondary School</td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-up"></i> 6</span>
+              </td>
+            </tr>
+          -->
+            <tr class="rank-divider">
+              <td colspan="3" class="text-center">
+                &hellip;
+              </td>
+            </tr>
+            <tr>
+              <td class="id">
+                012
+              </td>
+              <td class="organisation">
+                Waggott School
+              </td>
+              <td>
+                <span class="text-danger"><i class="fa fa-arrow-down"></i> 1</span>
+              </td>
+            </tr>
+            <tr class="rank-user">
+              <td class="id">
+                013
+              </td>
+              <td class="organisation">
+                Funding School
+              </td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-up"></i> 5</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">
+                014
+              </td>
+              <td class="organisation">
+                Wakenshaw School
+              </td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-up"></i> 2</span>
+              </td>
+            </tr>
+            <tr class="">
+              <td colspan="3" class="text-center">
+                <a href="">
+                  Show All
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
+
 <div class="row hide">
   <div class="col-md-4">
     <div class="panel">

@@ -8,7 +8,11 @@
       </div>
       <div class="modal-body modal-body-clear">
         <div class="body-title">
-          <div class="title">Create Service</div>
+          <div class="title">Create
+            <div id="title-skills" class="hide">Skills</div>
+            <div id="title-resource" class="hide">Skills</div>
+             Service
+           </div>
           <span>What Services would you like to provide?</span>
         </div>
         <div class="row">
@@ -31,11 +35,11 @@
                     </i>
                   </span>
                   <div class="title">
-                    Skilled
+                    Skills
                   </div>
-                  <p>Teaching, Education, Knowledge </p>
+                  <p>Teaching, Finance, Support </p>
                 </div>
-                <a class="btn btn-default" onclick="$('#services-facility').removeClass('hide'), $('#service-options').addClass('hide'), $('#service-footer').removeClass('hide')">Select</a>
+                <a class="btn btn-default" onclick="$('#services-facility').removeClass('hide'), $('#service-options').addClass('hide'), $('#service-footer').removeClass('hide'), $('#title-skills').removeClass('hide'), $('#title-skills').addClass('inline')">Select</a>
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="body-title">
@@ -44,9 +48,9 @@
                     </i>
                   </span>
                   <div class="title">Resources</div>
-                  <p>Printing, Catering, Aid</p>
+                  <p>Printing, Catering, ICT</p>
                 </div>
-                <a class="btn btn-default" onclick="$('#services-resources').removeClass('hide'), $('#service-options').addClass('hide'), $('#service-footer').removeClass('hide')">Select</a>
+                <a class="btn btn-default" onclick="$('#services-resources').removeClass('hide'), $('#service-options').addClass('hide'), $('#service-footer').removeClass('hide'), $('#title-resource').removeClass('hide'), $('#title-resource').addClass('inline')">Select</a>
               </div>
             </div>
 
@@ -54,8 +58,8 @@
               <div class="row">
                 <div class="col-md-7">
                   <div class="form-group">
-                    <label class="control-label">Service Name</label>
-                    <input class="form-control" type="text" placeholder="Service Name">
+                    <label class="control-label">Name</label>
+                    <input class="form-control" type="text" placeholder="Name">
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -71,7 +75,7 @@
               <div class="row">
                 <div class="col-md-12">
               		<div class="form-group">
-                    <label class="control-label">Description</label>
+                    <label class="control-label">Description {% include input-tips.html %}</label>
                     <textarea class="field form-control"  placeholder=""></textarea>
                   </div>
       					</div>
@@ -80,8 +84,8 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <label class="control-label">Service Address</label>
-                    <input class="form-control" type="text" placeholder="Service Address" value="Funding School">
+                    <label class="control-label">Address</label>
+                    <input class="form-control" type="text" placeholder="Address" value="Funding School">
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -95,28 +99,72 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <label class="control-label">Service Cost</label>
+                  <label class="control-label">Cost</label>
                   <table class="table table-form table-bordered">
                     <thead>
                       <tr>
                         <th class="room-type">Type</th>
                         <th>Price</th>
+                        <th>Metric</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <strong>Service Cost</strong>
-                          <span class="block">Cost for total service</span>
+                      <tr id="t-service-cost-1">
+                        <td class="">
+                          <div class="form-group">
+                            <input class="form-control" value="" type="text" placeholder="Label">
+                          </div>
                         </td>
                         <td class="amount amount-sm">
                           <div class="form-group">
-                            <input class="form-control input-amount" placeholder="£0.00" type="text">
+                            <input class="form-control input-amount" value="£0.00" type="text">
                           </div>
+                        </td>
+                        <td class="">
+        									<div class="form-group btn-block">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+        											<option>per hour</option>
+        											<option>per day</option>
+        											<option>per task</option>
+        											<option>per unit</option>
+                              <option>per item</option>
+                              <option>per session</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                      <tr id="t-service-cost-2" class="hide">
+                        <td class="">
+                          <div class="form-group">
+                            <input class="form-control" value="" type="text" placeholder="Label">
+                          </div>
+                        </td>
+                        <td class="amount amount-sm">
+                          <div class="form-group">
+                            <input class="form-control input-amount" value="£0.00" type="text">
+                          </div>
+                        </td>
+                        <td class="">
+        									<div class="form-group btn-block">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+        											<option>per hour</option>
+        											<option>per day</option>
+        											<option>per task</option>
+        											<option>per unit</option>
+                              <option>per item</option>
+                              <option>per session</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a class="btn btn-add" onclick="$('#t-service-cost-2').removeClass('hide')"><i class="fa fa-plus"></i>Add More</a>
                         </td>
                       </tr>
                     </tbody>
                   </table>
+
                 </div>
               </div>
 
@@ -141,19 +189,14 @@
                     </textarea>
                   </div>
                   <div class="form-group">
-                    <label class="control-label" for="">
-                    </label>
+                    <label class="control-label" for=""></label>
                     <div class="checkbox checkbox-primary">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
-                        <label for="donor">
-                         Terms and Conditions
-                        </label>
-                     </div>
-                  </div>
-                  <div class="form-group hide" id="policy-2">
-                    <textarea class="field form-control"  placeholder="">
-          In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.
-                    </textarea>
+                      <input id="donor" value="" type="checkbox">
+                      <label for="donor">
+                       Terms and Conditions Form
+                       <span>This will attach the <a href="">Terms and Conditions Form</a></span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -235,8 +278,8 @@
               <div class="row">
                 <div class="col-md-7">
                   <div class="form-group">
-                    <label class="control-label">Service Name</label>
-                    <input class="form-control" type="text" placeholder="Service Name">
+                    <label class="control-label">Name</label>
+                    <input class="form-control" type="text" placeholder="Name">
                   </div>
                 </div>
                 <div class="col-md-5">
@@ -252,7 +295,7 @@
               <div class="row">
                 <div class="col-md-12">
               		<div class="form-group">
-                    <label class="control-label">Description</label>
+                    <label class="control-label">Description{% include input-tips.html %}</label>
                     <textarea class="field form-control"  placeholder=""></textarea>
                   </div>
       					</div>
@@ -261,8 +304,8 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <label class="control-label">Service Address</label>
-                    <input class="form-control" type="text" placeholder="Service Address" value="Funding School">
+                    <label class="control-label">Address</label>
+                    <input class="form-control" type="text" placeholder="Address" value="Funding School">
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -275,24 +318,67 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <label class="control-label">Service Cost</label>
+                  <label class="control-label">Cost</label>
                   <table class="table table-form table-bordered">
                     <thead>
                       <tr>
                         <th class="room-type">Type</th>
                         <th>Price</th>
+                        <th>Metric</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>
-                          <strong>Service Cost</strong>
-                          <span class="block">Cost for total service</span>
+                      <tr id="t-service-cost-1">
+                        <td class="">
+                          <div class="form-group">
+                            <input class="form-control" value="" type="text" placeholder="Label">
+                          </div>
                         </td>
                         <td class="amount amount-sm">
                           <div class="form-group">
-                            <input class="form-control input-amount" placeholder="£0.00" type="text">
+                            <input class="form-control input-amount" value="£0.00" type="text">
                           </div>
+                        </td>
+                        <td class="">
+        									<div class="form-group btn-block">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+        											<option>per hour</option>
+        											<option>per day</option>
+        											<option>per task</option>
+        											<option>per unit</option>
+                              <option>per item</option>
+                              <option>per session</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                      <tr id="t-service-cost-3" class="hide">
+                        <td class="">
+                          <div class="form-group">
+                            <input class="form-control" value="" type="text" placeholder="Label">
+                          </div>
+                        </td>
+                        <td class="amount amount-sm">
+                          <div class="form-group">
+                            <input class="form-control input-amount" value="£0.00" type="text">
+                          </div>
+                        </td>
+                        <td class="">
+        									<div class="form-group btn-block">
+        										<select class="selectpicker form-control" data-style="btn btn-default">
+        											<option>per hour</option>
+        											<option>per day</option>
+        											<option>per task</option>
+        											<option>per unit</option>
+                              <option>per item</option>
+                              <option>per session</option>
+        										</select>
+        									</div>
+        								</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3">
+                          <a class="btn btn-add" onclick="$('#t-service-cost-3').removeClass('hide')"><i class="fa fa-plus"></i>Add More</a>
                         </td>
                       </tr>
                     </tbody>
@@ -321,19 +407,14 @@
                     </textarea>
                   </div>
                   <div class="form-group">
-                    <label class="control-label" for="">
-                    </label>
+                    <label class="control-label" for=""></label>
                     <div class="checkbox checkbox-primary">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
-                        <label for="donor">
-                         Terms and Conditions
-                        </label>
-                     </div>
-                  </div>
-                  <div class="form-group hide" id="policy-2">
-                    <textarea class="field form-control"  placeholder="">
-          In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.
-                    </textarea>
+                      <input id="donor" value="" type="checkbox">
+                      <label for="donor">
+                       Terms and Conditions Form
+                       <span>This will attach the <a href="">Terms and Conditions Form</a></span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>

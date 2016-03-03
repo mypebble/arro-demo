@@ -8,8 +8,12 @@
       </div>
       <div class="modal-body modal-body-clear">
         <div class="body-title">
-          <div class="title">Create Letting</div>
-          <span class="">What would you like to Let out?</span>
+          <div class="title">Create
+            <div id="title-facility" class="hide">Facility</div>
+            <div id="title-equipment" class="hide ">Equipment</div>
+             Letting
+           </div>
+          <span class="">What would you like to let out?</span>
 
         </div>
 
@@ -24,11 +28,11 @@
                     </i>
                   </span>
                   <div class="title">
-                    Facilities
+                    Facility
                   </div>
-                  <p>Halls, Rooms, Sports Halls </p>
+                  <p>Halls, Rooms, Grounds </p>
                 </div>
-                <a class="btn btn-default" onclick="$('#letting-facility').removeClass('hide'), $('#letting-options').addClass('hide'), $('#letting-footer').removeClass('hide')">Select</a>
+                <a class="btn btn-default" onclick="$('#letting-facility').removeClass('hide'), $('#letting-options').addClass('hide'), $('#letting-footer').removeClass('hide'), $('#title-facility').removeClass('hide'), $('#title-facility').addClass('inline')">Select</a>
               </div>
               <div class="col-lg-6 col-md-6">
                 <div class="body-title">
@@ -37,9 +41,9 @@
                     </i>
                   </span>
                   <div class="title">Equipment</div>
-                  <p>Printers, Chairs, Rackets</p>
+                  <p>Staging, Chairs, PA system</p>
                 </div>
-                <a class="btn btn-default" onclick="$('#letting-facility-equipment').removeClass('hide'), $('#letting-options').addClass('hide'), $('#letting-footer').removeClass('hide')">Select</a>
+                <a class="btn btn-default" onclick="$('#letting-facility-equipment').removeClass('hide'), $('#letting-options').addClass('hide'), $('#letting-footer').removeClass('hide'), $('#title-equipment').removeClass('hide'), $('#title-equipment').addClass('inline')">Select</a>
               </div>
             </div>
 
@@ -47,8 +51,8 @@
               <div class="row">
                 <div class="col-md-8">
                   <div class="form-group">
-                    <label class="control-label">Equipment Name</label>
-                    <input class="form-control" type="text" placeholder="Equipment Name">
+                    <label class="control-label">Name</label>
+                    <input class="form-control" type="text" placeholder="Name">
                   </div>
                 </div>
                 <div class="col-md-4">
@@ -137,8 +141,13 @@
                         <!--<p>Help sell your room with a photograph</p>-->
                       <form>
                         <ul class="list-unstyled list-inline list-gallery">
-                          <li>
-                            <img src="/img/letting/equipment/lawn-mower-1.jpg">
+                          <li id="img-removed-2">
+                            <img src="/img/letting/equipment/lawn-mower-1.jpg" onmouseover="$('#img-control-2').toggleClass('hide')">
+                            <div class="actions hide" id="img-control-2">
+                              <a class="btn btn-danger" onclick="$('#img-removed-2').addClass('hide')">
+                                <span class="fa fa-close"></span>
+                              </a>
+                            </div>
                           </li>
                         </ul>
                       </form>
@@ -238,7 +247,7 @@
                              <input id="option1" type="checkbox"  onclick="$('#t-c-3 td').toggleClass('td-disabled'), $('#t-c-3 td.amount .form-group').toggleClass('hide'), $('#t-c-3 td.hire .form-group').toggleClass('hide')">
                                 <label for="donor">
                                  Weekends
-                                 <span>Sat - Sun (Return Monday)</span>
+                                 <span>Sat - Sun</span>
                                 </label>
                              </div>
                           </div>
@@ -285,23 +294,20 @@ You must be over the age of 18 to hire this equipment
                     </textarea>
                   </div>
                   <div class="form-group">
-                    <label class="control-label" for="">
-                    </label>
+                    <label class="control-label" for=""></label>
                     <div class="checkbox checkbox-primary">
-                     <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
-                        <label for="donor">
-                         Terms and Conditions
-                        </label>
-                     </div>
-                  </div>
-                  <div class="form-group hide" id="policy-2">
-                    <textarea class="field form-control"  placeholder="">
-In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.
-                    </textarea>
+                      <input id="donor" value="" type="checkbox">
+                      <label for="donor">
+                       Terms and Conditions Form
+                       <span>This will attach the <a href="">Terms and Conditions Form</a></span>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
-<hr/>
+
+              <hr/>
+
               <div class="row">
                 <div class="col-md-12">
                   <label class="control-label">Booking Details</label>
@@ -381,8 +387,8 @@ In order to hire this equipment you must sign our terms and conditions document.
             <div class="row" >
               <div class="col-md-7">
                 <div class="form-group">
-                  <label class="control-label">Room Name</label>
-                  <input class="form-control" value="Large Hall" type="text" placeholder="Room Name">
+                  <label class="control-label">Name</label>
+                  <input class="form-control" type="text" placeholder="Name">
                 </div>
               </div>
               <div class="col-md-5">
@@ -411,7 +417,7 @@ In order to hire this equipment you must sign our terms and conditions document.
             <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
-                  <label class="control-label">Description</label>
+                  <label class="control-label">Description{% include input-tips.html %}</label>
                   <textarea class="field form-control"  placeholder="" ></textarea>
                 </div>
               </div>
@@ -420,7 +426,7 @@ In order to hire this equipment you must sign our terms and conditions document.
             <div class="row">
               <div class="col-md-4">
                 <div class="form-group">
-                  <label class="control-label">Room Max Capacity</label>
+                  <label class="control-label">Max Capacity</label>
                   <input class="form-control" value="Large Hall" type="number" placeholder="0">
                 </div>
               </div>
@@ -491,11 +497,15 @@ In order to hire this equipment you must sign our terms and conditions document.
                   <!--<p>Help sell your room with a photograph</p>-->
                 <form>
                   <ul class="list-unstyled list-inline list-gallery">
-                    <li>
-                      <img src="/img/letting/equipment/meeting-test.jpg">
+                    <li id="img-removed">
+                      <img src="/img/letting/facilities/meeting-test.jpg" onmouseover="$('#img-control').toggleClass('hide')">
+                      <div class="actions hide" id="img-control">
+                        <a class="btn btn-danger" onclick="$('#img-removed').addClass('hide')">
+                          <span class="fa fa-close"></span>
+                        </a>
+                      </div>
                     </li>
                   </ul>
-
                 </form>
                 <!--<ul class="list-unstyled list-inline list-images">
                   <li>
@@ -522,9 +532,12 @@ In order to hire this equipment you must sign our terms and conditions document.
             <div class="row">
               <div class="col-md-8">
                 <div class="form-group">
-                  <label class="control-label">Letting Address</label>
-                  <input class="form-control" type="text" placeholder="Letting Address">
-
+                  <label class="control-label">Facility Address</label>
+                  <input class="form-control" type="text" placeholder="Address">
+                </div>
+                <div class="form-group">
+                  <label class="control-label">Town</label>
+                  <input class="form-control" type="text" placeholder="Town">
                 </div>
               </div>
               <div class="col-md-4">
@@ -616,7 +629,7 @@ In order to hire this equipment you must sign our terms and conditions document.
                            <input id="option6" type="checkbox"  onclick="$('#t-c-6 td').toggleClass('td-disabled'), $('#t-c-6 td.amount .form-group').toggleClass('hide'), $('#t-c-6 td.hire .form-group').toggleClass('hide')">
                               <label for="donor">
                                Weekends
-                               <span>Sat - Sun (Return Monday)</span>
+                               <span>Sat - Sun</span>
                               </label>
                            </div>
                         </div>
@@ -650,31 +663,26 @@ In order to hire this equipment you must sign our terms and conditions document.
                       <label class="control-label" for="">
                       </label>
                       <div class="checkbox checkbox-danger">
-                       <input id="donor" value="xx" type="checkbox" onclick="$('#policy-1').toggleClass('hide')">
+                       <input id="donor" value="xx" type="checkbox" onclick="$('#policy-7').toggleClass('hide')">
                           <label for="donor">
-                           Age Restriction
+                           Restriction
                           </label>
                        </div>
                     </div>
-                    <div class="form-group hide" id="policy-1">
+                    <div class="form-group hide" id="policy-7">
                       <textarea class="field form-control"  placeholder="">
   You must be over the age of 18 to hire this Facility
                       </textarea>
                     </div>
                     <div class="form-group">
-                      <label class="control-label" for="">
-                      </label>
+                      <label class="control-label" for=""></label>
                       <div class="checkbox checkbox-primary">
-                       <input id="donor" value="xx" type="checkbox" onclick="$('#policy-2').toggleClass('hide')">
-                          <label for="donor">
-                           Terms and Conditions
-                          </label>
-                       </div>
-                    </div>
-                    <div class="form-group hide" id="policy-2">
-                      <textarea class="field form-control"  placeholder="">
-  In order to hire this facility you must sign our terms and conditions document
-                      </textarea>
+                        <input id="donor" value="" type="checkbox">
+                        <label for="donor">
+                         Terms and Conditions Form
+                         <span>This will attach the <a href="">Terms and Conditions Form</a></span>
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
