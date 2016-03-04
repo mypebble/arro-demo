@@ -16552,12 +16552,12 @@ ul.list-status li.terms.active {
 aul.list-status li.terms.active:hover {
   color: #245269 !important;
 }
-ul.list-status li.restriction.active {
-  color: #8a6d3b !important;
-  color: #f7b033 !important;
+ul.list-status li.docs.active {
+  color: #31708f !important;
+  color: #26aae2 !important;
 }
-aul.list-status li.restriction.active:hover {
-  color: #66512c !important;
+aul.list-status li.docs.active:hover {
+  color: #245269 !important;
 }
 ul.list-status li.photo.active {
   color: #3c763d !important;
@@ -17307,6 +17307,15 @@ a.list-facts-three li.rating-hard:hover {
   left: 0;
   right: 0;
   margin-bottom: 0 !important;
+}
+.section-label {
+  line-height: 2em;
+  display: block;
+  text-align: left;
+  font-weight: 700;
+}
+.section-label i {
+  margin-right: 5px;
 }
 /*global type*/
 .btn {
@@ -18867,6 +18876,13 @@ fieldset[disabled] .btn-menu.active {
 .panel-transparent blockquote {
   border-left: none;
 }
+.panel-fixed-height {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+.panel-fixed-height-md {
+  max-height: 500px;
+}
 /*panels*/
 /* TABLES */
 .table {
@@ -19163,8 +19179,28 @@ fieldset[disabled] .btn-menu.active {
   text-overflow: ellipsis;
   width: 100%;
 }
+.table td.document {
+  min-width: 50px;
+  max-width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.table td.document a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.table td.document a i {
+  margin-right: 5px;
+}
 .table .duration {
   width: 130px;
+  text-align: center;
+}
+.table .attached {
+  width: 80px;
   text-align: center;
 }
 .table td.members {

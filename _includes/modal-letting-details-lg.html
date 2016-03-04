@@ -16,8 +16,8 @@
           <li data-original-title="1 photos" class="photo active" data-toggle="tooltip" data-placement="top" title="">
             <i class="fa fa-picture-o"></i>
           </li>
-          <li data-original-title="restriction" class="restriction active" data-toggle="tooltip" data-placement="top" title="">
-            <i class="fa fa-ban"></i>
+          <li data-original-title="docs" class="docs" data-toggle="tooltip" data-placement="top" title="">
+            <i class="fa fa-file-text-o"></i>
           </li>
           <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
             <i class="fa fa-pencil-square-o"></i>
@@ -28,7 +28,7 @@
 
         <div class="row">
           <div class="col-md-5 col-md-offset-1">
-            <label class="control-label">Details</label>
+            <div class="section-label">Details</div>
               <div class="text-collapse">
               <p>The Lawnflite 60RDE offers the perfect compromise between a less productive walk-behind mower and an overly bulky lawn-tractor, so it will cover a larger lawn efficiently, whilst giving you none of the manoeuvrability or storage problems often encountered with more substantial machines.</p>
               <p>Power from its premium-grade single-cylinder Briggs &amp; Stratton four-stroke engine is sent to the drive-wheels via a six-speed Transmatic Shift-on-the-Go transmission, which makes adjusting the ground-speed more intuitive and less time-consuming than with a standard manual drive. The drive wheels are larger than the front wheels for easier turning and improved traction on damp grass.</p>
@@ -44,7 +44,7 @@
               <thead>
                 <tr>
                   <th>Time Available</th>
-                  <th>Price</th>
+                  <th class="amount">Price</th>
                 </tr>
               </thead>
               <tbody>
@@ -53,21 +53,21 @@
                     <strong>Peak</strong>
                     <span>08:00 to 16:00</span>
                   </td>
-                  <td>&pound;5.00 p/h</td>
+                  <td class="amount">&pound;5.00 p/h</td>
                 </tr>
                 <tr class="hire-detail active">
                   <td>
                     <strong>Offpeak</strong>
                     <span>16:00 to 19:00</span>
                   </td>
-                  <td>&pound;6.00 p/h</td>
+                  <td class="amount">&pound;6.00 p/h</td>
                 </tr>
                 <tr class="hire-detail">
                   <td>
                     <strong>Weekends</strong>
                     <span>Sat - Sun (Return Monday)</span>
                   </td>
-                  <td>Not Available</td>
+                  <td class="amount">Not Available</td>
                 </tr>
               </tbody>
             </table>
@@ -83,65 +83,95 @@
 
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <label class="control-label">Restrictions</label>
-             <p>You must be over the age of 18 to hire this equipment</p>
-            <label class="control-label">Terms and Conditions</label>
-            <a href="" class="btn btn-info"><i class="fa fa fa-pencil-square-o"></i> Terms and Conditions Form</a>
-            <!--<div class="text-collapse">
-               <p>In order to hire this equipment you must sign our terms and conditions document. This is in conjunction with our hire policy on all items that are taken out of the school grounds.</p>
-               <p>By signing this declaration you agree to the following;</p>
-               <ol>
-                 <li>Return the item in the condition it was given to you</li>
-                 <li>You will take full responsibility for the item during this hire period and will pay for any damages/loss</li>
-               </ol>
-            </div>-->
-          </div>
+            <!--<div class="section-label">Documents</div>-->
+            <!--  <div class="panel-subnav">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <div class="search">
+                        <input class="form-control" placeholder="Search Documents" type="text">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary col-sm-2">Search</button>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <ul class="list-unstyled list-inline pull-right">
+                    <li>
+                      <a class="btn btn-add" data-toggle="modal" data-target="#myModalLetting-room"><i class="fa fa-plus"></i> Add New</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>-->
+              <div class="panel-fixed-height">
+                <table class="table table-vam">
+                  <thead>
+                    <tr>
+                      <th>File Name</th>
+                      <th class="date date-right">Uploaded</th>
+                      <th class="action">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="name">
+                          <i class="fa fa-file-text-o"></i> Terms and Conditions Form <i class="fa fa-star text-favourite"></i>
+                      </td>
+                      <td class="date date-right">02/04/2015</td>
+                      <td class="action">
+                        <a class="btn btn-info">Download</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
         </div>
 
         <hr/>
         <div class="row">
           <div class="col-md-10 col-md-offset-1">
-            <div class="row">
+            <!--<div class="row">
               <div class="col-md-4">
                 <div class="form-group">
-                  <label class="control-label">Facility Address</label>
+                  <div class="section-label">Facility Address</div>
                   <input class="form-control" placeholder="Address" type="text">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label class="control-label">Town</label>
+                  <div class="section-label">Town</div>
                   <input class="form-control" placeholder="Town" type="text">
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
-                  <label class="control-label">Postcode</label>
+                  <div class="section-label">Postcode</div>
                   <input class="form-control" placeholder="Postcode" type="text">
                 </div>
               </div>
             </div>
-            <hr/>
-            <label class="control-label">Booking Details</label>
+            <hr/>-->
+            <div class="section-label">Booking Details</div>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label class="control-label" for="">Name
-                  </label>
+                  </div>
                   <input class="form-control" placeholder="Name" type="text" value="Office" disabled="">
                 </div>
               </div>
-            </div>
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="control-label">Telephone Number</label>
+                  <div class="section-label">Telephone Number</div>
                   <input class="form-control" placeholder="Telephone Number" type="text" disabled="" value="08453101788">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <label class="control-label">Email Address</label>
+                  <div class="section-label">Email Address</div>
                   <input class="form-control" placeholder="Email Address" type="text" disabled="" value="info@fundraisingschool.org.uk">
                 </div>
               </div>
@@ -155,7 +185,7 @@
             <div class="well">
                 <div class="well-body">
                   <div class="text-collapse">
-                    <label class="control-label">Office Use Only</label>
+                    <div class="section-label">Office Use Only</div>
                      <p>The Annual Service of th Sit on Lawn Mower is June 15th</p>
                   </div>
                 </div>
