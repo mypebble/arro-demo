@@ -809,7 +809,7 @@ $( '.dropdown-menu-checkbox a' ).on( 'click', function( event ) {
 });
 
 var opts = {
-    collapsedHeight: 130,
+    collapsedHeight: 210,
     speed: 120,
     moreLink: '<a href="#">Read more</a>',
     lessLink: '<!--<a href="#">Read Less</a>-->'
