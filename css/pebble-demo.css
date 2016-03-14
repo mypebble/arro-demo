@@ -19408,6 +19408,9 @@ a.table tr.updated > td.field-updated:hover {
   text-overflow: ellipsis;
   max-width: 150px;
 }
+th.actions-lg {
+  width: 200px;
+}
 /*end .table*/
 /* Tables */
 /* ALERTS */
