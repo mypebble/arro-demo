@@ -6637,6 +6637,12 @@ main {
     align-items: center;
     justify-content: center; }
 
+@media (max-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem; } }
 body {
   font-family: "Lato",sans-serif;
   color: #373a3c;
