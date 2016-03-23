@@ -6702,6 +6702,9 @@ h1, h2, h3 {
     color: #818a91;
     font-style: normal; }
 
+.navbar {
+  border-radius: 0px; }
+
 .brand {
   height: 40px;
   width: 150px;
