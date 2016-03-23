@@ -1,0 +1,53 @@
+//Type
+
+body{
+  font-family: "Lato",sans-serif;
+  color:$font-base-color;
+  font-size:$font-size-base;
+}
+
+h1, h2, h3{
+  font-family: 'Lato', Arial, serif; font-weight: 400;
+	font-weight: normal;
+	font-style: normal;
+  font-weight: bold;
+	font-style: normal;
+  margin-bottom: 20px;
+}
+
+
+.list-stats{
+  li{
+    display: inline-block;
+    @extend .text-xs-center;
+    font-size: 1.2rem;
+    span{
+      font-size:80%;
+      text-transform: uppercase;
+      display: block;
+      font-weight: bold;
+      color: $gray-light;
+    }
+    &:first-child{
+      border-right: 1px solid $gray-lighter;
+    }
+    &:last-child{
+      border-left: 1px solid $gray-lighter;
+    }
+  }
+}
+
+
+.awesome-lg{
+  font-size: 5rem;
+}
+
+.donation-amount{
+  @extend .text-xs-center;
+  font-size: 3rem;
+}
+
+
+.project-title{
+  font-size:1.2rem;
+}

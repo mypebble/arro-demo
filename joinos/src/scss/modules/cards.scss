@@ -1,0 +1,14 @@
+.card{
+  &-header{
+    @extend .text-xs-center;
+    font-size: 1.4rem;
+    background: $white;
+    span{
+      margin-top: 10px;
+      font-size: 80%;
+      display:block;
+      color: $gray-light;
+      font-style: normal;
+    }
+  }
+}
