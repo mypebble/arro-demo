@@ -1,7 +1,7 @@
 
 //END FILL IMAGES
 .section{
-  padding:50px 0px;
+  padding:10px 0px;
   .card{
     color:initial;
   }
@@ -9,7 +9,7 @@
     background: $brand-green;
   }
   &-xl{
-    height:100vh;
+    min-height:100vh;
   }
   //BANNER
   &-banner {

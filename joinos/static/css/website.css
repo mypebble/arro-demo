@@ -6626,13 +6626,13 @@ main {
   display: none; }
 
 .section {
-  padding: 50px 0px; }
+  padding: 10px 0px; }
   .section .card {
     color: initial; }
   .section-green {
     background: #22B99B; }
   .section-xl {
-    height: 100vh; }
+    min-height: 100vh; }
   .section-banner {
     align-items: center;
     justify-content: center; }
