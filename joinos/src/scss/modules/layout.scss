@@ -9,10 +9,10 @@ main{
   flex: 1;
   margin-top: 50px;
   &.content{
-    padding-top: 20px;
+    margin-top:0px;
+    height: 100vh;
   }
 }
-
 
 .hide{
   display: none;

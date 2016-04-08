@@ -2,19 +2,34 @@
 //END FILL IMAGES
 .section{
   padding:10px 0px;
+  &-sm{
+    padding:10px;
+    @extend .text-xs-center;
+    margin-bottom: 20px;
+
+  }
+  &-md{
+    padding:40px 0px;
+  }
   .card{
     color:initial;
   }
+
   &-green{
     background: $brand-green;
+    color: $white;
   }
-  &-xl{
-    min-height:100vh;
+  &-blue{
+    background: $brand-blue;
+    color: $white;
   }
-  //BANNER
-  &-banner {
-    align-items: center;
-    justify-content: center;
+  &-orange{
+    background: $brand-orange;
+    color: $white;
+  }
+  &-pink{
+    background: $brand-red;
+    color: $white;
   }
 }
 

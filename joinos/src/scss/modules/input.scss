@@ -13,3 +13,34 @@
      border-radius: 50px;
    }
  }
+
+
+//checkbox
+.checkbox{
+  span{
+    display: block;
+  }
+}
+
+.input-amount{
+  @extend .text-xs-right;
+}
+
+.bs-wizard{
+    .progress{
+      border:none;
+    }
+}
+
+
+label{
+  text-transform: uppercase;
+  color: $gray-light;
+  font-size: 80%;
+  font-weight: bold;
+}
+
+.form-control{
+  border-width: 2px;
+  border-color: $gray-lighter;
+}

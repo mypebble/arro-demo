@@ -1,0 +1,13 @@
+.modal{
+  &-header{
+    border-bottom: none;
+  }
+  &-body{
+    .figure{
+    }
+    .img-thumbnail{
+      width:100%;
+      height:inherit;
+    }
+  }
+}

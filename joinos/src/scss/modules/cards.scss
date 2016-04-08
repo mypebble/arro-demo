@@ -1,14 +1,192 @@
+.card-actions{
+  @extend .text-xs-center;
+}
+
 .card{
+  &-no-border{
+    border:none;
+  }
   &-header{
     @extend .text-xs-center;
-    font-size: 1.4rem;
+    font-size: 90%;
+    font-weight: bold;
+    border-bottom: 0px;
+    text-transform: uppercase;
     background: $white;
-    span{
-      margin-top: 10px;
-      font-size: 80%;
-      display:block;
-      color: $gray-light;
-      font-style: normal;
+    &-gray{
+      background: $gray-lightest;
     }
+  }
+  &-block{
+    img{
+      width:100px;
+      height:100px;
+    }
+  }
+  &-footer{
+    border-top:0px;
+    background: $white;
+    @extend .clearfix;
+
+    &-border{
+      border-top: 1px solid $card-border-color;
+    }
+    .card-header{
+      background: none !important;
+      color:$gray !important;
+      margin-bottom: 10px;
+    }
+
+    .amount{
+      font-weight: bold;
+      font-size: 1.5rem;
+      color:$gray;
+      padding:10px 0px;
+      span{
+        display: block;
+        font-size: 1rem;
+        font-weight: bold;
+        color: $gray;
+        text-transform: uppercase;
+      }
+    }
+    /*.offer{
+      @extend .text-xs-center;
+      .title{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size:1rem;
+      }
+      p{
+        margin-bottom: 0px;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }*/
+  }
+}
+
+@media (min-width:544px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+    column-gap: 1.25rem;
+    .card {
+     display: inline-block;
+     width: 100%
+   }
+ }
+}
+
+.card-project{
+  @extend .text-xs-center;
+  .card-header{
+    color: $white;
+  }
+  .card-block{
+    border-top-right-radius: $card-border-radius;
+    border-top-left-radius: $card-border-radius;
+    border-bottom:1px solid $card-border-color;
+  }
+}
+ .card-donor{
+   .card-block{
+     background: $gray-lightest;
+     border-radius: $card-border-radius;
+     .card-text{
+       font-size:1.2rem;
+       &:before{
+         content:"\201C";
+       }
+       &:after{
+        content:"\201D";
+      }
+     }
+   }
+   .card-title{
+     font-weight: bold;
+     span{
+       display: block;
+       font-weight: normal;
+       color: $gray-light;
+       font-size: 80%;
+     }
+   }
+ }
+.card-offer{
+  @extend .text-xs-center;
+  .card-header{
+    background: $gray-lightest;
+    color: $gray-light;
+  }
+  .card-block{
+    border-bottom:1px solid $card-border-color;
+    background: $gray-lightest;
+  }
+}
+ .card-gift-aid{
+   @extend .text-xs-center;
+   .card-header, .card-block{
+     background: $gray-lightest;
+   }
+ }
+
+.b-r{
+  border-right: 1px solid $card-border-color;
+
+}
+
+
+.card-footer{
+  .stats{
+      .info{
+        @extend .text-xs-center;
+        font-size: 2rem;
+
+      span{
+        font-size: 50%;
+        display: block;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.card-gray{
+  .card-header, .card-title, .card-block, .card-footer{
+    background: $gray-lightest;
+  }
+}
+
+.card-header{
+  .org{
+    margin-top:10px;
+    font-size: 1.2rem;
+    span{
+      font-size: 80%;
+      display: block;
+      font-weight:normal;
+    }
+  }
+}
+
+.card-comms{
+  font-size: 1.5rem;
+  a{
+    color:$gray-light;
+    &:hover{
+      color:$gray-dark;
+    }
+  }
+}
+.card-donate{
+  .card-header, .card-block, .card-footer{
+    background: $purple;
+    color: $white;
   }
 }

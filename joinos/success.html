@@ -1,126 +1,111 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default-success
+---
 
-  <head>
-	<base href="/arro-demo/joinos/" />
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <meta name="description" content="">
+<section>
+  <canvas id="canvas" class="hidden-xs-down"></canvas>
+  <div class="container">
 
-
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="/arro-demo/joinos/static/css/website.css">
-
-</head>
-
-
-  <body>
-
-    <nav class="navbar navbar-light bg-faded ">
-  <div class="text-xs-center">
-    <div class="brand">
-      <span class="sr-only">Joinos</span>
-    </div>
-  </div>
-</nav>
-
-
-          <section class="section section-banner section-xl section-green">
-  <div class="color-overlay color-overlay-gray">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
-                <div class="card">
-
-                  <div class="card-block">
-                    <div class="text-xs-center">
-                      <span class="awesome awesome-check-circle awesome-lg text-success"></span>
-                      <h1 class="">Thank You!</h1>
-                      <p>Your donations have been sent to the school.</p>
-                    </div>
-
-
-
-
-
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <a class="card">
-                          <div class="card-block">
-                            <img>
-                            <div class="project-title">The Exploration Deck</div>
-                            <p></p>
-
-                            <progress class="progress" value="50" max="100">50%</progress>
-
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-
-                    <hr/>
-
-                    <!--<ul class="row list-stats">
-                      <li class="col-sm-4">15
-                        <span>Donors</span>
-                      </li>
-                      <li class="col-sm-4">&pound;150.00
-                        <span>Currrent</span>
-                      </li>
-                      <li class="col-sm-4">&pound;500.00
-                        <span>Target</span>
-                      </li>
-                    </ul>
-                  -->
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="text-xs-center" style="margin-bottom:10px;">
-                          <h3>Create Account</h3>
-                          <p class="card-text">Create an Account to manage future donations</p>
-                        </div>
-                        <a id="btn-create" class="btn btn-primary btn-lg btn-block" onclick="$('#setup-password').removeClass('hide'), $('#btn-create').addClass('hide')">
-                          Create Account
-                        </a>
-                        <form id="setup-password" class="hide">
-                          <fieldset class="form-group">
-                            <label>Password</label>
-                            <input type="password" class="form-control" placeholder="Create Password">
-                          </fieldset>
-                          <fieldset class="form-group">
-                            <label>Repeat Password</label>
-                            <input type="password" class="form-control" placeholder="Repeat Password">
-                          </fieldset>
-
-                          <a class="btn btn-primary btn-lg btn-block">Create Account</a>
-                        </form>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="card-footer">
-                    <a class="btn btn-link btn-block" href="">
-                      skip
-                    </a>
-                  </div>
-                </div>
-
-
-           </div>
-         </div>
+    <!--
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-xs-center">
+        <h1>Thank you Adam!</h1>
+        <p class="lead">you have made a difference to <strong>Pebble School</strong></p>
       </div>
     </div>
-  </section>
+  -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-lg-6 col-lg-offset-3 col-md-10 col-md-offset-1">
+        <!--div class="card card-project">
+          <div class="card-footer">
+            <div class="offer">
+              <div class="title">
+                The Exploration Deck
+              </div>
+              <p>Learning outside made fun</p>
+            </div>
+
+            <div class="amount">
+              <span>New Total</span>
+              &pound;160.00
+            </div>
+            <div id="slider-animate-true"></div>
+          </div>
+
+        </div>
+      -->
 
 
+        <div class="card">
+          <div class="card-block">
+            <div class="text-xs-center">
+              <h1>Thank you Adam!</h1>
+              <p class="lead">you have made a difference to <strong>Pebble School</strong></p>
+            </div>
+          </div>
 
-    <footer class="">
+          <!--<div class="card card-project">
+            <div class="card-footer">
+              <div class="amount">
+                <span>New Total</span>
+                &pound;160.00
+              </div>
+              <div id="slider-animate-true"></div>
+            </div>
 
-</footer>
-<script src="/arro-demo/joinos/static/js/jquery.min.js"></script>
-<script src="/arro-demo/joinos/static/js/bootstrap.min.js"></script>
+          </div>
+        -->
+          <!--<div class="card-header">Leave a Comment</div>-->
+          <div class="card-block" id="comment-input">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1">
+                <fieldset class="form-group">
+                  <label for="exampleTextarea">Leave a Comment</label>
+                  <input class="form-control" placeholder="Comment" id="exampleTextarea">
+                </fieldset>
+                <div class="card-actions">
+                  <a class="btn btn-primary btn-lg"onclick="$('.card-comment').addClass('hide'), $('#comment-success').removeClass('hide'), $('#comment-input').addClass('hide')">Submit</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-    </body>
+          <div class="card-block hide" id="comment-success">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1">
+                <div class="alert alert-success text-xs-center">
+                  <strong>Thank you for your comment</strong>
+                </div>
+              </div>
+            </div>
+          </div>
 
-</html>
+        </div>
+
+
+        <div class="card">
+          <div class="card-block">
+            <div class="text-xs-center">
+              <h3>Help Share Our Project!</h3>
+              <p class="lead">Did you know that social media can <strong>triple</strong> our exposure, leading to increased donations?</p>
+              <p class="text-xs-left hide">Help get our project seen by more people and share on your social media channels!</p>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-sm-6">
+                <a class="btn btn-twitter btn-block"><!--<i class="awesome awesome-twitter"></i> -->Share on Twitter</a>
+              </div>
+              <div class="col-sm-6">
+                <a class="btn btn-facebook btn-block"><!--<i class="awesome awesome-facebook"></i> -->Share on Facebook</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<script src="{{ site.baseurl }}/static/js/confetti.js"></script>

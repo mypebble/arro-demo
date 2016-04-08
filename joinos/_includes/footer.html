@@ -1,0 +1,124 @@
+<footer>
+  <div class="container">
+    <div class="row footer-links">
+      <div class="col-sm-4">
+        <div class="title">Top Articles</div>
+        <ul class="list-unstyled">
+          <li>
+            <a>Why Donate to your Community?</a>
+          </li>
+          <li>
+            <a>What Projects Can I Raise Money For?</a>
+          </li>
+          <li>
+            <a>Past Projects</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <div class="title">Contact</div>
+        <ul class="list-unstyled">
+          <li>
+            <a>Support: support@joinos.com</a>
+          </li>
+          <li>
+            <a>Sales: info@joinos.com</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <div class="title">Social</div>
+        <ul class="list-unstyled">
+          <li>
+            <a>
+              <!--<i class="awesome awesome-facebook"></i>--> Facebook
+            </a>
+          </li>
+          <li>
+            <a>
+              <!--<i class="awesome awesome-twitter"></i>--> Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="text-xs-center">
+          &copy; Joinos. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="{{ site.baseurl }}/static/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/static/js/bootstrap.min.js"></script>
+
+<script src="{{ site.baseurl }}/static/js/nouislider.min.js"></script>
+
+{% include modal-img-1.html %}
+{% include donation-modal.html %}
+
+
+
+<script>
+var connectSlider = document.getElementById('slider-connect');
+
+noUiSlider.create(connectSlider, {
+	start: 10,
+	connect: 'lower',
+  step: 1,
+
+	range: {
+	  'min': 1,
+	  'max': 100
+	}
+});
+
+var stop = false;
+
+connectSlider.noUiSlider.on('update', function( values, handle ){
+  if(!stop){
+   $(".slider-input").val(values[handle]);
+  }
+});
+
+$(".slider-input").on("keyup update", function(){
+  stop = true;
+  connectSlider.noUiSlider.set($(this).val());
+  stop = false;
+
+  $(".donation-value").text($(this).val());
+  var money = Math.ceil($(this).val()*1.05*100)/100 + "";
+  if(money.substr(money.indexOf(".")+1).length == 1){
+    money = money + "0";
+  }
+  if(money.indexOf(".") == -1){
+    money = money + ".00";
+  }
+  $(".charges-value").text(money);
+}).trigger("update");
+
+</script>
+
+
+
+<script>
+var trueSlider = document.getElementById('slider-animate-true');
+
+noUiSlider.create(trueSlider, {
+animate: true,
+connect: 'lower',
+start: 0,
+range: {
+  min: 0,
+  max: 100
+}
+});
+setTimeout(function(){
+  trueSlider.noUiSlider.set(60);
+  trueSlider.setAttribute('disabled', true);
+}, 2000);
+
+</script>

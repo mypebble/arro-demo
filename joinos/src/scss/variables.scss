@@ -27,14 +27,16 @@ $gray-lightest:             #F7F7F7;
 
 $brand-blue:                #26aae2;
 $brand-green:               #22B99B;
-$brand-red:                 #e13053;
-$brand-orange:              #f7b033;
+$brand-red:                 #e75d78;
+$brand-orange:              #e2875f;
 
 $brand-blue-dark:           #105978;
 
 $brand-gold:                #D4AF37;
 $brand-silver:              #C0C0C0;
 $brand-bronze:              #CD7F32;
+
+$purple:                    #9c729c;
 
 // Colors
 //
@@ -301,9 +303,9 @@ $btn-padding-x-lg:               1.25rem !default;
 $btn-padding-y-lg:               .75rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:              $border-radius !default;
-$btn-border-radius-lg:           $border-radius-lg !default;
-$btn-border-radius-sm:           $border-radius-sm !default;
+$btn-border-radius:              3rem !default;
+$btn-border-radius-lg:           2rem !default;
+$btn-border-radius-sm:           2rem !default;
 
 
 // Forms
