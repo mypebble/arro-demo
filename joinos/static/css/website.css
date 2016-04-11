@@ -7024,6 +7024,13 @@ label {
   border-width: 2px;
   border-color: #eceeef; }
 
+.has-disabled .form-control[disabled] {
+  background: #F7F7F7;
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+  padding: 5px 0px; }
+
 .card-no-border {
   border: none; }
 .card-header {
