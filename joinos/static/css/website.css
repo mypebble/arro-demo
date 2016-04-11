@@ -6854,15 +6854,13 @@ input[type="radio"] .styled:checked + label::after {
 body {
   display: flex;
   min-height: 100vh;
-  overflow: scroll;
   flex-direction: column; }
 
 main {
   flex: 1;
   margin-top: 50px; }
   main.content {
-    margin-top: 0px;
-    height: 100vh; }
+    margin-top: 0px; }
 
 .hide {
   display: none; }
