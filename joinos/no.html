@@ -570,18 +570,23 @@ noUiSlider.create(connectSlider, {
 	}
 });
 
-var stop = false;
+var stop = false,
+  updateBox = false;
 
 connectSlider.noUiSlider.on('update', function( values, handle ){
   if(!stop){
-   $(".slider-input").val(values[handle]);
+   updateBox = true;
+   $(".slider-input").val(values[handle]).trigger("update");
+   updateBox = false;
   }
 });
 
 $(".slider-input").on("keyup update", function(){
-  stop = true;
-  connectSlider.noUiSlider.set($(this).val());
-  stop = false;
+  if(!updateBox){
+    stop = true;
+    connectSlider.noUiSlider.set($(this).val());
+    stop = false;
+  }
 
   $(".donation-value").text($(this).val());
   var money = Math.ceil($(this).val()*1.05*100)/100 + "";
