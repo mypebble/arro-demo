@@ -7659,10 +7659,12 @@ footer {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  height: 100vh; }
   .page-success .overlay {
     background: rgba(212, 175, 55, 0.2);
-    padding: 50px 0px; }
+    padding: 50px 0px;
+    height: 100vh; }
 
 .row-or {
   margin-top: 10px;
