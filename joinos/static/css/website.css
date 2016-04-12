@@ -7242,7 +7242,8 @@ footer {
   background-repeat: no-repeat; }
   .page-green .page-banner .overlay {
     background: rgba(34, 185, 155, 0.9);
-    padding: 20px 0px; }
+    padding: 20px 0px;
+    height: 100%; }
   .page-green .page-banner h1, .page-green .page-banner .lead {
     color: #ffffff; }
 .page-green .section-banner, .page-green .section-title {
@@ -7324,7 +7325,8 @@ footer {
   background-repeat: no-repeat; }
   .page-blue .page-banner .overlay {
     background: rgba(38, 170, 226, 0.9);
-    padding: 20px 0px; }
+    padding: 20px 0px;
+    height: 100%; }
   .page-blue .page-banner h1, .page-blue .page-banner .lead {
     color: #ffffff; }
 .page-blue .section-banner, .page-blue .section-title {
@@ -7406,7 +7408,8 @@ footer {
   background-repeat: no-repeat; }
   .page-orange .page-banner .overlay {
     background: rgba(226, 135, 95, 0.9);
-    padding: 20px 0px; }
+    padding: 20px 0px;
+    height: 100%; }
   .page-orange .page-banner h1, .page-orange .page-banner .lead {
     color: #ffffff; }
 .page-orange .section-banner, .page-orange .section-title {
@@ -7488,7 +7491,8 @@ footer {
   background-repeat: no-repeat; }
   .page-pink .page-banner .overlay {
     background: rgba(231, 93, 120, 0.9);
-    padding: 20px 0px; }
+    padding: 20px 0px;
+    height: 100%; }
   .page-pink .page-banner h1, .page-pink .page-banner .lead {
     color: #ffffff; }
 .page-pink .section-banner, .page-pink .section-title {
