@@ -17,8 +17,6 @@
   @include button-outline-variant($gray-dark);
 }
 
-
-
 .btn-facebook {
   @include button-variant($white, $social-facebook, $social-facebook);
 }

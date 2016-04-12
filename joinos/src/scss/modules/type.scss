@@ -47,13 +47,7 @@ h1, h2, h3{
   width:100px;
   height:100px;
 }
-
-
-.img-lg{
-  margin-bottom: 20px;
-}
-
-
+/*
 .list-gallery{
   li {
     display:inline;
@@ -61,10 +55,6 @@ h1, h2, h3{
     .img-thumbnail{
       width:100%;
       height:inherit;
-      /*cursor: pointer;
-      &:hover{
-        border:2px solid $brand-info;
-      }*/
     }
     .figure-caption{
       padding: 0px 5px;
@@ -74,48 +64,9 @@ h1, h2, h3{
       text-overflow: ellipsis;
       margin-bottom:10px;
     }
-
-
   }
 }
-
-.ribbon{
-  background:$gray-dark;
-  padding:15px 10px;
-  color: $brand-gold;
-  text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
-  position: absolute;
-  font-size:2rem;
-  right:20px;
-  top:-10px;
-  &:before{
-    content: "";
-    position: absolute;
-    top:0px;
-    left:-10px;
-    border-top: 10px solid transparent;
-  	border-right:10px solid black;
-  }
-  span{
-    &:before{
-      content: "";
-      position: absolute;
-      bottom:-20px;
-      left:0px;
-      border-bottom: 25px solid transparent;
-      border-left:27px solid $gray-dark;
-    }
-    &:after{
-      content: "";
-      position: absolute;
-      bottom:-20px;
-      right:0px;
-      border-bottom: 25px solid transparent;
-      border-right:27px solid $gray-dark;
-    }
-  }
-}
-
+*/
 
 .target{
   padding:20px 0px 10px 0px;
@@ -136,6 +87,13 @@ h1, h2, h3{
     font-size:1rem;
   }
 }
+
+
+//Image
+.img-lg{
+  margin-bottom: 20px;
+}
+
 .img-fill{
   width:100% !important;
   height:inherit  !important;

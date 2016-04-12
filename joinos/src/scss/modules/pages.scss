@@ -1,14 +1,12 @@
 // Page mixin
 @mixin page-bg-color($background, $text-color) {
   .page-banner{
-    //background:$brand-green;
     background: url('../images/project1-2.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-
     .overlay{
       background: rgba($background, .9 );
       padding:20px 0px;
@@ -16,10 +14,7 @@
     h1, .lead{
       color: $white;
     }
-    //margin-bottom:20px;
   }
-
-
   .section-banner, .section-title{
     background:$background;
     color:$text-color;
@@ -65,7 +60,6 @@
 }
 
 .page-success{
-  //background:$brand-green;
   background: url('../images/balloon.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -73,13 +67,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
-
   .overlay{
     background: rgba($brand-gold, .2 );
     padding:50px 0px;
   }
 }
-
 
 .row-or{
   margin-top:10px;

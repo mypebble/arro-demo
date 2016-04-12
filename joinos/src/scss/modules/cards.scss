@@ -1,8 +1,9 @@
-.card-actions{
-  @extend .text-xs-center;
-}
-
 .card{
+  &-gray{
+    .card-header, .card-title, .card-block, .card-footer{
+    background: $gray-lightest;
+    }
+  }
   &-no-border{
     border:none;
   }
@@ -16,11 +17,14 @@
     &-gray{
       background: $gray-lightest;
     }
-  }
-  &-block{
-    img{
-      width:100px;
-      height:100px;
+    .org{
+      margin-top:10px;
+      font-size: 1.2rem;
+      span{
+        font-size: 80%;
+        display: block;
+        font-weight:normal;
+      }
     }
   }
   &-footer{
@@ -36,7 +40,6 @@
       color:$gray !important;
       margin-bottom: 10px;
     }
-
     .amount{
       font-weight: bold;
       font-size: 1.5rem;
@@ -50,22 +53,93 @@
         text-transform: uppercase;
       }
     }
-    /*.offer{
-      @extend .text-xs-center;
-      .title{
-        font-weight: bold;
-        text-transform: uppercase;
-        font-size:1rem;
+    .stats{
+        .info{
+          @extend .text-xs-center;
+          font-size: 2rem;
+
+        span{
+          font-size: 50%;
+          display: block;
+          text-transform: uppercase;
+        }
       }
-      p{
-        margin-bottom: 0px;
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-    }*/
+    }
   }
+  &-actions{
+    @extend .text-xs-center;
+  }
+  &-project{
+    @extend .text-xs-center;
+    .card-header{
+      color: $white;
+    }
+    .card-block{
+      border-top-right-radius: $card-border-radius;
+      border-top-left-radius: $card-border-radius;
+      border-bottom:1px solid $card-border-color;
+    }
+  }
+  &-donate{
+    .card-header, .card-block, .card-footer{
+      background: $purple;
+      color: $white;
+    }
+  }
+  &-donor{
+    .card-block{
+      background: $gray-lightest;
+      border-radius: $card-border-radius;
+      .card-text{
+        font-size:1.2rem;
+        &:before{
+          content:"\201C";
+        }
+        &:after{
+         content:"\201D";
+       }
+      }
+    }
+    .card-title{
+      font-weight: bold;
+      span{
+        display: block;
+        font-weight: normal;
+        color: $gray-light;
+        font-size: 80%;
+      }
+    }
+  }
+  &-gift-aid{
+    @extend .text-xs-center;
+    .card-header, .card-block{
+      background: $gray-lightest;
+    }
+  }
+  &-offer{
+    @extend .text-xs-center;
+    .card-header{
+      background: $gray-lightest;
+      color: $gray-light;
+    }
+    .card-block{
+      border-bottom:1px solid $card-border-color;
+      background: $gray-lightest;
+    }
+  }
+  &-comms{
+    font-size: 1.5rem;
+    a{
+      color:$gray-light;
+      &:hover{
+        color:$gray-dark;
+      }
+    }
+  }
+}
+
+.b-r{
+  border-right: 1px solid $card-border-color;
 }
 
 @media (min-width:544px) {
@@ -81,112 +155,4 @@
      width: 100%
    }
  }
-}
-
-.card-project{
-  @extend .text-xs-center;
-  .card-header{
-    color: $white;
-  }
-  .card-block{
-    border-top-right-radius: $card-border-radius;
-    border-top-left-radius: $card-border-radius;
-    border-bottom:1px solid $card-border-color;
-  }
-}
- .card-donor{
-   .card-block{
-     background: $gray-lightest;
-     border-radius: $card-border-radius;
-     .card-text{
-       font-size:1.2rem;
-       &:before{
-         content:"\201C";
-       }
-       &:after{
-        content:"\201D";
-      }
-     }
-   }
-   .card-title{
-     font-weight: bold;
-     span{
-       display: block;
-       font-weight: normal;
-       color: $gray-light;
-       font-size: 80%;
-     }
-   }
- }
-.card-offer{
-  @extend .text-xs-center;
-  .card-header{
-    background: $gray-lightest;
-    color: $gray-light;
-  }
-  .card-block{
-    border-bottom:1px solid $card-border-color;
-    background: $gray-lightest;
-  }
-}
- .card-gift-aid{
-   @extend .text-xs-center;
-   .card-header, .card-block{
-     background: $gray-lightest;
-   }
- }
-
-.b-r{
-  border-right: 1px solid $card-border-color;
-
-}
-
-
-.card-footer{
-  .stats{
-      .info{
-        @extend .text-xs-center;
-        font-size: 2rem;
-
-      span{
-        font-size: 50%;
-        display: block;
-        text-transform: uppercase;
-      }
-    }
-  }
-}
-
-.card-gray{
-  .card-header, .card-title, .card-block, .card-footer{
-    background: $gray-lightest;
-  }
-}
-
-.card-header{
-  .org{
-    margin-top:10px;
-    font-size: 1.2rem;
-    span{
-      font-size: 80%;
-      display: block;
-      font-weight:normal;
-    }
-  }
-}
-
-.card-comms{
-  font-size: 1.5rem;
-  a{
-    color:$gray-light;
-    &:hover{
-      color:$gray-dark;
-    }
-  }
-}
-.card-donate{
-  .card-header, .card-block, .card-footer{
-    background: $purple;
-    color: $white;
-  }
 }
