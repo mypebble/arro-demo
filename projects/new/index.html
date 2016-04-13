@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Projects New</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -259,185 +259,264 @@
       <div id="content-container">
           <div id="page-content">
 
-          <div class="jumbotron hide" id="jumbo">
-  <div class="row">
-    <div class="col-lg-7 col-md-6 ">
-    </div>
-    <div class="col-lg-5 col-md-6 ">
-      <div class="panel">
-          <div class="panel-title">Getting started
-        </div>
+          <!--<div class="row">
+
+  <div class="col-lg-12 col-md-12 page-title">
+    <h1 class="page-header">Create Project
+      <span class="block">Starting your project journey the most efficient way</span>
+    </h1>
+
+
+    <ul class="list-unstyled menu-list list-inline">
+      <li class="helper">
+        <a onclick="$('.helper-toggle').toggleClass('hide')">
+         <i class="glyphicon glyphicon-question-sign"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<!--
+<div class="alert alert-success alert-fixed alert-sidebar" id="alert-download">
+  <a href="" class="close">
+    &times;
+  </a>
+  <div class="details">
+    <h4>Autosave</h4>
+    <p>09:32AM</p>
+  </div>
+</div>-->
+
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <a href="/projects/" class="btn btn-primary btn-r">
+      <i class="glyphicon glyphicon-chevron-left"></i> Back to Projects</a>
+
+      <!--<div class="pull-right">
+        <a class="btn btn-default" onclick="$('#copy').toggleClass('col-lg-8 col-md-8'), $('#comments').toggleClass('hide')">Comments</a>
+        <a class="btn btn-default" data-toggle="modal" data-target="#myModalTeam" class="btn btn-info">
+  <i class="fa fa-share-alt"></i> Share with Colleague
+</a>
+
+      </div>-->
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel">
+      <div class="panel-title">Project Details</div>
         <div class="panel-body">
-          <h3>Projects</h3>
-          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
-          <br>
-          <div class="staff-comment">
-            Daniel Wakenshaw
-            <small class="block">Pebble Support Team</small>
-          </div>
+           <div class="col-md-9">
+             <h2>The Exploration Deck  </h2>
+             <span class="block">Project Completion Date - 05/06/2016</span>
+
+             <!--<small class="block">01/01/2015 - 05/06/2016</small>-->
+             <p>Our project is the creation of an Exploration Deck for the children that surround our school. The Exploration Deck will be used by teachers, care providers and parents to facilitate investigation and reflective time for children who suffer from autism and behavioural issues. It will provide stimulation to all types of learners allowing for differentiation and encouragement of personalised learning treating each child as an individual.</p>
+           </div>
+           <div class="col-md-3 panel-side-l">
+               <div class="text-right">
+                   <h2>£15,000.00</h2>
+                   <p>Funding Target</p>
+               </div>
+           </div>
         </div>
         <div class="panel-footer">
           <div class="pull-right">
-            <a class="btn btn-default" ><i class="fa fa-book"></i> Project Library</a>
+            <!--<a class="btn btn-default" data-toggle="modal" data-target="#myModalTeam" class="btn btn-info">
+  <i class="fa fa-share-alt"></i> Share with Colleague
+</a>
+-->
+            <a class="btn btn-edit" data-toggle="modal" data-target="#myModal-record">
+              <i class="fa fa-pencil"></i> Edit
+            </a>
           </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <ul class="list-unstyled list-inline">
-          <li></li>
-          <li><a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a></li>
-        </ul>
-      </div>
     </div>
   </div>
 </div>
 
 
 <div class="row">
-  <div class="col-lg-12 col-md-12">
-    <div class="panel panel-context-projects">
-      <div class="panel-title">
-        Projects
+  <div id="copy" class="col-lg-12 col-md-12">
+    <div class="panel">
+      <div class="panel-title">Project Narrative</div>
+      <div class="panel-body">
+        <div class="project_need-hook">
+          <div class="form-group">
+            <label for="id_project_need" class="control-label">
+              Why Do You Need Your Project?
+              <a class="pull-right font-normal" onclick="$('#hint').removeClass('hide')">
+                <i class="fa fa-lightbulb-o"></i> Hints &amp; Tips
+              </a>
+              <div class="alert alert-info m-t-sm hide" id="hint">
+                <strong class="block">Hints &amp; Tips</strong>
+                <p>
+                  Maecenas sed diam eget risus varius blandit sit amet non magna:
+                </p>
+                <ol>
+                  <li>What is it you want to achieve?</li>
+                  <li>
+                    Maecenas sed diam eget risus varius blandit sit amet non magna.
+                  </li>
+                </ol>
+                <a class="btn btn-info pull-right" onclick="$('#hint').addClass('hide')">Got it
+                </a>
+              </div>
+            </label>
+            <textarea class="field form-control"  placeholder="" id="id_project_need"></textarea>
+            <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="impact-hook">
+          <div class="form-group">
+            <label for="id_impact" class="control-label">
+              What Impact Will Your Project Have?
+              <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+            </label>
+            <textarea class="field form-control"  placeholder="" id="id_impact"></textarea>
+            <!--
+<span class="help-block">
+  Strength: <span class="text-gray">Average <i class="fa fa-meh-o"></i></span>
+</span>
+-->
+
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="evidence-hook">
+          <div class="form-group">
+            <label for="id_evidence" class="control-label">
+              What Supporting Evidence Do You Have?
+              <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+            </label>
+            <textarea class="field form-control"  placeholder="" id="id_evidence"></textarea>
+            <!--
+<span class="help-block">
+  Strength: <span class="text-danger">Poor <i class="fa fa-frown-o"></i></span>
+</span>
+-->
+
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="school_improvement-hook">
+          <div class="form-group">
+            <label for="id_school_improvement" class="control-label">
+              How Does Your Project Link To Your School Vision and Goals?
+              <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+            </label>
+            <textarea class="field form-control"  placeholder="" id="id_school_improvement"></textarea>
+            <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="project_plan-hook">
+          <div class="form-group">
+            <label for="id_project_plan" class="control-label">
+              How Do You Plan to Deliver, Monitor and Evaluate Your Project?
+              <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+            </label>
+            <textarea class="field form-control"  placeholder="" id="id_project_plan"></textarea>
+            <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+            <div class="error"></div>
+          </div>
+        </div>
+
+        <div class="success_measure-hook">
+          <div class="form-group">
+            <label for="id_success_measure" class="control-label">
+              How Will You Measure and Report Success?
+              <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+            </label>
+            <textarea class="field form-control"  placeholder="" id="id_success_measure"></textarea>
+            <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+            <div class="error"></div>
+          </div>
+        </div>
       </div>
-      <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-12">
-            <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
-                <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>-->
-              <!--<li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-              </li>-->
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalLibrary"><i class="fa fa-book"></i> Project Library</a>
-              </li>
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalPot">
-                  <i class="fa fa-bank"></i> General Pot
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalProjectNew">
-                  <i class="fa fa-plus"></i>Add New
-                </a>
-              </li>
-            </ul>
+      <div class="panel-footer">
+        <div class="pull-left">
+          <a data-dismiss="modal"  class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
+        </div>
+        <div class="pull-right">
+          <a href="/projects/" class="btn btn-add">Create Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-4 hide" id="comments">
+    <div class="panel">
+      <div class="panel-title">Comments</div>
+    </div>
+    <!--<div class="panel">
+      <div class="panel-body">
+        <div class="body-title">
+          <div class="title">Need Help?
+            <span class="block">Invite colleagues to help with this project</span>
+          </div>
+          <div class="actions-row">
+            <a data-toggle="modal" data-target="#myModalTeam" class="btn btn-info">Create Team
+            </a>
           </div>
         </div>
       </div>
 
-
-
-
-      <div class="panel-body">
-
-        <div class="">
-          <table class="table table-vam table-hover table-bordered">
-            <thead>
-              <tr>
-                <th class="title">Active Projects <span>(2)</span></th>
-                <th class="value-progress">Funding Target</th>
-                <th class="date date-center">Completion Date</th>
-                <!--<th class="date date-lg date-right">Last Activity</th>-->
-                <!--<th class="rating">Project Strength</th>-->
-                <th class="comment">Comments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="title link">
-                  <a href="/projects/details/">
-                    <span class="initials icon-project">ED</span>
-                    The Exploration Deck
-                    <!--<span class="label label-info">1</span>-->
-                  </a>
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £15,000.00
-                </td>
-
-                <td class="date">
-                  15/06/2016
-                </td>
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-poor">
-                  30%
-                </td>-->
-                <td class="comment unread">
-                  <i class="fa fa-comment fa-lg"></i> 1
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a>
-                    <span class="initials icon-project">TC</span>
-                    Tennis Courts
-                  </a>
-
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £5,000.00
-                </td>
-
-                <td class="date date-center">
-                  Ongoing
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-good">
-                  90%
-                </td>-->
-                <td class="comment">
-                  <i class="fa fa-comment fa-lg text-muted"></i>
-                </td>
-                <!--<td class="text-success">
-
-                  Approved
-                </td>-->
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="panel-body">
-        <table class="table table-vam table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Inactive Projects <span>(1)</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="title link">
-                <a href="">
-                  <span class="initials icon-draft">RD</span>
-                  Reading Dog
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </div>-->
   </div>
+
+</div>
+
+
+
+
+
+
+
+
+
 </div>
 
 

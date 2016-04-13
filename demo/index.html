@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Dashboard</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,8 +13,8 @@
 </head>
 
 
-  <body class="page-context-projects">
-  		<div id="container" class="effect  mainnav-lg">
+  <body class="page-context-dashboard">
+  		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
   <div id="navbar-container">
@@ -159,7 +159,7 @@
             </li>
             <li class="list-divider"></li>
             <li class="list-header">System</li>
-            <li class="nav-projects active-page">
+            <li class="nav-projects ">
               <a href="/projects/">
                 <i class="fa fa-sitemap"></i>
                 <span class="menu-title">
@@ -259,183 +259,38 @@
       <div id="content-container">
           <div id="page-content">
 
-          <div class="jumbotron hide" id="jumbo">
-  <div class="row">
-    <div class="col-lg-7 col-md-6 ">
-    </div>
-    <div class="col-lg-5 col-md-6 ">
-      <div class="panel">
-          <div class="panel-title">Getting started
-        </div>
-        <div class="panel-body">
-          <h3>Projects</h3>
-          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
-          <br>
-          <div class="staff-comment">
-            Daniel Wakenshaw
-            <small class="block">Pebble Support Team</small>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <div class="pull-right">
-            <a class="btn btn-default" ><i class="fa fa-book"></i> Project Library</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <ul class="list-unstyled list-inline">
-          <li></li>
-          <li><a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-lg-12 col-md-12">
-    <div class="panel panel-context-projects">
-      <div class="panel-title">
-        Projects
-      </div>
-      <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-12">
-            <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
-                <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>-->
-              <!--<li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-              </li>-->
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalLibrary"><i class="fa fa-book"></i> Project Library</a>
-              </li>
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalPot">
-                  <i class="fa fa-bank"></i> General Pot
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalProjectNew">
-                  <i class="fa fa-plus"></i>Add New
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+          <!--
+Dashboard items
+<ul>
+  <li>Recommended Grants</li>
+  <li>Have you received your claim from HMRC</li>
+  <li>Social links</li>
+</ul>-->
 
 
 
-
+<div class="row  m-t-lg">
+  <div class="col-lg-4 col-md-4 col-lg-offset-4 col-md-offset-4">
+    <div class="panel">
       <div class="panel-body">
 
-        <div class="">
-          <table class="table table-vam table-hover table-bordered">
-            <thead>
-              <tr>
-                <th class="title">Active Projects <span>(2)</span></th>
-                <th class="value-progress">Funding Target</th>
-                <th class="date date-center">Completion Date</th>
-                <!--<th class="date date-lg date-right">Last Activity</th>-->
-                <!--<th class="rating">Project Strength</th>-->
-                <th class="comment">Comments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="title link">
-                  <a href="/projects/details/">
-                    <span class="initials icon-project">ED</span>
-                    The Exploration Deck
-                    <!--<span class="label label-info">1</span>-->
-                  </a>
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £15,000.00
-                </td>
 
-                <td class="date">
-                  15/06/2016
-                </td>
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-poor">
-                  30%
-                </td>-->
-                <td class="comment unread">
-                  <i class="fa fa-comment fa-lg"></i> 1
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a>
-                    <span class="initials icon-project">TC</span>
-                    Tennis Courts
-                  </a>
-
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £5,000.00
-                </td>
-
-                <td class="date date-center">
-                  Ongoing
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-good">
-                  90%
-                </td>-->
-                <td class="comment">
-                  <i class="fa fa-comment fa-lg text-muted"></i>
-                </td>
-                <!--<td class="text-success">
-
-                  Approved
-                </td>-->
-              </tr>
-            </tbody>
-          </table>
+        <div class="body-title">
+          <div class="title">Welcome Back
+            <span class="block">Tam</span>
+          </div>
+        </div>
+        <div class="text-center m-t-md">
+          <img src="/img/grants-icons/icon-free.png" width="100px">
         </div>
       </div>
-      <div class="panel-body">
-        <table class="table table-vam table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Inactive Projects <span>(1)</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="title link">
-                <a href="">
-                  <span class="initials icon-draft">RD</span>
-                  Reading Dog
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="actions-row">
+        <a class="btn btn-primary" href="/projects/">
+          Continue
+        </a>
+
       </div>
+
     </div>
   </div>
 </div>

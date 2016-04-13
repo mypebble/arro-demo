@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Support Admin</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,8 +13,8 @@
 </head>
 
 
-  <body class="page-context-projects">
-  		<div id="container" class="effect  mainnav-lg">
+  <body class="page-context-dashboard">
+  		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
   <div id="navbar-container">
@@ -22,31 +22,25 @@
       <a href="index.html" class="navbar-brand">
       </a>
     </div>
-    <div class="navbar-content clearfix ">
+    <div class="navbar-content clearfix">
       <div class="col-lg-12">
-        <div class="navbar-left menu-button hidden-sm">
+        <div class="navbar-left menu-button">
           <a href="" class="mainnav-toggle">
             <i class="fa fa-navicon fa-lg"></i>
           </a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-          <!--<li>
-            <a class="btn btn-notification" data-toggle="modal" data-target="#myModal-commuinty-activate">
-              Joinos Community
-              <span class="label labe-add">NEW</span>
-            </a>
-          </li>-->
-          <li class="dropdown user_name">
-            <a href="#" class="dropdown-toggle "
-               data-toggle="dropdown" role="button"
-               aria-haspopup="true" aria-expanded="false">
-                 <i class="fa fa-user"></i> Adam Hogg
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="/profile/home/"><i class="fa fa-user"></i> My Profile</a></li>
-              <li><a href="/logout/"><i class=" fa fa-power-off"></i>Logout</a></li>
-            </ul>
+
+
+
+        <!--
+        <div class="navbar-title">
+          <div class="title"><span>
+            - </span></div>
+
+        </div>-->
+        <ul class="navbar-right list-unstyled list-inline pull-right">
+          <li class="user_name">
+            Pebble Support Admin
           </li>
         </ul>
 
@@ -159,7 +153,7 @@
             </li>
             <li class="list-divider"></li>
             <li class="list-header">System</li>
-            <li class="nav-projects active-page">
+            <li class="nav-projects ">
               <a href="/projects/">
                 <i class="fa fa-sitemap"></i>
                 <span class="menu-title">
@@ -226,7 +220,7 @@
               </ul>
             </li>
             <li class="list-divider"></li>
-            <li class="nav-stakeholder ">
+            <li class="nav-stakeholder active-page">
               <a href="/support-admin/">
                 <i class="fa fa-crosshairs"></i>
                 <span class="menu-title">
@@ -259,185 +253,126 @@
       <div id="content-container">
           <div id="page-content">
 
-          <div class="jumbotron hide" id="jumbo">
-  <div class="row">
-    <div class="col-lg-7 col-md-6 ">
-    </div>
-    <div class="col-lg-5 col-md-6 ">
-      <div class="panel">
-          <div class="panel-title">Getting started
-        </div>
-        <div class="panel-body">
-          <h3>Projects</h3>
-          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
-          <br>
-          <div class="staff-comment">
-            Daniel Wakenshaw
-            <small class="block">Pebble Support Team</small>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <div class="pull-right">
-            <a class="btn btn-default" ><i class="fa fa-book"></i> Project Library</a>
-          </div>
-        </div>
-      </div>
+          <div class="row">
 
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <ul class="list-unstyled list-inline">
-          <li></li>
-          <li><a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col-lg-12 col-md-12">
-    <div class="panel panel-context-projects">
-      <div class="panel-title">
-        Projects
-      </div>
+  <div class="organisation-hook col-md-12"><div>
+    <div class="panel">
+      <div class="panel-title">Organisations</div>
       <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-12">
-            <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
-                <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>-->
-              <!--<li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-              </li>-->
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalLibrary"><i class="fa fa-book"></i> Project Library</a>
-              </li>
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalPot">
-                  <i class="fa fa-bank"></i> General Pot
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalProjectNew">
-                  <i class="fa fa-plus"></i>Add New
-                </a>
-              </li>
-            </ul>
+        <div class="filter-hook">
+          <form class="col-lg-4 col-md-4" role="search">
+            <div class="search">
+              <input class="form-control" placeholder="Search" type="text">
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-8">
+          <div class="pull-right">
+            <a class="btn btn-add">Add New</a>
           </div>
         </div>
       </div>
-
-
-
-
-      <div class="panel-body">
-
-        <div class="">
-          <table class="table table-vam table-hover table-bordered">
-            <thead>
-              <tr>
-                <th class="title">Active Projects <span>(2)</span></th>
-                <th class="value-progress">Funding Target</th>
-                <th class="date date-center">Completion Date</th>
-                <!--<th class="date date-lg date-right">Last Activity</th>-->
-                <!--<th class="rating">Project Strength</th>-->
-                <th class="comment">Comments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="title link">
-                  <a href="/projects/details/">
-                    <span class="initials icon-project">ED</span>
-                    The Exploration Deck
-                    <!--<span class="label label-info">1</span>-->
-                  </a>
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £15,000.00
-                </td>
-
-                <td class="date">
-                  15/06/2016
-                </td>
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-poor">
-                  30%
-                </td>-->
-                <td class="comment unread">
-                  <i class="fa fa-comment fa-lg"></i> 1
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a>
-                    <span class="initials icon-project">TC</span>
-                    Tennis Courts
-                  </a>
-
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £5,000.00
-                </td>
-
-                <td class="date date-center">
-                  Ongoing
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-good">
-                  90%
-                </td>-->
-                <td class="comment">
-                  <i class="fa fa-comment fa-lg text-muted"></i>
-                </td>
-                <!--<td class="text-success">
-
-                  Approved
-                </td>-->
-              </tr>
-            </tbody>
-          </table>
+    <div class="panel-body list-hook">
+      <table class="table table-bordered table-hover table-vam">
+        <thead>
+          <tr>
+            <th class="name">Name</th>
+            <th class="date">Created</th>
+            <th class="date">Last Used</th>
+            <th class="date">Expires</th>
+            <th class="status">Arro</th>
+            <th class="action"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name link">
+              <a href="/main/schools/7/" class="edit-organisation">
+                <span class="initials none">
+                  <i class="fa fa-building"></i>
+                </span>
+                A School
+                <small>NE1 2QB</small>
+              </a>
+            </td>
+            <td class="date">03/09/2013</td>
+            <td class="date">13/01/2016</td>
+            <td class="date">30/11/2016</td>
+            <td>
+              <i class="glyphicon glyphicon-ok"></i>
+            </td>
+            <td class="actions">
+              <div class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <i class="glyphicon glyphicon-cog"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li role="presentation">
+                    <a class="edit-organisation" href="/main/schools/7/" role="menuitem">
+                      Edit Organisation
+                    </a>
+                  </li>
+                  <li role="presentation">
+                    <a class="remove-organisation" href="/main/schools/7/" role="menuitem">
+                      Mark out of use
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--<div class="panel-footer">
+      <div class="row">
+        <div class="col-lg-8">
+          <ul class="pagination">
+              <li class="disabled">
+                <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+              </li>
+              <li class="active">
+                <a data-page="1" href="#" class="page">
+                  1
+                </a>
+              </li>
+              <li class="">
+                <a data-page="2" href="#" class="page">
+                  2
+                </a>
+              </li>
+              <li class="">
+                <a data-page="2" href="#" class="page">
+                  3
+                </a>
+              </li>
+              <li class="">
+                <a data-page="2" href="#" class="page">
+                  4
+                </a>
+              </li>
+              <li class="">
+                <a data-page="2" href="#" class="page">
+                  5
+                </a>
+              </li>
+            <li class="">
+              <a data-page="next" href="#" aria-label="Next" class="page-next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
+            </li>
+          </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="page-total">
+          Showing 1 - 10 of 2,000
         </div>
       </div>
-      <div class="panel-body">
-        <table class="table table-vam table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Inactive Projects <span>(1)</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="title link">
-                <a href="">
-                  <span class="initials icon-draft">RD</span>
-                  Reading Dog
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
     </div>
-  </div>
+  </div>-->
 </div>
 
 

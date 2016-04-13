@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Projects Details</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -259,40 +259,30 @@
       <div id="content-container">
           <div id="page-content">
 
-          <div class="jumbotron hide" id="jumbo">
-  <div class="row">
-    <div class="col-lg-7 col-md-6 ">
-    </div>
-    <div class="col-lg-5 col-md-6 ">
-      <div class="panel">
-          <div class="panel-title">Getting started
-        </div>
+          <div class="row">
+  <div class="col-md-12">
+    <div class="panel">
+      <div class="panel-title">Project Details</div>
         <div class="panel-body">
-          <h3>Projects</h3>
-          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
-          <br>
-          <div class="staff-comment">
-            Daniel Wakenshaw
-            <small class="block">Pebble Support Team</small>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <div class="pull-right">
-            <a class="btn btn-default" ><i class="fa fa-book"></i> Project Library</a>
-          </div>
-        </div>
-      </div>
+           <div class="col-md-9">
+             <h2>Sports Field
 
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <ul class="list-unstyled list-inline">
-          <li></li>
-          <li><a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a></li>
-        </ul>
-      </div>
+             </h2>
+             <span class="block">Project Completion Date - 05/06/2016</span>
+             <!--<small class="block">01/01/2015 - 05/06/2016</small>-->
+             <p>
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor vestibulum imperdiet. Ut auctor accumsan erat, a vulputate metus tristique non. Aliquam aliquam vel orci quis sagittis.
+             </p>
+           </div>
+           <div class="col-md-3 panel-side-l">
+               <div class="text-right">
+                   <h2>£5,000.00</h2>
+                   <p>Funding Target</p>
+                   <h2>05/06/2016</h2>
+                   <p>Completion Date</p>
+               </div>
+           </div>
+        </div>
     </div>
   </div>
 </div>
@@ -300,145 +290,268 @@
 
 <div class="row">
   <div class="col-lg-12 col-md-12">
-    <div class="panel panel-context-projects">
-      <div class="panel-title">
-        Projects
-      </div>
+    <div class="panel">
+      <div class="panel-title">Project Narrative</div>
+
       <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-12">
-            <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
-                <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>-->
-              <!--<li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-              </li>-->
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalLibrary"><i class="fa fa-book"></i> Project Library</a>
-              </li>
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalPot">
-                  <i class="fa fa-bank"></i> General Pot
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalProjectNew">
-                  <i class="fa fa-plus"></i>Add New
-                </a>
-              </li>
-            </ul>
+        <div class="col-lg-12 col-md-12">
+          <div class="pull-right">
+            <a class="btn btn-default" class="btn btn-info" onclick="$('#copy').toggleClass('col-lg-8 col-md-8'), $('#copy-toggle').toggleClass('hide'), $('#comment-show').toggleClass('hide'), $('#comment-hide').toggleClass('show')">
+
+  <span id="comment-show" class=""><i class="fa fa-comment"></i> Show Comments (2)</span>
+  <span id="comment-hide" class="hide"><i class="fa fa-comment"></i> Hide Comments (2)</span>
+</a>
+
           </div>
         </div>
       </div>
 
-
-
-
       <div class="panel-body">
+        <div class="row">
+          <div id="copy" class="col-lg-12 col-md-12">
 
-        <div class="">
-          <table class="table table-vam table-hover table-bordered">
-            <thead>
-              <tr>
-                <th class="title">Active Projects <span>(2)</span></th>
-                <th class="value-progress">Funding Target</th>
-                <th class="date date-center">Completion Date</th>
-                <!--<th class="date date-lg date-right">Last Activity</th>-->
-                <!--<th class="rating">Project Strength</th>-->
-                <th class="comment">Comments</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="title link">
-                  <a href="/projects/details/">
-                    <span class="initials icon-project">ED</span>
-                    The Exploration Deck
-                    <!--<span class="label label-info">1</span>-->
-                  </a>
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £15,000.00
-                </td>
+              <div class="project_need-hook">
+                <div class="form-group">
+                  <label for="id_project_need" class="control-label">
+                    Why do you need your project?
+                    <a class="pull-right font-normal" onclick="$('#hint').removeClass('hide')">
+                      Hints &amp; Tips
+                    </a>
+                    <div class="alert alert-info m-t-sm hide" id="hint">
+                      <strong class="block">Hints &amp; Tips</strong>
+                      <p>
+                        Maecenas sed diam eget risus varius blandit sit amet non magna:
+                      </p>
+                      <ol>
+                        <li>What is it you want to achieve?</li>
+                        <li>
+                          Maecenas sed diam eget risus varius blandit sit amet non magna.
+                        </li>
+                      </ol>
+                      <a class="btn btn-info pull-right" onclick="$('#hint').addClass('hide')">Got it
+                      </a>
+                    </div>
+                  </label>
+                  <textarea class="field form-control"  plcaeholder="What is your school missing that this project can provide?" id="id_project_need">
+Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.
 
-                <td class="date">
-                  15/06/2016
-                </td>
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-poor">
-                  30%
-                </td>-->
-                <td class="comment unread">
-                  <i class="fa fa-comment fa-lg"></i> 1
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a>
-                    <span class="initials icon-project">TC</span>
-                    Tennis Courts
-                  </a>
+Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £5,000.00
-                </td>
+Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui.
+                  </textarea>
+                  <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
 
-                <td class="date date-center">
-                  Ongoing
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-good">
-                  90%
-                </td>-->
-                <td class="comment">
-                  <i class="fa fa-comment fa-lg text-muted"></i>
-                </td>
-                <!--<td class="text-success">
+                  <div class="error"></div>
+                </div>
+              </div>
 
-                  Approved
-                </td>-->
-              </tr>
-            </tbody>
-          </table>
+              <div class="impact-hook">
+                <div class="form-group">
+                  <label for="id_impact" class="control-label">
+                    What impact will your project make?
+                    <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+                  </label>
+                  <textarea class="field form-control"  placeholder="For example, improve pupil IT literacy" id="id_impact">
+Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.
+                  </textarea>
+                  <!--
+<span class="help-block">
+  Strength: <span class="text-gray">Average <i class="fa fa-meh-o"></i></span>
+</span>
+-->
+
+                  <div class="error"></div>
+                </div>
+              </div>
+
+              <div class="evidence-hook">
+                <div class="form-group">
+                  <label for="id_evidence" class="control-label">
+                    What supporting evidence have you got to back up the need for your project?
+                    <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+                  </label>
+                  <textarea class="field form-control"  placeholder="Build your C.A.S.E (Consultations, Agendas, Statistics, Environment)" id="id_evidence">
+Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.
+
+                  </textarea>
+                  <!--
+<span class="help-block">
+  Strength: <span class="text-danger">Poor <i class="fa fa-frown-o"></i></span>
+</span>
+-->
+
+                  <div class="error"></div>
+                </div>
+              </div>
+
+              <div class="school_improvement-hook">
+                <div class="form-group">
+                  <label for="id_school_improvement" class="control-label">
+                    School Improvement
+                    <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+                  </label>
+                  <textarea class="field form-control"  placeholder="How does the project link it to your school improvement plan?" id="id_school_improvement">
+Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.
+
+                  </textarea>
+                  <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+                  <div class="error"></div>
+                </div>
+              </div>
+
+              <div class="project_plan-hook">
+                <div class="form-group">
+                  <label for="id_project_plan" class="control-label">
+                    How do you plan to deliver, monitor, and evaluate your project?
+                    <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+                  </label>
+                  <textarea class="field form-control"  placeholder="Deliverables, projected outcomes, success criteria" id="id_project_plan">
+Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.
+
+                  </textarea>
+                  <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+                  <div class="error"></div>
+                </div>
+              </div>
+
+              <div class="success_measure-hook">
+                <div class="form-group">
+                  <label for="id_success_measure" class="control-label">
+                    How will you measure and report success?
+                    <a class="pull-right font-normal">
+  <i class="fa fa-lightbulb-o"></i>Hints &amp; Tips
+</a>
+
+                  </label>
+                  <textarea class="field form-control"  placeholder="Success criteria, reporting tools" id="id_success_measure">
+Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.
+
+                  </textarea>
+                  <!--
+<span class="help-block">
+  Strength: <span class="text-success">Good <i class="fa fa-smile-o"></i></span>
+</span>
+-->
+
+                  <div class="error"></div>
+                </div>
+              </div>
+            </div>
+            <div id="copy-toggle" class="hide">
+              <div class="col-lg-4 col-md-4">
+                <div class="panel">
+                  <div class="panel-title">Comments (2)</div>
+                    <div class="panel-body">
+                      <ul class="list-unstyled list-with-icons">
+                        <li>
+                          <div class="name">
+                            <span class="initials comment">
+                              AH
+                            </span>
+                            Adam Hogg <span class="date">2hr ago</span>
+                            <small class="block">adam.hogg.ah@gmail.com</small>
+                          </div>
+                          <p>
+                            Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit&hellip;
+
+                            <a class="details-toggle collapsed"
+                              data-toggle="collapse" href="#collapseExample2"
+                              aria-expanded="false" aria-controls="collapseExample">
+                              Read More
+                            </a>
+                          </p>
+                          <!-- comment-->
+                          <div aria-expanded="false" class="collapse" id="collapseExample2">
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.
+                              <a
+                                data-toggle="collapse" href="#collapseExample2"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Read Less
+                              </a>
+                            </p>
+
+                          </div>
+                        </li>
+                        <li>
+                          <div class="name">
+                            <span class="initials comment">
+                              AH
+                            </span>
+                            Adam Hogg <span class="date">2hr ago</span>
+                            <small class="block">adam.hogg.ah@gmail.com</small>
+                          </div>
+                          <p>
+                            Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam id dolor id nibh ultricies vehicula ut id elit&hellip;
+                            <a class="details-toggle collapsed"
+                              data-toggle="collapse" href="#collapseExample3"
+                              aria-expanded="false" aria-controls="collapseExample">
+                              Read More
+                            </a>
+                          </p>
+                          <!-- comment-->
+                          <div aria-expanded="false" class="collapse" id="collapseExample3">
+                            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum. Etiam porta sem malesuada magna mollis euismod.</p>
+                            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Aenean lacinia bibendum nulla sed consectetur. Donec ullamcorper nulla non metus auctor fringilla. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.
+                              <a
+                                data-toggle="collapse" href="#collapseExample3"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Read Less
+                              </a>
+                            </p>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <div class="pull-left">
+            <a class="btn btn-default" href="/projects/details/"><i class="fa fa-trash-o"></i> Abandon</a>
+          </div>
+          <div class="pull-right">
+            <a href="/projects/details/" class="btn btn-info"><i class="fa fa-save"></i> Save Project</a>
+          </div>
         </div>
       </div>
-      <div class="panel-body">
-        <table class="table table-vam table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Inactive Projects <span>(1)</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="title link">
-                <a href="">
-                  <span class="initials icon-draft">RD</span>
-                  Reading Dog
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
     </div>
   </div>
+
+
+
 </div>
+  </div>
 
 
         </div>

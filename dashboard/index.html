@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Dashboard</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,8 +13,8 @@
 </head>
 
 
-  <body class="page-context-projects">
-  		<div id="container" class="effect  mainnav-lg">
+  <body class="page-context-dashboard">
+  		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
   <div id="navbar-container">
@@ -66,7 +66,7 @@
         </div>-->
         <div class="nano-content">
           <ul id="mainnav-menu" class="list-group">
-            <li class=" ">
+            <li class=" active-page">
               <a href="/dashboard/">
                 <i class="fa fa-tachometer"></i>
                 <span class="menu-title">
@@ -159,7 +159,7 @@
             </li>
             <li class="list-divider"></li>
             <li class="list-header">System</li>
-            <li class="nav-projects active-page">
+            <li class="nav-projects ">
               <a href="/projects/">
                 <i class="fa fa-sitemap"></i>
                 <span class="menu-title">
@@ -259,177 +259,170 @@
       <div id="content-container">
           <div id="page-content">
 
-          <div class="jumbotron hide" id="jumbo">
+          <!-- -->
+<!--<div class="row">
+  <div class="col-md-8">
+    <canvas id="canvas" height="150"></canvas>
+  </div>
+</div>
+-->
+
+<!--
   <div class="row">
-    <div class="col-lg-7 col-md-6 ">
-    </div>
-    <div class="col-lg-5 col-md-6 ">
-      <div class="panel">
-          <div class="panel-title">Getting started
-        </div>
-        <div class="panel-body">
-          <h3>Projects</h3>
-          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
-          <br>
-          <div class="staff-comment">
-            Daniel Wakenshaw
-            <small class="block">Pebble Support Team</small>
-          </div>
-        </div>
-        <div class="panel-footer">
-          <div class="pull-right">
-            <a class="btn btn-default" ><i class="fa fa-book"></i> Project Library</a>
-          </div>
-        </div>
-      </div>
+    <div class="col-md-12">
 
     </div>
   </div>
+-->
+
+<!--
+<div class="jumbotron">
   <div class="row">
-    <div class="col-lg-12">
-      <div class="pull-right">
-        <ul class="list-unstyled list-inline">
-          <li></li>
-          <li><a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a></li>
-        </ul>
+    <div class="col-lg-8 col-md-8">
+    </div>
+    <div class="col-lg-4 col-md-4">
+      <div class="panel">
+        <div class="panel-title">Suggestion
+          <span class="pull-right">1 of 5</span>
+        </div>
+        <div class="panel-body" style="min-height:200px;">
+          Message about possible suggestion a user can do. Chase money, Invite others.
+        </div>
+        <div class="panel-footer">
+          <div class="actions-row actions-row-clear">
+            <a class="btn btn-default btn-sm">
+              <i class="fa fa-chevron-left"></i> Back
+            </a>
+            <a class="btn btn-default btn-sm">
+              Next <i class="fa fa-chevron-right"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+-->
+<div class="row">
+  <div class="col-md-4">
+    <h2>Report</h2>
+    <div id="chart-guage"></div>
+
+    <div id="chart"></div>
+    </div>
+  </div>
+
+
 
 <div class="row">
-  <div class="col-lg-12 col-md-12">
-    <div class="panel panel-context-projects">
-      <div class="panel-title">
-        Projects
+  <div class="col-md-8">
+    <div id="lines"></div>
+  </div>
+  <div class="col-md-4">
+    <!--
+      <div class="alert alert-success">
+        xxx
       </div>
-      <div class="panel-subnav">
-        <div class="">
-          <div class="col-lg-12">
-            <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
-                <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>-->
-              <!--<li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-              </li>-->
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalLibrary"><i class="fa fa-book"></i> Project Library</a>
-              </li>
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalPot">
-                  <i class="fa fa-bank"></i> General Pot
-                </a>
-              </li>
-              <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalProjectNew">
-                  <i class="fa fa-plus"></i>Add New
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-
-
-
+    -->
+    <div class="panel">
+      <div class="panel-title panel-title-clear panel-title-white text-center">Weekly Summary</div>
       <div class="panel-body">
-
-        <div class="">
-          <table class="table table-vam table-hover table-bordered">
+        <ul class="list-unstyled list-stats">
+          <li>
+            New Stakeholders <span>15 <span><i class="fa fa-arrow-up text-success"></i>(4%)</span></span>
+          </li>
+          <li>
+            Donations <span>&pound;123.37</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-title panel-title-clear panel-title-white text-center">League Table</div>
+      <div class="panel-body">
+        <div class="alert alert-success hide">
+          <p><strong>Excelent News!</strong> You've gone up <strong>5</strong> places in the League with this months activity.</p>
+        </div>
+        <table class="table table-league">
+          <!--
             <thead>
               <tr>
-                <th class="title">Active Projects <span>(2)</span></th>
-                <th class="value-progress">Funding Target</th>
-                <th class="date date-center">Completion Date</th>
-                <!--<th class="date date-lg date-right">Last Activity</th>-->
-                <!--<th class="rating">Project Strength</th>-->
-                <th class="comment">Comments</th>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td class="title link">
-                  <a href="/projects/details/">
-                    <span class="initials icon-project">ED</span>
-                    The Exploration Deck
-                    <!--<span class="label label-info">1</span>-->
-                  </a>
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £15,000.00
-                </td>
-
-                <td class="date">
-                  15/06/2016
-                </td>
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-poor">
-                  30%
-                </td>-->
-                <td class="comment unread">
-                  <i class="fa fa-comment fa-lg"></i> 1
-                </td>
-              </tr>
-              <tr>
-                <td class="title link">
-                  <a>
-                    <span class="initials icon-project">TC</span>
-                    Tennis Courts
-                  </a>
-
-                </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £5,000.00
-                </td>
-
-                <td class="date date-center">
-                  Ongoing
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-good">
-                  90%
-                </td>-->
-                <td class="comment">
-                  <i class="fa fa-comment fa-lg text-muted"></i>
-                </td>
-                <!--<td class="text-success">
-
-                  Approved
-                </td>-->
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="panel-body">
-        <table class="table table-vam table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Inactive Projects <span>(1)</span></th>
-            </tr>
-          </thead>
+          -->
           <tbody>
+            <tr class="rank-leader">
+              <td class="id">001</td>
+              <td>Hogg Primary School</td>
+              <td>
+                <span class="text-gold">
+                  <i class="fa fa-trophy"></i>
+                </span>
+                <!--<span class="text-success"><i class="fa fa-arrow-up"></i> 1</span>-->
+              </td>
+            </tr>
+          <!--
             <tr>
-              <td class="title link">
+              <td class="id">002</td>
+              <td>Hogg Academy</td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-down"></i> 1</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">003</td>
+              <td>Hogg Secondary School</td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-up"></i> 6</span>
+              </td>
+            </tr>
+          -->
+            <tr class="rank-divider">
+              <td colspan="3" class="text-center">
+                &hellip;
+              </td>
+            </tr>
+            <tr>
+              <td class="id">
+                012
+              </td>
+              <td class="organisation">
+                Waggott School
+              </td>
+              <td>
+                <span class="text-danger"><i class="fa fa-arrow-down"></i> 1</span>
+              </td>
+            </tr>
+            <tr class="rank-user">
+              <td class="id">
+                013
+              </td>
+              <td class="organisation">
+                Funding School
+              </td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-up"></i> 5</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="id">
+                014
+              </td>
+              <td class="organisation">
+                Wakenshaw School
+              </td>
+              <td>
+                <span class="text-success"><i class="fa fa-arrow-up"></i> 2</span>
+              </td>
+            </tr>
+            <tr class="">
+              <td colspan="3" class="text-center">
                 <a href="">
-                  <span class="initials icon-draft">RD</span>
-                  Reading Dog
+                  Show All
                 </a>
               </td>
             </tr>
@@ -439,6 +432,219 @@
     </div>
   </div>
 </div>
+
+<div class="row hide">
+  <div class="col-md-4">
+    <div class="panel">
+      <div class="panel-body">
+        Result
+      </div>
+      <div class="panel-footer">
+        <div class="actions-row actions-row-clear">
+          <a class="btn btn-default">View Results</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-9">
+    <div class="panel">
+      <div class="panel-title">
+        To Do
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled">
+          <li class="panel">
+            <div class="panel-title panel-title-white">
+              Task #001 -
+              <!--<i class="fa fa-envelope"></i>-->
+              Thank your donors!
+              <div class="actions pull-right">
+                <a><i class="fa fa-close"></i></a>
+              </div>
+            </div>
+            <div class="panel-body">
+              <p>Send a <strong>'Thank You'</strong> message to all recent donations. They collectivly have contributed <strong>&pound;532.20</strong> towards your projects. </p>
+              <a class="btn btn-primary">
+                <i class="fa fa-paper-plane"></i> Send Message
+              </a>
+              <a class="btn btn-default">
+                Close
+              </a>
+            </div>
+            <div class="panel-footer panel-footer-gray">
+              <i class="fa fa-arrow-circle-up text-success"></i> Donors are more likely to donate again if they feel valued and apprechiated
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel">
+        <div class="panel-title">
+          To Do
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled list-tasks list-tasks-clear">
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" checked="" value="option3" type="checkbox" disabled="">
+                  <label for="checkbox3">Choose Project</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
+                  <label for="checkbox3">Customise Project</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
+                  <label for="checkbox3">Share project with team</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
+                  <label for="checkbox3">Search Grants</label>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="form-group">
+                <div class="checkbox checkbox-success">
+                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
+                  <label for="checkbox3">Save Grant</label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</div>
+-->
+
+<div class="row hide">
+  <div class="col-md-3">
+    <div class="panel panel-sm">
+      <span class="icon icon-grants"><i class="glyphicon glyphicon-briefcase"></i></span>
+      <div class="info">
+          <span>20</span>
+          New Grants
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-sm">
+      <span class="icon icon-clubs"><i class="glyphicon glyphicon-flag"></i></span>
+      <div class="info">
+        <span>20</span>
+        Active Clubs
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-sm">
+      <span class="icon icon-donations"><i class="glyphicon glyphicon-gift"></i></span>
+      <div class="info">
+        <span>1,000</span>
+        New Donations
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="panel panel-sm">
+      <span class="icon icon-stakeholders"><i class="fa fa-users"></i></span>
+      <div class="info">
+          <span>320</span>
+          New Stakeholders
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row hide">
+  <div class="col-md-6">
+    <div class="panel">
+      <div class="panel-title">
+        To Do List
+      </div>
+      <div class="panel-body">
+        <ul class="list-unstyled list-tasks">
+          <li>
+            <div class="form-group">
+              <div class="checkbox checkbox-primary">
+                <input id="checkbox3" checked="" value="option3" type="checkbox">
+                <label for="checkbox3">Donec quam libero, rutrum non gravida ut</label>
+              </div>
+            </div>
+            <div class="actions pull-right">
+              <a><i class="fa fa-close"></i></a>
+            </div>
+          </li>
+          <li>
+            <div class="form-group">
+              <div class="checkbox checkbox-primary">
+                <input id="checkbox3" checked="" value="option3" type="checkbox">
+                <label for="checkbox3">Donec quam libero, rutrum non gravida ut</label>
+              </div>
+            </div>
+            <div class="actions pull-right">
+              <a class=""><i class="fa fa-close"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="panel-footer">
+        <div class="pull-right">
+            <button type="submit" class="btn btn-add btn-block"><i class="fa fa-plus"></i> Add Task</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<div class="row">
+  <div class="col-lg-4">
+    <div class="panel">
+      <div class="panel-title">Progress
+        <span class="pull-right">1 of 5</span>
+      </div>
+      <div class="panel-body">
+        xx
+      </div>
+      <div class="panel-footer">
+        <div class="actions-row actions-row-clear">
+          <ul class="list-unstyled list-progress list-inline">
+            <li class="complete"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
 
 
         </div>

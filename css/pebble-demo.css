@@ -17357,6 +17357,96 @@ a.list-facts-three li.rating-hard:hover {
 button {
   background: inherit;
 }
+.btn-twitter {
+  color: #ffffff;
+  background-color: #00bdef;
+  border-color: #00bdef;
+}
+.btn-twitter:hover,
+.btn-twitter:focus,
+.btn-twitter.focus,
+.btn-twitter:active,
+.btn-twitter.active,
+.open > .dropdown-toggle.btn-twitter {
+  color: #ffffff;
+  background-color: #0095bc;
+  border-color: #008db2;
+}
+.btn-twitter:active,
+.btn-twitter.active,
+.open > .dropdown-toggle.btn-twitter {
+  background-image: none;
+}
+.btn-twitter.disabled,
+.btn-twitter[disabled],
+fieldset[disabled] .btn-twitter,
+.btn-twitter.disabled:hover,
+.btn-twitter[disabled]:hover,
+fieldset[disabled] .btn-twitter:hover,
+.btn-twitter.disabled:focus,
+.btn-twitter[disabled]:focus,
+fieldset[disabled] .btn-twitter:focus,
+.btn-twitter.disabled.focus,
+.btn-twitter[disabled].focus,
+fieldset[disabled] .btn-twitter.focus,
+.btn-twitter.disabled:active,
+.btn-twitter[disabled]:active,
+fieldset[disabled] .btn-twitter:active,
+.btn-twitter.disabled.active,
+.btn-twitter[disabled].active,
+fieldset[disabled] .btn-twitter.active {
+  background-color: #00bdef;
+  border-color: #00bdef;
+}
+.btn-twitter .badge {
+  color: #00bdef;
+  background-color: #ffffff;
+}
+.btn-facebook {
+  color: #ffffff;
+  background-color: #2f4b93;
+  border-color: #2f4b93;
+}
+.btn-facebook:hover,
+.btn-facebook:focus,
+.btn-facebook.focus,
+.btn-facebook:active,
+.btn-facebook.active,
+.open > .dropdown-toggle.btn-facebook {
+  color: #ffffff;
+  background-color: #23376c;
+  border-color: #203365;
+}
+.btn-facebook:active,
+.btn-facebook.active,
+.open > .dropdown-toggle.btn-facebook {
+  background-image: none;
+}
+.btn-facebook.disabled,
+.btn-facebook[disabled],
+fieldset[disabled] .btn-facebook,
+.btn-facebook.disabled:hover,
+.btn-facebook[disabled]:hover,
+fieldset[disabled] .btn-facebook:hover,
+.btn-facebook.disabled:focus,
+.btn-facebook[disabled]:focus,
+fieldset[disabled] .btn-facebook:focus,
+.btn-facebook.disabled.focus,
+.btn-facebook[disabled].focus,
+fieldset[disabled] .btn-facebook.focus,
+.btn-facebook.disabled:active,
+.btn-facebook[disabled]:active,
+fieldset[disabled] .btn-facebook:active,
+.btn-facebook.disabled.active,
+.btn-facebook[disabled].active,
+fieldset[disabled] .btn-facebook.active {
+  background-color: #2f4b93;
+  border-color: #2f4b93;
+}
+.btn-facebook .badge {
+  color: #2f4b93;
+  background-color: #ffffff;
+}
 .btn-save {
   color: #ffffff;
   background-color: #ed5565;
@@ -17705,6 +17795,10 @@ a.btn .notification:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 150px;
+}
+.btn-notification {
+  padding: 5px;
+  margin: 8px 10px;
 }
 /*global type*/
 /* LABELS */
@@ -18626,6 +18720,60 @@ fieldset[disabled] .btn-menu.active {
 }
 .navbar-clear-inverse .navbar-brand {
   background: url('../img/logo/logo_pebble_wht.svg') no-repeat;
+}
+.navbar-nav li .btn-notification {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  color: #ffffff;
+  background-color: #555555;
+  border-color: #494949;
+  padding: 5px 10px;
+  margin: 8px 10px;
+  font-weight: 700;
+}
+.navbar-nav li .btn-notification:hover,
+.navbar-nav li .btn-notification:focus,
+.navbar-nav li .btn-notification.focus,
+.navbar-nav li .btn-notification:active,
+.navbar-nav li .btn-notification.active,
+.open > .dropdown-toggle.navbar-nav li .btn-notification {
+  color: #ffffff;
+  background-color: #3c3c3c;
+  border-color: #2a2a2a;
+}
+.navbar-nav li .btn-notification:active,
+.navbar-nav li .btn-notification.active,
+.open > .dropdown-toggle.navbar-nav li .btn-notification {
+  background-image: none;
+}
+.navbar-nav li .btn-notification.disabled,
+.navbar-nav li .btn-notification[disabled],
+fieldset[disabled] .navbar-nav li .btn-notification,
+.navbar-nav li .btn-notification.disabled:hover,
+.navbar-nav li .btn-notification[disabled]:hover,
+fieldset[disabled] .navbar-nav li .btn-notification:hover,
+.navbar-nav li .btn-notification.disabled:focus,
+.navbar-nav li .btn-notification[disabled]:focus,
+fieldset[disabled] .navbar-nav li .btn-notification:focus,
+.navbar-nav li .btn-notification.disabled.focus,
+.navbar-nav li .btn-notification[disabled].focus,
+fieldset[disabled] .navbar-nav li .btn-notification.focus,
+.navbar-nav li .btn-notification.disabled:active,
+.navbar-nav li .btn-notification[disabled]:active,
+fieldset[disabled] .navbar-nav li .btn-notification:active,
+.navbar-nav li .btn-notification.disabled.active,
+.navbar-nav li .btn-notification[disabled].active,
+fieldset[disabled] .navbar-nav li .btn-notification.active {
+  background-color: #555555;
+  border-color: #494949;
+}
+.navbar-nav li .btn-notification .badge {
+  color: #555555;
+  background-color: #ffffff;
+}
+.navbar-nav li .btn-notification .label {
+  background: #93c01f;
 }
 /* Navbar */
 .panel {

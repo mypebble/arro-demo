@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Grants</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,8 +13,8 @@
 </head>
 
 
-  <body class="page-context-projects">
-  		<div id="container" class="effect  mainnav-lg">
+  <body class="page-context-grants">
+  		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
   <div id="navbar-container">
@@ -139,7 +139,7 @@
                 <i class="arrow"></i>
               </a>
             </li>
-            <li class="nav-grants ">
+            <li class="nav-grants active-page">
               <a href="/grants/">
                 <i class="fa fa-briefcase"></i>
                 <span class="menu-title">
@@ -159,7 +159,7 @@
             </li>
             <li class="list-divider"></li>
             <li class="list-header">System</li>
-            <li class="nav-projects active-page">
+            <li class="nav-projects ">
               <a href="/projects/">
                 <i class="fa fa-sitemap"></i>
                 <span class="menu-title">
@@ -259,7 +259,7 @@
       <div id="content-container">
           <div id="page-content">
 
-          <div class="jumbotron hide" id="jumbo">
+          <div class="jumbotron hide">
   <div class="row">
     <div class="col-lg-7 col-md-6 ">
     </div>
@@ -268,7 +268,7 @@
           <div class="panel-title">Getting started
         </div>
         <div class="panel-body">
-          <h3>Projects</h3>
+          <h3>Grants</h3>
           <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
           <br>
           <div class="staff-comment">
@@ -277,167 +277,555 @@
           </div>
         </div>
         <div class="panel-footer">
-          <div class="pull-right">
-            <a class="btn btn-default" ><i class="fa fa-book"></i> Project Library</a>
-          </div>
         </div>
       </div>
-
     </div>
   </div>
   <div class="row">
     <div class="col-lg-12">
       <div class="pull-right">
-        <ul class="list-unstyled list-inline">
-          <li></li>
-          <li><a class="btn btn-info" onclick="$('#jumbo').addClass('hide')">Got it</a></li>
-        </ul>
+        <a class="btn btn-info">Got it</a>
       </div>
     </div>
   </div>
 </div>
 
-
+<!--- content-->
 <div class="row">
   <div class="col-lg-12 col-md-12">
-    <div class="panel panel-context-projects">
-      <div class="panel-title">
-        Projects
-      </div>
+    <div class="panel panel-context-grants">
+      <div class="panel-title">Grants</div>
+      <!--<div class="panel-subnav">
+        <div class="col-md-12">
+          <strong class="col-md-1">Filter by:</strong>
+          <ul class="list-unstyled list-inline list-dividers">
+            <li class="col-md-3">
+              <div class="form-group btn-block">
+                <select class="selectpicker form-control" data-style="btn btn-default">
+                  <option>All Subjects</option>
+                  <option>Art and Design</option>
+                  <option>Business Studies</option>
+                  <option>Citizenship</option>
+                  <option>Design and Technology</option>
+                  <option>English Language and Literacy</option>
+                  <option>Geography</option>
+                  <option>History</option>
+                  <option>ICT</option>
+                  <option>Languages</option>
+                  <option>Mathematics</option>
+                  <option>Physical Education</option>
+                  <option>Religious Education</option>
+                  <option>Science</option>
+                </select>
+              </div>
+            </li>
+            <li class="col-md-1">
+              <div class="form-group btn-block">
+                <select class="selectpicker form-control" data-style="btn btn-default">
+                  <option>Basic</option>
+                  <option>Moderate</option>
+                  <option>Complex</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>-->
       <div class="panel-subnav">
         <div class="">
-          <div class="col-lg-12">
+          <div class="col-lg-6 col-md-6 col-sm-6 pull-left">
+            <div class="search">
+              <input type="text" class="form-control" placeholder="Search by Grant Title">
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
             <ul class="list-unstyled list-inline pull-right">
-              <!--<li>
+              <li>
                 <a class="btn btn-default">
-                  Filter
-                </a>
-              </li>-->
-              <!--<li>
-                <div class="btn-group">
-                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-right">
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Save as PDF</a></li>
-                        <li><a href="#">Export to Excel</a></li>
-                    </ul>
-                </div>
-              </li>-->
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalLibrary"><i class="fa fa-book"></i> Project Library</a>
-              </li>
-              <li>
-                <a class="btn btn-default" data-toggle="modal" data-target="#myModalPot">
-                  <i class="fa fa-bank"></i> General Pot
+                  <i class="fa fa-star  text-favourite"></i> Starred
                 </a>
               </li>
               <li>
-                <a class="btn btn-add" data-toggle="modal" data-target="#myModalProjectNew">
-                  <i class="fa fa-plus"></i>Add New
+                <a class="btn btn-default" onclick="$('#filter').toggleClass('hide')">
+                  Advanced Search
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
+      <div class="filter-menu hide" id="filter">
+        <div class="row">
+          <div class="col-lg-3 col-md-3">
+            <div class="form-group">
+              <label class="control-label" for="">Filter by Subject</label>
+              <select class="selectpicker form-control" data-style="btn btn-default block">
+                <option>All Projects</option>
+                <option>Art and Design</option>
+                <option>Business Studies</option>
+                <option>Citizenship</option>
+                <option>Design and Technology</option>
+                <option>English Language and Literacy</option>
+                <option>Geography</option>
+                <option>History</option>
+                <option>ICT</option>
+                <option>Languages</option>
+                <option>Mathematics</option>
+                <option>Physical Education</option>
+                <option>Religious Education</option>
+                <option>Science</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="label-title">Filter by Grant Type</div>
+            <!--<div class="btn-group btn-group-vertical btn-group-grants" data-toggle="buttons">
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><span>Show All</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-awards.png"> <span>Award</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-cash.png"><span>Cash</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-certificate.png"><span>Competition</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-discount.png"><span>Discount</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-free.png"><span>Freebie</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-bucket.png"><span>Fundraising</span>
+              </label>
+              <label class="btn btn-default">
+                <input type="checkbox" autocomplete="off"><img src="/img/grants-icons/icon-support.png"><span>In Kind Support</span>
+              </label>
+            </div>
+          -->
 
 
+           <ul class="list-unstyled row">
 
 
-      <div class="panel-body">
+             <div class="col-lg-6">
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">All Grant Types
 
-        <div class="">
-          <table class="table table-vam table-hover table-bordered">
+                  </label>
+                </div>
+              </li>
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">Award</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-awards.png">
+                  </span>
+                </div>
+              </li>
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">Cash</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-cash.png">
+                  </span>
+                </div>
+              </li>
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">Competition</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-certificate.png">
+                  </span>
+                </div>
+              </li>
+            </div>
+            <div class="col-lg-6">
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">Discount</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-discount.png">
+                  </span>
+                </div>
+              </li>
+
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">Freebies</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-free.png">
+                  </span>
+                </div>
+              </li>
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">Fundraising</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-bucket.png">
+                  </span>
+                </div>
+              </li>
+              <li class="form-group">
+                <div class="checkbox checkbox-primary">
+                  <input id="checkbox2" value="option1" type="checkbox">
+                  <label for="checkbox2">In Kind Support</label>
+                  <span class="icon-xs">
+                    <img src="/img/grants-icons/icon-support.png">
+                  </span>
+                </div>
+              </li>
+              </div>
+            </ul>
+
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+              <!--<div class="pull-left">
+                <a class="btn btn-default" onclick="$('#filter').addClass('hide')">Hide</a>
+              </div>-->
+              <div class="pull-right">
+                <a class="btn btn-default">Clear Form</a>
+                <a class="btn btn-primary">
+                  Search</a>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="panel-body">
+            <!--<div class="search-results">
+              <div class="results pull-left">
+                <strong>Results for:</strong> <span>New Resources</span>
+              </div>
+              <div class="grants-total pull-right">
+                280 Grants Available
+              </div>
+            </div>-->
+
+            <!--<table class="table table-vam">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th class="title">Grant Title</th>
+                  <th class="value">Award</th>
+                  <th class="rating">Detail Required <a class="filter"></a>
+</th>
+                  <th class="duration">Time to the deadline  <a class="filter"></a>
+</th>
+                  <th class="date date-right">Deadline  <a class="filter"></a>
+</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="check-star" id="star">
+                    <a onclick="$('#star').toggleClass('checked')">
+                      <i class="fa fa-star-o"></i>
+                    </a>
+                  </td>
+                  <td class="title link">
+                    <a data-toggle="modal" data-target="#myModalGrants">
+                      <span class="grant-icon">
+                        <img src="/img/grants-icons/icon-awards.png">
+                      </span>
+                        Grants for Guitars
+                    </a>
+                  </td>
+
+                  <td class="value">
+                    &pound;1,000
+                  </td>
+                  <td class="rating rating-easy">
+                    Basic
+                  </td>
+                  <td class="duration">
+                    Days
+                  </td>
+                  <td class="date date-right">
+                    None
+                  </td>
+                  <td class="action"><a class="btn btn-default">button</a></td>
+                </tr>
+                <tr class="details-row">
+                  <td></td>
+                  <td>
+                    <p>One of Britain's biggest music retailers is offering grants of up to £150,000 for schools who need new guitars in order to offer lessons to their disadvantaged pupils</p>
+</td>
+                  <td colspan=""></td>
+                </tr>
+              </tbody>
+            </table>-->
+            <div class="table-responsive">
+          <table class="table table-hover table-vam">
             <thead>
-              <tr>
-                <th class="title">Active Projects <span>(2)</span></th>
-                <th class="value-progress">Funding Target</th>
-                <th class="date date-center">Completion Date</th>
-                <!--<th class="date date-lg date-right">Last Activity</th>-->
-                <!--<th class="rating">Project Strength</th>-->
-                <th class="comment">Comments</th>
-              </tr>
-            </thead>
+                <tr>
+                  <th></th>
+                  <th class="title">Grant Title</th>
+                  <th class="value">Award</th>
+                  <th class="rating">Detail <span class="hidden-sm"> Required</span><a class="filter"></a>
+</th>
+                  <th class="duration"><span class="hidden-sm">To </span>complete <a class="filter"></a>
+</th>
+                  <th class="date date-right">Deadline  <a class="filter"></a>
+</th>
+                  <!--<th class="action">
+                    Actions
+                  </th>-->
+                </tr>
+              </thead>
             <tbody>
               <tr>
-                <td class="title link">
-                  <a href="/projects/details/">
-                    <span class="initials icon-project">ED</span>
-                    The Exploration Deck
-                    <!--<span class="label label-info">1</span>-->
+                <td class="check-star checked">
+                  <a>
+                    <i class="fa fa-star"></i>
                   </a>
                 </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £15,000.00
-                </td>
 
-                <td class="date">
-                  15/06/2016
+                <td class="title link">
+                  <a data-toggle="modal" data-target="#myModalGrants">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-awards.png">
+                    </span>
+                    Grants for Guitars
+                  </a>
                 </td>
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-poor">
-                  30%
-                </td>-->
-                <td class="comment unread">
-                  <i class="fa fa-comment fa-lg"></i> 1
+                <td class="value">
+                  &pound;1,000
                 </td>
+                <td class="rating rating-easy">
+                  Basic
+                </td>
+                <td class="duration">
+                  Days
+                </td>
+                <td class="date date-right">
+                    None
+                  </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary" data-toggle="modal" data-target="#myModalGrants">
+                    View
+                  </a>
+                </td>-->
               </tr>
               <tr>
-                <td class="title link">
+                <td class="check-star">
                   <a>
-                    <span class="initials icon-project">TC</span>
-                    Tennis Courts
+                    <i class="fa fa-star-o"></i>
                   </a>
-
                 </td>
-                <td class="value-progress">
-                  <span>£100.00</span> / £5,000.00
+                <td class="title link">
+                  <a data-toggle="modal" data-target="#myModalGrants-lg">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-cash.png">
+                    </span>
+                    Sport England Inspired Facilities
+                  </a>
                 </td>
-
-                <td class="date date-center">
-                  Ongoing
-                <!--<td class="date date-right">
-                  20/03/2015
-                </td>-->
-                <!--<td class="rating rating-good">
-                  90%
-                </td>-->
-                <td class="comment">
-                  <i class="fa fa-comment fa-lg text-muted"></i>
+                <td class="value">
+                  &pound;150,000
                 </td>
-                <!--<td class="text-success">
-
-                  Approved
+                <td class="rating rating-hard">
+                  Complex
+                </td>
+                <td class="duration">
+                  Weeks
+                </td>
+                <td class="date date-right">
+                    04/02/2016
+                  </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary">
+                    View
+                  </a>
                 </td>-->
               </tr>
+              <tr>
+                <td class="check-star" id="star">
+                  <a>
+                    <i class="fa fa-star-o"></i>
+                  </a>
+                </td>
+                <td class="title link">
+                  <a href="">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-certificate.png">
+                    </span>
+                    Grants for Sport Science
+                  </a>
+                </td>
+                <td class="value">
+                  &pound;1,000
+                </td>
+                <td class="rating rating-medium">
+                  Moderate
+                </td>
+                <td class="duration">
+                  Days
+                </td>
+                <td class="date date-right">
+                    05/02/2016
+                  </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary">
+                    View
+                  </a>
+                </td>-->
+              </tr>
+              <tr>
+                <td class="check-star" id="star">
+                  <a>
+                    <i class="fa fa-star-o"></i>
+                  </a>
+                </td>
+                <td class="title link">
+                  <a href="">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-discount.png">
+                    </span>
+                    Access Broadband Cymru
+                  </a>
+                </td>
+                <td class="value">
+                  <div data-toggle="tooltip" data-placement="top" title="This grant will give you access to a new setup etc for broadband">details
+                  </div>
+                </td>
+                <td class="rating rating-medium">
+                  Moderate
+                </td>
+                <td class="duration">
+                  Days
+                </td>
+                <td class="date date-right">
+                    04/04/2016
+                  </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary">
+                    View
+                  </a>
+                </td>-->
+              </tr>
+              <tr>
+                <td class="check-star" id="star">
+                  <a>
+                    <i class="fa fa-star-o"></i>
+                  </a>
+                </td>
+                <td class="title link">
+                  <a href="">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-free.png">
+                    </span>
+                  Alchol Education Trust: Free resources
+                  </a>
+                </td>
+                <td class="value">
+                  details
+                </td>
+                <td class="rating rating-easy">
+                  Basic
+                </td>
+                <td class="duration">
+                  Days
+                </td>
+                <td class="date date-right">
+                    06/04/2016
+                  </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary">
+                    View
+                  </a>
+                </td>-->
+              </tr>
+              <tr>
+                <td class="check-star" id="star">
+                  <a>
+                    <i class="fa fa-star-o"></i>
+                  </a>
+                </td>
+                <td class="title link">
+                  <a href="">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-support.png">
+                    </span>
+                    ASH Scotland: Free tobacco awareness raising session
+                  </a>
+                </td>
+                <td class="value">
+                  details
+                </td>
+                <td class="rating rating-easy">
+                  Basic
+                </td>
+                <td class="duration">
+                  Days
+                </td>
+                <td class="date date-right">
+                  10/04/2016
+                </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary">
+                    View
+                  </a>
+                </td>-->
+              </tr>
+              <tr>
+                <td class="check-star" id="star">
+                  <a>
+                    <i class="fa fa-star-o"></i>
+                  </a>
+                </td>
+                <td class="title link">
+                  <a href="">
+                    <span class="grant-icon">
+                      <img src="/img/grants-icons/icon-bucket.png">
+                    </span>
+                    Arla: Community Challenge
+                  </a>
+                </td>
+                <td class="value">
+                  details
+                </td>
+                <td class="rating rating-easy">
+                  Basic
+                </td>
+                <td class="duration">
+                  Days
+                </td>
+                <td class="date date-right">
+                  26/05/2016
+                </td>
+                <!--<td class="action">
+                  <a class="btn btn-primary">
+                    View
+                  </a>
+                </td>-->
+              </tr>
+
             </tbody>
           </table>
         </div>
-      </div>
-      <div class="panel-body">
-        <table class="table table-vam table-hover table-bordered">
-          <thead>
-            <tr>
-              <th>Inactive Projects <span>(1)</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="title link">
-                <a href="">
-                  <span class="initials icon-draft">RD</span>
-                  Reading Dog
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        </div>
     </div>
   </div>
+</div>
+
+
+<div class="row hide">
+  <div class="loader">Loading...</div>
 </div>
 
 
