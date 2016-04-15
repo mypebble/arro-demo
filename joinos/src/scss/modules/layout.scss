@@ -1,0 +1,17 @@
+//Layouts
+body{
+  display: flex;
+  min-height:100vh;
+  flex-direction: column;
+}
+main{
+  flex: 1;
+  margin-top: 50px;
+  &.content{
+    margin-top:0px;
+  }
+}
+
+.hide{
+  display: none;
+}

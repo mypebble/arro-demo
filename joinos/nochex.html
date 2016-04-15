@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <title>Joinos</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+
+    .navbar-inverse{
+      background-color: #34495e;
+      border: 0px;
+      margin-bottom: 0px;
+      border-radius: 0px;
+    }
+    .navbar-inverse .navbar-header{
+      font-weight: 700;
+    }
+    .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+      color: #FFF;
+    }
+
+    .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+      background-color: #2C3E50;
+    }
+
+    .navbar-inverse .basket-icon{
+      width: 23px;
+      margin-top: -5px;
+    }
+    .navbar-inverse .basket-icon path{
+      transition: fill 100ms linear;
+    }
+    .navbar-inverse .basket-icon:hover path{
+      fill: #1abc9c;
+    }
+    .navbar-brand.brand>img {
+        width: 18px;
+        float: right;
+        position: relative;
+        top: -5px;
+    }
+    body{
+      font-family: 'Lato', sans-serif;
+      color: #34495e;
+      font-weight: 400;
+    }
+    .bottom-menu {
+      background: #ebedef;
+      color: #b8bfc7;
+      padding: 40px 0;
+      margin-top: 10px;
+    }
+    .bottom-menu .brand {
+      font-size: 23.996px;
+
+
+      margin-bottom: -6px;
+      margin-top: -8px;
+    }
+    .bottom-menu .title {
+      font-size: 14px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+    .bottom-menu a {
+      color: inherit;
+    }
+    .active .bottom-menu a,
+    .bottom-menu a:hover,
+    .bottom-menu a:focus {
+      color: #1abc9c;
+    }
+    .bottom-menu .label,
+    .bottom-menu .badge {
+      vertical-align: middle;
+    }
+    .bottom-icons {
+      font-size: 15.988px;
+
+
+    }
+    .bottom-menu-inverse {
+      background-color: #34495e;
+      color: #677786;
+    }
+    .bottom-menu-large {
+      padding-bottom: 52px;
+      padding-top: 52px;
+    }
+    .bottom-menu-large .brand {
+      margin-top: -2px;
+    }
+    .bottom-menu-large .bottom-links li {
+      float: none;
+      margin-right: 0;
+    }
+    .bottom-links,
+    .bottom-icons {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .bottom-links li,
+    .bottom-icons li {
+      display: block;
+      float: left;
+      margin: 0 18px 0 0;
+    }
+    .rights {
+      text-align: center;
+    }
+    .content{
+      min-height: 650px;
+    }
+    label.joinos_checkbox {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    label.joinos_checkbox input {
+        width: 22px;
+        height: 22px;
+        vertical-align: bottom;
+        margin-right: 5px;
+    }
+    .payicon{
+        width: 22px;
+        vertical-align: text-bottom;
+    }
+    </style>
+
+    <meta name="theme-color" content="#34495E" />
+
+
+</head>
+<body>
+
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand brand" href="#">
+                Joinos <img alt="" src="https://my.joinos.com/static/images/logo_white.png">
+              </a>
+            </div>
+        </div>
+    </nav>
+
+<div class="container content" style="margin-top:100px;">
+
+    <!--
+    This layout is if Nochex can customize everything for us
+-->
+<div class="row"><div class="col-lg-offset-3 col-lg-6 col-sm-offset-1 col-md-9 col-sm-10">
+
+<!--
+<div class="alert alert-warning">
+    This is a test transaction. No money will actually be sent
+</div>
+-->
+
+
+<form class="form-horizontal">
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Payment To</label>
+    <div class="col-sm-9">
+      <p class="form-control-static">Pebble School</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Amount</label>
+    <div class="col-sm-9">
+      <p class="form-control-static">&pound;10.00</p>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Order ID</label>
+    <div class="col-sm-9">
+      <p class="form-control-static">31b0ad67-6f25-4d50-a0dd-7720a79caa29</p>
+    </div>
+  </div>
+
+<p class="lead">
+    Card details:
+</p>
+
+  <div class="form-group">
+    <label for="cn" class="col-sm-3 control-label">Card Number</label>
+    <div class="col-sm-9">
+      <input type="tel" class="form-control" id="cn" placeholder="0000-0000-0000-0000">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="nc" class="col-sm-3 control-label">Name on Card</label>
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="nc" placeholder="" />
+      <span class="help-block">
+          Enter your name exactly as it appears on your card
+      </span>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-3 control-label">Expiry</label>
+    <div class="col-sm-9">
+        <div class="row">
+            <div class="col-xs-6">
+                <select name="card_expiry_month" id="card_expiry_month" tabindex="3" class="form-control">
+                    <option selected="selected" value="MM">Expiry Month</option>
+                    <option value="01">01</option>
+                    <option value="02">02</option>
+                    <option value="03">03</option>
+                    <option value="04">04</option>
+                    <option value="05">05</option>
+                    <option value="06">06</option>
+                    <option value="07">07</option>
+                    <option value="08">08</option>
+                    <option value="09">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </select>
+            </div>
+            <div class="col-xs-6">
+                <select name="card_expiry_year" id="card_expiry_year" tabindex="4" class="form-control">
+                    <option selected="selected" value="YYYY">Expiry Year</option>
+                    <option value="16">2016</option>
+                    <option value="17">2017</option>
+                    <option value="18">2018</option>
+                    <option value="19">2019</option>
+                    <option value="20">2020</option>
+                    <option value="21">2021</option>
+                    <option value="22">2022</option>
+                    <option value="23">2023</option>
+                    <option value="24">2024</option>
+                    <option value="25">2025</option>
+                    <option value="26">2026</option>
+                </select>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="cvv" class="col-sm-3 control-label">CVV</label>
+    <div class="col-sm-9">
+      <div class="row">
+          <div class="col-xs-4">
+            <input type="tel" class="form-control" id="cvv" placeholder="000" />
+          </div>
+      </div>
+      <span class="help-block">
+            Usually the last three digits on the back of your card
+      </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-9 col-sm-offset-3">
+        <label for="tandcs" class="joinos_checkbox">
+            <input class="joinos_checkbox" type="checkbox" name="tandcs" id="tandcs" />
+            I agree to the Terms and Conditions of this payment
+        </label>
+         <br/><br/>
+         <a class="btn btn-default" target="_blank" href="https://testsecure.nochex.com/help_messages.aspx?Action=Q&ID=296">
+            Read Terms
+        </a><br/><br/>
+
+        <a type="submit" class="btn btn-lg btn-primary" href="success.html">
+            <svg class="payicon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><g><path fill="#FFF" d="M94.671,34.767v-4.048c0-5.583-4.568-10.151-10.151-10.151H15.151C9.568,20.568,5,25.136,5,30.719v4.048   H94.671z"></path><path fill="#FFF" d="M5,46.265v28.58c0,5.583,4.568,10.151,10.151,10.151H84.52c5.583,0,10.151-4.568,10.151-10.151v-28.58H5z"></path></g></svg>
+            Make Payment
+        </a>
+        &nbsp;&nbsp;&nbsp;or <a href="#">Start Again</a>
+     </div>
+  </div>
+
+  <br/><br/>
+
+
+
+</div></div>
+
+
+
+</div>
+
+</html>

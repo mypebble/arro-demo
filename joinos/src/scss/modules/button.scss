@@ -1,0 +1,25 @@
+// Buttons
+.btn {
+  font-weight:700;
+  text-transform: uppercase;
+  border-radius: 4px;
+  span{
+    display: block;
+    font-size: 80%;
+    font-weight: normal;
+  }
+}
+
+.btn-donate {
+  @include button-variant($white, $gray-dark, $gray-dark);
+}
+.btn-donate-outline {
+  @include button-outline-variant($gray-dark);
+}
+
+.btn-facebook {
+  @include button-variant($white, $social-facebook, $social-facebook);
+}
+.btn-twitter {
+  @include button-variant($white, $social-twitter, $social-twitter);
+}

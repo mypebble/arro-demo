@@ -1,0 +1,81 @@
+// Page mixin
+@mixin page-bg-color($background, $text-color) {
+  .page-banner{
+    background: url('../images/project1-2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .overlay{
+      background: rgba($background, .9 );
+      padding:20px 0px;
+      height: 100%;
+    }
+    h1, .lead{
+      color: $white;
+    }
+  }
+  .section-banner, .section-title{
+    background:$background;
+    color:$text-color;
+  }
+  .btn-primary {
+    @include button-variant($btn-primary-color, $background , $background);
+  }
+  .btn-primary-outline {
+    @include button-outline-variant($background);
+  }
+  .card-project{
+    .card-block{
+      background:$background;
+    }
+  }
+  .noUi-connect{
+    background: $background;
+  }
+  .nav-link {
+    color: $background;
+    text-decoration: $link-decoration;
+    @include hover-focus {
+      color: darken($background, 15%);
+      text-decoration: $link-hover-decoration;
+    }
+    &:focus {
+      @include tab-focus();
+    }
+  }
+}
+
+.page-green {
+  @include page-bg-color($brand-green, $white);
+}
+.page-blue {
+  @include page-bg-color($brand-blue, $white);
+}
+.page-orange {
+  @include page-bg-color($brand-orange, $white);
+}
+.page-pink {
+  @include page-bg-color($brand-red, $white);
+}
+
+.page-success{
+  background: url('../images/balloon.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  .overlay{
+    background: rgba($brand-gold, .2 );
+    padding:50px 0px;
+    height: 100%;
+  }
+}
+
+.row-or{
+  margin-top:10px;
+  color:$gray;
+}
