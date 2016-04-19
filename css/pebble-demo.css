@@ -16471,6 +16471,9 @@ ul.list-profile-settings li-footer-gray {
   background: #f9f9f9;
   border-radius: 4px;
 }
+ul.list-profile-settings li-footer-border {
+  border-top: 1px solid #cccccc;
+}
 ul.list-profile-settings li-footer ul {
   margin-bottom: 0 !important;
 }
@@ -16726,6 +16729,17 @@ ul.list-summary li.description {
   font-size: 5em;
   margin-bottom: 20px;
 }
+.icon-xl {
+  margin: 10px auto !important;
+  text-align: center;
+  display: block !important;
+  height: 100px !important;
+  width: 100px !important;
+}
+.icon-xl .fa {
+  line-height: 80px;
+  font-size: 50px;
+}
 .text-income {
   color: #00ad57;
 }
@@ -16867,6 +16881,10 @@ ul.list-files li a small {
 }
 .icon-user {
   background: #77216f;
+  color: #ffffff;
+}
+.icon-joinos {
+  background: #22b99b;
   color: #ffffff;
 }
 .menu-list {
@@ -17316,6 +17334,17 @@ a.list-facts-three li.rating-hard:hover {
 }
 .section-label i {
   margin-right: 5px;
+}
+.lead {
+  font-size: 16px;
+}
+.list-initials-sm li {
+  padding: 0px 5px;
+}
+.list-initials-sm li span {
+  width: 40px;
+  height: 40px;
+  margin-right: 0px;
 }
 /*global type*/
 .btn {
@@ -18952,6 +18981,9 @@ fieldset[disabled] .navbar-nav li .btn-notification.active {
 .panel-footer-gray {
   background: #f9f9f9;
   border-radius: 4px;
+}
+.panel-footer-border {
+  border-top: 1px solid #cccccc;
 }
 .panel-footer ul {
   margin-bottom: 0 !important;

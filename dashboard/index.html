@@ -304,6 +304,110 @@
 </div>
 
 -->
+
+
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>We Recommend&hellip;</h2>
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="text-center m-b-sm">
+            <span class="label label-success">Quick Win</span>
+          </div>
+          <span class="initials icon-xl icon-donations m-b-sm">
+            <i class="fa fa-gift"></i>
+          </span>
+          <p class="lead">Thank all of your donors can increase engagement by 72%</p>
+          <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-thank">Thank Donors</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="text-center m-b-sm">
+            <span class="label label-info">Long Term Win</span>
+          </div>
+          <span class="initials icon-xl icon-project m-b-sm">
+            <i class="fa fa-sitemap"></i>
+          </span>
+          <p class="lead">Update your community about your Project's progress</p>
+          <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-project">Send Message</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="text-center m-b-sm">
+            <span class="label label-success">Win, Win</span>
+          </div>
+          <span class="initials icon-xl icon-joinos m-b-sm">
+            <i class="fa fa-bullhorn"></i>
+          </span>
+          <p class="lead">Joinos Community Update</p>
+          <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-joinos">Show</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+
+
+    <h2>Highlights</h2>
+
+    <div>
+    </div>
+
+    <!--<a class="btn btn-default">
+      Show
+    </a>-->
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-gray">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-sm-8">
+            <div id="lines"></div>
+          </div>
+          <div class="col-sm-4">
+            <div class="panel-title panel-title-clear panel-title-white text-center">Weekly Summary</div>
+            <div class="panel-body">
+              <ul class="list-unstyled list-stats">
+                <li>
+                  New Stakeholders <span>15 <span><i class="fa fa-arrow-up text-success"></i>(4%)</span></span>
+                </li>
+                <li>
+                  Donations <span>&pound;123.37</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="panel-footer panel-footer-border">
+        footer
+      </div>-->
+    </div>
+  </div>
+</div>
+
 <div class="row">
   <div class="col-md-4">
     <h2>Report</h2>
@@ -317,7 +421,6 @@
 
 <div class="row">
   <div class="col-md-8">
-    <div id="lines"></div>
   </div>
   <div class="col-md-4">
     <!--
@@ -325,20 +428,8 @@
         xxx
       </div>
     -->
-    <div class="panel">
-      <div class="panel-title panel-title-clear panel-title-white text-center">Weekly Summary</div>
-      <div class="panel-body">
-        <ul class="list-unstyled list-stats">
-          <li>
-            New Stakeholders <span>15 <span><i class="fa fa-arrow-up text-success"></i>(4%)</span></span>
-          </li>
-          <li>
-            Donations <span>&pound;123.37</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="panel">
+
+    <div class="panel hide">
       <div class="panel-title panel-title-clear panel-title-white text-center">League Table</div>
       <div class="panel-body">
         <div class="alert alert-success hide">
@@ -433,6 +524,38 @@
   </div>
 </div>
 
+
+<div class="row">
+  <div class="col-sm-4">
+    <div class="panel">
+      <div class="panel-title panel-title-clear panel-title-white">New Contacts</div>
+      <div class="panel-body">
+        <p class="lead">Introduce your new contacts to your Projects.</p>
+        <ul class="list-unstyled list-inline list-initials-sm">
+          <li>
+            <span class="initials pupil" title="Adam Hogg">
+              AH
+            </span>
+          </li>
+          <li>
+            <span class="initials pta" title="Daniel Wakenshaw">
+              DW
+            </span>
+          </li>
+          <li>
+            <span class="initials staff" title="Ryan Green">
+              RG
+            </span>
+          </li>
+          <li>
+            <a>5 More&hellip;</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="row hide">
   <div class="col-md-4">
     <div class="panel">
@@ -448,7 +571,7 @@
   </div>
 </div>
 
-<div class="row">
+<div class="row hide">
   <div class="col-md-9">
     <div class="panel">
       <div class="panel-title">
@@ -483,61 +606,6 @@
     </div>
   </div>
 </div>
-<!--
-<div class="row">
-  <div class="col-lg-4">
-    <div class="panel">
-        <div class="panel-title">
-          To Do
-        </div>
-        <div class="panel-body">
-          <ul class="list-unstyled list-tasks list-tasks-clear">
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox3" checked="" value="option3" type="checkbox" disabled="">
-                  <label for="checkbox3">Choose Project</label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
-                  <label for="checkbox3">Customise Project</label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
-                  <label for="checkbox3">Share project with team</label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
-                  <label for="checkbox3">Search Grants</label>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="form-group">
-                <div class="checkbox checkbox-success">
-                  <input id="checkbox3" value="option3" type="checkbox" disabled="">
-                  <label for="checkbox3">Save Grant</label>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-  </div>
-</div>
--->
 
 <div class="row hide">
   <div class="col-md-3">
@@ -5373,7 +5441,133 @@
   </div>
 </div>
 
+
+
+  <!-- Dashboard modals -->
+
+  <div class="modal fade" id="dashboard-thank" tabindex="-1" role="dialog" aria-labelledby="dashboard-thank">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-body-clear">
+        <!--<div class="body-title">
+          <i class="fa fa-question-circle fa-xl text-info"></i>
+          <div class="title">Thank Donors</div>
+          <span class="block">Action Completed</span>
+          <p>You are about to import this amount of names.</p>
+        </div>-->
+
+<!--
+
+<textarea class="field form-control"  placeholder="">
+</textarea
+
+-->
+
+        <div class="panel">
+          <div class="panel-body">
+            <p><strong>Thank You!</strong></p>
+            <p>Thank you for taking the time to donate <strong class="text-danger">The Exploration Deck</strong> it means a lot to our school and we greatly apprechiate your kind gesture.</p>
+
+            <p>Many Thanks!</p>
+
+            <strong>The Funding School</strong>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="pull-left">
+          <a class="btn btn-default"><i class="fa fa-trash"></i> Abandon</a>
+        </div>
+        <div class="pull-right"><a class="btn btn-primary"><i class="fa fa-paper-plane-o"></i> Send Message</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="dashboard-project" tabindex="-1" role="dialog" aria-labelledby="dashboard-project">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-body-clear">
+        <!--<div class="body-title">
+          <i class="fa fa-question-circle fa-xl text-info"></i>
+          <div class="title">Thank Donors</div>
+          <span class="block">Action Completed</span>
+          <p>You are about to import this amount of names.</p>
+        </div>-->
+
+<!--
+
+<textarea class="field form-control"  placeholder="">
+</textarea
+
+-->
+
+        PROJECT
+
+        
+      </div>
+      <div class="modal-footer">
+        <div class="pull-left">
+          <a class="btn btn-default"><i class="fa fa-trash"></i> Abandon</a>
+        </div>
+        <div class="pull-right"><a class="btn btn-primary"><i class="fa fa-paper-plane-o"></i> Send Message</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="dashboard-joinos" tabindex="-1" role="dialog" aria-labelledby="dashboard-joinos">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header modal-header-clear">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body modal-body-clear">
+        <!--<div class="body-title">
+          <i class="fa fa-question-circle fa-xl text-info"></i>
+          <div class="title">Thank Donors</div>
+          <span class="block">Action Completed</span>
+          <p>You are about to import this amount of names.</p>
+        </div>-->
+
+<!--
+
+<textarea class="field form-control"  placeholder="">
+</textarea
+
+-->
+
+        joinos
+
+
+      </div>
+      <div class="modal-footer">
+        <div class="pull-left">
+          <a class="btn btn-default"><i class="fa fa-trash"></i> Abandon</a>
+        </div>
+        <div class="pull-right"><a class="btn btn-primary"><i class="fa fa-paper-plane-o"></i> Send Message</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- end dashboard modals -->
+
 <!-- end modals-->
+
 
 
 <button id="scroll-top" class="btn">
