@@ -47,6 +47,10 @@ h1, h2, h3{
   width:100px;
   height:100px;
 }
+.img-dd{
+  height: auto;
+  width:89px;
+}
 /*
 .list-gallery{
   li {
@@ -101,4 +105,19 @@ h1, h2, h3{
 
 .form-control-text{
     border: none;
+}
+
+
+address{
+  font-size:80%;
+}
+
+
+.total-donation{
+  @extend .text-xs-center;
+  .total{
+  @extend h1;
+  margin-bottom: 0px;
+  display: block;
+  }
 }

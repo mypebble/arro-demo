@@ -19,6 +19,13 @@ $check-icon: $fa-var-check !default;
       color: #fff;
     }
   }
+  input[type="checkbox"]{
+    &:checked{
+      & + label{
+        //background: $color;
+      }
+    }
+  }
 }
 
 @mixin checkbox-variant-indeterminate($parent, $color) {
@@ -38,6 +45,8 @@ $check-icon: $fa-var-check !default;
   padding-left: 20px;
 
   label{
+    text-transform: none !important;
+    font-size:1rem;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -80,7 +89,6 @@ $check-icon: $fa-var-check !default;
     &:focus + label::before{
       @include tab-focus();
     }
-
     &:checked + label::after{
       font-family: $font-family-icon;
       content: $check-icon;

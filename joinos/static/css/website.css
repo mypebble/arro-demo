@@ -61,7 +61,7 @@ strong {
 dfn {
   font-style: italic; }
 
-h1 {
+h1, .total-donation .total {
   font-size: 2em;
   margin: 0.67em 0; }
 
@@ -273,7 +273,7 @@ body {
 [tabindex="-1"]:focus {
   outline: none !important; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .total-donation .total, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem; }
 
@@ -408,7 +408,7 @@ output {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
+h1, .total-donation .total, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -416,7 +416,7 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.1;
   color: inherit; }
 
-h1 {
+h1, .total-donation .total {
   font-size: 2.5rem; }
 
 h2 {
@@ -4525,7 +4525,7 @@ button.close {
 .text-xs-right, .input-amount {
   text-align: right !important; }
 
-.text-xs-center, .project-stats, .target, .card-header, .card-footer .stats .info, .card-actions, .card-project, .card-gift-aid, .card-offer {
+.text-xs-center, .project-stats, .target, .total-donation, .card-header, .card-footer .stats .info, .card-actions, .card-project, .card-gift-aid, .card-offer {
   text-align: center !important; }
 
 @media (min-width: 544px) {
@@ -6614,6 +6614,8 @@ a.bg-danger:focus {
 .abc-checkbox {
   padding-left: 20px; }
   .abc-checkbox label {
+    text-transform: none !important;
+    font-size: 1rem;
     display: inline-block;
     vertical-align: middle;
     position: relative;
@@ -6869,7 +6871,7 @@ body {
   color: #373a3c;
   font-size: 1rem; }
 
-h1, h2, h3 {
+h1, .total-donation .total, h2, h3 {
   font-weight: normal;
   font-style: normal;
   font-weight: bold;
@@ -6897,6 +6899,10 @@ h1, h2, h3 {
 .img-thumbnail {
   width: 100px;
   height: 100px; }
+
+.img-dd {
+  height: auto;
+  width: 89px; }
 
 /*
 .list-gallery{
@@ -6942,6 +6948,13 @@ h1, h2, h3 {
 
 .form-control-text {
   border: none; }
+
+address {
+  font-size: 80%; }
+
+.total-donation .total {
+  margin-bottom: 0px;
+  display: block; }
 
 .checkbox span {
   display: block; }
@@ -7271,7 +7284,7 @@ footer {
     background: rgba(34, 185, 155, 0.9);
     padding: 20px 0px;
     height: 100%; }
-  .page-green .page-banner h1, .page-green .page-banner .lead {
+  .page-green .page-banner h1, .page-green .page-banner .total-donation .total, .total-donation .page-green .page-banner .total, .page-green .page-banner .lead {
     color: #ffffff; }
 .page-green .section-banner, .page-green .section-title {
   background: #22B99B;
@@ -7354,7 +7367,7 @@ footer {
     background: rgba(38, 170, 226, 0.9);
     padding: 20px 0px;
     height: 100%; }
-  .page-blue .page-banner h1, .page-blue .page-banner .lead {
+  .page-blue .page-banner h1, .page-blue .page-banner .total-donation .total, .total-donation .page-blue .page-banner .total, .page-blue .page-banner .lead {
     color: #ffffff; }
 .page-blue .section-banner, .page-blue .section-title {
   background: #26aae2;
@@ -7437,7 +7450,7 @@ footer {
     background: rgba(226, 135, 95, 0.9);
     padding: 20px 0px;
     height: 100%; }
-  .page-orange .page-banner h1, .page-orange .page-banner .lead {
+  .page-orange .page-banner h1, .page-orange .page-banner .total-donation .total, .total-donation .page-orange .page-banner .total, .page-orange .page-banner .lead {
     color: #ffffff; }
 .page-orange .section-banner, .page-orange .section-title {
   background: #e2875f;
@@ -7520,7 +7533,7 @@ footer {
     background: rgba(231, 93, 120, 0.9);
     padding: 20px 0px;
     height: 100%; }
-  .page-pink .page-banner h1, .page-pink .page-banner .lead {
+  .page-pink .page-banner h1, .page-pink .page-banner .total-donation .total, .total-donation .page-pink .page-banner .total, .page-pink .page-banner .lead {
     color: #ffffff; }
 .page-pink .section-banner, .page-pink .section-title {
   background: #e75d78;
@@ -7608,6 +7621,9 @@ footer {
 .row-or {
   margin-top: 10px;
   color: #55595c; }
+
+.charges-value-fee {
+  display: inline !important; }
 
 .amount-slider {
   margin-bottom: 20px;

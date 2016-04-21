@@ -155,17 +155,48 @@
 
         <div class="row">
           <div class="col-sm-4 col-sm-offset-4">
-            <label>Amount</label>
-            <input type="text" class="form-control form-control-lg input-amount slider-input" value="">
+            <fieldset class="form-group">
+              <label>Amount</label>
+              <input type="text" class="form-control form-control-lg input-amount slider-input" value="">
+            </fieldset>
           </div>
         </div>
-        <div class="row row-or">
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <fieldset class="form-group">
+              <div class="checkbox abc-checkbox abc-checkbox-primary">
+                <input id="checkbox3" class="styled" type="checkbox" checked="" onclick="$('#total-1').toggleClass('hide'), $('#total-2').toggleClass('hide')">
+                <label for="checkbox3">
+
+
+                I would like cover the transaction fee of <strong>&pound;<span class="charges-value-fee"></span></strong> to allow the school to receive my <strong>full donation</strong>.
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="actions-row text-xs-center">
+            <a id="btn-1" class="btn btn-default btn-info">Single Donation</a>
+            <a id="btn-2" class="btn btn-default">Monthly Donation</a>
+            <div class="hide">
+              This donation will come out on the <strong>Last Day</strong> of each calender month <a>Change Date</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-or hide">
           <div class="col-sm-12 text-xs-center">
           - or -
           </div>
         </div>
 
-        <div class="amount-slider">
+
+
+        <div class="amount-slider hide">
           <div class="row">
             <div class="value">
               <div class="col-sm-10 col-sm-offset-1">
@@ -174,7 +205,7 @@
                   <span class="donation-value"></span>
                 </div>
                 <div class="charges">
-                  Inc Charges:
+                  Total Inc Charges:
                   <span class="charges-value"></span>
                 </div>
               </div>
@@ -186,6 +217,8 @@
             </div>
           </div>
         </div>
+
+
 
         <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
@@ -206,16 +239,7 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="checkbox abc-checkbox">
-                    <input id="checkbox1" class="styled" type="checkbox">
-                    <label for="checkbox1">
-                        <strong>Anonymous Donation</strong>
-                    </label>
-                  </div>
-                </div>
-              </div>
+
 
               <fieldset class="form-group">
                 <label>Email address</label>
@@ -232,59 +256,75 @@
                         I am a UK tax payer
                       </label>
                   </div>
+
+                  <div id="gift-aid" class="text-xs-left hide">
+                    <fieldset class="form-group">
+                      <label>Postcode</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Postcode">
+                        <span class="input-group-btn">
+                          <button class="btn btn-secondary" type="button" onclick="$('#find-address-results').removeClass('hide')">Find Address</button>
+                        </span>
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="form-group hide" id="find-address-results">
+                      <label for="exampleSelect1">Postcode Results</label>
+                      <select class="form-control" id="exampleSelect1">
+                        <option>Media Exchange 1, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
+                        <option>Media Exchange 2, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
+                        <option>Media Exchange 3, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
+                        <option>Media Exchange 4, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
+                        <option>Media Exchange 5, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
+                      </select>
+                    </fieldset>
+
+                  </div>
+
                 </div>
               </div>
 
-              <div id="gift-aid" class="hide">
-                <fieldset class="form-group">
-                  <label>Postcode</label>
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Postcode">
-                    <span class="input-group-btn">
-                      <button class="btn btn-secondary" type="button" onclick="$('#find-address-results').removeClass('hide')">Find Address</button>
-                    </span>
+               <div class="row">
+                  <div class="col-sm-10 col-sm-offset-1 text-xs-center">
+                    <div class="checkbox abc-checkbox abc-checkbox-primary">
+                      <input id="checkbox1" class="styled" type="checkbox">
+                      <label for="checkbox1">
+                        I'd like my identity to be hidden from others
+                      </label>
+                    </div>
                   </div>
-                </fieldset>
+                </div>
 
-                <fieldset class="form-group hide" id="find-address-results">
-                  <label for="exampleSelect1">Postcode Results</label>
-                  <select class="form-control" id="exampleSelect1">
-                    <option>Media Exchange 1, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
-                    <option>Media Exchange 2, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
-                    <option>Media Exchange 3, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
-                    <option>Media Exchange 4, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
-                    <option>Media Exchange 5, Coquet Street, Newcastle Upon Tyne, NE12QB</option>
-                  </select>
-                </fieldset>
-
-              </div>
             </div>
           </form>
           </div>
 
-      </div>
-
-      <div class="modal-footer">
-        <div class="card-actions">
-          <a class="btn btn-primary btn-lg" href="/arro-demo/joinos/no.html">Make Donation</a>
-
-          <!--<a class="btn btn-primary btn-lg"
-            onclick="$('#donation-modal').modal('hide');$('#modal-donation-card').modal('show')">Make Donation</a>-->
-
-          <script>
-
-          #modal-donation
-          #modal-donation-card
-
-          </script>
-
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="total-donation">
+              Total Donation
+              <span class="total">
+                £<span class="charges-value" id="total-1"></span><span class="donation-value hide" id="total-2"></span>
+              </span>
+            </div>
+          </div>
 
         </div>
       </div>
 
-    </div>
+      <div class="modal-footer">
+        <div class="card-actions">
+          <!--<a class="btn btn-primary btn-lg" href="/arro-demo/joinos/no.html">Continue</a>-->
+          <a class="btn btn-primary btn-lg"
+            onclick="$('#donation-modal').modal('hide');$('#modal-donation-card').modal('show')">
+            Continue
+          </a>
+        </div>
+      </div>
+
 
   </div>
+</div>
 </div>
 
 <!-- Modal -->
@@ -297,7 +337,7 @@
           <i class="awesome awesome-lock"></i>
         </span>-->
         <h4 class="modal-title text-xs-center" id="myModalLabel">
-          <div class="card-header">Donation</div>
+          <div class="card-header">Total Donation</div>
         </h4>
       </div>
 
@@ -306,7 +346,7 @@
 
         <div class="row">
           <div class="col-sm-6 col-sm-offset-3">
-            <h1>£10.50</h1>
+            <h1>£10.60</h1>
             <a class="btn-block text-xs-center" onclick="$('#modal-donation-card').modal('hide');$('#donation-modal').modal('show')">Change Amount</a>
           </div>
         </div>
@@ -320,7 +360,7 @@
           <div class="col-sm-6">
             <fieldset class="form-group">
               <label class="">Sort Code</label>
-                <input class="form-control" id="sort-input" placeholder="00-00-00" type="text">
+                <input class="form-control" placeholder="00-00-00" type="text">
             </fieldset>
           </div>
           <div class="col-sm-6">
@@ -335,9 +375,9 @@
           <div class="col-sm-12">
             <div class="card">
               <div class="card-block">
-                <div class="checkbox abc-checkbox" style="margin-bottom:0px;">
-                  <input id="checkbox1" class="styled" type="checkbox">
-                  <label for="checkbox1">
+                <div class="checkbox abc-checkbox abc-checkbox-primary" style="margin-bottom:0px;">
+                  <input id="checkbox4" class="styled" type="checkbox">
+                  <label for="checkbox4">
                     I confirm that I am the account holder and am the only person required to authorise debits on this account
                   </label>
                 </div>
@@ -350,9 +390,8 @@
       <div class="modal-footer">
         <div class="row">
           <div class="col-sm-12">
-            <a class="btn btn-primary btn-block btn-lg">
-              Make Donate
-              <span>&pound;10.00</span>
+            <a class="btn btn-primary btn-block btn-lg" onclick="$('#modal-donation-card').modal('hide');$('#gocardless').modal('show')">
+              Make Donation
             </a>
             <!--<a class="btn btn-default btn-block">
               Cancel
@@ -360,8 +399,18 @@
           </div>
         </div>
       </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <img src="static/images/DirectDebitLogo.jpg" class="img-dd pull-right">
+
+            <p>Your payments are protected by the <a href="">Direct Debit Guarantee.</a></p>
+          </div>
+        </div>
+      </div>
+
       <div class="modal-footer modal-footer-gray text-xs-left">
-        <div class="text-xs-center"></div>
         <strong>Payment Provided by:</strong>
         <address>
           <strong>GoCardless</strong><br>
@@ -411,7 +460,7 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <a class="btn btn-primary btn-lg btn-block">Confirm</a>
+            <a class="btn btn-primary btn-lg btn-block" href="success.html">Confirm</a>
             <a class="btn btn-default btn-block">Change Details</a>
           </div>
         </div>
@@ -478,7 +527,9 @@ $(".slider-input").on("keyup update", function(){
   }
 
   $(".donation-value").text($(this).val());
-  var money = Math.ceil($(this).val()*1.05*100)/100 + "";
+  var coins = parseInt($(this).val().replace(".", ""));
+  console.log(coins);
+  var money = Math.ceil(coins*1.06)/100 + "";
   if(money.substr(money.indexOf(".")+1).length == 1){
     money = money + "0";
   }
@@ -486,7 +537,18 @@ $(".slider-input").on("keyup update", function(){
     money = money + ".00";
   }
   $(".charges-value").text(money);
+
+  var money = Math.ceil(coins*0.06)/100 + "";
+  if(money.substr(money.indexOf(".")+1).length == 1){
+    money = money + "0";
+  }
+  if(money.indexOf(".") == -1){
+    money = money + ".00";
+  }
+  $(".charges-value-fee").text(money);
 }).trigger("update");
+
+
 
 </script>
 
