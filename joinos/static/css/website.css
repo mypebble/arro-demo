@@ -7280,6 +7280,8 @@ footer {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat; }
+  .page-green .page-banner-sea {
+    background: url("../images/pool-img.jpg") !important; }
   .page-green .page-banner .overlay {
     background: rgba(34, 185, 155, 0.9);
     padding: 20px 0px;
@@ -7363,6 +7365,8 @@ footer {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat; }
+  .page-blue .page-banner-sea {
+    background: url("../images/pool-img.jpg") !important; }
   .page-blue .page-banner .overlay {
     background: rgba(38, 170, 226, 0.9);
     padding: 20px 0px;
@@ -7446,6 +7450,8 @@ footer {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat; }
+  .page-orange .page-banner-sea {
+    background: url("../images/pool-img.jpg") !important; }
   .page-orange .page-banner .overlay {
     background: rgba(226, 135, 95, 0.9);
     padding: 20px 0px;
@@ -7529,6 +7535,8 @@ footer {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat; }
+  .page-pink .page-banner-sea {
+    background: url("../images/pool-img.jpg") !important; }
   .page-pink .page-banner .overlay {
     background: rgba(231, 93, 120, 0.9);
     padding: 20px 0px;
