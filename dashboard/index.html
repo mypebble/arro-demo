@@ -259,23 +259,7 @@
       <div id="content-container">
           <div id="page-content">
 
-          <!-- -->
-<!--<div class="row">
-  <div class="col-md-8">
-    <canvas id="canvas" height="150"></canvas>
-  </div>
-</div>
--->
-
-<!--
-  <div class="row">
-    <div class="col-md-12">
-
-    </div>
-  </div>
--->
-
-<!--
+          <!--
 <div class="jumbotron">
   <div class="row">
     <div class="col-lg-8 col-md-8">
@@ -302,15 +286,61 @@
     </div>
   </div>
 </div>
-
 -->
 
 
 
-<div class="jumbotron">
+<div class="jumbotron" id="jumbo-toggle">
   <div class="row">
     <div class="col-sm-12">
-      <h2>We Recommend&hellip;</h2>
+      <div class="panel panel-clear">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-8">
+              <div id="lines"></div>
+            </div>
+            <div class="col-sm-4">
+              <div class="panel-body">
+                <ul class="list-unstyled list-fact">
+                  <li>
+                    <div class="dashboard-stats">
+                      &pound;5,000.00
+                      <small class="text-success">
+                        <i class="glyphicon glyphicon-arrow-up"></i> 2%
+                      </small>
+                      <span>The current value of using <a href="#">Arro this year</a></span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dashboard-stats">
+                      100
+                      <small class="text-success">
+                        <i class="glyphicon glyphicon-arrow-up"></i> 50%
+                      </small>
+                      <span><a href="#">New Stakeholders</a> to help with Projects</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dashboard-stats">
+                      42
+                      <small class="text-success">
+                        <i class="glyphicon glyphicon-arrow-up"></i> 10%
+                      </small>
+                      <span><a href="#">New Donations</a> received this week</span>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hide">
+          <a onclick="$('#jumbo-toggle').toggleClass('jumbotron-gray-darker')" class="btn btn-default">
+            <i class="fa fa-lightbulb-o"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -324,7 +354,7 @@
           <span class="initials icon-xl icon-donations m-b-sm">
             <i class="fa fa-gift"></i>
           </span>
-          <p class="lead">Thank all of your donors can increase engagement by 72%</p>
+          <p class="lead">Thank all of your donors can <strong>increase engagement</strong> by 72%</p>
           <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-thank">Thank Donors</a>
         </div>
       </div>
@@ -338,7 +368,7 @@
           <span class="initials icon-xl icon-project m-b-sm">
             <i class="fa fa-sitemap"></i>
           </span>
-          <p class="lead">Update your community about your Project's progress</p>
+          <p class="lead">Update <strong>your community</strong> about your Project's progress</p>
           <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-project">Send Message</a>
         </div>
       </div>
@@ -351,72 +381,260 @@
             <span class="label label-success">Win, Win</span>
           </div>
           <span class="initials icon-xl icon-joinos m-b-sm">
-            <i class="fa fa-bullhorn"></i>
+            <i class="fa fa-users"></i>
           </span>
-          <p class="lead">Joinos Community Update</p>
-          <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-joinos">Show</a>
+          <p class="lead">Share your Joinos Community with your <strong>new contacts</strong></p>
+          <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-joinos">Share</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="text-center m-b-sm">
+            <span class="label label-info">Long Term Win</span>
+          </div>
+          <span class="initials icon-xl icon-info m-b-sm">
+            <i class="fa fa-calendar"></i>
+          </span>
+          <p class="lead">Book your <strong>FREE Workshop</strong> training day</p>
+          <a class="btn btn-default btn-block" data-toggle="modal" data-target="#dashboard-book">Book Now</a>
         </div>
       </div>
     </div>
 
   </div>
+
 </div>
 
 <div class="row">
-  <div class="col-sm-12">
+  <div class="col-sm-4">
+    <div class="panel">
+      <div class="panel-title">
+        Donations Summary
+      </div>
+      <div class="panel-body">
 
+        <ul class="list-dashboard">
+          <li>
+            How many donations: <span>5</span>
+          </li>
+          <li>
+            Total Value: <span>&pound;500.00</span>
+          </li>
+          <li>
+            Average: <span>&pound;100.00</span>
+          </li>
+          <li>
+            Comments: <span>5</span>
+          </li>
+          <!--<li>
+            Value of Gift Aid: <span>&pound;20.00</span>
+          </li>-->
+        </ul>
 
-    <h2>Highlights</h2>
-
-    <div>
+      </div>
+      <div class="panel-footer">
+        <p class=""><strong>Good News!</strong> Your School is in the <strong>top 5%</strong> of our Income Generation Schools</p>
+      </div>
     </div>
+  </div>
 
-    <!--<a class="btn btn-default">
-      Show
-    </a>-->
+  <div class="col-sm-4">
+    <div class="panel">
+      <div class="panel-title">
+        SRM Summary
+      </div>
+      <div class="panel-body">
 
+        <ul class="list-unstyled">
+          <li>New contacts added: <div>10</div></li>
+          <li>New info received: <div>15</div></li>
+          <!--<li>Database segmentation: <div></div></li>-->
+          <li>No. Donors: <div>5</div></li>
+          <li>No. repeat Donors: <div>1</div></li>
+          <li>No. Volunteers: <div>0</div></li>
+        </ul>
+
+      </div>
+      <div class="panel-footer">
+        <strong>We Reccomend</strong> This
+
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="row">
+
+<div class="row hide">
   <div class="col-sm-12">
-    <div class="panel panel-gray">
-      <div class="panel-body">
-        <div class="row">
-          <div class="col-sm-8">
-            <div id="lines"></div>
+    Grants
+  </div>
+</div>
+
+<div class="">
+  <div class="row">
+    <!--<div class="col-sm-8">
+      <div class="panel">
+        <div class="panel-title">
+          <div class="dashboard-stats">
+            &pound;500.00
+            <small class="text-success">
+              <i class="glyphicon glyphicon-arrow-up"></i> 2%
+            </small>
+            <span>Something</span>
           </div>
-          <div class="col-sm-4">
-            <div class="panel-title panel-title-clear panel-title-white text-center">Weekly Summary</div>
-            <div class="panel-body">
-              <ul class="list-unstyled list-stats">
-                <li>
-                  New Stakeholders <span>15 <span><i class="fa fa-arrow-up text-success"></i>(4%)</span></span>
-                </li>
-                <li>
-                  Donations <span>&pound;123.37</span>
-                </li>
-              </ul>
+        </div>
+        <div class="panel-body">
+
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="dashboard-stats">
+                &pound;500.00
+                <small class="text-success">
+                  <i class="glyphicon glyphicon-arrow-up"></i> 2%
+                </small>
+                <span><a href="#">Donations Received</a> This week from the campaign</span>
+              </div>
             </div>
           </div>
         </div>
+        <div class="panel-footer">
+          <div class="dashboard-stats">
+            &pound;500.00
+            <small class="text-success">
+              <i class="glyphicon glyphicon-arrow-up"></i> 2%
+            </small>
+            <span>Something</span>
+          </div>
+        </div>
       </div>
-      <!--<div class="panel-footer panel-footer-border">
-        footer
-      </div>-->
+    </div>-->
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+          <p class="lead">How your school compares to similar organisations.</p>
+          <div id="barz"></div>
+          <div class="alert alert-success hide">
+            <strong>£100 more</strong> than the national average for income generation
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-sm-4">
+      <div class="panel">
+        <div class="panel-body">
+
+          <div class="text-center">
+
+            <div id="chart"></div>
+
+            <div class="dashboard-stats">
+              &pound;500.00
+              <small class="text-success">
+                <i class="glyphicon glyphicon-arrow-up"></i> 2%
+              </small>
+              <span>Something</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </div>
+
+
+  <div class="row">
+    <div class="col-sm-8">
+
+    </div>
+
+  </div>
+
+  <!--
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">Pannel1</div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">Pannel1</div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">Pannel1</div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">Pannel1</div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">Pannel1</div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="panel">
+        <div class="panel-body">Pannel1</div>
+      </div>
+    </div>
+  </div>
+-->
+
 </div>
 
+
+
+
+
+
+
+<!--
 <div class="row">
   <div class="col-md-4">
     <h2>Report</h2>
     <div id="chart-guage"></div>
-
-    <div id="chart"></div>
-    </div>
   </div>
+</div>
+-->
+<!--
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-joinos">
+        <div class="panel-title">xx</div>
+        <div class="panel-body">
 
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="current-total">
+                  &pound;50.00
+                <span>Current Total</span>
+              </div>
+            </div>
+          </div>
+
+
+          Shares:
+
+          Tweets <span>5</span>
+          Facebook <span>40</span>
+        </div>
+        <div class="panel-footer">
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+-->
 
 
 <div class="row">
@@ -512,7 +730,7 @@
             </tr>
             <tr class="">
               <td colspan="3" class="text-center">
-                <a href="">
+                <a href="#">
                   Show All
                 </a>
               </td>
@@ -525,7 +743,7 @@
 </div>
 
 
-<div class="row">
+<div class="row hide">
   <div class="col-sm-4">
     <div class="panel">
       <div class="panel-title panel-title-clear panel-title-white">New Contacts</div>
@@ -5454,28 +5672,47 @@
         </button>
       </div>
       <div class="modal-body modal-body-clear">
-        <!--<div class="body-title">
-          <i class="fa fa-question-circle fa-xl text-info"></i>
+        <div class="body-title">
+          <!--<i class="fa fa-question-circle fa-xl text-info"></i>-->
           <div class="title">Thank Donors</div>
-          <span class="block">Action Completed</span>
-          <p>You are about to import this amount of names.</p>
-        </div>-->
+          <p>Thank all of your donors can increase engagement by 72%</p>
+        </div>
 
-<!--
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="panel panel-mail">
+              <form class="form-horizontal">
+                <div class="panel-title">
+                  <div class="form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" for="">To</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <input class="form-control" value="15 Contacts" type="text" disabled="">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-2">
+                      <label class="control-label" for="">Subject</label>
+                    </div>
+                    <div class="col-sm-10">
+                      <input class="form-control col-sm-10" value="Thank you for your Donation" type="text" placeholder="Subject">
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <p>Thank You!</p>
+                  <p>Thank you for taking the time to donate towards the <strong>"The Exploration Deck"</strong> project. It means a lot to our school and we greatly apprechiate your kind gesture.</p>
 
-<textarea class="field form-control"  placeholder="">
-</textarea
+                  <p>Many Thanks Again!</p>
 
--->
+                  <strong>The Funding School</strong>
+                </div>
 
-        <div class="panel">
-          <div class="panel-body">
-            <p><strong>Thank You!</strong></p>
-            <p>Thank you for taking the time to donate <strong class="text-danger">The Exploration Deck</strong> it means a lot to our school and we greatly apprechiate your kind gesture.</p>
-
-            <p>Many Thanks!</p>
-
-            <strong>The Funding School</strong>
+                <div class="panel-footer hide">
+                </div>
+              </form>
+            </div>
           </div>
         </div>
 
