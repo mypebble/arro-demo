@@ -1,0 +1,349 @@
+---
+layout: default-donations
+title: View Donations
+permalink: /donations/all/
+heading: View Donations
+tagline: All your recorded transactions in one place
+
+---
+
+<!--
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <h1 class="page-header">{{ page.heading }}
+    </h1>
+  </div>
+</div>
+-->
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-context-donations">
+      <div class="panel-title">
+        View Donations
+      </div>
+      <div class="panel-subnav">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="row">
+            <div class="col-sm-10">
+              <div class="search">
+                <input class="form-control" placeholder="Search by Name" type="text">
+                <i class="glyphicon glyphicon-search"></i>
+              </div>
+            </div>
+            <button class="btn btn-primary col-sm-2">Search</button>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <ul class="list-unstyled list-inline pull-right">
+            <li>
+              <a class="btn btn-add" href="/donations/home/">
+                <i class="fa fa-plus"></i>Add New
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+
+      <div class="panel-body">
+        <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th class="date">Date{% include filter.html %}</th>
+                <th class="rec">No#{% include filter.html %}</th>
+                <th class="">Name{% include filter.html %}</th>
+                <th class="details">Description</th>
+                <th class="amount">Amount{% include filter.html %}</th>
+                <th class="type">Type{% include filter.html %}</th>
+                <th class="status">Gift Aid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-toggle="modal" data-target="#myModal-donation" class="link">
+                <td class="date">05/05/2015</td>
+                <td class="rec">D001</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D002</td>
+                <td class="name">Alan Waggott</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £1.00
+
+                </td>
+                <td cl>Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D003</td>
+                <td class="name">Daniel Wakenshaw</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D004</td>
+                <td class="name">Ryan Green</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D005</td>
+                <td class="name">Jill West</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D006</td>
+                <td class="name">Daniel Wakenshaw</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D007</td>
+                <td class="name">Darren Mansfield</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D008</td>
+                <td class="name">Janis Green</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr data-toggle="modal" data-target="#myModal-donation">
+                <td class="date">05/05/2015</td>
+                <td class="rec">D009</td>
+                <td class="name">Darren Mansfield</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="date">05/05/2015</td>
+                <td class="rec">D010</td>
+                <td class="name">Adam Hogg</td>
+
+                <td class="details details-sm">
+                  This is a voluntary donation
+                </td>
+                <td class="amount donation">
+                  £10.00
+
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <!--<tr>
+                <td class="date">45/05/2015</td>
+                <td class="rec">GASD01</td>
+                <td class="name">Sports Hall</td>
+                <td class="details details-sm">
+                 Donation bucket cashout
+                </td>
+                <td class="amount donation">
+                  £23.72
+                </td>
+                <td class="type">Cash</td>
+                <td class="status">
+                  <ul class="list-unstyled list-inline list-status">
+                    <li class="donations active">
+                      <i class="fa fa-gift"></i>
+                    </li>
+                  </ul>
+                </td>
+              </tr>-->
+            </tbody>
+          </table>
+        </div>
+        <div class="panel-footer">
+          <div class="row">
+            <div class="col-lg-8">
+              <ul class="pagination">
+                  <li class="disabled">
+                    <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                  </li>
+                  <li class="active">
+                    <a data-page="1" href="#" class="page">
+                      1
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      2
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      3
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      4
+                    </a>
+                  </li>
+                  <li class="">
+                    <a data-page="2" href="#" class="page">
+                      5
+                    </a>
+                  </li>
+                <li class="">
+                  <a data-page="next" href="#" aria-label="Next" class="page-next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+                </li>
+              </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="page-total">
+              Showing 1 - 10 of 2,000
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+{% include modal-transaction.html %}

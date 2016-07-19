@@ -1,0 +1,162 @@
+---
+layout: default-donations
+title:  Donations History
+permalink: /donations/history/
+
+heading: View Pending / Archived Claims
+tagline: Your pending and archived Claims for HMRC
+
+
+---
+
+<div class="jumbotron hide" id="jumbo">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 ">
+    </div>
+    <div class="col-lg-5 col-md-6 ">
+      <div class="panel">
+          <div class="panel-title">Getting started
+        </div>
+        <div class="panel-body">
+          <h3>Grants</h3>
+          <p>Here you'll find 1#00's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
+          <br>
+          <div class="staff-comment">
+            Daniel Wakenshaw
+            <small class="block">Pebble Support Team</small>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <a class="btn btn-info pull-right" onclick="$('#jumbo').addClass('hide')">Got it</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-table panel-context-donations">
+      <div class="panel-title">
+        Gift Aid Claims
+      </div>
+      
+      <div class="panel-subnav">
+        <div class="col-md-12">
+          <!--<a class="btn btn-info">Hints &amp; Tips</a>-->
+          <a class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModalRefund"><i class="fa fa-gift"></i> Repayment Received</a>
+        </div>
+      </div>
+      <!--<div class="panel-alert alert-info ">
+        <div class="col-md-12">
+          <div class="title">
+            Hints and Tips: Did you know you could claim an additional <span>&pound;250.00</span> from these <span>50 donors</span>
+          </div>
+          <a class="btn btn-info pull-right">Learn More</a>
+        </div>
+      </div>-->
+      <div class="panel-body">
+            <table class="table table-vam table-bordered">
+                <thead>
+                  <tr>
+                    <th class="title">To be Claimed</th>
+                    <th>Donors</th>
+                    <th class="amount">Repayment Amount<!--{% include filter.html %}--></th>
+                    <th>Reports</th>
+                    <th class="action"></th>
+                  </tr>
+                  <tr>
+                    <td class="title link">
+                      <a href="">
+                        <span class="initials icon-donations">
+                          <i class="fa fa-file"></i>
+                        </span>
+                        Outstanding Donations
+                      </a>
+                    </td>
+                    <td class="names">
+                      10 Donors
+                    </td>
+                    <td class="amount total-claim">
+                      £250.00
+                    </td>
+                    <td>
+                      <a data-toggle="modal" data-target="#myModalHMRC-data">
+                        Preview
+                      </a>
+                    </td>
+                    <td>
+                      <a class="btn btn-default" data-toggle="modal" data-target="#myModalHMRC">
+                        Create Claim
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="archived">
+                    <td colspan="5">
+                      Archived Claims
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+
+                  <tr>
+                    <td class="title link">
+                      <a href="">
+                        <span class="initials icon-donations">
+                          <i class="fa fa-file"></i>
+                        </span>
+                        Gift Aid Claim - January 2016
+                      </a>
+                    </td>
+                    <td class="names">
+                      1 Donor
+                    </td>
+                    <td class="amount">
+                      &pound;5.00
+                    </td>
+                    <td>
+                      <a>View Report</a>
+                    </td>
+                    <td class="date date-right">
+                      Created 05/05/2015
+                    </td>
+                  </tr>
+                  <!--
+                  <tr class="">
+                    <td class="title link">
+                      <a href="">
+                        <span class="initials icon-donations">
+                          <i class="fa fa-file"></i>
+                        </span>
+                        Gift Aid Claim - December 2015
+                        <span class="label label-success">
+                          Repayment Received
+                        </span>
+                      </a>
+                    </td>
+                    <td class="names">
+                      1 Donor
+                    </td>
+                    <td class="amount income">
+                      &pound;10.00
+                    </td>
+                    <td>
+                      <a>View Report</a>
+                    </td>
+                    <td class="date date-right">
+                      Created 12/01/2015
+                    </td>
+                  </tr>
+                  -->
+                </tbody>
+              </table>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    </div>
+  </div>

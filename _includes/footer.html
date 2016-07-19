@@ -69,7 +69,25 @@
   {% include modal-admin-account.html %}
   {% include modal-admin-bank.html %}
 
+
+<!-- community -->
+  {% include modal-community-activate.html %}
+
+
+  <!-- Dashboard modals -->
+
+  {% include modal-dashboard-thank.html %}
+  {% include modal-dashboard-project.html %}
+  {% include modal-dashboard-joinos.html %}
+  <!-- end dashboard modals -->
+
+
+<!-- SRM Campaigns -->
+  {% include modal-srm-project.html %}
+<!-- end SRM Campaigns -->
+
 <!-- end modals-->
+
 
 
 <button id="scroll-top" class="btn">
@@ -170,4 +188,8 @@ window.myLine = new Chart(ctx).Line(lineChartData, {
         $(this).attr("href", "{{ site.baseurl }}/" + $(this).attr("href"));
       }
     });
+
+    if(document.location.hash == "#community"){
+      $(".community-tab").tab('show');
+    }
 </script>

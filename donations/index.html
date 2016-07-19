@@ -1,0 +1,216 @@
+---
+layout: default-donations
+
+title:  Record Donation
+permalink: /donations/home/
+heading: Record Donation
+tagline: Donations are a great way to get additional income without much effort.
+---
+
+<!--
+<div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <h1 class="page-header">{{ page.heading }}
+    </h1>
+    <ul class="list-unstyled menu-list list-inline">
+      <li class="helper">
+        <a onclick="$('.helper-toggle').toggleClass('hide')">
+         <i class="glyphicon glyphicon-question-sign"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<!--
+<div class="pull-right">
+  <a href="" class="btn btn-info">
+    Help
+  </a>
+</div>
+-->
+
+
+<div class="jumbotron hide" id="jumbo">
+  <div class="row">
+    <div class="col-lg-7 col-md-6 ">
+
+
+    </div>
+    <div class="col-lg-5 col-md-6 ">
+      <div class="panel">
+          <div class="panel-title">Getting started
+        </div>
+        <div class="panel-body">
+          <h3>Grants</h3>
+          <p>Here you'll find 100's of grants available to your organisation. Arro makes it easy to browser and apply, we have even rated each grant so you know how easy they may be to obtain. Start funding today, lets get browsing!</p>
+          <br>
+          <div class="staff-comment">
+            Daniel Wakenshaw
+            <small class="block">Pebble Support Team</small>
+          </div>
+        </div>
+        <div class="panel-footer">
+          <a class="btn btn-info pull-right" onclick="$('#jumbo').addClass('hide')">Got it</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="row flex-center-row">
+  <div class="col-lg-6 col-md-6">
+    <div class="panel panel-context-donations" id="donation-record">
+      <div class="panel-body">
+        <div class="body-title">
+          <div class="title">Record Donation</div>
+          <span>Record your donation(s) here</span>
+        </div>
+      </div>
+      <div class="panel-title">Donation Details</div>
+      <div class="panel-body">
+        <form class="">
+          <div class="row">
+            <div class="col-lg-4 col-md-4">
+              <div class="form-group">
+                <label class="control-label" for="">Amount</label>
+                <input class="form-control input-amount" placeholder="0.00" type="text">
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+              <div class="form-group">
+                <label class="control-label" for="">Type</label>
+                <select class="selectpicker" data-style="btn-primary">
+                    <option>Cash</option>
+                    <option>Cheque</option>
+                    <option>Credit</option>
+                 </select>
+               </div>
+             </div>
+             <div class="col-lg-4 col-md-4">
+               <div class="form-group">
+                 <label for="dtp_input2" class="control-label">Date</label>
+                 <div class="input-group date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                     <input class="form-control" size="16" value="" placeholder="Date" type="text">
+                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <div class="form-group" id="add-description">
+             <label for="" class="control-label">Description</label>
+             This is a voluntary donation.
+             <a onclick="$('#ga-description').removeClass('hide'),$('#add-description').addClass('hide') ">Add Description</a>
+           </div>
+
+
+            <div class="form-group hide" id="ga-description">
+                <label for="textArea" class="control-label">Description</label>
+                <textarea class="form-control" rows="3" id="textArea"></textarea>
+            </div>
+
+
+            <div class="form-group m-b-none">
+              <div class="checkbox checkbox-donations">
+               <input id="checkbox2" checked="" value="option1" type="checkbox">
+                  <label for="checkbox2">
+                   Claim Gift Aid on this donation
+                   <span>This donation is eligible for Gift Aid</span>
+                  </label>
+               </div>
+            </div>
+          </div>
+          <div class="panel-title">Donor</div>
+          <div class="panel-subnav">
+            <div action="#" class="col-lg-9">
+              <div class="search">
+                <input type="text" class="form-control" placeholder="Search for Name" value="Adam Hogg">
+                <i class="glyphicon glyphicon-search"></i>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <a class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Name</a>
+            </div>
+          </div>
+          <div class="panel-body">
+            <table class="table table-vam">
+              <thead>
+                <tr>
+                  <th class="check">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox3" value="option3" type="checkbox">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </div>
+                  </th>
+                  <th class="name">Name {% include filter.html %}</th>
+                  <th class="status">Gift Aid</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="selected">
+                  <td class="check">
+                    <div class="form-group">
+                      <div class="checkbox checkbox-primary">
+                        <input id="checkbox3" checked="" value="option3" type="checkbox">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="name link">
+                    <a  data-toggle="modal" data-target="#myModalName">
+                    <span class="initials pupil">AH</span>
+                    Adam Hogg</a>
+                  </td>
+                  <td class="status">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="donations active">
+                        <i class="fa fa-gift"></i>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <!--<tr class="info table-alert">
+                  <td colspan="3">
+                    <div class="title">Can't find your donor's details?</div>
+                      <a class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add Name</a>
+                    </div>
+                </tr>-->
+              </tbody>
+            </table>
+
+        </form>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left">
+              <a data-dismiss="modal"  class="btn btn-default"><i class="fa fa-trash-o"></i> Abandon</a>
+            </div>
+            <div class="pull-right">
+              <a class="btn btn-add" href="">Create Donation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!--<div id="donation-details-toggle" class="panel hide">
+      <div class="panel-body">
+
+        <ul class="list-unstyled list-summary">
+          <li class="amount">&pound;12.00 <span>Cash</span> <span class="pull-right">11.05.2015</span></li>
+          <li class="gift-aid"><i class="fa fa-check-circle"></i> Claim Gift Aid</li>
+          <li class="description">Donation towards School Improvements</li>
+        </ul>
+        <a class="pull-right btn btn-edit" onclick="$('#donation-details-toggle').toggleClass('hide'), $('#donation-record').toggleClass('hide')">
+           <i class="fa fa-pencil"></i> Edit
+        </a>
+      </div>
+    </div>-->
+
+  </div>
+</div>

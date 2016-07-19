@@ -1,0 +1,50 @@
+---
+layout: default-admin
+title: Admin Accounts
+permalink: /admin/account/
+heading: Manage Accounts
+tagline: xxx
+
+
+---
+
+<div class="row">
+	<div class="panel panel-context-admin">
+		<div class="panel-title">Manage Accounts</div>
+		<div class="panel-subnav">
+			<div class="col-lg-12">
+				<a class="btn btn-add pull-right" data-toggle="modal" data-target=""><i class="fa fa-plus"></i> Add New</a>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th class="code">CODE{% include filter.html %}</th>
+						<th class="title">Account{% include filter.html %}</th>
+						<th class="amount">Budget{% include filter.html %}</th>
+						<th class="amount">Unit Cost{% include filter.html %}</th>
+						<th class="amount">Balance{% include filter.html %}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="code">ALTON</td>
+						<td class="title link">
+							<a data-toggle="modal" data-target="#myModalAccount">Alton Towers Trip</a>
+						</td>
+						<td class="amount">
+							&pound;0.00
+						</td>
+						<td class="amount">
+							&pound;40.00
+						</td>
+						<td class="amount">
+							&pound;165.00
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
