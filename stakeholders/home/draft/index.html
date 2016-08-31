@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Stakeholders</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,7 +13,7 @@
 </head>
 
 
-  <body class="page-context-reports">
+  <body class="page-context-stakeholder">
   		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
@@ -170,7 +170,7 @@
 
               </a>
             </li>
-            <li  class="nav-reports active-page">
+            <li  class="nav-reports ">
               <a href="/reports/">
                 <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
@@ -199,7 +199,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-stakeholder ">
+            <li class="nav-stakeholder active-page">
               <a href="/stakeholders/home/">
                 <i class="fa fa-users"></i>
                 <span class="menu-title">
@@ -259,7 +259,1296 @@
       <div id="content-container">
           <div id="page-content">
 
-          Reports
+          <div class="row">
+  <div class="col-lg-12">
+    <div class="panel">
+      <div class="panel-title with-nav-tabs">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#tab1default" data-toggle="tab">Stakeholders <span>(3,231)</span></a></li>
+            <li><a href="#tab3default" data-toggle="tab">Reports <span class="label label-success">NEW</span></a></li>
+        </ul>
+      </div>
+
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="tab1default">
+              <div class="panel-subnav">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="row">
+                    <div class="col-sm-10">
+                      <div class="search">
+                        <input class="form-control" placeholder="Search by Name" type="text">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </div>
+                    </div>
+                    <button class="btn btn-primary col-sm-2">Search</button>
+                  </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6">
+                  <ul class="list-unstyled list-inline pull-right">
+                    <li>
+                      <div class="btn-group">
+                          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a data-toggle="modal" data-target="#myModalImport"><i class="fa fa-upload"></i> Import Data</a></li>
+                            <li><a href=""><i class="fa fa-download"></i> Export Data</a></li>
+                          </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a class="btn btn-default" id="adv-btn" onclick="$('#filter').toggleClass('hide'), $('#adv-btn').toggleClass('active')">Advanced Search</a>
+                    </li>
+                    <li>
+                      <a class="btn btn-add" data-toggle="modal" data-target="#myModalSRMNew">
+                        <i class="fa fa-plus"></i>Add New
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+
+              <!-- keyword search -->
+              <div class="panel-subnav panel-subnav-gray hide" id='filter'>
+                  <div class="col-md-12">
+                    <!--<div class="control-label">Filter by:</div>-->
+                    <ul class="list-unstyled list-inline list-dividers">
+                      <li class="col-sm-4">
+                       <div class="button-group btn-group-checkboxes">
+                          <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                            <span>Stakeholder Type</span>
+                            <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu dropdown-menu-checkbox">
+                            <li>
+                              <a href="#" data-value="option-agt">
+                                <div class="checkbox checkbox-primary" data-value="option-agt">
+                                  <input id="option-agt" value="option-agt" type="checkbox">
+                                  <label for="option-award">Show All</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-award">
+                                <div class="checkbox checkbox-primary" data-value="option-award">
+                                  <input id="option-award" value="option-test" type="checkbox">
+                                  <label for="option-award">Pupil</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-cash">
+                                <div class="checkbox checkbox-primary" data-value="option-cash">
+                                  <input id="option-cash" value="option-cash" type="checkbox">
+                                  <label for="option-cash">Alumni</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-competition">
+                                <div class="checkbox checkbox-primary" data-value="option-competition">
+                                  <input id="option-competition" value="option-competition" type="checkbox">
+                                  <label for="option-competition">PTA</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-discount">
+                                <div class="checkbox checkbox-primary" data-value="option-award">
+                                  <input id="option-discount" value="option-discount" type="checkbox">
+                                  <label for="option-discount">Parent / Guardian</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-freebie">
+                                <div class="checkbox checkbox-primary" data-value="option-award">
+                                  <input id="option-freebie" value="option-freebie" type="checkbox">
+                                  <label for="option-freebie">Volunteer</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-fund">
+                                <div class="checkbox checkbox-primary" data-value="option-fund">
+                                  <input id="option-fund" value="option-fund" type="checkbox">
+                                  <label for="option-fund">Staff</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Business</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Supplier</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Organisation</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-iksupport">
+                                <div class="checkbox checkbox-primary" data-value="option-iksupport">
+                                  <input id="option-iksupport" value="option-iksupport" type="checkbox">
+                                  <label for="option-iksupport">Sponsor</label>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="col-sm-4">
+                       <div class="button-group btn-group-checkboxes">
+                          <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                            <span>Gift Aid Status</span>
+                            <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu dropdown-menu-checkbox">
+                             <li>
+                               <a href="#" data-value="option-agt">
+                                 <div class="checkbox checkbox-primary" data-value="option-agt">
+                                   <input id="option-agt" value="option-agt" type="checkbox">
+                                   <label for="option-all">All</label>
+                                 </div>
+                               </a>
+                             </li>
+                             <li>
+                              <a href="#" data-value="option-agt">
+                                <div class="checkbox checkbox-primary" data-value="option-agt">
+                                  <input id="option-agt" value="option-agt" type="checkbox">
+                                  <label for="option-all">Eligible</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-basic">
+                                <div class="checkbox checkbox-primary" data-value="option-basic">
+                                  <input id="option-basic" value="option-basic" type="checkbox">
+                                  <label for="option-basic">Not Eligible</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-moderate">
+                                <div class="checkbox checkbox-primary" data-value="option-moderate">
+                                  <input id="option-moderate" value="option-moderate" type="checkbox">
+                                  <label for="option-moderate">Unknown</label>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="col-sm-4">
+                       <div class="button-group btn-group-checkboxes">
+                          <button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown">
+                            <span>Volunteer Status</span>
+                            <span class="caret"></span>
+                          </button>
+                           <ul class="dropdown-menu dropdown-menu-checkbox">
+                             <li>
+                               <a href="#" data-value="option-agt">
+                                 <div class="checkbox checkbox-primary" data-value="option-agt">
+                                   <input id="option-agt" value="option-agt" type="checkbox">
+                                   <label for="option-all">All</label>
+                                 </div>
+                               </a>
+                             </li>
+                             <li>
+                              <a href="#" data-value="option-agt">
+                                <div class="checkbox checkbox-primary" data-value="option-agt">
+                                  <input id="option-agt" value="option-agt" type="checkbox">
+                                  <label for="option-all">Willing</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-basic">
+                                <div class="checkbox checkbox-primary" data-value="option-basic">
+                                  <input id="option-basic" value="option-basic" type="checkbox">
+                                  <label for="option-basic">Not Willing</label>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" data-value="option-moderate">
+                                <div class="checkbox checkbox-primary" data-value="option-moderate">
+                                  <input id="option-moderate" value="option-moderate" type="checkbox">
+                                  <label for="option-moderate">Unknown</label>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
+
+              <!-- filter -->
+              <div class="filter-menu hide" id="filter">
+                <div class="row">
+
+                  <div class="col-lg-6 col-md-6">
+                    <div class="label-title">Filter by Stakeholder Type</div>
+                     <ul class="list-unstyled">
+                       <div class="row">
+                         <div class="col-lg-12 col-md-12">
+                           <li class="form-group">
+                             <div class="checkbox checkbox-primary">
+                               <input id="checkbox1" value="option1" type="checkbox">
+                               <label for="checkbox2">All Stakeholder Types</label>
+                             </div>
+                           </li>
+                         </div>
+                       </div>
+                       <div class="row">
+                         <div class="col-lg-6 col-md-6">
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox2" value="option2" type="checkbox">
+                              <label for="checkbox2">Pupil</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3">Alumni</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox4" value="option4" type="checkbox">
+                              <label for="checkbox4">PTA</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox5" value="option5" type="checkbox">
+                              <label for="checkbox5">Parent / Guardian</label>
+                            </div>
+                          </li>
+
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox6" value="option6" type="checkbox">
+                              <label for="checkbox6">Volunteer</label>
+                            </div>
+                          </li>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox7" value="option7" type="checkbox">
+                              <label for="checkbox7">Staff</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox8" value="option8" type="checkbox">
+                              <label for="checkbox8">Business</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox9" value="option9" type="checkbox">
+                              <label for="checkbox9">Supplier</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox10" value="option10" type="checkbox">
+                              <label for="checkbox10">Organisation</label>
+                            </div>
+                          </li>
+                          <li class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox11" value="option11" type="checkbox">
+                              <label for="checkbox1">Sponsor</label>
+                            </div>
+                          </li>
+                          </div>
+                        </div>
+                      </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <div class="form-group">
+                        <label class="control-label" for="">Filter Gift Aid Status</label>
+                        <select class="selectpicker form-control" data-style="btn btn-default block">
+                          <option>All Gift Aid Status</option>
+                          <option>Gift Aid Eligible</option>
+                          <option>Gift Aid Not Eligible</option>
+                          <option>No Information Available</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3">
+                      <div class="form-group">
+                        <label class="control-label" for="">Filter by Volunteer Status</label>
+                        <select class="selectpicker form-control" data-style="btn btn-default block">
+                          <option>All Volunteer Status</option>
+                          <option>Willing to Volunteer</option>
+                          <option>Not willing to Volunteer</option>
+                          <option>No Information Available</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                      <!--<div class="pull-left">
+                        <a class="btn btn-default" onclick="$('#filter').addClass('hide')">Hide</a>
+                      </div>-->
+                      <div class="pull-right">
+                        <a class="btn btn-default">Clear Form</a>
+                        <a class="btn btn-primary">
+                          Search</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              <!-- end filter -->
+
+
+                <div class="panel-body">
+                  <div class="alert alert-info">
+                    <div class="title">Import Pending: Complete your import to access your updated/new names</div> <a href="/stakeholders/import/preview/" class="btn btn-info pull-right">View Data</a>
+                  </div>
+                  <table class="table table-bordered table-vam table-hover">
+                    <thead>
+                      <tr>
+                        <th class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox1" value="option1" type="checkbox">
+                              <label for="checkbox1"></label>
+                            </div>
+                          </div>
+                        </th>
+                        <th class="name">Name<a class="filter"></a>
+</th>
+                        <th class="category">Type</th>
+                        <th class="comms">Contact Details</th>
+                        <th class="status">Gift Aid</th>
+                        <th class="status">Volunteer</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox2" value="option1" type="checkbox">
+                              <label for="checkbox2"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a data-toggle="modal" data-target="#myModalName">
+                          <span class="initials pupil">AH</span>
+                          Adam Hogg</a>
+                        </td>
+                        <td class="category">Pupil</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, DL15EA">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="adam.hogg.ah@gmail.com">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="@adam-hogg">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations active">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer active">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="selected">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" checked="" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials alumni">AW</span>
+                          Alan Waggott</a>
+                        </td>
+                        <td class="category">Alumni</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="Address">
+                              <i class="fa fa-home"></i>
+                            </li>
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="alan@waggott.com">
+                              <i class="fa fa-envelope-o"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations active">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer active">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link ">
+                          <a href="">
+                          <span class="initials charity">DW</span>
+                          Daniel Wakenshaw</a>
+                        </td>
+                        <td class="category ">PTA</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer active">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3"  value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials family">JW</span>
+                          Jaquie Wade</a>
+                        </td>
+                        <td class="category ">Parent / Guardian</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials volunteer">DM</span>
+                          Darren Mansfield</a>
+                        </td>
+                        <td class="category">Volunteer</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials staff">RG</span>
+                          Ryan Green</a>
+                        </td>
+                        <td class="category">Staff</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials business">JG</span>
+                          Janis Green</a>
+                        </td>
+                        <td class="category">Business</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials supplier">T</span>
+                          Tesco</a>
+                        </td>
+                        <td class="category">Supplier</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials organisation">PS</span>
+                          Pebble School</a>
+                        </td>
+                        <td class="category">Organisation</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations ">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer active">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr class="">
+                        <td class="check">
+                          <div class="form-group">
+                            <div class="checkbox checkbox-primary">
+                              <input id="checkbox3" value="option3" type="checkbox">
+                              <label for="checkbox3"></label>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="name link">
+                          <a href="">
+                          <span class="initials sponsor">DW</span>
+                          Daniel Wakenshaw</a>
+                        </td>
+                        <td class="category">Sponsor</td>
+                        <td class="comms">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                              <i class="fa fa-home"></i>
+                              <span class="icon-primary"></span>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-envelope-o"></i>
+                            </li>
+                            <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                              <i class="fa fa-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-mobile-phone"></i>
+                            </li>
+                            <li class="">
+                              <i class="fa fa-twitter"></i>
+
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="donations">
+                              <i class="fa fa-gift"></i>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="status">
+                          <ul class="list-unstyled list-inline list-status">
+                            <li class="volunteer">
+                              <i class="fa fa-plus-square"></i>
+                            </li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="panel-footer">
+                  <div class="row">
+                    <div class="col-lg-8">
+                      <ul class="pagination">
+                          <li class="disabled">
+                            <a data-page="prev" href="#" aria-label="Previous" class="page-prev">
+                              <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                          </li>
+                          <li class="active">
+                            <a data-page="1" href="#" class="page">
+                              1
+                            </a>
+                          </li>
+                          <li class="">
+                            <a data-page="2" href="#" class="page">
+                              2
+                            </a>
+                          </li>
+                          <li class="">
+                            <a data-page="2" href="#" class="page">
+                              3
+                            </a>
+                          </li>
+                          <li class="">
+                            <a data-page="2" href="#" class="page">
+                              4
+                            </a>
+                          </li>
+                          <li class="">
+                            <a data-page="2" href="#" class="page">
+                              5
+                            </a>
+                          </li>
+                        <li class="">
+                          <a data-page="next" href="#" aria-label="Next" class="page-next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                          </a>
+                        </li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="page-total">
+                      <strong>Selected 1</strong>
+                      <!--
+                        <a class="btn btn-primary">Action</a>
+                      -->
+                    <!--  Showing 1 - 10 of 2,000 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade in" id="tab2default">
+                <div class="panel-subnav">
+                  <div class="">
+                    <div class="col-lg-6 col-md-6 pull-left">
+                      <div class="search">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <i class="glyphicon glyphicon-search"></i>
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                      <ul class="list-unstyled list-inline pull-right">
+                        <li>
+                          <div class="btn-group">
+                              <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">Tools <i class="fa fa-angle-down"></i>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a data-toggle="modal" data-target="#myModalImport"><i class="fa fa-upload"></i> Import Data</a></li>
+                                <li><a href="#"><i class="fa fa-download"></i> Export Data</a></li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a class="btn btn-add" data-toggle="modal" data-target="#myModalSRMNew">
+                            <i class="fa fa-plus"></i>Add New
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                  <div class="panel-body">
+                    <table class="table table-bordered table-vam table-hover">
+                      <thead>
+                        <tr>
+                          <th class="check">
+                            <div class="form-group">
+                              <div class="checkbox checkbox-primary">
+                                <input id="checkbox1" value="option1" type="checkbox">
+                                <label for="checkbox1"></label>
+                              </div>
+                            </div>
+                          </th>
+                          <th class="name">Stakeholder<a class="filter"></a>
+</th>
+                          <th class="category">Type</th>
+                          <th class="comms">Contact Details</th>
+                          <th class="status">Gift Aid</th>
+                          <th class="status">Volunteer</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="">
+                          <td class="check">
+                            <div class="form-group">
+                              <div class="checkbox checkbox-primary">
+                                <input id="checkbox2" value="option1" type="checkbox">
+                                <label for="checkbox2"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="name link">
+                            <a data-toggle="modal" data-target="#myModalName">
+                            <span class="initials pupil">AH</span>
+                            Adam Hogg</a>
+                          </td>
+                          <td class="category">Pupil</td>
+                          <td class="comms">
+                            <ul class="list-unstyled list-inline list-status">
+                              <li class="active primary" data-toggle="tooltip" data-placement="top" title="212 Clifton Rd, Darlington, DL15EA, UK">
+                                <i class="fa fa-home"></i>
+                                <span class="icon-primary"></span>
+                              </li>
+                              <li class="active" data-toggle="tooltip" data-placement="top" title="adam.hogg.ah@gmail.com">
+                                <i class="fa fa-envelope-o"></i>
+                              </li>
+                              <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                                <i class="fa fa-phone"></i>
+                              </li>
+                              <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                                <i class="fa fa-mobile-phone"></i>
+                              </li>
+                              <li class="active" data-toggle="tooltip" data-placement="top" title="@adam-hogg">
+                                <i class="fa fa-twitter"></i>
+
+                              </li>
+                            </ul>
+                          </td>
+                          <td class="status">
+                            <ul class="list-unstyled list-inline list-status">
+                              <li class="donations active">
+                                <i class="fa fa-gift"></i>
+                              </li>
+                            </ul>
+                          </td>
+                          <td class="status">
+                            <ul class="list-unstyled list-inline list-status">
+                              <li class="volunteer active">
+                                <i class="fa fa-plus-square"></i>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="check">
+                            <div class="form-group">
+                              <div class="checkbox checkbox-primary">
+                                <input id="checkbox3" value="option3" type="checkbox">
+                                <label for="checkbox3"></label>
+                              </div>
+                            </div>
+                          </td>
+                          <td class="name link">
+                            <a href="">
+                            <span class="initials alumni">AW</span>
+                            Alan Waggott</a>
+                          </td>
+                          <td class="category">Alumni</td>
+                          <td class="comms">
+                            <ul class="list-unstyled list-inline list-status">
+                              <li class="active" data-toggle="tooltip" data-placement="top" title="Address">
+                                <i class="fa fa-home"></i>
+                              </li>
+                              <li class="active primary" data-toggle="tooltip" data-placement="top" title="alan@waggott.com">
+                                <i class="fa fa-envelope-o"></i>
+                                <span class="icon-primary"></span>
+                              </li>
+                              <li class="active" data-toggle="tooltip" data-placement="top" title="07757079692">
+                                <i class="fa fa-phone"></i>
+                              </li>
+                              <li class="">
+                                <i class="fa fa-mobile-phone"></i>
+                              </li>
+                              <li class="">
+                                <i class="fa fa-twitter"></i>
+
+                              </li>
+                            </ul>
+                          </td>
+                          <td class="status">
+                            <ul class="list-unstyled list-inline list-status">
+                              <li class="donations active">
+                                <i class="fa fa-gift"></i>
+                              </li>
+                            </ul>
+                          </td>
+                          <td class="status">
+                            <ul class="list-unstyled list-inline list-status">
+                              <li class="volunteer active">
+                                <i class="fa fa-plus-square"></i>
+                              </li>
+                            </ul>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+            </div>
+            <div class="tab-pane fade in" id="tab3default">
+              <!--<div class="panel-body">
+                <div class="row">
+                  <div class="jumbotron jumbotron-sm m-b-none" id="jumbo">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <h2>Featured Campaign</h2>
+                        <strong>#001 - Gift Aid Eligible Stakeholders <span class="label label-success">New</span></strong>
+                        <p>Collect all avaiable Gift Aid Declaration forms from your stakeholders to allow you to claim an additional 2% on all Gift Aid Eligible Transactions and Donations.</p>
+                        <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-ga">Show Details</a>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            -->
+
+            <!--
+              <div class="panel-title">All Campaigns <span>(2)</span></div>
+            -->
+              <div class="panel-body">
+
+                <div class="row row-campaigns">
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-donations">
+                            <i class="fa fa-gift"></i>
+                          </span>
+                          <div class="title">#001 - Gift Aid Eligible Stakeholders</div>
+                        </div>
+                        <p class="text-center">Collect all avaiable Gift Aid Declaration forms from your stakeholders to allow you to claim an additional 2% on all Gift Aid Eligible Transactions and Donations.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-ga"><i class="fa fa-paper-plane"></i> Run Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign" id="campaign">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-stakeholders">
+                            <i class="fa fa-users"></i>
+                          </span>
+                          <div class="title">#002 - Improve your stakeholders knowledge</div>
+                        </div>
+                        <p class="text-center">Collect more information about your stakeholders without having to Run Campaign out and chase them all.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-info"><i class="fa fa-paper-plane"></i> Run Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="panel panel-campaign in-progress hide" id="campaign-wip">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-stakeholders">
+                            <i class="fa fa-users"></i>
+                          </span>
+                          <div class="title">IN PROGRESS #002 - Improve your stakeholders knowledge</div>
+                        </div>
+                        <p class="text-center">Collect more information about your stakeholders without having to Run Campaign out and chase them all.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-default">In Progress&hellip;</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-volunteer">
+                            <i class="fa fa-plus-square"></i>
+                          </span>
+                          <div class="title">#003 - Get your Volunteers involved</div>
+                        </div>
+                        <p class="text-center">Ask your local community to help your school grow.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target=""><i class="fa fa-paper-plane"></i> Run Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="panel panel-campaign locked">
+                      <div class="panel-body">
+                        <div class="body-title">
+                          <span class="initials icon-donations">
+                            <i class="fa fa-lock"></i>
+                          </span>
+                          <div class="title">#004 - Donate £10 to help your school</div>
+                        </div>
+                        <p class="text-center">Ask your parents to donate just £10 a year towards the runing of your club.</p>
+                      </div>
+                      <div class="panel-footer">
+                        <div class="pull-right">
+                          <a class="btn btn-primary" data-toggle="modal" data-target="#myModalSRM-campaign-locked"><i class="fa fa-lock"></i> Unlock Campaign</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!--
+                <table class="table table-vam table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th class="title">Campaigns <span>(2)</span></th>
+                      <th class="details">Description</th>
+                      <th class="rating">Detail Required</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="title link">
+                        <a data-toggle="modal" data-target="#myModalSRM-campaign-ga">
+                          <span class="initials campaign">
+                            <i class="fa fa-paper-plane"></i>
+                          </span>
+                          #001 - Gift Aid Eligible Stakeholders
+                          <span class="label label-success">NEW</span>
+                        </a>
+                      </td>
+                      <td class="details details-md">Collect all avaiable Gift Aid Declaration forms from your stakeholders to allow you to claim an additional 2% on all Gift Aid Eligible Transactions and Donations.</td>
+                      <td class="rating rating-medium">
+                        Moderate
+                      </td>
+                      <td class="action"><a class="btn btn-default" data-toggle="modal" data-target="#myModalSRM-campaign-ga">Show Details</a></td>
+                    </tr>
+                    <tr>
+                      <td class="title link">
+                        <a data-toggle="modal" data-target="#myModalSRM-campaign-info">
+                          <span class="initials campaign">
+                            <i class="fa fa-paper-plane"></i>
+                          </span>
+                          #002 - Improve Stakeholder Engagement
+                          <span class="label label-success">NEW</span>
+                        </a>
+                      </td>
+                      <td class="details details-md">Improve and gather more information about your stakeholders.</td>
+                      <td class="rating rating-easy">
+                        Basic
+                      </td>
+                      <td class="action"><a class="btn btn-default" data-toggle="modal" data-target="#myModalSRM-campaign-info">Show Details</a></td>
+                    </tr>
+                  </tbody>
+                </table>-->
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
 
 
         </div>

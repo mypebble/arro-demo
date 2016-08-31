@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Stakeholder Import Preview</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,7 +13,7 @@
 </head>
 
 
-  <body class="page-context-reports">
+  <body class="page-context-stakeholder">
   		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
@@ -170,7 +170,7 @@
 
               </a>
             </li>
-            <li  class="nav-reports active-page">
+            <li  class="nav-reports ">
               <a href="/reports/">
                 <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
@@ -199,7 +199,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-stakeholder ">
+            <li class="nav-stakeholder active-page">
               <a href="/stakeholders/home/">
                 <i class="fa fa-users"></i>
                 <span class="menu-title">
@@ -259,7 +259,436 @@
       <div id="content-container">
           <div id="page-content">
 
-          Reports
+          <div class="row">
+  <div class="col-lg-12">
+
+    <div class="panel">
+      <div class="panel-title">Import Preview</div>
+      <div class="panel-body">
+        <table class="table table-bordered table-vam">
+          <thead>
+            <tr>
+              <th class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </th>
+              <th class="name">Names</th>
+              <th class="category">Type</th>
+              <th class="comms">Contact Details</th>
+              <th class="status">Gift Aid</th>
+              <th class="status">Volunteer</th>
+              <th class="action">
+                Remove
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="success">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td colspan="7">
+                New Names <span>(5)</span>
+              </td>
+            </tr>
+            <tr class="" id="tr-delete">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox-test" value="option-test" type="checkbox">
+                    <label for="checkbox-test"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <span>
+                <span class="initials none">DH</span>
+                Daniel Hogg<!--<span class="label label-success">New</span>-->
+                </span>
+              </td>
+              <td class="category">Unknown</td>
+              <td class="comms">
+                <ul class="list-unstyled list-inline list-status">
+                  <li data-original-title="212 Clifton Rd, DL15EA" class="active primary" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-home"></i>
+                  </li>
+                  <li data-original-title="adam.hogg.ah@gmail.com" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-envelope-o"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-phone"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-mobile-phone"></i>
+                  </li>
+                  <li data-original-title="@adam-hogg" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-twitter"></i>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="donations active">
+                    <i class="fa fa-gift"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="volunteer active">
+                    <i class="fa fa-plus-square"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="action">
+                <a class="btn btn-danger" onclick="$('#tr-delete').addClass('hide')">
+                  <!--<i class="fa fa-times"></i>--> Remove
+                </a>
+              </td>
+            </tr>
+            <tr class="" id="tr-delete-2">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <span>
+                <span class="initials staff">TH</span>
+                Tam Heally
+                </span>
+              </td>
+              <td class="category">Staff</td>
+              <td class="comms">
+                <ul class="list-unstyled list-inline list-status">
+                  <li data-original-title="212 Clifton Rd, DL15EA" class=" primary" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-home"></i>
+                  </li>
+                  <li data-original-title="adam.hogg.ah@gmail.com" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-envelope-o"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-phone"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-mobile-phone"></i>
+                  </li>
+                  <li data-original-title="@adam-hogg" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-twitter"></i>
+
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="donations">
+                    <i class="fa fa-gift"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="volunteer">
+                    <i class="fa fa-plus-square"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="action">
+                <a class="btn btn-danger" onclick="$('#tr-delete-2').addClass('hide')">
+                  <!--<i class="fa fa-times"></i>--> Remove
+                </a>
+              </td>
+            </tr>
+            <tr class="" id="tr-delete-3">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <span>
+                <span class="initials staff">JW</span>
+                Janice Write<!--<span class="label label-success">New</span>-->
+                </span>
+              </td>
+              <td class="category ">Staff</td>
+              <td class="comms">
+                <ul class="list-unstyled list-inline list-status">
+                  <li data-original-title="212 Clifton Rd, DL15EA" class="primary" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-home"></i>
+                  </li>
+                  <li data-original-title="adam.hogg.ah@gmail.com" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-envelope-o"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-phone"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-mobile-phone"></i>
+                  </li>
+                  <li data-original-title="@adam-hogg" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-twitter"></i>
+
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="donations active">
+                    <i class="fa fa-gift"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="volunteer">
+                    <i class="fa fa-plus-square"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="action">
+                <a class="btn btn-danger" onclick="$('#tr-delete-3').addClass('hide')">
+                  <!--<i class="fa fa-times"></i>--> Remove
+                </a>
+              </td>
+            </tr>
+            <tr class="" id="tr-delete-4">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <span>
+                <span class="initials family">CH</span>
+                Christine Hogg
+                </span>
+              </td>
+              <td class="category">Parent</td>
+              <td class="comms">
+                <ul class="list-unstyled list-inline list-status">
+                  <li data-original-title="212 Clifton Rd, DL15EA" class="active primary" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-home"></i>
+                  </li>
+                  <li data-original-title="adam.hogg.ah@gmail.com" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-envelope-o"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-phone"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-mobile-phone"></i>
+                  </li>
+                  <li data-original-title="@adam-hogg" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-twitter"></i>
+
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="donations active">
+                    <i class="fa fa-gift"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="volunteer">
+                    <i class="fa fa-plus-square"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="action">
+                <a class="btn btn-danger" onclick="$('#tr-delete-4').addClass('hide')">
+                  <!--<i class="fa fa-times"></i>--> Remove
+                </a>
+              </td>
+            </tr>
+            <tr class="" id="tr-delete-5">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <span>
+                <span class="initials family">SH</span>
+                Sean Hogg
+                </span>
+              </td>
+              <td class="category">Parent</td>
+              <td class="comms">
+                <ul class="list-unstyled list-inline list-status">
+                  <li data-original-title="212 Clifton Rd, DL15EA" class="active primary" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-home"></i>
+                  </li>
+                  <li data-original-title="adam.hogg.ah@gmail.com" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-envelope-o"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-phone"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-mobile-phone"></i>
+                  </li>
+                  <li data-original-title="@adam-hogg" class="" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-twitter"></i>
+
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="donations">
+                    <i class="fa fa-gift"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="volunteer active">
+                    <i class="fa fa-plus-square"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="action">
+                <a class="btn btn-danger" onclick="$('#tr-delete-5').addClass('hide')">
+                  <!--<i class="fa fa-times"></i>--> Remove
+                </a>
+              </td>
+            </tr>
+            <tr class="info">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td colspan="7">
+                Updated Names <span>(1)</span>
+              </td>
+            </tr>
+            <tr class="">
+              <td class="check">
+                <div class="form-group">
+                  <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" value="option1" type="checkbox">
+                    <label for="checkbox2"></label>
+                  </div>
+                </div>
+              </td>
+              <td class="name">
+                <span>
+                <span class="initials alumni">AH</span>
+                Adam Hogg
+                <!--<span class="label label-info">Updated</span>-->
+              </span>
+              </td>
+              <td class="category">Alumni</td>
+              <td class="comms">
+                <ul class="list-unstyled list-inline list-status">
+                  <li data-original-title="212 Clifton Rd, DL15EA" class="active updated" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-home"></i>
+                    <span class="icon-updated"></span>
+                  </li>
+                  <li data-original-title="adam.hogg.ah@gmail.com" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-envelope-o"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-phone"></i>
+                  </li>
+                  <li data-original-title="07757079692" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-mobile-phone"></i>
+                  </li>
+                  <li data-original-title="@adam-hogg" class="active" data-toggle="tooltip" data-placement="top" title="">
+                    <i class="fa fa-twitter"></i>
+
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="donations active">
+                    <i class="fa fa-gift"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="status">
+                <ul class="list-unstyled list-inline list-status">
+                  <li class="volunteer active">
+                    <i class="fa fa-plus-square"></i>
+                  </li>
+                </ul>
+              </td>
+              <td class="action">
+                <a class="btn btn-danger">
+                  <!--<i class="fa fa-times"></i>--> Remove
+                </a>
+
+              </td>
+            </tr>
+            <!--<tr class="warning">
+              <td colspan="8">
+                Not Imported
+              </td>
+            </tr>
+            <tr>
+              <td colspan="8">
+                <code>
+                  123, Mrz Christine Hogg, parent
+                </code>
+              </div>
+            </tr>-->
+          </tbody>
+        </table>
+      </div>
+      <div class="panel-footer">
+        <div class="pull-left">
+          <ul class="list-unstyled list-inline">
+            <li>
+              <a class="btn btn-default"><i class="fa fa-trash"></i> Abandon</a>
+            </li>
+            <li>
+              <a class="btn btn-danger" disabled=""><i class="fa fa-close"></i> Remove Selected</a>
+            </li>
+          </ul>
+        </div>
+        <div class="pull-right">
+          <ul class="list-unstyled list-inline">
+            <li>
+              <a class="btn btn-default" href="stakeholders/home/draft/">Save Draft</a>
+            </li>
+            <li>
+              <a class="btn btn-primary" data-toggle="modal" data-target="#myModalImportWarning">Upload Names</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
 
 
         </div>

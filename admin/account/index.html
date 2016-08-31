@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Admin Accounts</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,7 +13,7 @@
 </head>
 
 
-  <body class="page-context-reports">
+  <body class="page-context-admin">
   		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
@@ -170,7 +170,7 @@
 
               </a>
             </li>
-            <li  class="nav-reports active-page">
+            <li  class="nav-reports ">
               <a href="/reports/">
                 <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
@@ -208,7 +208,7 @@
                 <i class="arrow"></i>
               </a>
             </li>
-            <li class="nav-admin ">
+            <li class="nav-admin active-page">
               <a href="#">
                 <i class="fa fa-wrench"></i>
                 <span class="menu-title">
@@ -216,8 +216,8 @@
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse ">
-                <li class="">
+              <ul class="collapse in">
+                <li class="active">
                   <a href="/admin/account/">Manage Accounts</a>
                 </li>
                 <li class="">
@@ -259,7 +259,37 @@
       <div id="content-container">
           <div id="page-content">
 
-          Reports
+          <div class="row">
+	<div class="panel panel-context-admin">
+		<div class="panel-title">Manage Accounts</div>
+		<div class="panel-subnav">
+			<div class="col-lg-12">
+				<a class="btn btn-add pull-right" data-toggle="modal" data-target=""><i class="fa fa-plus"></i> Add New</a>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<td class="code">ALTON</td>
+						<td class="title link">
+							<a data-toggle="modal" data-target="#myModalAccount">Alton Towers Trip</a>
+						</td>
+						<td class="amount">
+							&pound;0.00
+						</td>
+						<td class="amount">
+							&pound;40.00
+						</td>
+						<td class="amount">
+							&pound;165.00
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
 
         </div>

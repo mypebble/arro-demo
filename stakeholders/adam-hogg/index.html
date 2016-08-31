@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Stakeholders</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,7 +13,7 @@
 </head>
 
 
-  <body class="page-context-reports">
+  <body class="page-context-stakeholder">
   		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
@@ -170,7 +170,7 @@
 
               </a>
             </li>
-            <li  class="nav-reports active-page">
+            <li  class="nav-reports ">
               <a href="/reports/">
                 <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
@@ -199,7 +199,7 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-stakeholder ">
+            <li class="nav-stakeholder active-page">
               <a href="/stakeholders/home/">
                 <i class="fa fa-users"></i>
                 <span class="menu-title">
@@ -259,7 +259,209 @@
       <div id="content-container">
           <div id="page-content">
 
-          Reports
+          <div class="row">
+  <div class="col-lg-12 col-md-12 page-title">
+    <a href="/stakeholders/home/" class="btn btn-primary btn-r">
+      <i class="glyphicon glyphicon-chevron-left"></i> Back to Stakeholders</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-summary">
+      <div class="panel-title">Stakeholder Details</div>
+        <div class="panel-body">
+           <div class="col-md-9">
+             <div class="row">
+               <div class="col-md-2">
+                 <span class="initials initials-lg pupil">AH</span>
+
+               </div>
+               <div class="col-md-10">
+                 <h2>Adam Hogg</h2>
+                 <span>
+                   <i class="fa fa-home"></i>
+                   212 Clifton Road, DL15EA
+                 </span>
+                 <!--<p>Pupil</p>
+                 <p class="text-muted">
+                   Class: 7Y / Year: 7 / Reg: GBA
+                 </p>-->
+                 <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean porttitor vestibulum imperdiet. Ut auctor accumsan erat, a vulputate metus tristique non. Aliquam aliquam vel orci quis sagittis.
+                 </p>-->
+               </div>
+             </div>
+           </div>
+           <div class="col-md-3 panel-side-l">
+             <ul class="list-unstyled list-status list-stats">
+                <li class="donations active">
+                  <i class="fa fa-gift"></i> Gift Aid
+                </li>
+                <li class="volunteer active">
+                  <i class="fa fa-plus-square"></i> Volunteer
+                </li>
+              </ul>
+               <div class="text-right">
+                   <!--<h2>£100.00</h2>
+                   <p>Currently</p>-->
+                   <!--<h2>£5,000.00</h2>
+                   <p>Funding Target</p>-->
+               </div>
+           </div>
+        </div>
+        <div class="panel-footer">
+          <div class="pull-right">
+            <a class="btn btn-edit">
+              <i class="fa fa-pencil"></i> Edit
+            </a>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+
+    <div class="panel">
+      <div class="panel-title with-nav-tabs">
+        <ul class="nav nav-tabs ">
+            <!--<li class="active"><a href="#tab1default" data-toggle="tab">Overview</a></li>-->
+            <li class="active"><a href="#tab2default" data-toggle="tab">About</a></li>
+            <li><a href="#tab3default" data-toggle="tab">Activity</a></li>
+        </ul>
+      </div>
+      <div class="panel-body">
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="tab2default">
+
+            <div class="row">
+              <div class="col-md-8">
+
+              </div>
+              <div class="col-lg-4">
+                <div class="panel panel-clear">
+                  <div class="panel-title">
+                    Donor Details
+                    <div class="actions pull-right">
+                      <a class="">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="summary-row">
+                        <div class="col-md-2">
+                          <span class="initials initials-profile icon-donations">
+                            <i class="fa fa-gift"></i>
+                          </span>
+                        </div>
+                        <div class="col-md-10">
+                          <strong>MR Adam Hogg</strong>
+                          <span class="block">Donation form complete</span>
+                        </div>
+                      </div>
+                    </div>
+
+
+                  <!--  Gift Aid
+
+                    Donor title
+                    Donor First Name
+                    Donor Last Name-->
+                  </div>
+                </div>
+                <div class="panel panel-clear">
+                  <div class="panel-title">
+                    Volunteer Details
+                  </div>
+                  <div class="panel-body">
+                    <div class="form-group m-b-none">
+                      <div class="checkbox checkbox-success">
+                       <input id="checkbox2" value="donor" type="checkbox"checked="" onclick="$('#donor').toggleClass('hide')">
+                          <label for="donor">
+                            Would like to help the school
+                           <span>This contact would like to volunteer and help your school.</span>
+                          </label>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-clear">
+                  <div class="panel-title">
+                    Address Details
+                    <div class="actions pull-right">
+                      <a class="">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="summary-row">
+                        <div class="col-md-2">
+                          <span class="initials none initials-profile">
+                            <i class="fa fa-home"></i>
+                          </span>
+                        </div>
+                        <div class="col-md-10">
+                          <strong>212 Clfiton Road</strong>
+                          <span class="block">DL15EA</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel panel-clear">
+                  <div class="panel-title">
+                    Employer Details
+                    <div class="actions pull-right">
+                      <a class="">
+                        <i class="fa fa-pencil"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    <div class="row">
+                      <div class="summary-row">
+                        <div class="col-md-2">
+                          <span class="initials none initials-profile">
+                            <i class="fa fa-building"></i>
+                          </span>
+                        </div>
+                        <div class="col-md-10">
+                          <strong>Designer</strong>
+                          <span class="block">Pebble</span>
+
+                          <ul class="list-unstyled">
+                            <li>Newcastle upon Tyne</li>
+                            <li>NE12QB</li>
+
+                            <li>08453101788</li>
+                            <li>info@mypebble.co.uk</li>
+                            <li>@mypebble</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="tab3default">
+            <h2 class="section-title">Activity List</h2>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 
         </div>

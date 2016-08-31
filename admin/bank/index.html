@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Admin Bank</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,7 +13,7 @@
 </head>
 
 
-  <body class="page-context-reports">
+  <body class="page-context-admin">
   		<div id="container" class="effect mainnav-lg">
 
     <header id="navbar">
@@ -170,7 +170,7 @@
 
               </a>
             </li>
-            <li  class="nav-reports active-page">
+            <li  class="nav-reports ">
               <a href="/reports/">
                 <i class="fa fa-folder-o"></i>
                 <span class="menu-title">
@@ -208,7 +208,7 @@
                 <i class="arrow"></i>
               </a>
             </li>
-            <li class="nav-admin ">
+            <li class="nav-admin active-page">
               <a href="#">
                 <i class="fa fa-wrench"></i>
                 <span class="menu-title">
@@ -216,11 +216,11 @@
                 </span>
                 <i class="arrow"></i>
               </a>
-              <ul class="collapse ">
+              <ul class="collapse in">
                 <li class="">
                   <a href="/admin/account/">Manage Accounts</a>
                 </li>
-                <li class="">
+                <li class="active">
                   <a href="/admin/bank/">Manage Bank Accounts</a>
                 </li>
               </ul>
@@ -259,7 +259,59 @@
       <div id="content-container">
           <div id="page-content">
 
-          Reports
+          <div class="row">
+	<div class="panel panel-context-admin">
+		<div class="panel-title">Manage Bank Accounts</div>
+		<div class="panel-subnav">
+			<div class="col-lg-12">
+				<a class="btn btn-add pull-right" data-toggle="modal" data-target=""><i class="fa fa-plus"></i> Add New</a>
+			</div>
+		</div>
+		<div class="panel-body">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th class="code">CODE<a class="filter"></a>
+</th>
+						<th class="title">Account<a class="filter"></a>
+</th>
+						<th class="amount">Balance<a class="filter"></a>
+</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="code">CASH</td>
+						<td class="title link">
+							<a data-toggle="modal" data-target="#myModalAccount-Bank">Cash Account</a>
+						</td>
+						<td class="amount">
+							&pound;50.00
+						</td>
+					</tr>
+          <tr>
+						<td class="code">CURR</td>
+						<td class="title link">
+							<a>Current Account</a>
+						</td>
+						<td class="amount">
+							&pound;21,485.70
+						</td>
+					</tr>
+          <tr>
+						<td class="code">DEP</td>
+						<td class="title link">
+							<a>Deposit Account</a>
+						</td>
+						<td class="amount">
+							&pound;10,921.65
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
 
         </div>

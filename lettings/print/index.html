@@ -5,7 +5,7 @@
 	<base href="/arro-demo/" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reports</title>
+  <title>Lettings</title>
   <meta name="description" content="">
 
   <link rel="stylesheet" href="css/pebble-demo.css">
@@ -13,258 +13,426 @@
 </head>
 
 
-  <body class="page-context-reports">
-  		<div id="container" class="effect mainnav-lg">
-
-    <header id="navbar">
-  <div id="navbar-container">
-    <div class="navbar-header">
-      <a href="index.html" class="navbar-brand">
-      </a>
-    </div>
-    <div class="navbar-content clearfix ">
-      <div class="col-lg-12">
-        <div class="navbar-left menu-button hidden-sm">
-          <a href="" class="mainnav-toggle">
-            <i class="fa fa-navicon fa-lg"></i>
-          </a>
-        </div>
-        <ul class="nav navbar-nav navbar-right">
-          <!--<li>
-            <a class="btn btn-notification" data-toggle="modal" data-target="#myModal-commuinty-activate">
-              Joinos Community
-              <span class="label labe-add">NEW</span>
-            </a>
-          </li>-->
-          <li class="dropdown user_name">
-            <a href="#" class="dropdown-toggle "
-               data-toggle="dropdown" role="button"
-               aria-haspopup="true" aria-expanded="false">
-                 <i class="fa fa-user"></i> Adam Hogg
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="/profile/home/"><i class="fa fa-user"></i> My Profile</a></li>
-              <li><a href="/logout/"><i class=" fa fa-power-off"></i>Logout</a></li>
-            </ul>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </div>
-</header>
-
-
-    <nav id="mainnav-container">
-  <div id="mainnav">
-    <!--Menu-->
-    <div id="mainnav-menu-wrap">
-      <div class="nano">
-        <!--<div class="date">
-          01<span class="block">Sep</span>
-        </div>-->
-        <div class="nano-content">
-          <ul id="mainnav-menu" class="list-group">
-            <li class=" ">
-              <a href="/dashboard/">
-                <i class="fa fa-tachometer"></i>
-                <span class="menu-title">
-                  <strong>Dashboard</strong>
-                </span>
-              </a>
-            </li>
-            <li class="list-divider"></li>
-            <li class="list-header">Activities</li>
-
-            <li class="nav-donations  "><!-- active-page  -->
-              <a>
-                <i class="fa fa-gift"></i>
-                <span class="menu-title">
-                  Donations
-                </span>
-                <i class="arrow"></i>
-              </a>
-              <ul class="collapse ">
-                <li class="">
-                  <a href="/donations/home/">
-                    Record Donation
-                  </a>
-                </li>
-                <li class="list-divider"></li>
-                <!--<li><a href="/donations/claim/" class="">Create Claim</a></li>-->
-                <li class="">
-                  <a href="/donations/all/">View Donations</a>
-                </li>
-                <li class="">
-                  <a href="/donations/history/">Gift Aid Claims</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-clubs  ">
-              <a href="/clubs/home/">
-                <i class="fa fa-flag-o"></i>
-                <span class="menu-title">
-                  Clubs
-                </span>
-                <i class="arrow"></i>
-              </a>
-
-            </li>
-
-            <li class="nav-events  ">
-              <a href="/events/home">
-                <i class="fa fa-calendar-o"></i>
-                <span class="menu-title">
-                  Events
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="nav-services ">
-              <a href="/services/home/">
-                <i class="fa fa-magic"></i>
-                <span class="menu-title">
-                  Services
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="nav-lettings ">
-              <a href="/lettings/home/">
-                <i class="fa fa-building-o"></i>
-                <span class="menu-title">
-                  Lettings
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="nav-grants ">
-              <a href="/grants/">
-                <i class="fa fa-briefcase"></i>
-                <span class="menu-title">
-                  Grants
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="nav-sponsorship ">
-              <a href="/sponsorship/home/">
-                <i class="fa fa-diamond"></i>
-                <span class="menu-title">
-                  Sponsorship
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="list-divider"></li>
-            <li class="list-header">System</li>
-            <li class="nav-projects ">
-              <a href="/projects/">
-                <i class="fa fa-sitemap"></i>
-                <span class="menu-title">
-                  Projects
-                  <span class="notification">1</span>
-                </span>
-                <i class="arrow"></i>
-
-              </a>
-            </li>
-            <li  class="nav-reports active-page">
-              <a href="/reports/">
-                <i class="fa fa-folder-o"></i>
-                <span class="menu-title">
-                  Reports
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="nav-finance ">
-              <a href="#">
-                <i class="fa fa-exchange"></i>
-                <span class="menu-title">
-                  Transactions
-                </span>
-                <i class="arrow"></i>
-              </a>
-              <ul class="collapse ">
-                <li class="">
-                  <a href="/transactions/record/">
-                    Record Transaction
-                  </a>
-                </li>
-                <li class="list-divider"></li>
-                <li class="">
-                  <a href="/transactions/home/">View Transactions</a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-stakeholder ">
-              <a href="/stakeholders/home/">
-                <i class="fa fa-users"></i>
-                <span class="menu-title">
-                  SRM
-                </span>
-                <i class="arrow"></i>
-              </a>
-            </li>
-            <li class="nav-admin ">
-              <a href="#">
-                <i class="fa fa-wrench"></i>
-                <span class="menu-title">
-                  Admin
-                </span>
-                <i class="arrow"></i>
-              </a>
-              <ul class="collapse ">
-                <li class="">
-                  <a href="/admin/account/">Manage Accounts</a>
-                </li>
-                <li class="">
-                  <a href="/admin/bank/">Manage Bank Accounts</a>
-                </li>
-              </ul>
-            </li>
-            <li class="list-divider"></li>
-            <li class="nav-stakeholder ">
-              <a href="/support-admin/">
-                <i class="fa fa-crosshairs"></i>
-                <span class="menu-title">
-                  Support
-                </span>
-              </a>
-            </li>
-            <!--
-            <li class="">
-              <a href="/logout/">
-                <i class=" fa fa-power-off"></i>
-                <span class="menu-title">
-                  Logout
-                </span>
-              </a>
-            </li>-->
+  <body class="">
+    <div class="container">
+      <div class="col-md-12">
+		<div class="panel">
+      <!--
+        <div class="panel-title with-nav-tabs">
+          <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab1default" data-toggle="tab">Lettings Portfolio <span>(10)</span></a></li>
+              <li><a href="#tab2default" data-toggle="tab">Documents <span>(2)</span></a></li>
           </ul>
+        </div>
+      -->
 
+      <div class="panel-title">Lettings Portfolio <span>(10)</span></div>
+
+      <div class="tab-content">
+        <div class="tab-pane fade in active" id="tab1default">
+          <div class="panel-subnav">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <div class="row">
+                <div class="col-sm-10">
+                  <div class="search">
+                    <input class="form-control" placeholder="Search by ID, Letting Name" type="text">
+                    <i class="glyphicon glyphicon-search"></i>
+                  </div>
+                </div>
+                <button class="btn btn-primary col-sm-2">Search</button>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <ul class="list-unstyled list-inline pull-right">
+                <li>
+                  <a class="btn btn-default">Download Brochure</a>
+                </li>
+                <li>
+                  <a class="btn btn-add" data-toggle="modal" data-target="#myModalLetting-room"><i class="fa fa-plus"></i> Add New</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel-body">
+    				<!--
+              <div class="alert alert-success" id="alert">
+      					<strong>Well Done.</strong> You have saved your first Service Portfolio item!
+      				</div>
+            -->
+    			  <table class="table table-hover table-vam">
+    			    <thead>
+    						<tr>
+    							<th class="id">ID<!--<a class="filter"></a>--></th>
+    							<th class="title">Letting Name</th>
+                  <th class="category">Type</th>
+                  <th class="status-lg">Details</th>
+                  <th class="available">Time Available
+                    <span>Price</span>
+                  </th>
+                  <!--<th class="price">Letting Price</th>-->
+    							<!--<th class="actions"></th>-->
+    						</tr>
+    					</thead>
+    			    <tbody>
+    			      <tr id="" class="">
+    							<td class="id">L001</td>
+    							<td class="title link">
+                    <a data-toggle="modal" data-target="#myModalLetting-details-lg">
+                      Sit on Lawn Mower
+                    </a>
+    							</td>
+                  <td class="category">
+                    Equipment
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li data-original-title="1 photos" class="photo active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li data-original-title="restriction" class="restriction active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li class="active">Peak <span>£5.00 p/h</span></li>
+                      <li class="active">Offpeak <span>£6.00 p/h</span></li>
+                      <li class="">Weekend<span>Not Available</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L002</td>
+    							<td class="title link">
+                    <a>
+                      Floor Polisher
+                    </a>
+    							</td>
+                  <td class="category">
+                    Equipment
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li data-original-title="restriction" class="restriction active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li class="active">Peak <span>£8.00 p/h</span></li>
+                      <li>Offpeak <span>Not Available</span></li>
+                      <li>Weekend<span>Not Available</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L003</td>
+    							<td class="title link">
+                    <a>
+                      20 x Computer Chairs
+                    </a>
+    							</td>
+                  <td class="category">
+                    Equipment
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li>Offpeak <span>Not Available</span></li>
+                      <li class="active">Weekend<span>£10.00</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L004</td>
+    							<td class="title link">
+                    <a>
+                      10 x Tables
+                    </a>
+    							</td>
+                  <td class="category">
+                    Equipment
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li>Offpeak <span>Not Available</span></li>
+                      <li class="active">Weekend<span>£12.00</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L005</td>
+    							<td class="title link">
+                    <a>
+                      Music Studio
+                    </a>
+    							</td>
+                  <td class="category">
+                    Facility
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li class="active">Offpeak <span>£12.00 p/h</span></li>
+                      <li>Weekend<span>Not Available</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L006</td>
+    							<td class="title link">
+                    <a>
+                      Jetwash Powerwash
+                    </a>
+    							</td>
+                  <td class="category">
+                    Equipment
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction active" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>£5.00 p/h</span></li>
+                      <li class="active">Offpeak <span>£5.00 p/h</span></li>
+                      <li>Weekend<span>£4.00 p/h</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L007</td>
+    							<td class="title link">
+                    <a>
+                      Drama Studio
+                    </a>
+    							</td>
+                  <td class="category">
+                    Facility
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li class="active">Offpeak <span>£12.00 p/h</span></li>
+                      <li>Weekend<span>Not Available</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L007</td>
+    							<td class="title link">
+                    <a>
+                      Music Studio
+                    </a>
+    							</td>
+                  <td class="category">
+                    Facility
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li class="active">Offpeak <span>£12.00 p/h</span></li>
+                      <li>Weekend<span>Not Available</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L008</td>
+    							<td class="title link">
+                    <a>
+                      Classroom E3
+                    </a>
+    							</td>
+                  <td class="category">
+                    Facility
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction active" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li class="active">Offpeak <span>£12.00 p/h</span></li>
+                      <li>Weekend<span>£12.00 p/h</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L009</td>
+    							<td class="title link">
+                    <a>
+                      Classroom E4
+                    </a>
+    							</td>
+                  <td class="category">
+                    Facility
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction active" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li>Peak <span>Not Available</span></li>
+                      <li class="active">Offpeak <span>£12.00 p/h</span></li>
+                      <li>Weekend<span>£12.00 p/h</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+                <tr id="" class="">
+    							<td class="id">L010</td>
+    							<td class="title link">
+                    <a>
+                      Small Hall
+                    </a>
+    							</td>
+                  <td class="category">
+                    Facility
+                  </td>
+                  <td class="status-lg">
+                    <ul class="list-unstyled list-inline list-status">
+                      <li class="photo">
+                        <i class="fa fa-picture-o"></i>
+                      </li>
+                      <li class="restriction" data-placement="top" title="restriction">
+                        <i class="fa fa-ban"></i>
+                      </li>
+                      <li data-original-title="terms required" class="terms active" data-toggle="tooltip" data-placement="top" title="">
+                        <i class="fa fa-pencil-square-o"></i>
+                      </li>
+                    </ul>
+                  </td>
+                  <td class="price-list">
+                    <ul class="list-unstyled list-status">
+                      <li class="active">Peak <span>Not Available</span></li>
+                      <li class="active">Offpeak <span>£12.00 p/h</span></li>
+                      <li>Weekend<span>£20.00 p/h</span></li>
+                    </ul>
+                  </td>
+    						</tr>
+    			    </tbody>
+    			  </table>
+    			</div>
 
         </div>
+
+        <!--
+          <div class="tab-pane fade in active" id="tab2default">
+            <div class="panel-body">Documents</div>
+          </div>
+        -->
       </div>
+
+
+		</div>
+	</div>
+
     </div>
-    <!--End menu-->
-
-  </div>
-</nav>
-<!--END MAIN NAVIGATION-->
-
-
-      <div id="content-container">
-          <div id="page-content">
-
-          Reports
-
-
-        </div>
-      </div>
-
 
       <div class="modal fade" id="myModalTrial" tabindex="-1" role="dialog" aria-labelledby="myModalLabelTrial">
   <div class="modal-dialog" role="document">
@@ -5463,7 +5631,7 @@ window.myLine = new Chart(ctx).Line(lineChartData, {
     }
 </script>
 
-      </div>
+
 
     </body>
 
