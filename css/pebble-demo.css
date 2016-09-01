@@ -22277,6 +22277,394 @@ th .form-group .checkbox label {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.icon-properties {
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon-lg span {
+  background-size: 100px !important;
+  height: 100px !important;
+  width: 100px !important;
+}
+.icon-sm span {
+  background-size: 60px !important;
+  height: 60px !important;
+  width: 60px !important;
+}
+.icon-xs span {
+  background-size: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+}
+.icon-project {
+  background: #fc6e51;
+  color: #ffffff;
+}
+.icon-grants {
+  background: #f6bb42;
+  color: #ffffff;
+}
+.icon-draft {
+  background: #9b9b9b;
+  color: #ffffff;
+}
+.icon-donations {
+  background: #00aea9;
+  color: #ffffff;
+}
+.icon-stakeholder {
+  background: #79d4a1;
+  color: #ffffff;
+}
+.icon-clubs {
+  background: #ec87c0;
+  color: #ffffff;
+}
+.icon-events {
+  background: #48cfad;
+  color: #ffffff;
+}
+.icon-services {
+  background: #fc766a;
+  color: #ffffff;
+}
+.icon-lettings {
+  background: #2ad2f5;
+  color: #ffffff;
+}
+.icon-sponsorship {
+  background: #df7bd2;
+  color: #ffffff;
+}
+.icon-doc {
+  background: #333333;
+  color: #ffffff;
+}
+.icon-volunteer {
+  background: #e6c200;
+  color: #ffffff;
+}
+.icon-base {
+  background: #333333;
+  color: #ffffff;
+}
+.icon-user {
+  background: #77216f;
+  color: #ffffff;
+}
+.icon-joinos {
+  background: #22b99b;
+  color: #ffffff;
+}
+.icon-success {
+  background: #93c01f;
+  color: #ffffff;
+}
+.icon-warning {
+  background: #f7b033;
+  color: #ffffff;
+}
+.icon-danger {
+  background: #ed5565;
+  color: #ffffff;
+}
+.icon-info {
+  background: #26aae2;
+  color: #ffffff;
+}
+.icon .icon-tablet {
+  background: url("../img/iconset/tablets.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-clock {
+  background: url("../img/iconset/clock.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-map {
+  background: url("../img/iconset/map.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-sent {
+  background: url("../img/iconset/sent.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-campaign-01 {
+  background: url("../img/iconset/campaign-01.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-campaign-02 {
+  background: url("../img/iconset/campaign-02.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-campaign-03 {
+  background: url("../img/iconset/campaign-03.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-progress-01 {
+  background: url("../img/iconset/progress-01.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-progress-02 {
+  background: url("../img/iconset/progress-02.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-progress-03 {
+  background: url("../img/iconset/progress-03.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-complete-01 {
+  background: url("../img/iconset/complete-01.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-01 {
+  background: url("../img/iconset/project-01.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-02 {
+  background: url("../img/iconset/project-02.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-03 {
+  background: url("../img/iconset/project-03.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-04 {
+  background: url("../img/iconset/project-04.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-05 {
+  background: url("../img/iconset/project-05.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-06 {
+  background: url("../img/iconset/project-06.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-07 {
+  background: url("../img/iconset/project-07.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-08 {
+  background: url("../img/iconset/project-08.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-09 {
+  background: url("../img/iconset/project-09.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-10 {
+  background: url("../img/iconset/project-10.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-11 {
+  background: url("../img/iconset/project-11.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-12 {
+  background: url("../img/iconset/project-12.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-13 {
+  background: url("../img/iconset/project-13.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-14 {
+  background: url("../img/iconset/project-14.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-15 {
+  background: url("../img/iconset/project-15.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-16 {
+  background: url("../img/iconset/project-16.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.icon .icon-project-17 {
+  background: url("../img/iconset/project-17.svg");
+  background-repeat: no-repeat;
+  background-size: 80px;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.glyphicon {
+  top: 2px;
+}
+.fa-sm {
+  width: 20px;
+}
+.fa-xl {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+.icon-xl {
+  margin: 10px auto !important;
+  text-align: center;
+  display: block !important;
+  height: 100px !important;
+  width: 100px !important;
+}
+.icon-xl .fa {
+  line-height: 80px;
+  font-size: 50px;
+}
+.icon-tag {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  border-radius: 500px;
+  border: 1px solid #9b9b9b;
+}
+.icon-tag i {
+  font-size: 40px;
+  line-height: 80px;
+  color: #9b9b9b;
+}
+/*global type*/
 .progress {
   position: relative;
   height: 25px;
