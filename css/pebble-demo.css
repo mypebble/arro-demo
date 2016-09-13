@@ -17730,6 +17730,30 @@ a.stats-below:hover {
 .list-stats-inline li:last-child {
   border-right: 0px;
 }
+.picker {
+  display: inline-block;
+  float: left;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  margin: 5px;
+  margin-right: 10px;
+}
+.picker.color-blue {
+  background: #26aae2;
+}
+.picker.color-pink {
+  background: #ed5565;
+}
+.picker.color-orange {
+  background: #f7b033;
+}
+.picker.color-green {
+  background: #a0d468;
+}
+.picker.color-gray {
+  background: #555555;
+}
 /*global type*/
 .btn {
   padding: 8px 12px;

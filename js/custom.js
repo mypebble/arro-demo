@@ -856,4 +856,15 @@ function clock(){
 var inter = setInterval(clock,400);
 
 
+$(".waitload-button").click(function(){
+  $(".waitload-initial").addClass("hidden");
+  $(".waitload-loading").removeClass("hidden");
+  var url = $(this).attr("href");
+  setTimeout(function(){
+    document.location.href = url;
+  }, 5000);
+  return false;
+});
+
+
 }(jQuery);
