@@ -23022,3 +23022,21 @@ textarea,
   stroke-width: 6px;
 }
 /*c3 charts*/
+.bg-services {
+background: url('../img/no-services.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+}
+.bg-clubs {
+background: url('../img/no-services.jpg');
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+background-repeat: no-repeat;
+height: 100vh;
+}
