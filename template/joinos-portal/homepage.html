@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joinos Template</title>
+  <meta name="description" content="">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:700|Lato:400,700" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="css/joinos_parents.css">
+</head>
+
+
+  <body class="home-page bags">
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="http://prismjs.com/prism.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style>
+
+code{
+  color:red;
+}
+article.container-fluid{
+  border-bottom: 1px solid #f1f1f1;
+  padding:20px 0px;
+}
+article.container-fluid:nth-child(odd){
+  background: #fcfcfc;
+}
+
+/* CSS Simple Pre Code */
+pre {
+  background: #fff;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+pre.code {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  position: relative;
+}
+
+pre.code code {
+  font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+  display: block;
+  padding: 15px 16px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #444;
+  max-height: 500px;
+  overflow: scroll;
+
+}
+
+
+pre.code-css code {
+  color: #0288d1;
+}
+
+pre.code-html code {
+  color: #558b2f;
+}
+
+pre.code-javascript code {
+  color: #f57c00;
+}
+
+pre.code-jquery code {
+  color: #78909c;
+}
+
+iframe{
+  width: 100%;
+  border: 0px;
+}
+</style>
+
+<script>
+$('i[rel="pre"]').replaceWith(function() {
+    return $('<pre><code>' + $(this).html() + '</code></pre>');
+});
+var pres = document.querySelectorAll('pre,kbd,blockquote');
+for (var i = 0; i < pres.length; i++) {
+  pres[i].addEventListener("dblclick", function () {
+    var selection = getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(this);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }, false);
+}
+
+$(document).ready(function(){
+  $(".example").each(function(){
+    $("<code>").text($(this).html()).appendTo(
+      $("#" + $(this).attr("data-codeblock")));
+  });
+});
+</script>
+
+
+<main>
+
+<div class="content-container">
+    <div class="content">
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand brand" href="#" data-href="#"> Joinos <img alt="" src="https://joinos.pebblecloud.net/static/images/logo_white.svg"></a>
+                    <p class="navbar-text">CSS Documentation</p>
+                </div>
+            </div>
+        </nav>
+
+<div class="container example" data-codeblock="title">
+<div class="row">
+    <div class="col-xs-offset-0 col-xs-12 col-md-10 col-md-offset-1">
+        <div class="text-center hidden-xs">
+            <!-- Desktop -->
+            <h1>Being a parent is hard enough without your own homework</h1>
+            <p> Cash, cheques and important letters left in the bottom of schoolbags.
+                Children are at school to learn, not be a courier service.
+                Surely there's a better way? </p><p> There is, and it's called 'Joinos'.
+            </p>
+        </div>
+        <div class="visible-xs">
+            <!-- Mobile -->
+            <h1>Being a parent is hard enough without your own homework</h1>
+            <p class="lead">Cash, cheques and important letters left in the bottom of schoolbags.
+                Children are at school to learn, not be a courier service. Surely there's
+                a better way? </p><p> There is, and it's called 'Joinos'.
+            </p>
+            <hr>
+            <a href="#register" class="login-item">
+                <p><strong>Got a Joinos Code?</strong></p>
+                <p>Been given a Joinos Code from your school? Tap here to get started</p>
+            </a>
+            <hr>
+            <a href="#login" class="login-item">
+                <p><strong>Login</strong></p>
+                <p>Already using Joinos? Tap here to login</p>
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="example" data-codeblock="loginForm">
+  <article id="bodyContent" class="container">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1 box">
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="register">
+                        <a id="register"></a>
+                        <h3>Joinos Code</h3>
+                        <p>I have been given a Joinos Code</p>
+                        <div class="form-group">
+                            <label for="joinos_code"> Joinos Code: </label>
+                            <input type="text" class="form-control code-input" id="joinos_code"
+                                placeholder="AAAA-AAAA-AAAA-AAAA">
+                        </div>
+                        <button class="btn btn-primary btn-lg" id="register_button">Register</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <form id="login">
+                        <a id="login"></a>
+                        <h3>Joinos Login</h3>
+                        <p>Already have a login? Sign in here</p>
+                        <div class="form-group">
+                            <label for="email"> Email: </label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label> Password:  </label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <button class="btn btn-primary btn-lg" id="login_button">Login</button>
+                        <br><br>
+                        <a href="/auth/reset">Forgot your password?</a>
+                    </form>
+                </div>
+            </div>
+            <div class="cookie-notice">
+                <img class="visible-xs-inline-block pull-left" src="/static/images/info-mobile.svg">
+                <img class="hidden-xs" src="/static/images/info.svg"> Joinos uses cookies to log in,
+                and for analytics purposes. By logging in, you accept our use of these cookies for
+                these purposes.
+            </div>
+        </div>
+    </div>
+</article>
+
+    </div>
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Title</h2>
+      <pre class="code code-html" id="title"></pre>
+      <h2>Login Form</h2>
+      <pre class="code code-html" id="loginForm"></pre>
+    </div>
+  </div>
+</div>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joinos Template</title>
+  <meta name="description" content="">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:700|Lato:400,700" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="css/joinos_parents.css">
+</head>
+
+
+  <body>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="http://prismjs.com/prism.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style>
+
+code{
+  color:red;
+}
+article{
+  border-bottom: 1px solid #f1f1f1;
+  padding:20px 0px;
+}
+article:nth-child(odd){
+  background: #fcfcfc;
+}
+
+/* CSS Simple Pre Code */
+pre {
+  background: #fff;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+pre.code {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  position: relative;
+}
+
+pre.code code {
+  font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+  display: block;
+  padding: 15px 16px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #444;
+  max-height: 500px;
+  overflow: scroll;
+
+}
+
+
+pre.code-css code {
+  color: #0288d1;
+}
+
+pre.code-html code {
+  color: #558b2f;
+}
+
+pre.code-javascript code {
+  color: #f57c00;
+}
+
+pre.code-jquery code {
+  color: #78909c;
+}
+
+iframe{
+  width: 100%;
+  border: 0px;
+}
+</style>
+
+<script>
+$('i[rel="pre"]').replaceWith(function() {
+    return $('<pre><code>' + $(this).html() + '</code></pre>');
+});
+var pres = document.querySelectorAll('pre,kbd,blockquote');
+for (var i = 0; i < pres.length; i++) {
+  pres[i].addEventListener("dblclick", function () {
+    var selection = getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(this);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }, false);
+}
+
+$(document).ready(function(){
+  $(".example").each(function(){
+    $("<code>").text($(this).html()).appendTo(
+      $("#" + $(this).attr("data-codeblock")));
+  });
+});
+</script>
+
+
+<main>
+
+<navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <a class="btn btn-info-outlined" href="../">
+          <i class="glyphicon glyphicon-chevron-left"></i>
+          Back to Templates
+        </a>
+      </div>
+    </div>
+  </div>
+</navbar>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand brand" href="#" data-href="#"> Joinos <img alt="" src="https://joinos.pebblecloud.net/static/images/logo_white.svg"></a>
+        <p class="navbar-text">CSS Documentation</p>
+      </div>
+    </div>
+</nav>
+
+<section>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="title">Joinos Portal</h1>
+          <p class="details">HTML and CSS Guidelines</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Overview</h2>
+      <p class="lead">The Joinos for Parents portal is built on Bootstrap 3</p>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Typography</h2>
+      <p class="lead">How text is displayed</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Text Size</h3>
+      <p>Text sizes are controlled by the html structure of the page h1 to h5.</p>
+      <h3>Text Alignment</h3>
+      <p>Text can be aligned using the following 3 classes.</p>
+      <ul class="list-unstyled">
+        <li>
+          <code>.text-left</code> will align the text to the left.
+        </li>
+        <li>
+          <code>.text-right</code> will align the text to the right.
+        </li>
+        <li>
+          <code>.text-center</code> will align the text to the center.
+        </li>
+      </ul>
+      <h3>Labels</h3>
+<div class="example" data-codeblock="labels">
+  <span class="label label-default">Label Default</span>
+  <span class="label label-primary">Label Primary</span>
+  <span class="label label-info">Label Info</span>
+  <span class="label label-danger">Label Danger</span>
+  <span class="label label-warning">Label Warning</span>
+  <span class="label label-success">Label Success</span>
+</div>
+<pre class="code code-html" id="labels"></pre>
+
+      <h3>Buttons</h3>
+
+<div class="example" data-codeblock="buttons">
+<!-- Standard button -->
+<button type="button" class="btn btn-default">Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">Link</button>
+</div>
+<pre class="code code-html" id="buttons"></pre>
+
+    </div>
+    <div class="col-sm-6">
+      <h4>Examples</h4>
+      <div class="example" data-codeblock="type">
+      <h1>Header H1 <small class="block">small section to display after</small></h1>
+      <h2>Header H2 <small class="block">small section to display after</small></h2>
+      <h3>Header H3 <small class="block">small section to display after</small></h3>
+      <h4>Header H4 <small class="block">small section to display after</small></h4>
+      <h5>Header H5 <small class="block">small section to display after</small></h5>
+
+      <p class="lead">Paragraph using a <code>.lead</code> style added</p>
+      <p>Default paragraph styling</p>
+
+      <p class="text-danger">Text Danger</p>
+      <p class="text-warning">Text Warning</p>
+      <p class="text-success">Text Success</p>
+      </div>
+
+      <pre class="code code-html" id="type"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>Navbar</h2>
+  <p class="lead">The Joinos Navbar</p>
+  <!-- Use iframes just to demonstrate the responsive view -->
+  <iframe src="sample-navbar.html" style="height:100px"></iframe>
+  <div class="row"><div class="col-sm-6 col-lg-3">
+    <iframe src="sample-navbar.html" style="height:250px"></iframe>
+  </div></div>
+</article>
+
+<article class="container-fluid">
+  <h2>Organisation Header</h2>
+  <p class="lead">
+    The org header lets the user pick from the organisation to see
+  </p>
+  <div class="example" data-codeblock="orgHeader">
+<h1>
+  <div class="row">
+    <div class="col-xs-9 col-sm-11 dropdown-list">
+      <div class="null-org org-name ">
+        <small>Show all</small> Shop
+      </div>
+      <div class="org-name active">
+        <small>Show only Shop for</small>
+        Kirkwall Primary
+      </div>
+      <div class="org-name">
+        <small>Show only Shop for</small>Ferelden
+      </div>
+      <div class="org-name">
+        <small>Show only Shop for</small>Orlay
+      </div>
+    </div>
+    <div class="col-xs-3 col-sm-1 org-dropdown-toggle">
+      <i class="glyphicon glyphicon-triangle-bottom"></i>
+    </div>
+  </div>
+</h1>
+  </div>
+  <pre class="code code-html" id="orgHeader"></pre>
+</article>
+
+<article class="container-fluid">
+  <h2>Line Navigation</h2>
+  <p class="lead">This is navigation which is to appear under tabs to add another level
+    of navigation</p>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="example" data-codeblock="lineNav">
+<ul class="nav nav-lines">
+  <li role="presentation" class="active">
+    <a href="/organisations/1/offers?include_paid=no">Available to Purchase</a>
+  </li>
+  <li role="presentation">
+    <a href="/organisations/1/offers?include_paid=yes">All</a>
+  </li>
+</ul>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="lineNav"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>Loading</h2>
+  <p class="lead">The loading spinner</p>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="spinner">
+<svg width='42px' height='42px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt spinner">
+  <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+    <circle cx="50" cy="50" r="40" stroke="null" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+    <circle cx="50" cy="50" r="40" stroke="#34495e" fill="none" stroke-width="6" stroke-linecap="round" class="ring">
+    </circle>
+</svg>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="spinner"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>Status Messages</h2>
+  <p class="lead">Status messages fixed at the top of the screen in order to notify of system issues</p>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="status">
+<div class="statusmessage statusmessage-critical">
+<div class="container">There is a problem</div>
+</div>
+<div class="statusmessage statusmessage-warning">
+<div class="container">There is an issue</div>
+</div>
+<div class="statusmessage statusmessage-info">
+<div class="container">There is something minor</div>
+</div>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="status"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>Big Status</h2>
+  <p class="lead">Big boxes to describe status to users</p>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="bigStatus">
+<div class="big-status success">
+    <h1>
+        <img src="https://joinos.pebblecloud.net/static/icons/tick.svg" />
+        Payment Success
+    </h1>
+    <p>
+        Thanks, your money has gone to Kirkwall Primary.
+        Your payment reference is:
+    </p>
+    <p class="transaction-id">
+        TEST-TEST-TEST-TEST
+    </p>
+</div>
+<div class="big-status processing">
+    <h1>
+      <!-- Spinner -->
+      <svg width='42px' height='42px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt spinner">
+        <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+          <circle cx="50" cy="50" r="40" stroke="null" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+          <circle cx="50" cy="50" r="40" stroke="#34495e" fill="none" stroke-width="6" stroke-linecap="round" class="ring">
+          </circle>
+      </svg>
+      <!-- Add spinner in here properly in-app -->
+      Just a moment...
+    </h1>
+</div>
+<div class="big-status failure">
+    <h1>
+        <img src="https://joinos.pebblecloud.net/static/icons/error.svg" />
+        Payment Failure
+    </h1>
+    <p>
+      We were unable to take your payment and no money
+      was taken from your bank account
+    </p>
+</div>
+    </div>
+    <div class="col-sm-6">
+      <pre id="bigStatus" class="code code-html"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>News Feed</h2>
+  <p class="lead">The news feed provides a feed of activies ocurring on the user's account</p>
+
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="newsFeed">
+<div class="news-feed-item row">
+    <div class="col-sm-2 hidden-xs news-feed-side">
+      <img class="news-feed-icon" src="https://joinos.pebblecloud.net/static/icons/new-joinos.svg">
+    </div>
+    <div class="col-sm-10">
+        <h3>New Support</h3>
+        <p><i class="glyphicon glyphicon-user"></i> All Joinos Users </p>
+        <p>The new Joinos Support pages are live and should be working! Woo!</p>
+    </div>
+</div>
+<div class="news-feed-item row">
+    <div class="col-sm-2 hidden-xs news-feed-side">
+        <img class="news-feed-icon" src="https://joinos.pebblecloud.net/static/icons/meal2.svg">
+    </div>
+    <div class="col-sm-10">
+        <h3>Meal Statement for John Smith</h3>
+        <table class="table table-statement table-striped table-smaller">
+            <thead>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><i class="web-checkmark"></i></td>
+                    <td><i class="web-checkmark"></i></td>
+                    <td><i class="web-checkmark"></i></td>
+                    <td><i class="web-checkmark"></i></td>
+                    <td><i class="web-checkmark"></i></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="newsFeed"></pre>
+    </div>
+  </div>
+
+</article>
+
+<article class="container-fluid">
+  <h2>Checkbox Icons</h2>
+  <p class="lead">Checkboxes which affect a checkbox using CSS</p>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="checkboxIcon">
+<input id="offerC691" type="checkbox" class="hidden">
+<label for="offerC691" class="label-icon">
+  <div class="media">
+  <div class="media-left">
+    <img src="https://joinos.pebblecloud.net/static/icons/tick_circle.svg" class="icon-selected header-icon">
+    <img src="https://joinos.pebblecloud.net/static/icons/user2.svg" class="icon-unselected header-icon">
+  </div>
+  <div class="media-body">
+    <strong>Harry Walton</strong>
+  <div class="icon-selected">
+    Item is to be paid for Harry Walton
+  </div>
+  <div class="icon-unselected text-muted">
+    Tap to select for this child </div>
+  </div>
+  </div>
+</label>
+    </div>
+    <div class="col-sm-6">
+      <pre id="checkboxIcon" class="code code-html"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>No Info</h2>
+  <p class="lead">Displayed where there is an empty list</p>
+
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="noInfo">
+<section class="no-info">
+  <p>There is nothing to display</p>
+</section>
+<hr/>
+<section class="no-info">
+  <img src="https://joinos.pebblecloud.net/static/icons/warning.svg" class="basketicon" />
+
+  <p>There was a problem fetching that information</p>
+
+  <a href="#" class="btn btn-lg btn-primary btn-retry">Retry</a>
+</section>
+<hr/>
+<section class="no-info">
+  <!-- Spinner -->
+  <svg width='42px' height='42px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt spinner">
+    <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+      <circle cx="50" cy="50" r="40" stroke="null" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+      <circle cx="50" cy="50" r="40" stroke="#34495e" fill="none" stroke-width="6" stroke-linecap="round" class="ring">
+      </circle>
+  </svg>
+  <!-- Add spinner in here properly in-app -->
+
+  <p>Just a moment while we get that for you...</p>
+</section>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="noInfo"></pre>
+    </div>
+  </div>
+
+</article>
+
+<article class="container-fluid">
+  <h2>Messaging</h2>
+  <p class="lead">Various elements around messaging</p>
+
+  <h3>Header</h3>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="messagingHeader">
+<div class="messages-header">
+    <div class="container">
+        <h1>
+            <img class="headericon"
+                aria-hidden="true" src="https://joinos.pebblecloud.net/static/icons/mail.svg">
+            Messages
+        </h1>
+        <ul class="nav nav-lines">
+        <li role="presentation" class="active">
+            <a href="/messages">
+                Messages
+            </a>
+        </li>
+        <li role="presentation">
+            <a href="/messages">
+                Direct Messages <span class="badge">123</span>
+            </a>
+        </li>
+    </div>
+</div>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="messagingHeader"></pre>
+    </div>
+  </div>
+
+  <h3>Messages</h3>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="messaging">
+<div class="message row">
+  <div class="col-xs-10 col-xs-offset-2 col-sm-9 col-sm-offset-3">
+    <p class="message-stat text-right">
+        You sent
+        <abbr title="Full Date">
+            Just now
+        </abbr>
+    </p>
+    <div class="message-bubble from-user">
+        <p>Joinos isn't working properly and I can't see the 20 pounds i paid yesterday! ARGHHHH!!!!</p>
+    </div>
+  </div>
+</div>
+<div class="message row">
+    <div class="col-xs-3 col-sm-2 text-right">
+        <img src="https://joinos.pebblecloud.net/api/organisations/1/icon/" class="fwidth" />
+    </div>
+    <div class="col-xs-9 col-sm-9">
+      <p class="message-stat">
+          Kirkwall Primary sent
+          <abbr title="Full Date">
+              In the future
+          </abbr>:
+      </p>
+      <div class="message-bubble to-user">
+          <p>Hi, we have fixed the issue. There was a delay in adding cash transactions to the system</p>
+      </div>
+    </div>
+</div>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="messaging"></pre>
+    </div>
+  </div>
+
+</article>
+
+<article class="container-fluid">
+  <h2>Mealpicker</h2>
+  <p class="lead">The meal choice system in Joinos</p>
+  <div class="row">
+    <div class="col-sm-6 example" data-codeblock="mealPicker">
+<div id="mealpicker-hook">
+<div class="col-sm-8 controls mealpicker-controls">
+  <div class="select select-green">
+    <p><strong>Set Menu 1 (v)</strong></p>
+    <p>Vegetable Soup, Potato &amp; Leek Bake, Fruit Salad</p>
+  </div>
+  <div class="cell-wrapper">
+    <ul class="cell-options">
+      <label class="picker picker-remove ">
+        <input type="radio" class="remove-choice">
+        <h4 class="list-group-item-header">No Choice</h4>
+        <p class="list-group-item-text"> Remove your selection from this day </p>
+      </label>
+      <li>
+        <label class="picker-blue picker">
+          <input type="radio" disabled="disabled">
+          <h4 class="list-group-item-heading">Varible Menu - Suitable V</h4>
+          <p class="list-group-item-text">Cold Pasta Bar, Jacket Potato with choice of filling, Fruit salad</p>
+        </label>
+      </li>
+      <li>
+        <label class="picker-green picker">
+          <input type="radio" disabled="disabled" checked="checked">
+          <h4 class="list-group-item-heading">Set Menu 1 (v)</h4>
+          <p class="list-group-item-text">Vegetable Soup, Potato &amp; Leek Bake, Fruit Salad</p>
+        </label>
+      </li>
+      <li>
+        <label class="picker-red picker">
+          <input type="radio" disabled="disabled">
+          <h4 class="list-group-item-heading">Set Menu 2</h4>
+          <p class="list-group-item-text">Oxtail Soup, Ham &amp; Leek Bake, Fruit Salad</p>
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+    </div>
+    <div class="col-sm-6">
+      <pre class="code code-html" id="mealPicker"></pre>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <h2>Footer</h2>
+  <div class="example" data-codeblock="footer">
+<div class="bottom-menu">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 brand">
+                <a href="/">Joinos</a>
+            </div>
+
+
+            <div class="col-md-6">
+                <ul class="bottom-links">
+                    <li>
+                        <a href=
+                        "/terms">Information
+                        and Use Policy</a>
+                    </li>
+
+
+                    <li>
+                        <a href="/support">Support</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 text-right">
+                Joinos &copy; All rights reserved 2016
+            </div>
+
+        </div>
+
+    </div>
+</div>
+  </div>
+  <pre class="code code-html" id="footer"></pre>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Sample Pages</h2>
+      <p>
+        For specific page CSS, see the other pages
+      </p>
+      <div class="actions-row">
+        <div class="pull-left">
+          <a class="btn btn-info" href="homepage.html">Homepage</a>
+          <a class="btn btn-info" href="welcome.html">Welcome page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+  </body>
+
+</html>

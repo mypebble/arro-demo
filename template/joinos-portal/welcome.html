@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joinos Template</title>
+  <meta name="description" content="">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:700|Lato:400,700" rel="stylesheet" type="text/css">
+ <link rel="stylesheet" href="css/joinos_parents.css">
+</head>
+
+
+  <body class="welcome">
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="http://prismjs.com/prism.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style>
+
+code{
+  color:red;
+}
+article{
+  border-bottom: 1px solid #f1f1f1;
+  padding:20px 0px;
+}
+article:nth-child(odd){
+  background: #fcfcfc;
+}
+
+/* CSS Simple Pre Code */
+pre {
+  background: #fff;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+pre.code {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  position: relative;
+}
+
+pre.code code {
+  font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+  display: block;
+  padding: 15px 16px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #444;
+  max-height: 500px;
+  overflow: scroll;
+
+}
+
+
+pre.code-css code {
+  color: #0288d1;
+}
+
+pre.code-html code {
+  color: #558b2f;
+}
+
+pre.code-javascript code {
+  color: #f57c00;
+}
+
+pre.code-jquery code {
+  color: #78909c;
+}
+
+iframe{
+  width: 100%;
+  border: 0px;
+}
+</style>
+
+<script>
+$('i[rel="pre"]').replaceWith(function() {
+    return $('<pre><code>' + $(this).html() + '</code></pre>');
+});
+var pres = document.querySelectorAll('pre,kbd,blockquote');
+for (var i = 0; i < pres.length; i++) {
+  pres[i].addEventListener("dblclick", function () {
+    var selection = getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(this);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }, false);
+}
+
+$(document).ready(function(){
+  $(".example-css").each(function(){
+    $("<code>").text($(this).html()).appendTo(
+      $("#" + $(this).attr("data-codeblock")));
+  });
+});
+</script>
+
+
+<main>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="col-sm-12">
+        <div class="navbar-header">
+          <a class="navbar-brand brand" href="#" data-href="#"> Joinos <img alt="" src="https://joinos.pebblecloud.net/static/images/logo_white.svg"></a>
+          <p class="navbar-text">CSS Documentation</p>
+        </div>
+      </div>
+    </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="example-css" data-codeblock="jumbotron">
+        <div class="jumbotron">
+            <h1>Welcome to Joinos</h1>
+            <p>Joinos is the way to pay for things and stay informed about your children at school</p>
+            <p> This is a quick guide to get you started</p>
+            <p><a class="btn btn-link btn-done">Skip</a></p>
+        </div>
+      </div>
+      <div class="example"><pre class="code code-html" id="jumbotron"></pre></div>
+
+      <div data-codeblock="example" class="example-css">
+        <div class="example">
+            Example of Example
+            <pre id="example" class="code code-html"></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</main>
+
+</body>
+</html>

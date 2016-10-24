@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joinos Template</title>
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:700|Lato:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/joinos_parents.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="pull-right menu-text">Menu</span><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a href="/support" class="pull-right navbar-brand visible-xs" data-href="/support"><img class="support-icon" src="https://joinos.pebblecloud.net/static/icons/support.svg"></a><a class="navbar-brand brand" href="#" data-href="#"> Joinos <img alt="" src="https://joinos.pebblecloud.net/static/images/logo_white.svg"></a></div>
+        <div class="navbar-mobile visible-xs in" aria-expanded="true">
+            <div class="row">
+                <div class="col-xs-6 text-center">
+                    <a class="mobile-link" href="/" data-href="/"><img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/dash.svg"><span class="description">Dashboard</span></a>
+                </div>
+                <div class="col-xs-6 text-center">
+                    <a class="mobile-link" href="/messages" data-href="/messages"> <img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/msg.svg"><span class="description">Messages</span></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <a class="mobile-link" href="/balances" data-href="/balances"><img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/balance_green.svg"><span class="description">Balances</span></a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a class="mobile-link" href="/offers" data-href="/offers"><img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/shop.svg"><span class="description">Shop</span></a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a class="mobile-link" href="/basket" data-href="/basket"> <span class="badge">2</span> <img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/offer.svg"><span class="description">Basket</span></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-4 text-center">
+                    <a class="mobile-link" href="/payments" data-href="/payments"><img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/paymentcard.png"><span class="description">Payments</span></a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a class="mobile-link" href="/settings" data-href="/settings"><img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/settings.svg"><span class="description">Settings</span></a>
+                </div>
+                <div class="col-xs-4 text-center">
+                    <a class="mobile-link" href="/logout" data-href="/logout"><img class="mobile-icon" src="https://joinos.pebblecloud.net/static/icons/logout-button.svg"><span class="description">Logout</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse hidden-xs">
+            <ul class="nav navbar-nav ">
+                <li><a href="/" title="Go to your dashboard" data-href="/"><span class="hidden-xs"><img class="basket-icon" src="https://joinos.pebblecloud.net/static/icons/dashboard.svg"></span><span class="visible-xs-inline"> Dashboard </span></a></li>
+            </ul>
+            <ul class="nav navbar-nav " id="shopMenu">
+                <li role="menu" class="dropdown"><a href="#" class="dropdown-toggle not-link"> Shop </a>
+                    <ul class="organisations dropdown-menu" role="menu">
+                        <li><a class="not-link" href="/organisations/15"> Joinos NOCHEX Demo</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav " id="paymentsMenu">
+                <li role="menu" class="dropdown"><a href="#" class="dropdown-toggle not-link"> Payments </a>
+                    <ul class="organisations dropdown-menu" role="menu">
+                        <li><a class="not-link" href="/organisations/15/payments"> Joinos NOCHEX Demo</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav hidden-sm navbar-nav " id="balanceMenu">
+                <li role="menu" class="dropdown"><a href="#" class="dropdown-toggle not-link"> Balances </a>
+                    <ul class="organisations dropdown-menu" role="menu">
+                        <li><a class="not-link" href="/organisations/15/balances"> Joinos NOCHEX Demo</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+                <li>
+                    <a title="Help and support" href="/support" data-href="/support"><img class="basket-icon" src="https://joinos.pebblecloud.net/static/icons/support.svg"></a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a class="icon" href="/basket?modal=true" id="cart-hook" data-href="/basket?modal=true"><span class="hidden-xs"><img class="basket-icon" src="https://joinos.pebblecloud.net/static/icons/basket.svg"></span><span class="visible-xs-inline" id="basket-label">Basket</span>  <span class="badge">2</span>  </a></li>
+                <li><a class="icon" href="/messages" id="messages-hook" data-href="/messages"><span class="hidden-xs"><img class="basket-icon" src="https://joinos.pebblecloud.net/static/icons/mail.svg"></span><span class="visible-xs-inline" id="messages-label">Messages</span>  </a></li>
+                <li><a href="/settings" data-href="/settings">Settings</a></li>
+                <li><a href="/logout" data-href="/logout">Logout</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right visible-xs">
+                <li><a title="Help and support" href="/support" data-href="/support"> Support </a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+</body>
+
+</html>

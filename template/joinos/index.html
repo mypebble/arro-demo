@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joinos Template</title>
+  <meta name="description" content="">
+
+ <link rel="stylesheet" href="css/joinos.css">
+</head>
+
+
+  <body class="theme-red">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="http://prismjs.com/prism.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style>
+
+code{
+  color:red;
+}
+article{
+  border-bottom: 1px solid #f1f1f1;
+  padding:20px 0px;
+}
+article:nth-child(odd){
+  background: #fcfcfc;
+}
+
+/* CSS Simple Pre Code */
+pre {
+  background: #fff;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+pre.code {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  position: relative;
+}
+
+pre.code code {
+  font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+  display: block;
+  padding: 15px 16px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #444;
+  max-height: 500px;
+  overflow: scroll;
+
+}
+
+
+pre.code-css code {
+  color: #0288d1;
+}
+
+pre.code-html code {
+  color: #558b2f;
+}
+
+pre.code-javascript code {
+  color: #f57c00;
+}
+
+pre.code-jquery code {
+  color: #78909c;
+}
+</style>
+
+<script>
+$('i[rel="pre"]').replaceWith(function() {
+    return $('<pre><code>' + $(this).html() + '</code></pre>');
+});
+var pres = document.querySelectorAll('pre,kbd,blockquote');
+for (var i = 0; i < pres.length; i++) {
+  pres[i].addEventListener("dblclick", function () {
+    var selection = getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(this);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }, false);
+}
+</script>
+
+
+<main>
+
+<navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <a class="btn btn-info-outlined" href="../">
+          <i class="awesome awesome-angle-left"></i>
+          Back to Templates
+        </a>
+      </div>
+    </div>
+  </div>
+</navbar>
+
+<section>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="title">Joinos Community</h1>
+          <p class="details">HTML and CSS Guidelines</p>
+
+          <div class="actions-row">
+            <a class="btn btn-info" href="sample.html">Load Demo Page</a>
+            <!--<a class="btn btn-info" data-target="#donate" data-toggle="modal">
+              Donate amount
+            </a>
+            <a class="btn btn-info" data-target="#donation-card" data-toggle="modal">
+              Donate Card
+            </a>
+            <a class="btn btn-info" data-target="#gocardless" data-toggle="modal">
+              GoCardless Summary
+            </a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Overview</h2>
+      <p class="lead">The Joinos Community has been built on the same framework as the <strong>Arro</strong> product. See <a href="/arro/">Arro Styles Documentation</a> for most core items to this product. All custom styles related to Jonios Community will be within this document along with a sample page created.</p>
+    </div>
+  </div>
+</article>
+
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Theme</h2>
+      <p class="lead">Custom Styling for the community</p>
+      <p>The joinos community CSS has been built so that only one class needs to be changed in order to completly change the pages look and feel.</p>
+      <p>Adding a custom class to the <code>body</code> element will style all custom elements within the page from one location.
+      <code>&lt;body class="theme-red"&gt;</code></p>
+      <div class="row">
+        <div class="col-sm-6">
+        <h3>Available Themes</h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Class</th>
+              <th>Theme</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>.theme-red</code></td>
+              <td>Lets the page to a red theme</td>
+            </tr>
+            <tr>
+              <td><code>.theme-blue</code></td>
+              <td>Lets the page to a blue theme</td>
+            </tr>
+            <tr>
+              <td><code>.theme-green</code></td>
+              <td>Lets the page to a green theme</td>
+            </tr>
+            <tr>
+              <td><code>.theme-orange</code></td>
+              <td>Lets the page to a orange theme</td>
+            </tr>
+            <tr>
+              <td><code>.theme-gray</code></td>
+              <td>Lets the page to a gray theme</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-6">
+      <h3>What is effected</h3>
+      <!--<p>These are the items within the page that will get impacted by the theme colour.</p>-->
+      <table class="table table-bordered">
+        <thead></thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.navbar</code>
+            </td>
+            <td>he background colour of the navbar</td>
+          </tr>
+          <tr>
+            <td>
+              <code>.divider</code> / <code>.divider-thin</code>
+            </td>
+            <td>
+              The section dividers will automatically be upted to match the theme.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.btn-theme</code>
+            </td>
+            <td>Button theme is added to each button that is related to the colour theme</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Banner Images</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>Example</h4>
+
+    <!-- banner-->
+    <section class="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 banner-container">
+            <div class="banner-image">
+              <img src="img/bg/dog.jpg">
+            </div>
+          </div>
+          <div class="col-sm-4 side-panel">
+            <div class="content-md">
+              <div class="value">
+                <div class="amount">&pound;350
+                  <small class="block"><i class="awesome awesome-thumbs-o-up"></i> Raised by 23 Sponsors</small>
+                </div>
+              </div>
+              <div class="actions-row">
+                <a class="btn btn-lg btn-primary btn-block">
+                  Donate
+                </a>
+                <span class="help-text">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <ul class="list-inline list-clear">
+                        <li>
+                          <small>Share &amp; Support&hellip;</small>
+                        </li>
+                        <li>
+                          <a class="btn btn-facebook btn-xs btn-auto">
+                            <i class="awesome awesome-facebook"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="btn btn-twitter btn-xs btn-auto">
+                            <i class="awesome awesome-twitter-square"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="btn btn-secondary btn-xs btn-auto">
+                            <i class="awesome awesome-envelope"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Variations</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Image Source</th>
+            <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>pool.jpg</code>
+            </td>
+            <td>
+              Swimming Pool
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>bike.jpg</code>
+            </td>
+            <td>
+              Cycling 1
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>bike2.jpg</code>
+            </td>
+            <td>
+              Cyclings 2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>allotment.jpg</code>
+            </td>
+            <td>
+              Gardening, Outdoors, Allotments
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>circuit.jpg</code>
+            </td>
+            <td>
+              Science, Technology
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>deck.jpg</code>
+            </td>
+            <td>
+              Outdoor Learning
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>music.jpg</code>
+            </td>
+            <td>
+              Music, Education
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>guitar.jpg</code>
+            </td>
+            <td>
+              Music, Guitars
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>library.jpg</code>
+            </td>
+            <td>
+              Library, Education, Reading
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <code>ski.jpg</code>
+            </td>
+            <td>
+                Sking, Outdoors, Trip
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <pre class="code code-html">
+      <code>
+      &lt;section class="banner"&gt;
+        &lt;div class="container"&gt;
+          &lt;div class="row"&gt;
+            &lt;div class="col-sm-8 banner-container"&gt;
+              &lt;div class="banner-image"&gt;
+                &lt;img src="img/bg/dog.jpg"&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="col-sm-4 side-panel"&gt;
+              &lt;div class="content-md"&gt;
+                &lt;div class="value"&gt;
+                  &lt;div class="amount"&gt;&pound;350
+                    &lt;small class="block"&gt;&lt;i class="awesome awesome-thumbs-o-up"&gt;&lt;/i&gt; Raised by 23 Sponsors&lt;/small&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="actions-row"&gt;
+                  &lt;a class="btn btn-lg btn-primary btn-block"&gt;
+                    Donate
+                  &lt;/a&gt;
+                  &lt;span class="help-text"&gt;
+                    &lt;div class="row"&gt;
+                      &lt;div class="col-sm-12"&gt;
+                        &lt;ul class="list-inline list-clear"&gt;
+                          &lt;li&gt;
+                            &lt;small&gt;Share &amp; Support&hellip;&lt;/small&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a class="btn btn-facebook btn-xs btn-auto"&gt;
+                              &lt;i class="awesome awesome-facebook"&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a class="btn btn-twitter btn-xs btn-auto"&gt;
+                              &lt;i class="awesome awesome-twitter-square"&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                          &lt;/li&gt;
+                          &lt;li&gt;
+                            &lt;a class="btn btn-secondary btn-xs btn-auto"&gt;
+                              &lt;i class="awesome awesome-envelope"&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                          &lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/div&gt;
+                    &lt;/div&gt;
+                  &lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/section&gt;
+      </code>
+      </pre>
+    </div>
+  </div>
+</article>
+
+<!-- end banner -->
+
+
+<article class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Custom List</h2>
+        <p class="lead">Supports Custom List</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6"></div>
+      <div class="col-sm-6">
+        <h4>Example</h4>
+        <ul class="list-supporters">
+          <li>
+            <img src="img/sponsors/user-1.jpg" >
+            <div class="name">
+              Stuart Richardson <span>1 min ago</span>
+            </div>
+            <div class="donation">
+              &pound;10.00 <small> + &pound;2.00 Gift Aid</small>
+            </div>
+          </li>
+          <li>
+            <img src="img/sponsors/user-2.jpg" >
+            <div class="name">
+              Stuart Richardson <span>1 min ago</span>
+            </div>
+            <div class="donation">
+              &pound;10.00 <small> + &pound;2.00 Gift Aid</small>
+            </div>
+          </li>
+        </ul>
+
+<pre class="code code-html">
+<code>
+&lt;ul class="list-supporters"&gt;
+  &lt;li&gt;
+    &lt;img src="img/sponsors/user-1.jpg" &gt;
+    &lt;div class="name"&gt;
+      Stuart Richardson &lt;span&gt;1 min ago&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="donation"&gt;
+      &pound;10.00 &lt;small&gt; + &pound;2.00 Gift Aid&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;img src="img/sponsors/user-2.jpg" &gt;
+    &lt;div class="name"&gt;
+      Stuart Richardson &lt;span&gt;1 min ago&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class="donation"&gt;
+      &pound;10.00 &lt;small&gt; + &pound;2.00 Gift Aid&lt;/small&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+      </div>
+    </div>
+</article>
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Custom Modals</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-5">
+    </div>
+    <div class="col-sm-7">
+      <a class="btn btn-info" data-target="#modal-sponsor" data-toggle="modal">
+        Sponsor Modal
+      </a>
+      <a class="btn btn-info" data-target="#donate" data-toggle="modal">
+        Donate Modal
+      </a>
+      <a class="btn btn-info" data-target="#donation-card" data-toggle="modal">
+        Card Details Modal
+      </a>
+      <a class="btn btn-info" data-target="#gocardless" data-toggle="modal">
+      Summary Modal
+      </a>
+    </div>
+  </div>
+</article>
+<!-- end main-->
+</main>
+
+<!-- Modal -->
+
+
+
+
+<!-- Joinos Modals -->
+<div class="modal" id="modal-sm" tabindex="-1" role="dialog" aria-labelledby="modal-sm">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Small Modal
+      </div>
+      <div class="modal-body">
+        <div class="actions-row">
+          <a class="btn btn-info" data-dismiss="modal">
+            Close Window
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Standard Modal
+      </div>
+      <div class="modal-body">
+
+        <div class="actions-row">
+          <a class="btn btn-info" data-dismiss="modal">
+            Close Window
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal-lg">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Large Modal
+      </div>
+      <div class="modal-body">
+        <div class="actions-row">
+          <a class="btn btn-info" data-dismiss="modal">
+            Close Window
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="donate" tabindex="-1" role="dialog" aria-labelledby="modal-lg">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <div class="text-center">
+              <h3>How much would you like to donate?</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+          <div class="col-sm-4 col-sm-offset-4">
+            <fieldset class="form-group">
+              <label>Amount</label>
+              <input class="form-control form-control-lg input-amount slider-input" value="" type="text">
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <fieldset class="form-group">
+              <div class="checkbox abc-checkbox abc-checkbox-primary">
+                <input id="checkbox3" class="styled" checked="" onclick="$('#total-1').toggleClass('hide'), $('#total-2').toggleClass('hide')" type="checkbox">
+                <label for="checkbox3">
+                I would like to cover the transaction fee of <strong>£<span class="charges-value-fee">0.60</span></strong> to allow the school to recieve my <strong>full donation</strong>.
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="actions-row">
+            <a id="btn-1" class="btn btn-info btn-sm">Single Donation</a>
+            <a id="btn-2" class="btn btn-default btn-sm">Monthly Donation</a>
+          <hr class="clear">
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-10 col-sm-offset-1">
+            <form>
+              <div class="row">
+                <div class="col-sm-6">
+                  <fieldset class="form-group">
+                    <label>First Name</label>
+                    <input class="form-control" placeholder="First Name" type="text">
+                  </fieldset>
+                </div>
+                <div class="col-sm-6">
+
+                  <fieldset class="form-group">
+                    <label>Last Name</label>
+                    <input class="form-control" placeholder="Last Name" type="text">
+                  </fieldset>
+                </div>
+              </div>
+              <fieldset class="form-group">
+                <label>Email address</label>
+                <input class="form-control" placeholder="Email Address" type="email">
+              </fieldset>
+
+              <div class="alert alert-info">
+                  <p><strong>Boost Donation</strong></br>If you are UK tax payer, we can claim an additional 25% of your donation from HMRC.</p>
+                  <div class="checkbox abc-checkbox">
+                      <input id="checkbox2" class="styled" onclick="$('#gift-aid').toggleClass('hide')" type="checkbox">
+                      <label for="checkbox2">
+                        I am a UK tax payer
+                      </label>
+                  </div>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="actions-row">
+          <div class="pull-right">
+            <span class="help-text">Total Donation: &pound;10.60</span>
+            <a class="btn btn-primary btn-lg" onclick="$('#donation-modal').modal('hide');$('#modal-donation-card').modal('show')">
+              Continue
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="donation-card" tabindex="-1" role="dialog" aria-labelledby="modal-lg">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Total Donation
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="actions-row">
+              <h1>£10.60</h1>
+              <a class="btn" onclick="$('#modal-donation-card').modal('hide');$('#donation-modal').modal('show')">Change Amount</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-header"><i class="awesome-credit-card"></i> Bank Details</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label >Sort Code</label>
+                <input class="form-control" placeholder="00-00-00" type="text">
+            </fieldset>
+          </div>
+          <div class="col-sm-6">
+            <fieldset class="form-group">
+              <label >Account Number</label>
+              <input class="form-control" value="" placeholder="12345678" type="text">
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="alert alert-info">
+              <div class="checkbox abc-checkbox abc-checkbox-primary" style="margin-bottom:0px;">
+                <input id="checkbox4" class="styled" type="checkbox">
+                <label for="checkbox4">
+                  I confirm that I am the account holder and am the only person required to authorise debits on this account
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="row">
+          <div class="col-sm-12">
+            <a class="btn btn-primary btn-block btn-lg" onclick="$('#modal-donation-card').modal('hide');$('#gocardless').modal('show')">
+              Make Donation
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <!--<img src="img/DirectDebitLogo.jpg" class="img-dd pull-right">-->
+            <p>Your payments are protected by the <a href="">Direct Debit Guarantee.</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer modal-footer-gray text-xs-left">
+        <strong>Payment Provided by:</strong>
+        <address>
+          <strong>GoCardless</strong><br>
+          338-346 Goswell Road, London, EC1V 7LQ<br>
+          <a href="">+44 20 7183 8674</a> | <a href="#">help@gocardless.com</a>
+        </address>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="gocardless" tabindex="-1" role="dialog" aria-labelledby="gocardless">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Summary
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12">
+            <fieldset class="form-group has-disabled">
+              <label>Name</label>
+              <input type="text" class="form-control" disabled="" value="Adam Hogg">
+            </fieldset>
+            <fieldset class="form-group has-disabled">
+              <label>Sort Code</label>
+              <input type="text" class="form-control" disabled="" value="01-01-01">
+            </fieldset>
+            <fieldset class="form-group has-disabled">
+              <label>Account Number</label>
+              <input type="text" class="form-control" disabled="" value="12345678">
+            </fieldset>
+          </div>
+        </div>
+        <div class="actions-row">
+          <a class="btn btn-primary btn-block">Confirm</a>
+          <a class="btn">Change Details</a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="">View your Direct Debit instruction</a>
+        <strong>Hamilton Enterprise</strong> will appear on your bank statement.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-sponsor" tabindex="-1" role="dialog" aria-labelledby="modal-lg">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2">
+            <div class="text-center">
+              <h3>Sponsorship Enquiry</h3>
+              <p>
+                Please provide the below details and a member of our sponsorship team will be in touch..
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+
+        <div class="row">
+          <form class="form-horizontal col-sm-8 col-sm-offset-2">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-3 control-label">Name</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-3 control-label">Company</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-3 control-label">Tel.</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-3 control-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="">
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="actions-row">
+          <a class="btn btn-theme" data-dismiss="modal">
+            Send
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+<!-- Placed JavaScript at bottom of page for quicker loading -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+  </body>
+
+</html>

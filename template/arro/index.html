@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arro Template</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="css/arro.css">
+
+</head>
+
+
+  <body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.min.js"></script>
+<script src="http://prismjs.com/prism.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style>
+
+code{
+  color:red;
+}
+article{
+  border-bottom: 1px solid #f1f1f1;
+  padding:20px 0px;
+}
+article:nth-child(odd){
+  background: #fcfcfc;
+}
+
+/* CSS Simple Pre Code */
+pre {
+  background: #fff;
+  white-space: pre;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+pre.code {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  position: relative;
+}
+
+pre.code code {
+  font-family: "Inconsolata","Monaco","Consolas","Andale Mono","Bitstream Vera Sans Mono","Courier New",Courier,monospace;
+  display: block;
+  padding: 15px 16px 14px;
+  overflow-x: auto;
+  font-size: 13px;
+  line-height: 19px;
+  color: #444;
+  max-height: 500px;
+  overflow: scroll;
+
+}
+
+
+pre.code-css code {
+  color: #0288d1;
+}
+
+pre.code-html code {
+  color: #558b2f;
+}
+
+pre.code-javascript code {
+  color: #f57c00;
+}
+
+pre.code-jquery code {
+  color: #78909c;
+}
+</style>
+
+<script>
+$('i[rel="pre"]').replaceWith(function() {
+    return $('<pre><code>' + $(this).html() + '</code></pre>');
+});
+var pres = document.querySelectorAll('pre,kbd,blockquote');
+for (var i = 0; i < pres.length; i++) {
+  pres[i].addEventListener("dblclick", function () {
+    var selection = getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(this);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }, false);
+}
+</script>
+
+
+<navbar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <a class="btn btn-info-outlined" href="../">
+          <i class="awesome awesome-angle-left"></i>
+          Back to Templates
+        </a>
+      </div>
+    </div>
+  </div>
+</navbar>
+
+<main>
+<section>
+  <div class="jumbotron">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="title">Arro</h1>
+          <p class="details">HTML and CSS Guidelines</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Overview</h2>
+      <p class="lead">This is the Template file for the updated SCSS for the Arro system, which include the migration from LESS to SASS.</p>
+      <p>Arro has been built on <a href="http://getbootstrap.com" target="_blank">Bootstrap v3.3.7</a> SASS with a custom overlay</p>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Layouts</h2>
+      <p class="lead">How pages are structured</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Grid Layout</h3>
+      <p>Arro is based on the <a href="http://getbootstrap.com/css/#grid" target="_blank">Bootstrap Grid</a> system of using a maximum of 12 columns.</p>
+      <h3>Basic Structure</h3>
+          We use the class <code>.container-fluid</code> to allow the full page to be used by the user.
+        </div>
+        <div class="col-sm-6">
+          <h4>Example</h4>
+<pre class="code code-html">
+<code>
+&lt;div class="container-fluid"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-12"&gt;
+      Content
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Page Structure</h3>
+          <p>Pages that require the side navigation menu will require <code>.page-content</code> adding to the <code>body</code> atribute in order to display the page correctly.</p>
+        </div>
+        <div class="col-sm-6">
+          <h4>Example</h4>
+<pre class="code code-html">
+<code>
+&lt;body class="page-content"&gt;
+Page Content
+&lt;/body&gt;
+</code>
+</pre>
+        </div>
+
+    </div>
+</article>
+
+  <article class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <h2>Typography</h2>
+        <p class="lead">How text is displayed</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Text Size</h3>
+        <p>Text sizes are controlled by the html structure of the page h1 to h5.</p>
+        <h3>Text Alignment</h3>
+        <p>Text can be aligned using the following 3 classes.</p>
+        <ul class="list-unstyled">
+          <li>
+            <code>.text-left</code> will align the text to the left.
+          </li>
+          <li>
+            <code>.text-right</code> will align the text to the right.
+          </li>
+          <li>
+            <code>.text-center</code> will align the text to the center.
+          </li>
+        </ul>
+        <h3>Labels</h3>
+        <span class="label label-default">Label Default</span>
+        <span class="label label-primary">Label Primary</span>
+        <span class="label label-info">Label Info</span>
+        <span class="label label-danger">Label Danger</span>
+        <span class="label label-warning">Label Warning</span>
+        <span class="label label-success">Label Success</span>
+
+<pre class="code code-html">
+<code class="">
+  &lt;span class="label label-default"&gt;Label Default&lt;/span&gt;
+  &lt;span class="label label-primary"&gt;Label Primary&lt;/span&gt;
+  &lt;span class="label label-info"&gt;Label Info&lt;/span&gt;
+  &lt;span class="label label-danger"&gt;Label Danger&lt;/span&gt;
+  &lt;span class="label label-warning"&gt;Label Warning&lt;/span&gt;
+  &lt;span class="label label-success"&gt;Label Success&lt;/span&gt;
+</code>
+</pre>
+
+      </div>
+      <div class="col-sm-6">
+        <h4>Examples</h4>
+        <h1>Header H1 <small class="block">small section to display after</small></h1>
+        <h2>Header H2 <small class="block">small section to display after</small></h2>
+        <h3>Header H3 <small class="block">small section to display after</small></h3>
+        <h4>Header H4 <small class="block">small section to display after</small></h4>
+        <h5>Header H5 <small class="block">small section to display after</small></h5>
+
+        <p class="lead">Paragraph using a <code>.lead</code> style added</p>
+        <p>Default paragraph styling</p>
+
+        <p class="text-danger">Text Danger</p>
+        <p class="text-warning">Text Warning</p>
+        <p class="text-success">Text Success</p>
+
+<pre class="code code-html">
+<code>
+&lt;h1&gt;Header H1 &lt;small class="block"&gt;small section to display after&lt;/small&gt;&lt;/h1&gt;
+&lt;h2&gt;Header H2 &lt;small class="block"&gt;small section to display after&lt;/small&gt;&lt;/h2&gt;
+&lt;h3&gt;Header H3 &lt;small class="block"&gt;small section to display after&lt;/small&gt;&lt;/h3&gt;
+&lt;h4&gt;Header H4 &lt;small class="block"&gt;small section to display after&lt;/small&gt;&lt;/h4&gt;
+&lt;h5&gt;Header H5 &lt;small class="block"&gt;small section to display after&lt;/small&gt;&lt;/h5&gt;
+
+&lt;p class="lead"&gt;Paragraph using a &lt;code&gt;.lead&lt;/code&gt; style added&lt;/p&gt;
+&lt;p&gt;Default paragraph styling&lt;/p&gt;
+
+&lt;p class="text-danger"&gt;Text Danger&lt;/p&gt;
+&lt;p class="text-warning"&gt;Text Warning&lt;/p&gt;
+&lt;p class="text-success"&gt;Text Success&lt;/p&gt;</code>
+</pre>
+      </div>
+    </div>
+  </article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>List Thirds</h2>
+      <p class="lead">Custom styling of information lists</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <p>Lists can be customised to display blocks of information inline using the <code>.list divided</code> which will assign the correct borders. An option of <code>.list-two</code> and <code>.lost-thirds</code> can be added to organise the widths of these elements.</p>
+    </div>
+    <div class="col-sm-6">
+      <h4>Examples</h4>
+      <ul class="list-divided list-thirds">
+        <li>
+          Item 1
+          <span>Small Text</span>
+        </li>
+        <li>
+          Item 2
+          <span>Small Text</span>
+        </li>
+        <li>
+          Item 3
+          <span>Small Text</span>
+        </li>
+      </ul>
+
+<pre class="code code-html">
+<code>
+&lt;ul class="list-divided list-two"&gt;
+  &lt;li&gt;
+    Item 1
+    &lt;span&gt;Small Text&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    Item 2
+    &lt;span&gt;Small Text&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+
+
+      <ul class="list-divided list-two">
+        <li>
+          Item 1
+          <span>Small Text</span>
+        </li>
+        <li>
+          Item 2
+          <span>Small Text</span>
+        </li>
+      </ul>
+
+<pre class="code code-html">
+<code>
+&lt;ul class="list-divided list-thirds"&gt;
+  &lt;li&gt;
+    Item 1
+    &lt;span&gt;Small Text&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    Item 2
+    &lt;span&gt;Small Text&lt;/span&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    Item 3
+    &lt;span&gt;Small Text&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</article>
+
+  <article class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Panels</h2>
+        <p class="lead">Grouping information within a container</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <p>Panels are used with arro to group a block of information together and allow the user to see the in a container. This will help when making decisions within the system.</p>
+      </div>
+      <div class="col-sm-6">
+        <h4>Examples</h4>
+
+        <div class="panel">
+          <div class="panel-heading">Panel Heading</div>
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading panel-heading-gray">Panel Heading</div>
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+
+        <div class="panel panel-narrow text-center">
+          <div class="panel-heading">Panel Heading</div>
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-heading">Panel Heading</div>
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer panel-footer-clear">
+            <div class="actions-row">
+              <a class="btn btn-info btn-sm">Button A</a>
+            </div>
+          </div>
+        </div>
+
+<pre class="code code-html">
+<code>
+
+&lt;div class="panel"&gt;
+  &lt;div class="panel-heading"&gt;Panel Heading&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Panel Body&lt;/div&gt;
+  &lt;div class="panel-footer"&gt;Panel Footer&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel"&gt;
+  &lt;div class="panel-heading-gray"&gt;Panel Heading&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Panel Body&lt;/div&gt;
+  &lt;div class="panel-footer"&gt;Panel Footer&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel panel-narrow text-center"&gt;
+  &lt;div class="panel-heading"&gt;Panel Heading&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Panel Body&lt;/div&gt;
+  &lt;div class="panel-footer"&gt;Panel Footer&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="panel"&gt;
+  &lt;div class="panel-heading"&gt;Panel Heading&lt;/div&gt;
+  &lt;div class="panel-body"&gt;Panel Body&lt;/div&gt;
+  &lt;div class="panel-footer panel-footer-clear"&gt;
+    &lt;div class="actions-row"&gt;
+      &lt;a class="btn btn-info btn-sm"&gt;Button A&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+      </div>
+    </div>
+  </article>
+
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Images &amp; Icons
+        <span class="pull-right">
+          <a class="btn btn-info btn-sm" href="sample-images.html">Load Sample Page</a>
+        </span>
+
+      </h2>
+      <p class="lead"></p>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Icons</h3>
+          <h4>Font Awesome
+            <small><a href="http://fontawesome.io/cheatsheet/" target="_blank">Cheatsheet</a></small>
+          </h4>
+          <p>Font Awesome is the main iconset in Arro and is used for navigation items and within buttons.</p>
+          <p><strong>Note:</strong>The class required to call an icon from the cheatsheet i.e. <code>.awesome-th</code> needs to be <code>.awesome-th</code></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>SVG Icons</h4>
+          <p>SVG icons are used for more stand out items within Arro including:- Grants icon, Project icons etc.</p>
+        </div>
+        <div class="col-sm-6">
+          <h4>Example</h4>
+          <span class="icon icon-sm">
+            <span class="icon-project-01"></span>
+          </span>
+          <pre class="code code-html">
+<code>
+  &lt;span class="icon icon-sm"&gt;
+    &lt;span class="icon-project-01"&gt;&lt;/span&gt;
+  &lt;/span&gt;
+</code>
+          </pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Buttons</h2>
+      <p class="lead">User Interacting with the system</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <p></p>
+          <h3>Sizes</h3>
+          <p>
+            There are 2 sizes of buttons within Arro. that can be called up depending on the page state.
+          </p>
+
+        </div>
+        <div class="col-sm-6">
+          <h4>Examples</h4>
+          <a class="btn btn-info">Default</a>
+          <a class="btn btn-info btn-sm">Small</a>
+<pre class='code code-html'>
+<code>
+&lt;a class="btn btn-primary"&gt;Default&lt;/a&gt;
+&lt;a class="btn btn-primary btn-sm"&gt;Small&lt;/a&gt;
+</code></pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <h3>Variations</h3>
+          <table class="table table-bordered table-vam">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a class="btn btn-default">Button Default</a>
+                </td>
+                <td>
+                  <code>.btn .btn-default</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-primary">Button Primary</a>
+                </td>
+                <td>
+                  <code>.btn .btn-primary</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-primary-outline">Button Primary Outline</a>
+                </td>
+                <td>
+                  <code>.btn .btn-primary-outline</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-secondary">Button Secondary</a>
+                </td>
+                <td>
+                  <code>.btn .btn-secondary</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-secondary-outline">Button Secondary Outline</a>
+                </td>
+                <td>
+                  <code>.btn .btn-secondary-outline</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-info">Button Info</a>
+                </td>
+                <td>
+                  <code>.btn .btn-info</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-info-outline">Button Info Outline</a>
+                </td>
+                <td>
+                  <code>.btn .btn-info-outline</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-danger">Button Danger</a>
+                </td>
+                <td>
+                  <code>.btn .btn-default</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="btn btn-danger-outline">Button Danger Outline</a>
+                </td>
+                <td>
+                  <code>.btn .btn-default-outline</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="">Link Standard</a>
+                </td>
+                <td>
+                  <code></code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="link-success">Link Success</a>
+                </td>
+                <td>
+                  <code>.link-success</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a class="link-danger">Link Danger</a>
+                </td>
+                <td>
+                  <code>.link-danger</code>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Dropdown Buttons</h3>
+          <p></p>
+
+          <h4>Example</h4>
+          <div class="dropdown">
+            <button class="btn btn-info btn-sm dropdown-toggle"
+                    type="button" id="dropdownmenu"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="true">
+              Button A
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownmenu">
+              <li><a href="">Button B</a></li>
+              <li><a href="">Button C</a></li
+              <li role="separator" class="divider"></li>
+              <li><a href="">Button D</a></li>
+            </ul>
+          </div>
+
+<pre class="code code-html">
+<code>
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"&gt;
+    Button A
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;ul class="dropdown-menu" aria-labelledby="dropdownmenu"&gt;
+    &lt;li&gt;&lt;a href=""&gt;Button B&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Button C&lt;/a&gt;&lt;/li
+    &lt;li role="separator" class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=""&gt;Button D&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Tables
+        <span class="pull-right">
+          <a href="sample-tables.html" class="btn btn-info btn-sm">Load Sample Table</a>
+        </span>
+      </h2>
+      <p class="lead">Display blocks of information within a table</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <p>
+        Tables are used to display data in a systematic order and will have a variety of styling applied to the <code>table cell</code> via a CSS Class. These classes may effect the following <strong>colour, size, text position, width</strong>.
+      </p>
+      <h3>Global Varients</h3>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>.table</code>
+            </td>
+            <td>
+              This class must be added to all tables to style them correctly
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.table-hover</code>
+            </td>
+            <td>
+              This will apply a hover state to the table row
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.table-bordered</code>
+            </td>
+            <td>
+              This will apply a border to the entire table including rows
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <code>.table-vam</code>
+            </td>
+            <td>
+              This class will align all fields to the middle of the cells (vertically)
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <table class="table table-bordered table-vam">
+        <thead>
+          <tr>
+            <th>Table Head</th>
+            <th>Table Head</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Table Cell
+            </td>
+          </tr>
+        </tbody>
+      </table>
+<pre class="code code-html">
+<code>
+&lt;table class="table table-bordered table-vam"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Table Head&lt;/th&gt;
+      &lt;th&gt;Table Head&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;
+        Table Cell
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code>
+</pre>
+</div>
+</div>
+
+</article>
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Modals</h2>
+      <p class="lead">Pop ups alerts</p>
+      <div class="row">
+        <div class="col-sm-12">
+          <p>Modals are used for displaying information yet keeping the user on the same page they were previous on.</p>
+
+          <h3>Modal Structure</h3>
+          <p>This is the format to display information within a modal once it has been activated</p>
+
+<h4>Example</h4>
+<pre class="code code-html">
+<code>
+&lt;div class="modal" id="modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal-lg"&gt;
+  &lt;div class="modal-dialog modal-lg" role="document"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt;
+          &lt;span aria-hidden="true">&times;&lt;/span&gt;
+        &lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;div class="actions-row"&gt;
+          &lt;a class="btn btn-info" data-dismiss="modal"&gt;
+            Close Window
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+<h3>Trigger</h3>
+<p>This is how we call the modal to open. <code>data-toggle="modal"</code> and then link to the modal via <code>data-target="#modal-name"</code></p>
+<h4>Example</h4>
+<a data-toggle="modal" data-target="#modal-sm" class="btn btn-info">Small Modal</a>
+<a data-toggle="modal" data-target="#modal" class="btn btn-info">Standard Modal</a>
+<a data-toggle="modal" data-target="#modal-lg" class="btn btn-info">Large Modal</a>
+<pre class="code code-html">
+<code>
+&lt;a data-toggle="modal" data-target="#modal-sm" class="btn btn-info"&gt;Small Modal&lt;/a&gt;
+&lt;a data-toggle="modal" data-target="#modal" class="btn btn-info"&gt;Standard Modal&lt;/a&gt;
+&lt;a data-toggle="modal" data-target="#modal-lg" class="btn btn-info"&gt;Large Modal&lt;/a&gt;
+</code>
+</pre>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Inputs</h2>
+      <p class="lead">User Input, Forms</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <div class="form-group">
+        <div class="checkbox checkbox-primary">
+          <input id="checkbox3" checked="" value="option3" type="checkbox">
+          <label for="checkbox3"><span>Option 1</span></label>
+        </div>
+      </div>
+
+<pre class="code code-html">
+<code>
+&lt;div class="form-group"&gt;
+  &lt;div class="checkbox checkbox-primary"&gt;
+    &lt;input id="checkbox3" checked="" value="option3" disabled="" type="checkbox"&gt;
+    &lt;label for="checkbox3"&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+      <div class="form-group">
+        <div class="radio radio-primary">
+          <input id="radio" value="radio" type="radio">
+          <label for="radio"><span>Option 1</span></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="radio radio-primary">
+          <input id="radio2" checked="" value="radio2" type="radio">
+          <label for="radio2"><span>Option 1</span></label>
+        </div>
+      </div>
+<pre class="code code-html">
+<code>
+&lt;div class="form-group"&gt;
+  &lt;div class="radio radio-primary"&gt;
+    &lt;input id="radio" value="radio" disabled="" type="radio"&gt;
+    &lt;label for="radio"&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;div class="radio radio-primary"&gt;
+    &lt;input id="radio2" checked="" value="radio2" disabled="" type="radio"&gt;
+    &lt;label for="radio2"&gt;&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+      <div class="form-group">
+        <label class="control-label" for="">Address
+        </label>
+        <input class="form-control" placeholder="Address" type="text">
+      </div>
+<pre class="code code-html">
+<code>
+&lt;div class="form-group"&gt;
+  &lt;label class="control-label" for=""&gt;Address
+  &lt;/label&gt;
+  &lt;input class="form-control" placeholder="Address" type="text"&gt;
+&lt;/div&gt;&lt;
+</code>
+</pre>
+      <h4>Example with icon</h4>
+      <div class="form-group">
+        <div class="search">
+          <input class="form-control" placeholder="Search by Name" type="text">
+          <i class="awesome awesome-search"></i>
+        </div>
+      </div>
+<pre class="code code-html">
+<code>
+&lt;div class="form-group"&gt;
+  &lt;div class="search"&gt;
+    &lt;input class="form-control" placeholder="Search by Name" type="text"&gt;
+    &lt;i class="awesome awesome-search"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+      <h4>Example Error</h4>
+      <div class="form-group has-error">
+        <span class="error"> Error</span>
+        <label class="control-label" for="">Address
+        </label>
+        <input class="form-control" placeholder="Address" type="text">
+      </div>
+
+      <div class="form-group has-warning">
+        <span class="error"> Warning</span>
+        <label class="control-label" for="">Address
+        </label>
+        <input class="form-control" placeholder="Address" type="text">
+      </div>
+
+      <div class="form-group has-success">
+        <span class="error"> Success</span>
+        <label class="control-label" for="">Address
+        </label>
+        <input class="form-control" placeholder="Address" type="text">
+      </div>
+
+<pre class="code code-html">
+<code>
+&lt;div class="form-group has-error"&gt;
+  &lt;span class="error"&gt; Error&lt;/span&gt;
+  &lt;label class="control-label" for=""&gt;Address
+  &lt;/label&gt;
+  &lt;input class="form-control" placeholder="Address" type="text"&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group has-warning"&gt;
+  &lt;span class="error"&gt; Warning&lt;/span&gt;
+  &lt;label class="control-label" for=""&gt;Address
+  &lt;/label&gt;
+  &lt;input class="form-control" placeholder="Address" type="text"&gt;
+&lt;/div&gt;
+
+&lt;div class="form-group has-success"&gt;
+  &lt;span class="error"&gt; Success&lt;/span&gt;
+  &lt;label class="control-label" for=""&gt;Address
+  &lt;/label&gt;
+  &lt;input class="form-control" placeholder="Address" type="text"&gt;
+&lt;/div&gt;
+</code>
+</pre>
+<h4>Custom</h4>
+  <form class="form-inline form-colour">
+    <div class="form-group">
+      <div class="form-control community-red active"></div>
+      <div class="form-control community-blue"></div>
+      <div class="form-control community-green"></div>
+      <div class="form-control community-orange"></div>
+      <div class="form-control community-gray"></div>
+    </div>
+  </form>
+
+<pre class="code code-html">
+<code>
+  &lt;form class="form-inline form-colour"&gt;
+    &lt;div class="form-group"&gt;
+      &lt;div class="form-control community-red active"&gt;&lt;/div&gt;
+      &lt;div class="form-control community-blue"&gt;&lt;/div&gt;
+      &lt;div class="form-control community-green"&gt;&lt;/div&gt;
+      &lt;div class="form-control community-orange"&gt;&lt;/div&gt;
+      &lt;div class="form-control community-gray"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</article>
+
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Nav / Actions
+        <span class="pull-right">
+          <a href="sample.html" class="btn btn-info btn-sm">Load Sample Page</a>
+        </span>
+      </h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Sidenav</h3>
+      <p> The side nav is a custom piece of html that will display the full niavgiation menu on the left hand side of the Arro software.</p>
+      <p>We will be using <a href="http://getbootstrap.com/javascript/#collapse" target="_blank"> Bootstrap Collapse</a> in order to alow the submenu items to be loaded.</p>
+      <strong>Note: The sidemenu must be wrapped with the following class which allows it to be fixed to the side</strong>
+      <code>.sidenav-container</code>
+    </div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+<pre class="code code-html">
+<code>
+&lt;ul class="main-nav"&gt;
+  &lt;li class="nav-large nav-project active-page"&gt;
+    &lt;a&gt;
+      &lt;i class="awesome awesome-sitemap"&gt;&lt;/i&gt;
+      Projects
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="nav-large nav-activities"&gt;
+    &lt;a data-toggle="collapse" href="#activities"&gt;
+      &lt;i class="awesome awesome-th"&gt;&lt;/i&gt;
+      &lt;span class="menu-title"&gt;
+        Activities
+      &lt;/span&gt;
+      &lt;i class="arrow"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;ul class="subnav collapse" id="activities"&gt;
+      &lt;li class=""&gt;
+        &lt;a href="donations/home/"&gt;
+          Record Donation
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="list-divider"&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;a&gt;View Donations&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=""&gt;
+        &lt;a&gt;Gift Aid Claims&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a&gt;
+      Transactions
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a&gt;
+      SRM
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a&gt;
+      Admin
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a&gt;
+      Help
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+</div>
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <h3>Sidenav Footer</h3>
+    <p>This is the sticky footer that will only apear in the sidemenu.</p>
+  </div>
+  <div class="col-sm-6">
+    <h4>Example</h4>
+<pre class="code code-html">
+<code>
+&lt;ul class="footer-nav"&gt;
+  &lt;li class="footer-intro"&gt;See what's coming soon!&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a &gt;Reports&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a &gt;Clubs &amp; Events&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a &gt;Services &amp; Lettings&lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li class="brand"&gt;
+    &lt;img src="img/logo/logo_dots.svg"&gt;
+    © Arro by Pebble
+  &lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Footer Fixed Navigation</h3>
+      <p>
+        We have the option for a sticky footer navigation menu that can be used during onboarding process and pages that we want to keep the user on the page.
+      </p>
+      <p>We can use <code>.page-footer-nav-full</code> to allow full width sticky navigation footer</p>
+      <p><strong>Note</strong> This can be placed within the main <code>.page-content</code> section.</p>
+    </div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+ <pre class="code code-html">
+ <code>
+ &lt;div class="page-footer-nav"&gt;
+   &lt;div class="actions-left"&gt;
+     &lt;a class="btn btn-info btn-sm"&gt;buttton&lt;/a&gt;
+   &lt;/div&gt;
+   &lt;div class="actions-right"&gt;
+     &lt;a class="btn btn-info btn-sm"&gt;buttton&lt;/a&gt;
+     &lt;a class="btn btn-info btn-sm"&gt;buttton&lt;/a&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+
+ &lt;div class="page-footer-nav page-footer-nav-full"&gt;
+   &lt;div class="actions-left"&gt;
+     &lt;a class="btn btn-info btn-sm"&gt;buttton&lt;/a&gt;
+   &lt;/div&gt;
+   &lt;div class="actions-right"&gt;
+     &lt;a class="btn btn-info btn-sm"&gt;buttton&lt;/a&gt;
+     &lt;a class="btn btn-info btn-sm"&gt;buttton&lt;/a&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Actions</h3>
+      <p class="lead">Actions are used to group together buttons.</p>
+
+      <p>By default these actions will position themself in the center of the parent element. In order to position items to each side <code>.pull-left</code> and <code>.pull-right</code> can be used.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <div class="actions-row">
+        <a class="btn btn-sm btn-info">Button A</a>
+        <span class="help-text">Help text here</span>
+      </div>
+      <pre class="code code-html">
+      <code>
+      &lt;div class="actions-row"&gt;
+      &lt;a class="btn btn-sm btn-info"&gt;Button B&lt;/a&gt;
+      &lt;span class="help-text"&gt;Help text here&lt;/span&gt;
+      &lt;/div&gt;
+      </code>
+      </pre>
+
+      <div class="actions-row">
+        <a class="btn btn-sm btn-info">Button A</a>
+        <span class="help-text block">( Help text here )</span>
+      </div>
+      <pre class="code code-html">
+      <code>
+      &lt;div class="actions-row"&gt;
+      &lt;a class="btn btn-sm btn-info"&gt;Button B&lt;/a&gt;
+      &lt;span class="help-text block"&gt;( Help text here )&lt;/span&gt;
+      &lt;/div&gt;
+      </code>
+      </pre>
+
+      <div class="actions-row">
+        <a class="btn btn-sm btn-info-outline">Button A</a>
+        <a class="btn btn-sm btn-info">Button B</a>
+      </div>
+<pre class="code code-html">
+<code>
+&lt;div class="actions-row"&gt;
+&lt;a class="btn btn-sm btn-info-outline"&gt;Button A&lt;/a&gt;
+&lt;a class="btn btn-sm btn-info"&gt;Button B&lt;/a&gt;
+&lt;/div&gt;
+</code>
+</pre>
+      <div class="actions-row">
+        <div class="pull-left">
+          <a class="btn btn-sm btn-info-outline">Button A</a>
+        </div>
+        <div class="pull-right">
+          <a class="btn btn-sm btn-info">Button B</a>
+          <a class="btn btn-sm btn-info-outline">Button C</a>
+        </div>
+      </div>
+<pre class="code code-html">
+<code>
+&lt;div class="actions-row"&gt;
+  &lt;div class="pull-left"&gt;
+    &lt;a class="btn btn-sm btn-info-outline"&gt;Button A&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="pull-right"&gt;
+  &lt;a class="btn btn-sm btn-info">Button B&lt;/a&gt;
+    &lt;a class="btn btn-sm btn-info-outline">Button C&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Sub Nav</h2>
+      <p>
+        Sub navigation are used to filter page content that are not part of the main navigation. These can vairy depending on the pages content. They must be wrapped in <code>.subnav</code>.
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6"></div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <div class="subnav">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-12">
+              <ul class="list-subnav">
+                <li>
+                  <span>
+                    Filter By:
+                  </span>
+                </li>
+                <li>
+                  <a class="btn btn-default btn-sm">
+                    Filter
+                  </a>
+                </li>
+                <li>
+                  <form class="form-inline form-colour">
+                    <div class="form-group">
+                      <label>Colour</label>
+                      <div class="form-control community-red active"></div>
+                      <div class="form-control community-blue"></div>
+                      <div class="form-control community-green"></div>
+                      <div class="form-control community-orange"></div>
+                      <div class="form-control community-gray"></div>
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<pre class="code code-html">
+<code>
+&lt;div class="subnav"&gt;
+  &lt;div class="container-fluid"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-sm-12"&gt;
+        &lt;ul class="list-subnav"&gt;
+          &lt;li&gt;
+            &lt;span&gt;
+              Filter By:
+            &lt;/span&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;a class="btn btn-default btn-sm"&gt;
+              Filter
+            &lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+            &lt;form class="form-inline form-colour"&gt;
+              &lt;div class="form-group"&gt;
+                &lt;label&gt;Colour&lt;/label&gt;
+                &lt;div class="form-control community-red active"&gt;&lt;/div&gt;
+                &lt;div class="form-control community-blue"&gt;&lt;/div&gt;
+                &lt;div class="form-control community-green"&gt;&lt;/div&gt;
+                &lt;div class="form-control community-orange"&gt;&lt;/div&gt;
+                &lt;div class="form-control community-gray"&gt;&lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/form&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Jumbotron</h2>
+      <p class="lead">Banner Alerts and Messages</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Jumbotrons are used to within the onboarding process to communicate with users at different stages. These can also be used for larger alerts and annoucements.</p>
+
+        </div>
+        <div class="col-sm-6">
+          <h4>Example</h3>
+            <div class="jumbotron">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h1 class="title">Welcome to Arro</h1>
+                    <p class="details">your new best friend</p>
+                    <i class="awessome awesome-refrsh fa-2x awesome-spin"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+<pre class="code code-html">
+<code>
+&lt;div class="jumbotron"&gt;
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="col-sm-12"&gt;
+        &lt;h1 class="title">Welcome to Arro&lt;/h1&gt;
+        &lt;p class="details">your new best friend&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2>Alerts</h2>
+      <p class="lead">Alert Messages</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <p>Alerts are the systems way of informing users if an action has been successful or unsuccessful.</p>
+          <p>These have been build on the <a href="http://getbootstrap.com/components/#alerts" target="_blank">Bootstrap Alerts</a> model. Where <code>.alert-dismissible</code> has been included to allow these alert message to be closed by the user.</p>
+        </div>
+        <div class="col-sm-6">
+          <h4>Example</h3>
+            <div class="alert alert-info alert-dismissible">
+              <button type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              Information Alert
+            </div>
+            <div class="alert alert-success alert-dismissible">
+              <button type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              Success Alert
+            </div>
+            <div class="alert alert-warning alert-dismissible">
+              <button type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              Warning Alert
+            </div>
+            <div class="alert alert-danger alert-dismissible">
+              <button type="button"
+                      class="close"
+                      data-dismiss="alert"
+                      aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              Danger Alert
+            </div>
+<pre class="code code-html">
+<code>
+&lt;div class="alert alert-info alert-dismissible"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+  Information Alert
+&lt;/div&gt;
+&lt;div class="alert alert-success alert-dismissible"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+  Success Alert
+&lt;/div&gt;
+&lt;div class="alert alert-warning alert-dismissible"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+  Warning Alert
+&lt;/div&gt;
+&lt;div class="alert alert-danger alert-dismissible"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert" aria-label="Close"&gt;&lt;span aria-hidden="true"&gt;&times;&lt;/span&gt;&lt;/button&gt;
+  Danger Alert
+&lt;/div&gt;
+</code>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Progress Bars</h2>
+      <p class="lead">Loading state</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      Progress bars are used to inform the user that an action is happening and it may require a little time to process. Arro's progress bars are build on <a href="http://getbootstrap.com/components/#progress" target="_blank">Bootstrap Progress Bars</a> with a custom overlay to fit into the brand.
+    </div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+          <span class="sr-only">60% Complete</span>
+        </div>
+      </div>
+
+<pre class="code code-html">
+<code>
+&lt;div class="progress"&gt;
+  &lt;div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"&gt;
+    &lt;span class="sr-only"&gt;60% Complete&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+
+    </div>
+  </div>
+</article>
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Other</h2>
+      <p class="lead"></p>
+
+      <h3>Page Backgrounds</h3>
+      <p>The default theme set for the Arro system has been set to a white background. Some pages require a background colour whilst others may require a background image.</p>
+
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>What this does?</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <code>body class="theme-gray"</code>
+            </td>
+            <td>
+              This will set the background of this page to gray
+            </td>
+            <td>
+          </tr>
+          <tr>
+            <td>
+              <code>section class="section-bg-image"</code>
+            </td>
+            <td>
+              This will apply a background image that would fill the page.
+            </td>
+            <td>
+              <a href="sample-comming-soon" class="btn btn-info btn-sm">Load Sample Page</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</article>
+
+
+<article class="container-fluid">
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Notifications</h2>
+      <p class="lead">Communicating with the user</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Notifications Menu</h3>
+      <p></p>
+    </div>
+    <div class="col-sm-6">
+      <h4>Example</h4>
+      <div class="dropdown">
+        <button class="btn btn-info btn-sm dropdown-toggle"
+                type="button" id="dropdownmenu"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="true">
+          Button A
+          <span class="caret"></span>
+        </button>
+        <div class="notification-dropdown-menu dropdown-menu">
+          <ul class="list-notifications" aria-labelledby="dropdownmenu">
+            <li class="title">
+              Notifications
+            </li>
+            <li class="feed-grant">
+              <a href="#">
+                <img src="img/iconset/complete-01.svg">
+                <strong>New grants</strong> are avaiable that may be appropiate for your project
+              </a>
+            </li>
+            <li class="feed-project">
+              <a href="#">
+                <img src="img/iconset/campaign-02.svg">
+                <strong>Lucy</strong> has commented on your project <strong>project name</strong>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+<pre class="code code-html">
+<code>
+&lt;div class="dropdown"&gt;
+  &lt;button class="btn btn-info btn-sm dropdown-toggle" type="button" id="dropdownmenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"&gt;
+    Button A
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+  &lt;div class="notification-dropdown-menu dropdown-menu"&gt;
+    &lt;ul class="list-notifications" aria-labelledby="dropdownmenu"&gt;
+      &lt;li class="title"&gt;
+        Notifications
+      &lt;/li&gt;
+      &lt;li class="feed-grant"&gt;
+        &lt;a href="#"&gt;
+          &lt;img src="img/iconset/complete-01.svg"&gt;
+          &lt;strong&gt;New grants&lt;/strong&gt; are avaiable that may be appropiate for your project
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class="feed-project"&gt;
+        &lt;a href="#"&gt;
+          &lt;img src="img/iconset/campaign-02.svg"&gt;
+          &lt;strong&gt;Lucy&lt;/strong&gt; has commented on your project &lt;strong&gt;project name&lt;/strong&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-sm-12">
+
+      <h3>Notifications Alert</h3>
+      <p class="lead">
+
+      </p>
+      <h4>Example</h4>
+      <div class="notification notification-info">
+        <div class="step">Next Step</div>
+        Create your page <strong>page</strong>
+        <div class="action">
+          <a class="btn">Create Page</a>
+        </div>
+      </div>
+<pre class="code code-html">
+<code>
+&lt;div class="notification notification-info"&gt;
+  &lt;div class="step"&gt;Next Step&lt;/div&gt;
+  Create your page &lt;strong&gt;page&lt;/strong&gt;
+  &lt;div class="action"&gt;
+    &lt;a class="btn"&gt;Create Page&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+    </div>
+  </div>
+</article>
+
+</main>
+
+</div>
+
+
+    <!-- Templates -->
+<div class="modal" id="modal-sm" tabindex="-1" role="dialog" aria-labelledby="modal-sm">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Small Modal
+      </div>
+      <div class="modal-body">
+        <div class="actions-row">
+          <a class="btn btn-info" data-dismiss="modal">
+            Close Window
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Standard Modal
+      </div>
+      <div class="modal-body">
+
+        <div class="actions-row">
+          <a class="btn btn-info" data-dismiss="modal">
+            Close Window
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal-lg" tabindex="-1" role="dialog" aria-labelledby="modal-lg">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        Large Modal
+      </div>
+      <div class="modal-body">
+        <div class="actions-row">
+          <a class="btn btn-info" data-dismiss="modal">
+            Close Window
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--JAVASCRIPT-->
+<!--=================================================-->
+<!-- Placed JavaScript at bottom of page for quicker loading -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+  </body>
+
+</html>
