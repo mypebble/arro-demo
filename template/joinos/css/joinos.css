@@ -1124,7 +1124,8 @@ input[type="button"].btn-block {
   letter-spacing: .05em;
   border-radius: 4px; }
   .btn-auto {
-    min-width: auto; }
+    width: auto !important;
+    min-width: 0px; }
   .btn-padded {
     min-width: 200px !important;
     padding: 12px 40px; }
